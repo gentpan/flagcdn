@@ -2,7 +2,7 @@
   function loadVisitorFlag() {
     var el = document.getElementById("visitor-flag");
     if (!el) return;
-    fetch("https://api.ip.sb/geoip")
+    fetch("https://api.cnip.io/geoip")
       .then(function (r) { return r.json(); })
       .then(function (data) {
         var code = (data && data.country_code && String(data.country_code).toLowerCase()) || "";

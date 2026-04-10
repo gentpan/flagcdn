@@ -27,7 +27,7 @@ $extraHead = '<style>
       --cl-tag-site-bg: rgba(25, 135, 84, 0.15);
       --cl-tag-i18n-bg: rgba(111, 66, 193, 0.15);
     }
-    .changelog { padding-bottom: 2rem; font-family: "Outfit", "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.5; }
+    .changelog { padding-bottom: 2rem; font-family: "Lexend Deca", "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.5; }
     .changelog-date { font-size: 1.15rem; font-weight: 600; margin: 2rem 0 0.75rem; padding-bottom: 0.35rem; border-bottom: 1px solid var(--cl-line); color: var(--bs-emphasis-color, #212529); }
     .changelog-date:first-child { margin-top: 0; }
     .changelog-list { list-style: none; margin: 0 0 1.5rem; padding: 0; }
@@ -40,7 +40,7 @@ $extraHead = '<style>
     .changelog-tag--site { color: var(--cl-tag-site); background: var(--cl-tag-site-bg); }
     .changelog-tag--i18n { color: var(--cl-tag-i18n); background: var(--cl-tag-i18n-bg); }
     .changelog-text { flex: 1; color: var(--bs-body-color, #212529); }
-    .changelog-code { font-family: "Paper Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.85rem; padding: 0.1rem 0.35rem; background: var(--bs-surface, #f8f9fa); border: 1px solid var(--cl-line); border-radius: 4px; }
+    .changelog-code { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.85rem; padding: 0.1rem 0.35rem; background: var(--bs-surface, #f8f9fa); border: 1px solid var(--cl-line); border-radius: 4px; }
     .changelog-flag { vertical-align: middle; margin: 0 0.15rem; }
   </style>';
 $bodyAttr = 'data-i18n-page-title="changelog.titleFull"';

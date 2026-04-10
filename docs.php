@@ -7,10 +7,23 @@ $baseHref = '/';
 $extraHead = '<style>
     :root {
       --fa-family-classic: "Font Awesome 7 Pro";
-      --accent-dark: #0b6f45;
-      --text: #1c4741;
-      --line-strong: #9ebcb6;
-      --font-body: "Outfit", "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
+      --accent-dark: #008858;
+      --text: var(--bs-body-color, #1c4741);
+      --line-strong: var(--bs-border-color, #9ebcb6);
+      --pane-bg: var(--bs-success-bg-subtle, #e3f9e9);
+      --muted: var(--bs-tertiary-color, #5e827d);
+      --accent: var(--bs-accent, #2ba471);
+      --font-body: "Lexend Deca", "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
+    }
+    html[data-theme="dark"] {
+      --accent-dark: #56c08d;
+      --pane-bg: var(--bs-surface, #343a40);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        --accent-dark: #56c08d;
+        --pane-bg: var(--bs-surface, #343a40);
+      }
     }
     .docs { padding-bottom: 2rem; font-family: var(--font-body); line-height: 1.4; }
     .docs h2 { font-size: 1.25rem; margin: 2rem 0 0.75rem; padding-bottom: 0.35rem; border-bottom: 1px solid var(--line-strong, #9ebcb6); color: var(--text, #1c4741); }
@@ -18,7 +31,7 @@ $extraHead = '<style>
     .docs p { margin-bottom: 1rem; }
     .docs ul { margin: 0 0 1rem 1.25rem; }
     .docs li { margin-bottom: 0.35rem; }
-    .docs .code { font-family: "Paper Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; display: inline; padding: 0.15rem 0.4rem; background: var(--pane-bg, #e6efed); font-size: 0.875rem; border: 1px solid var(--line-strong, #9ebcb6); }
+    .docs .code { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; display: inline; padding: 0.15rem 0.4rem; background: var(--pane-bg, #e6efed); font-size: 0.875rem; border: 1px solid var(--line-strong, #9ebcb6); }
     .docs .example { margin: 1rem 0; }
     .docs .example span { margin-right: 0.5rem; vertical-align: middle; }
     .docs a {
@@ -44,7 +57,7 @@ $extraHead = '<style>
       flex: 1;
       margin: 0;
       padding: 0;
-      font-family: "Paper Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       font-size: 0.875rem;
       overflow-x: auto;
       background: none;
@@ -195,7 +208,7 @@ ob_start();
             var orig = icon.className;
             btn.classList.add("copied");
             icon.className = "fa-solid fa-check";
-            icon.style.color = "#72BF80";
+            icon.style.color = "#2ba471";
             setTimeout(function () {
               btn.classList.remove("copied");
               icon.className = orig;

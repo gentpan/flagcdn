@@ -8,8 +8,8 @@ $pageDescription = 'Free SVG country flag icons by ISO 3166-1 alpha-2. One-line 
 $pageKeywords = 'country flags, flag icons, SVG flags, ISO 3166, flag CDN, country code flags, free flag icons, national flags, flag emoji, world flags';
 $canonicalUrl = 'https://flagcdn.io/';
 
-// 页面额外 head：Leaflet 地图样式。若使用自建 Umami 或已授权域名，可追加统计 script。
-$extraHead = '<link rel="stylesheet" href="https://static.bluecdn.com/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />';
+// Leaflet 地图样式
+$extraHead = '<link rel="stylesheet" href="https://jsd.bluecdn.com/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />';
 
 require __DIR__ . '/header.php';
 
@@ -38,11 +38,9 @@ $extraHead .= '
 }
 </script>';
 
-// 页脚脚本：地图与主应用（Google Maps API Key 由 header 中加载的 .env 提供）
+// 页脚脚本：Leaflet 地图与主应用
 $footerScripts = implode("\n    ", [
-    '<script src="https://static.bluecdn.com/npm/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>',
-    '<script src="https://static.bluecdn.com/npm/leaflet.gridlayer.googlemutant@0.16.0/dist/Leaflet.GoogleMutant.js" crossorigin=""></script>',
-    '<script>window.GOOGLE_MAPS_API_KEY = ' . json_encode($googleMapsApiKey ?? '', JSON_UNESCAPED_SLASHES) . ';</script>',
+    '<script src="https://jsd.bluecdn.com/npm/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>',
     '<script src="/assets/i18n.js"></script>',
     '<script src="/assets/app.js"></script>',
 ]);
@@ -86,20 +84,24 @@ $footerScripts = implode("\n    ", [
       <div class="container">
         <div class="cf-stats-row" id="cf-stats-row">
           <div class="cf-stat">
+            <span class="cf-stat-badge">7D</span>
             <span class="cf-stat-value" id="cf-stat-requests">-</span>
-            <span class="cf-stat-label" data-i18n="stats.requests">Requests (30d)</span>
+            <span class="cf-stat-label" data-i18n="stats.requests">Requests</span>
           </div>
           <div class="cf-stat">
+            <span class="cf-stat-badge">7D</span>
             <span class="cf-stat-value" id="cf-stat-visitors">-</span>
-            <span class="cf-stat-label" data-i18n="stats.visitors">Unique Visitors (30d)</span>
+            <span class="cf-stat-label" data-i18n="stats.visitors">Unique Visitors</span>
           </div>
           <div class="cf-stat">
+            <span class="cf-stat-badge">7D</span>
             <span class="cf-stat-value" id="cf-stat-bandwidth">-</span>
-            <span class="cf-stat-label" data-i18n="stats.bandwidth">Bandwidth (30d)</span>
+            <span class="cf-stat-label" data-i18n="stats.bandwidth">Bandwidth</span>
           </div>
           <div class="cf-stat">
+            <span class="cf-stat-badge">7D</span>
             <span class="cf-stat-value" id="cf-stat-pageviews">-</span>
-            <span class="cf-stat-label" data-i18n="stats.pageviews">Page Views (30d)</span>
+            <span class="cf-stat-label" data-i18n="stats.pageviews">Page Views</span>
           </div>
         </div>
       </div>
@@ -184,6 +186,7 @@ $footerScripts = implode("\n    ", [
     <div class="format-switch">
       <button id="format-4x3" class="active" title="4:3">4:3</button>
       <button id="format-1x1" title="1:1">1:1</button>
+      <button type="button" class="theme-toggle-side" id="theme-toggle-side" aria-label="Toggle theme" title="Toggle light/dark theme"><i class="fa-solid fa-moon theme-toggle-icon theme-toggle-icon--dark" aria-hidden="true"></i><i class="fa-solid fa-sun theme-toggle-icon theme-toggle-icon--light" aria-hidden="true"></i></button>
       <button type="button" class="format-switch-backtotop" id="format-switch-backtotop" aria-label="Back to top" title="Back to top" data-i18n-title="footer.backtotop"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
     </div>
 
@@ -196,10 +199,6 @@ $footerScripts = implode("\n    ", [
       <div class="map-modal-box">
         <div class="map-modal-header">
           <h2 id="map-modal-title" class="map-modal-title"></h2>
-          <div class="map-layer-switcher">
-            <button type="button" class="map-layer-btn active" data-layer="osm" title="OpenStreetMap">OSM</button>
-            <button type="button" class="map-layer-btn" data-layer="google" title="Google Maps">Google</button>
-          </div>
           <button type="button" class="map-modal-close" aria-label="Close"><i class="fa-solid fa-times"></i></button>
         </div>
         <div id="map-container" class="map-container"></div>

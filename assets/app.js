@@ -220,108 +220,12 @@ let mapModal = null;
 let mapInstance = null;
 let mapHighlightLayer = null;
 let mapBaseLayer = null;
-let mapCurrentProvider = "osm";
-let googleMapsLoaded = false;
 
-function createOSMLayer() {
-  return L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>"
+function createMapboxLayer() {
+  return L.tileLayer("https://mapbox.mapcdn.io/styles/v1/mapbox/light-v11/tiles/{z}/{x}/{y}?access_token=", {
+    tileSize: 512,
+    zoomOffset: -1
   });
-}
-
-function createGoogleLayer() {
-  if (!window.google || !window.google.maps) return null;
-  if (typeof L.gridLayer !== "undefined" && L.gridLayer.googleMutant) {
-    return L.gridLayer.googleMutant({ type: "roadmap" });
-  }
-  return null;
-}
-
-function loadGoogleMapsAPI() {
-  return new Promise((resolve) => {
-    if (window.google && window.google.maps) {
-      googleMapsLoaded = true;
-      resolve();
-      return;
-    }
-    const key = (window.GOOGLE_MAPS_API_KEY || "").trim();
-    if (!key) {
-      resolve();
-      return;
-    }
-    const id = "google-maps-api-script";
-    if (document.getElementById(id)) {
-      if (window.google && window.google.maps) {
-        resolve();
-      } else {
-        const done = () => resolve();
-        document.getElementById(id).addEventListener("load", done);
-        setTimeout(done, 12000);
-      }
-      return;
-    }
-    const timeout = setTimeout(() => resolve(), 12000);
-    window.__googleMapsCallback = function () {
-      clearTimeout(timeout);
-      googleMapsLoaded = true;
-      resolve();
-    };
-    const script = document.createElement("script");
-    script.id = id;
-    script.src = "https://maps.googleapis.com/maps/api/js?key=" + encodeURIComponent(key) + "&loading=async&callback=__googleMapsCallback";
-    script.async = true;
-    script.defer = true;
-    script.onerror = () => {
-      clearTimeout(timeout);
-      resolve();
-    };
-    document.head.appendChild(script);
-  });
-}
-
-function setMapBaseLayer(provider) {
-  if (!mapInstance) return;
-  const btns = document.querySelectorAll(".map-layer-btn");
-  const mapContainer = mapInstance.getContainer();
-
-  if (provider === "osm") {
-    if (mapContainer) mapContainer.classList.remove("map-base-google");
-    if (mapBaseLayer) {
-      mapInstance.removeLayer(mapBaseLayer);
-      mapBaseLayer = null;
-    }
-    mapBaseLayer = createOSMLayer().addTo(mapInstance);
-    mapCurrentProvider = "osm";
-    btns.forEach((b) => b.classList.toggle("active", b.getAttribute("data-layer") === "osm"));
-    return;
-  }
-  if (provider === "google") {
-    const key = (window.GOOGLE_MAPS_API_KEY || "").trim();
-    if (!key) {
-      btns.forEach((b) => b.classList.toggle("active", b.getAttribute("data-layer") === "osm"));
-      return;
-    }
-    btns.forEach((b) => b.classList.toggle("active", b.getAttribute("data-layer") === "google"));
-    loadGoogleMapsAPI().then(() => {
-      const layer = createGoogleLayer();
-      if (layer) {
-        if (mapBaseLayer) mapInstance.removeLayer(mapBaseLayer);
-        mapBaseLayer = layer.addTo(mapInstance);
-        mapCurrentProvider = "google";
-        if (mapContainer) mapContainer.classList.add("map-base-google");
-        setTimeout(() => {
-          mapInstance.invalidateSize();
-          if (mapContainer) mapContainer.classList.add("map-base-google");
-        }, 150);
-      } else {
-        if (mapContainer) mapContainer.classList.remove("map-base-google");
-        if (mapBaseLayer) mapInstance.removeLayer(mapBaseLayer);
-        mapBaseLayer = createOSMLayer().addTo(mapInstance);
-        mapCurrentProvider = "osm";
-        btns.forEach((b) => b.classList.toggle("active", b.getAttribute("data-layer") === "osm"));
-      }
-    });
-  }
 }
 
 function openMapModal(country) {
@@ -346,11 +250,8 @@ function openMapModal(country) {
       mapHighlightLayer = null;
     }
     container.innerHTML = "";
-    container.classList.remove("map-base-google");
-    mapInstance = L.map(container).setView([20, 0], 2);
-    mapBaseLayer = createOSMLayer().addTo(mapInstance);
-    mapCurrentProvider = "osm";
-    document.querySelectorAll(".map-layer-btn").forEach((b) => b.classList.toggle("active", b.getAttribute("data-layer") === "osm"));
+    mapInstance = L.map(container, { attributionControl: false }).setView([20, 0], 2);
+    mapBaseLayer = createMapboxLayer().addTo(mapInstance);
   }
 
   function showCountry(feature) {
@@ -360,9 +261,9 @@ function openMapModal(country) {
     }
     mapHighlightLayer = L.geoJSON(feature, {
       style: {
-        fillColor: "#72BF80",
+        fillColor: "#2ba471",
         fillOpacity: 0.6,
-        color: "#72BF80",
+        color: "#2ba471",
         weight: 2
       }
     }).addTo(mapInstance);
@@ -423,12 +324,6 @@ document.addEventListener("DOMContentLoaded", () => {
     mapModal.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closeMapModal();
     });
-    mapModal.querySelectorAll(".map-layer-btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const layer = btn.getAttribute("data-layer");
-        if (layer) setMapBaseLayer(layer);
-      });
-    });
   }
 
   document.addEventListener("click", (e) => {
@@ -444,7 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.classList.add("copied");
       if (icon) {
         icon.className = "fa-solid fa-check";
-        icon.style.color = "#72BF80";
+        icon.style.color = "#2ba471";
       }
       setTimeout(() => {
         btn.classList.remove("copied");
@@ -555,25 +450,29 @@ function initDownloadCount() {
 const THEME_KEY = "flagcdn-theme";
 
 function initTheme() {
-  const btn = document.getElementById("theme-toggle");
-  if (!btn) return;
+  const btns = [document.getElementById("theme-toggle"), document.getElementById("theme-toggle-side")].filter(Boolean);
+  if (!btns.length) return;
   function applyTheme(theme) {
     if (theme === "dark" || theme === "light") {
       document.documentElement.setAttribute("data-theme", theme);
       localStorage.setItem(THEME_KEY, theme);
-      btn.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
-      btn.title = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+      btns.forEach(b => {
+        b.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        b.title = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+      });
     }
   }
-  btn.addEventListener("click", () => {
+  function toggle() {
     let current = document.documentElement.getAttribute("data-theme");
     if (!current) current = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    const next = current === "dark" ? "light" : "dark";
-    applyTheme(next);
-  });
+    applyTheme(current === "dark" ? "light" : "dark");
+  }
+  btns.forEach(b => b.addEventListener("click", toggle));
   let current = document.documentElement.getAttribute("data-theme");
   if (!current) current = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  if (current) btn.setAttribute("aria-label", current === "dark" ? "Switch to light mode" : "Switch to dark mode");
+  btns.forEach(b => {
+    b.setAttribute("aria-label", current === "dark" ? "Switch to light mode" : "Switch to dark mode");
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {

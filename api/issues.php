@@ -18,6 +18,19 @@ header('Cache-Control: no-store');
 $dir  = dirname(__DIR__) . '/data';
 $file = $dir . '/issues.json';
 
+// ---------- load .env for GitHub ----------
+$ghToken = '';
+$ghRepo  = '';
+$envFile = dirname(__DIR__) . '/.env';
+if (is_file($envFile) && is_readable($envFile)) {
+    foreach (file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
+        $line = trim($line);
+        if ($line === '' || $line[0] === '#') continue;
+        if (preg_match('/^GITHUB_TOKEN=(.*)$/', $line, $m)) $ghToken = trim($m[1], " \t\"'");
+        if (preg_match('/^GITHUB_REPO=(.*)$/', $line, $m))  $ghRepo  = trim($m[1], " \t\"'");
+    }
+}
+
 // ---------- helpers ----------
 function fail($msg, $code = 400) {
     http_response_code($code);
@@ -193,5 +206,41 @@ $issue = [
 ];
 
 $issue = appendIssueAtomic($file, $issue);
+
+// ---------- sync to GitHub Issues ----------
+if ($ghToken && $ghRepo) {
+    $typeLabels = [
+        'flag-fix' => 'flag-fix',
+        'new-flag' => 'new-flag',
+        'suggestion' => 'suggestion',
+        'bug' => 'bug',
+        'other' => 'other',
+    ];
+    $ghBody = $body;
+    if ($website) $ghBody .= "\n\n**Website:** " . $website;
+    $ghBody .= "\n\n---\n*Submitted by " . $name . " via flagcdn.io/issues/ · #" . $issue['id'] . "*";
+
+    $ghPayload = json_encode([
+        'title'  => '[' . strtoupper($type) . '] ' . $title,
+        'body'   => $ghBody,
+        'labels' => [$typeLabels[$type] ?? 'other'],
+    ]);
+
+    $ch = curl_init("https://api.github.com/repos/{$ghRepo}/issues");
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST           => true,
+        CURLOPT_HTTPHEADER     => [
+            'Authorization: Bearer ' . $ghToken,
+            'Accept: application/vnd.github.v3+json',
+            'Content-Type: application/json',
+            'User-Agent: flagcdn.io',
+        ],
+        CURLOPT_POSTFIELDS     => $ghPayload,
+        CURLOPT_TIMEOUT        => 10,
+    ]);
+    $ghResponse = curl_exec($ch);
+    curl_close($ch);
+}
 
 echo json_encode(['ok' => true, 'issue' => publicIssue($issue)]);

@@ -6,7 +6,7 @@ $canonicalUrl = 'https://flagcdn.io/issues/';
 $baseHref = '/';
 $extraHead = '<style>
     :root {
-      --iss-accent: var(--bs-primary, #1971c2);
+      --iss-accent: var(--bs-primary, #008858);
       --iss-muted: var(--bs-tertiary-color, #6c757d);
       --iss-line: var(--bs-border-color, #e9ecef);
       --iss-surface: var(--bs-surface, #fff);
@@ -23,7 +23,7 @@ $extraHead = '<style>
       --iss-tag-other-bg: rgba(111, 66, 193, 0.08);
     }
 
-    .issues-page { padding-bottom: 2rem; font-family: "Outfit", "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.5; }
+    .issues-page { padding-bottom: 2rem; font-family: "Lexend Deca", "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.5; }
 
     /* ---- form ---- */
     .iss-form-card {
@@ -102,7 +102,7 @@ $extraHead = '<style>
       cursor: pointer;
       transition: background 0.15s;
     }
-    .iss-btn-submit:hover { background: var(--bs-primary-hover, #145a9b); }
+    .iss-btn-submit:hover { background: var(--bs-primary-hover, #006c45); }
     .iss-btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
     .iss-form-msg {
       font-size: 0.85rem;
