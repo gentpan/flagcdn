@@ -81,6 +81,39 @@
       });
   }
 
+  function formatNumber(n) {
+    if (n >= 1e9) return (n / 1e9).toFixed(1).replace(/\.0$/, "") + "B";
+    if (n >= 1e6) return (n / 1e6).toFixed(1).replace(/\.0$/, "") + "M";
+    if (n >= 1e3) return (n / 1e3).toFixed(1).replace(/\.0$/, "") + "K";
+    return String(n);
+  }
+
+  function formatBytes(b) {
+    if (b >= 1e12) return (b / 1e12).toFixed(1) + " TB";
+    if (b >= 1e9) return (b / 1e9).toFixed(1) + " GB";
+    if (b >= 1e6) return (b / 1e6).toFixed(1) + " MB";
+    return (b / 1e3).toFixed(1) + " KB";
+  }
+
+  function loadCfStats() {
+    var els = {
+      requests: document.getElementById("cf-stat-requests"),
+      visitors: document.getElementById("cf-stat-visitors"),
+      bandwidth: document.getElementById("cf-stat-bandwidth"),
+      pageviews: document.getElementById("cf-stat-pageviews"),
+    };
+    if (!els.requests) return;
+    fetch("/api/stats.php")
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error(r.status)); })
+      .then(function (d) {
+        if (els.requests) els.requests.textContent = formatNumber(d.requests || 0);
+        if (els.visitors) els.visitors.textContent = formatNumber(d.visitors || 0);
+        if (els.bandwidth) els.bandwidth.textContent = formatBytes(d.bytes || 0);
+        if (els.pageviews) els.pageviews.textContent = formatNumber(d.pageViews || 0);
+      })
+      .catch(function () {});
+  }
+
   function bindBackToTop() {
     document.querySelectorAll(".footer-backtotop").forEach(function (el) {
       el.addEventListener("click", function (e) {
@@ -94,6 +127,7 @@
     loadVisitorFlag();
     loadGitHubStars();
     loadAnnounceRelease();
+    loadCfStats();
     bindBackToTop();
   });
 

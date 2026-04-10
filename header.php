@@ -58,6 +58,9 @@ $siteName = 'flagcdn.io';
     <meta name="twitter:description" content="<?php echo htmlspecialchars($pageDescription, ENT_QUOTES, 'UTF-8'); ?>">
 <?php endif; ?>
     <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.bluecdn.com" crossorigin />
+    <link rel="preconnect" href="https://icons.bluecdn.com" crossorigin />
+    <link rel="dns-prefetch" href="https://api.github.com" />
     <link href="https://fonts.bluecdn.com/css2?family=Cairo+Play:wght@900&family=IBM+Plex+Mono:wght@400;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://icons.bluecdn.com/fontawesome-pro/css/all.min.css" rel="stylesheet" />
     <link href="/css/flag-icons.min.css" rel="stylesheet" />

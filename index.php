@@ -13,6 +13,31 @@ $extraHead = '<link rel="stylesheet" href="https://static.bluecdn.com/npm/leafle
 
 require __DIR__ . '/header.php';
 
+// JSON-LD structured data
+$extraHead .= '
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "flagcdn.io",
+  "url": "https://flagcdn.io",
+  "description": "Free SVG country flag icons by ISO 3166-1 alpha-2. One-line CSS, 4:3 & 1:1 aspect ratios. Fast CDN delivery.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "flagcdn.io",
+    "url": "https://flagcdn.io"
+  },
+  "license": "https://opensource.org/licenses/MIT"
+}
+</script>';
+
 // 页脚脚本：地图与主应用（Google Maps API Key 由 header 中加载的 .env 提供）
 $footerScripts = implode("\n    ", [
     '<script src="https://static.bluecdn.com/npm/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>',
@@ -52,6 +77,29 @@ $footerScripts = implode("\n    ", [
             <span class="fi fi-de" title="4:3"></span>
             <span class="fi fi-fr fis" title="1:1"></span>
             <span class="fi fi-eu fis" title="1:1"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cf-stats">
+      <div class="container">
+        <div class="cf-stats-row" id="cf-stats-row">
+          <div class="cf-stat">
+            <span class="cf-stat-value" id="cf-stat-requests">-</span>
+            <span class="cf-stat-label" data-i18n="stats.requests">Requests (30d)</span>
+          </div>
+          <div class="cf-stat">
+            <span class="cf-stat-value" id="cf-stat-visitors">-</span>
+            <span class="cf-stat-label" data-i18n="stats.visitors">Unique Visitors (30d)</span>
+          </div>
+          <div class="cf-stat">
+            <span class="cf-stat-value" id="cf-stat-bandwidth">-</span>
+            <span class="cf-stat-label" data-i18n="stats.bandwidth">Bandwidth (30d)</span>
+          </div>
+          <div class="cf-stat">
+            <span class="cf-stat-value" id="cf-stat-pageviews">-</span>
+            <span class="cf-stat-label" data-i18n="stats.pageviews">Page Views (30d)</span>
           </div>
         </div>
       </div>

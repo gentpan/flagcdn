@@ -179,16 +179,6 @@ function setFormat(format) {
   });
 }
 
-let flagsLoadingTimeout = null;
-
-function showFlagsLoading() {
-  const el = document.getElementById("flags-loading");
-  if (el) {
-    el.classList.remove("flags-loading-done");
-    el.setAttribute("aria-hidden", "false");
-  }
-}
-
 function hideFlagsLoading() {
   const el = document.getElementById("flags-loading");
   if (el) {
@@ -197,18 +187,14 @@ function hideFlagsLoading() {
   }
 }
 
-function withMinLoading(callback) {
-  showFlagsLoading();
-  clearTimeout(flagsLoadingTimeout);
-  flagsLoadingTimeout = setTimeout(() => {
-    callback();
-    hideFlagsLoading();
-    flagsLoadingTimeout = null;
-  }, 1000);
+let debounceTimer;
+function debounce(fn, ms) {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(fn, ms);
 }
 
-searchInput.addEventListener("input", () => withMinLoading(filterFlags));
-if (continentSelect) continentSelect.addEventListener("change", () => withMinLoading(filterFlags));
+searchInput.addEventListener("input", () => debounce(filterFlags, 150));
+if (continentSelect) continentSelect.addEventListener("change", filterFlags);
 format4x3Btn.addEventListener("click", () => setFormat("4x3"));
 format1x1Btn.addEventListener("click", () => setFormat("1x1"));
 
@@ -472,9 +458,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function init() {
-  const minDelay = new Promise((r) => setTimeout(r, 1000));
-
-  const [countries] = await Promise.all([loadJSON("/data/country.json"), minDelay]);
+  const countries = await loadJSON("/data/country.json");
 
   hideFlagsLoading();
 

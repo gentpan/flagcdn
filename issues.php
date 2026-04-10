@@ -29,7 +29,7 @@ $extraHead = '<style>
     .iss-form-card {
       background: var(--iss-surface);
       border: 1px solid var(--iss-line);
-      border-radius: 8px;
+      border-radius: 4px;
       padding: 1.5rem;
       margin-bottom: 2rem;
     }
@@ -62,7 +62,7 @@ $extraHead = '<style>
     .iss-form-textarea {
       padding: 0.5rem 0.65rem;
       border: 1px solid var(--iss-line);
-      border-radius: 5px;
+      border-radius: 4px;
       background: var(--iss-input-bg);
       color: var(--bs-body-color, #212529);
       font-size: 0.9rem;
@@ -94,7 +94,7 @@ $extraHead = '<style>
     .iss-btn-submit {
       padding: 0.5rem 1.5rem;
       border: none;
-      border-radius: 5px;
+      border-radius: 4px;
       background: var(--iss-accent);
       color: #fff;
       font-size: 0.9rem;
@@ -121,7 +121,7 @@ $extraHead = '<style>
     .iss-list { list-style: none; margin: 0; padding: 0; }
     .iss-item {
       border: 1px solid var(--iss-line);
-      border-radius: 6px;
+      border-radius: 4px;
       padding: 0.85rem 1rem;
       margin-bottom: 0.5rem;
       background: var(--iss-surface);
@@ -138,7 +138,7 @@ $extraHead = '<style>
     .iss-tag {
       display: inline-block;
       padding: 0.08rem 0.45rem;
-      border-radius: 3px;
+      border-radius: 4px;
       font-size: 0.7rem;
       font-weight: 600;
       text-transform: uppercase;

@@ -33,14 +33,14 @@ $extraHead = '<style>
     .changelog-list { list-style: none; margin: 0 0 1.5rem; padding: 0; }
     .changelog-item { display: flex; align-items: flex-start; gap: 0.5rem; padding: 0.45rem 0; border-bottom: 1px dashed var(--cl-line); font-size: 0.95rem; }
     .changelog-item:last-child { border-bottom: none; }
-    .changelog-tag { display: inline-block; flex-shrink: 0; padding: 0.1rem 0.5rem; border-radius: 3px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
+    .changelog-tag { display: inline-block; flex-shrink: 0; padding: 0.1rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
     .changelog-tag--svg { color: var(--cl-tag-svg); background: var(--cl-tag-svg-bg); }
     .changelog-tag--css { color: var(--cl-tag-css); background: var(--cl-tag-css-bg); }
     .changelog-tag--data { color: var(--cl-tag-data); background: var(--cl-tag-data-bg); }
     .changelog-tag--site { color: var(--cl-tag-site); background: var(--cl-tag-site-bg); }
     .changelog-tag--i18n { color: var(--cl-tag-i18n); background: var(--cl-tag-i18n-bg); }
     .changelog-text { flex: 1; color: var(--bs-body-color, #212529); }
-    .changelog-code { font-family: "Paper Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.85rem; padding: 0.1rem 0.35rem; background: var(--bs-surface, #f8f9fa); border: 1px solid var(--cl-line); border-radius: 3px; }
+    .changelog-code { font-family: "Paper Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.85rem; padding: 0.1rem 0.35rem; background: var(--bs-surface, #f8f9fa); border: 1px solid var(--cl-line); border-radius: 4px; }
     .changelog-flag { vertical-align: middle; margin: 0 0.15rem; }
   </style>';
 $bodyAttr = 'data-i18n-page-title="changelog.titleFull"';
