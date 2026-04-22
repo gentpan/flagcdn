@@ -8,7 +8,6 @@ $pageDescription = 'Free SVG country flag icons by ISO 3166-1 alpha-2. One-line 
 $pageKeywords = 'country flags, flag icons, SVG flags, ISO 3166, flag CDN, country code flags, free flag icons, national flags, flag emoji, world flags';
 $canonicalUrl = 'https://flagcdn.io/';
 
-// Leaflet 地图样式
 $extraHead = '<link rel="stylesheet" href="https://jsd.bluecdn.com/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />';
 
 require __DIR__ . '/header.php';
@@ -54,11 +53,14 @@ $footerScripts = implode("\n    ", [
             URL and country code.
           </p>
           <div class="welcome-cta-row">
-            <a href="/docs/" class="welcome-cta"><i class="fa-solid fa-book-open welcome-cta-icon" aria-hidden="true"></i><span data-i18n="hero.cta">View Docs</span></a>
+            <a href="/docs/" class="welcome-cta">
+              <i class="fa-solid fa-file-lines welcome-cta-fa" aria-hidden="true"></i>
+              <span data-i18n="hero.cta">View Docs</span>
+            </a>
             <a href="/download/flags.zip" class="welcome-cta welcome-cta--download" id="download-flags-btn" download>
               <span class="download-btn-tooltip" id="download-btn-tooltip" role="tooltip">flags.zip</span>
               <span class="download-btn-content">
-                <i class="fa-solid fa-download download-btn-icon" aria-hidden="true"></i>
+                <i class="fa-solid fa-arrow-down-to-line welcome-cta-fa download-btn-icon" aria-hidden="true"></i>
                 <span data-i18n="hero.download">Download</span>
               </span>
               <span class="download-btn-number" id="download-count">0</span>
@@ -80,65 +82,28 @@ $footerScripts = implode("\n    ", [
       </div>
     </section>
 
-    <section class="cf-stats">
-      <div class="container">
-        <div class="cf-stats-row" id="cf-stats-row">
-          <div class="cf-stat">
-            <span class="cf-stat-badge">7D</span>
-            <span class="cf-stat-value" id="cf-stat-requests">-</span>
-            <span class="cf-stat-label" data-i18n="stats.requests">Requests</span>
-          </div>
-          <div class="cf-stat">
-            <span class="cf-stat-badge">7D</span>
-            <span class="cf-stat-value" id="cf-stat-visitors">-</span>
-            <span class="cf-stat-label" data-i18n="stats.visitors">Unique Visitors</span>
-          </div>
-          <div class="cf-stat">
-            <span class="cf-stat-badge">7D</span>
-            <span class="cf-stat-value" id="cf-stat-bandwidth">-</span>
-            <span class="cf-stat-label" data-i18n="stats.bandwidth">Bandwidth</span>
-          </div>
-          <div class="cf-stat">
-            <span class="cf-stat-badge">7D</span>
-            <span class="cf-stat-value" id="cf-stat-pageviews">-</span>
-            <span class="cf-stat-label" data-i18n="stats.pageviews">Page Views</span>
-          </div>
+    <section class="bento">
+      <div class="container bento-grid">
+        <div class="bento-card bento-feat">
+          <div class="bento-feat-header"><i class="fa-solid fa-flag bento-feat-icon" aria-hidden="true"></i><h3 class="bento-feat-title" data-i18n="bento.flagsTitle">270+ Flags</h3></div>
+          <p class="bento-feat-desc" data-i18n="bento.flagsDesc">Every ISO 3166-1 country and territory, plus regions and organizations.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="features">
-      <div class="container">
-        <ul class="features-list">
-          <li class="feature-card">
-            <span class="feature-card__icon" aria-hidden="true"><i class="fa-solid fa-crop-simple"></i></span>
-            <div class="feature-card__body">
-              <h3 class="feature-card__title" data-i18n="features.aspectTitle">4:3 & 1:1 aspect ratios</h3>
-              <p class="feature-card__desc" data-i18n="features.aspectDesc">Unified proportions for a consistent, clean look across all flags.</p>
-            </div>
-          </li>
-          <li class="feature-card">
-            <span class="feature-card__icon" aria-hidden="true"><i class="fa-solid fa-earth-americas"></i></span>
-            <div class="feature-card__body">
-              <h3 class="feature-card__title" data-i18n="features.isoTitle">ISO 3166-1-alpha-2</h3>
-              <p class="feature-card__desc" data-i18n="features.isoDesc">Standard country and territory codes; search and copy HTML or image URL.</p>
-            </div>
-          </li>
-          <li class="feature-card">
-            <span class="feature-card__icon" aria-hidden="true"><i class="fa-solid fa-cloud-arrow-down"></i></span>
-            <div class="feature-card__body">
-              <h3 class="feature-card__title" data-i18n="features.cdnTitle">CDN delivery</h3>
-              <p class="feature-card__desc" data-i18n="features.cdnDesc">Fast, stable delivery; one line of CSS to get started.</p>
-            </div>
-          </li>
-          <li class="feature-card">
-            <span class="feature-card__icon" aria-hidden="true"><i class="fa-regular fa-copy"></i></span>
-            <div class="feature-card__body">
-              <h3 class="feature-card__title" data-i18n="features.copyTitle">Copy HTML & URL</h3>
-              <p class="feature-card__desc" data-i18n="features.copyDesc">One-click copy of HTML snippet or image URL for any flag below.</p>
-            </div>
-          </li>
-        </ul>
+        <div class="bento-card bento-feat">
+          <div class="bento-feat-header"><i class="fa-solid fa-crop-simple bento-feat-icon" aria-hidden="true"></i><h3 class="bento-feat-title" data-i18n="bento.ratioTitle">4:3 & 1:1</h3></div>
+          <p class="bento-feat-desc" data-i18n="bento.ratioDesc">Two aspect ratios. Uniform sizing for clean, aligned layouts.</p>
+        </div>
+        <div class="bento-card bento-feat">
+          <div class="bento-feat-header"><i class="fa-solid fa-bolt bento-feat-icon" aria-hidden="true"></i><h3 class="bento-feat-title" data-i18n="bento.cdnTitle">CDN Powered</h3></div>
+          <p class="bento-feat-desc" data-i18n="bento.cdnDesc">Global edge delivery via Cloudflare. One CSS link to get started.</p>
+        </div>
+        <div class="bento-card bento-feat">
+          <div class="bento-feat-header"><i class="fa-solid fa-clipboard bento-feat-icon" aria-hidden="true"></i><h3 class="bento-feat-title" data-i18n="bento.copyTitle">Click to Copy</h3></div>
+          <p class="bento-feat-desc" data-i18n="bento.copyDesc">Copy HTML snippet or SVG image URL with a single click.</p>
+        </div>
+        <div class="bento-card bento-feat">
+          <div class="bento-feat-header"><i class="fa-solid fa-earth-americas bento-feat-icon" aria-hidden="true"></i><h3 class="bento-feat-title" data-i18n="bento.mapTitle">Map View</h3></div>
+          <p class="bento-feat-desc" data-i18n="bento.mapDesc">Locate any country on an interactive Mapbox map.</p>
+        </div>
       </div>
     </section>
 

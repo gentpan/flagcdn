@@ -62,7 +62,7 @@
     var tag = data.tag_name || "";
     var url = data.html_url || "https://github.com/lipis/flag-icons/releases/latest";
     var dateStr = formatReleaseDate(data.published_at, lang);
-    el.innerHTML = labels.latest + ': <a href="' + url + '" target="_blank" rel="noopener noreferrer">' + tag + "</a> · " + labels.released + " " + dateStr;
+    el.innerHTML = '<a href="' + url + '" target="_blank" rel="noopener noreferrer">' + tag + '</a> · ' + dateStr;
   }
 
   function loadAnnounceRelease() {
@@ -96,20 +96,12 @@
   }
 
   function loadCfStats() {
-    var els = {
-      requests: document.getElementById("cf-stat-requests"),
-      visitors: document.getElementById("cf-stat-visitors"),
-      bandwidth: document.getElementById("cf-stat-bandwidth"),
-      pageviews: document.getElementById("cf-stat-pageviews"),
-    };
-    if (!els.requests) return;
+    var el = document.getElementById("header-requests-count");
+    if (!el) return;
     fetch("/api/stats.php")
       .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error(r.status)); })
       .then(function (d) {
-        if (els.requests) els.requests.textContent = formatNumber(d.requests || 0);
-        if (els.visitors) els.visitors.textContent = formatNumber(d.visitors || 0);
-        if (els.bandwidth) els.bandwidth.textContent = formatBytes(d.bytes || 0);
-        if (els.pageviews) els.pageviews.textContent = formatNumber(d.pageViews || 0);
+        el.textContent = formatNumber(d.requests || 0);
       })
       .catch(function () {});
   }

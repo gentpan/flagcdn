@@ -101,7 +101,7 @@ function createFlagCard(country) {
     copyImgBtn.dataset.i18nTitle = "action.copyImageUrl";
     copyImgBtn.title = (typeof I18n !== "undefined" && I18n.t("action.copyImageUrl")) || "Copy image URL";
     copyImgBtn.setAttribute("aria-label", (typeof I18n !== "undefined" && I18n.t("action.copyImageUrl")) || "Copy image URL");
-    copyImgBtn.innerHTML = "<svg class=\"icon-copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\" ry=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg>";
+    copyImgBtn.innerHTML = "<i class=\"fa-regular fa-clone\" aria-hidden=\"true\"></i>";
     const mapBtn = document.createElement("button");
     mapBtn.type = "button";
     mapBtn.className = "flag-action-btn flag-action-map";
@@ -214,19 +214,8 @@ if (formatSwitchBacktotop) {
   });
 }
 
-const GEOJSON_URL = "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_0_countries.geojson";
-let countriesGeoJSON = null;
-let mapModal = null;
+const MAPBOX_TOKEN = "";
 let mapInstance = null;
-let mapHighlightLayer = null;
-let mapBaseLayer = null;
-
-function createMapboxLayer() {
-  return L.tileLayer("https://mapbox.mapcdn.io/styles/v1/mapbox/light-v11/tiles/{z}/{x}/{y}?access_token=", {
-    tileSize: 512,
-    zoomOffset: -1
-  });
-}
 
 function openMapModal(country) {
   const modal = document.getElementById("map-modal");
@@ -240,70 +229,26 @@ function openMapModal(country) {
   modal.classList.add("map-modal-open");
   document.body.style.overflow = "hidden";
 
-  function initMap() {
-    if (mapInstance) {
-      mapInstance.remove();
-      mapInstance = null;
-    }
-    mapBaseLayer = null;
-    if (mapHighlightLayer) {
-      mapHighlightLayer = null;
-    }
-    container.innerHTML = "";
-    mapInstance = L.map(container, { attributionControl: false }).setView([20, 0], 2);
-    mapBaseLayer = createMapboxLayer().addTo(mapInstance);
-  }
+  if (mapInstance) { mapInstance.remove(); mapInstance = null; }
+  container.innerHTML = "";
+  mapInstance = L.map(container, { attributionControl: false }).setView([20, 0], 2);
+  L.tileLayer("https://mapbox.mapcdn.io/styles/v1/mapbox/light-v11/tiles/{z}/{x}/{y}?access_token=" + MAPBOX_TOKEN, {
+    tileSize: 512, zoomOffset: -1
+  }).addTo(mapInstance);
 
-  function showCountry(feature) {
-    if (!mapInstance) return;
-    if (mapHighlightLayer) {
-      mapInstance.removeLayer(mapHighlightLayer);
-    }
-    mapHighlightLayer = L.geoJSON(feature, {
-      style: {
-        fillColor: "#2ba471",
-        fillOpacity: 0.6,
-        color: "#2ba471",
-        weight: 2
+  const query = encodeURIComponent(country.name);
+  fetch("https://api.mapbox.com/geocoding/v5/mapbox.places/" + query + ".json?types=country&limit=1&access_token=" + MAPBOX_TOKEN)
+    .then((r) => r.json())
+    .then((data) => {
+      const feat = data.features && data.features[0];
+      if (!mapInstance) return;
+      if (feat && feat.bbox) {
+        mapInstance.fitBounds([[feat.bbox[1], feat.bbox[0]], [feat.bbox[3], feat.bbox[2]]], { padding: [30, 30] });
+      } else if (feat && feat.center) {
+        mapInstance.setView([feat.center[1], feat.center[0]], 5);
       }
-    }).addTo(mapInstance);
-    const bounds = mapHighlightLayer.getBounds();
-    if (bounds.isValid()) {
-      mapInstance.fitBounds(bounds.pad(0.4));
-    }
-  }
-
-  if (!countriesGeoJSON) {
-    initMap();
-    fetch(GEOJSON_URL)
-      .then((r) => r.json())
-      .then((geojson) => {
-        countriesGeoJSON = geojson;
-        const codeUpper = country.code.toUpperCase();
-        const feature = (geojson.features || []).find(
-          (f) => (f.properties && (f.properties.ISO_A2 === codeUpper || f.properties.iso_a2 === codeUpper || (f.properties.ADM0_A3 && f.properties.ADM0_A3.toLowerCase() === country.code.toLowerCase())))
-        );
-        if (feature) {
-          showCountry(feature);
-        } else {
-          mapInstance.setView([20, 0], 2);
-        }
-      })
-      .catch(() => {
-        if (mapInstance) mapInstance.setView([20, 0], 2);
-      });
-  } else {
-    initMap();
-    const codeUpper = country.code.toUpperCase();
-    const feature = (countriesGeoJSON.features || []).find(
-      (f) => (f.properties && (f.properties.ISO_A2 === codeUpper || f.properties.iso_a2 === codeUpper))
-    );
-    if (feature) {
-      showCountry(feature);
-    } else {
-      mapInstance.setView([20, 0], 2);
-    }
-  }
+    })
+    .catch(() => {});
 }
 
 function closeMapModal() {
@@ -339,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.classList.add("copied");
       if (icon) {
         icon.className = "fa-solid fa-check";
-        icon.style.color = "#2ba471";
+        icon.style.color = "#6b7d8e";
       }
       setTimeout(() => {
         btn.classList.remove("copied");

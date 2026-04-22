@@ -40,7 +40,11 @@ $siteName = 'flagcdn.io';
 <?php if (!empty($pageDescription)): ?>
     <meta name="twitter:description" content="<?php echo htmlspecialchars($pageDescription, ENT_QUOTES, 'UTF-8'); ?>">
 <?php endif; ?>
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.bluecdn.com" crossorigin />
     <link rel="preconnect" href="https://icons.bluecdn.com" crossorigin />
     <link rel="dns-prefetch" href="https://api.github.com" />
@@ -61,6 +65,7 @@ $siteName = 'flagcdn.io';
         <nav class="site-nav-center">
           <a href="/changelog/" class="site-nav-link" title="Changelog"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> <span data-i18n="changelog.title">Changelog</span></a>
           <a href="/issues/" class="site-nav-link" title="Feedback"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> <span data-i18n="issues.title">Feedback</span></a>
+          <span class="site-nav-badge" id="header-requests-badge" title="API requests (7 days)"><i class="fa-solid fa-bolt" aria-hidden="true"></i> <span id="header-requests-count">-</span></span>
         </nav>
         <nav class="site-nav">
           <div class="lang-switcher lang-dropdown">
@@ -76,17 +81,8 @@ $siteName = 'flagcdn.io';
               <li class="lang-dropdown-option" role="option" data-lang-btn="ar" data-lang-flag="sa" data-lang-label="العربية"><span class="fi fi-sa"></span><span class="lang-option-name">العربية</span></li>
             </ul>
           </div>
-          <a href="https://github.com/lipis/flag-icons" class="site-nav-link site-nav-link--github" target="_blank" rel="noopener noreferrer" title="Flag Icons on GitHub" aria-label="Flag Icons on GitHub" data-github-repo="lipis/flag-icons"><i class="fa-brands fa-github" aria-hidden="true"></i><span class="hero-github-stars-wrap"><i class="fa-solid fa-star hero-github-star-icon" aria-hidden="true"></i><span class="hero-github-stars" id="github-stars" aria-hidden="true"></span></span></a>
+          <a href="https://github.com/lipis/flag-icons" class="site-nav-link site-nav-link--github" target="_blank" rel="noopener noreferrer" title="Flag Icons on GitHub" aria-label="Flag Icons on GitHub" data-github-repo="lipis/flag-icons"><i class="fa-brands fa-github" aria-hidden="true"></i> <i class="fa-solid fa-star github-star-icon" aria-hidden="true"></i><span class="github-stars-count" id="github-stars"></span></a>
+          <span class="site-nav-version" id="announce-release-content"></span>
         </nav>
       </div>
     </header>
-    <div class="announce-bar">
-      <div class="announce-bar__wrap">
-        <div class="announce-bar-inner">
-          <div class="announce-content">
-            <p class="announce-about" data-i18n-html="announce.about">Based on <a href="https://github.com/lipis/flag-icons" target="_blank" rel="noopener noreferrer">lipis/flag-icons</a>. We added more flags, fixed SVG errors, and provide free CDN. A non-profit community project.</p>
-            <p class="announce-release"><span id="announce-release-content" data-i18n="announce.loading">Loading...</span></p>
-          </div>
-        </div>
-      </div>
-    </div>

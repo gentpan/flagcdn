@@ -7,21 +7,21 @@ $baseHref = '/';
 $extraHead = '<style>
     :root {
       --fa-family-classic: "Font Awesome 7 Pro";
-      --accent-dark: #008858;
+      --accent-dark: #4a6178;
       --text: var(--bs-body-color, #1c4741);
       --line-strong: var(--bs-border-color, #9ebcb6);
       --pane-bg: var(--bs-success-bg-subtle, #e3f9e9);
       --muted: var(--bs-tertiary-color, #5e827d);
-      --accent: var(--bs-accent, #2ba471);
+      --accent: var(--bs-accent, #6b7d8e);
       --font-body: "Lexend Deca", "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
     }
     html[data-theme="dark"] {
-      --accent-dark: #56c08d;
+      --accent-dark: #8fa5b8;
       --pane-bg: var(--bs-surface, #343a40);
     }
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme]) {
-        --accent-dark: #56c08d;
+        --accent-dark: #8fa5b8;
         --pane-bg: var(--bs-surface, #343a40);
       }
     }
@@ -208,7 +208,7 @@ ob_start();
             var orig = icon.className;
             btn.classList.add("copied");
             icon.className = "fa-solid fa-check";
-            icon.style.color = "#2ba471";
+            icon.style.color = "#6b7d8e";
             setTimeout(function () {
               btn.classList.remove("copied");
               icon.className = orig;
