@@ -1,18 +1,4 @@
 (function () {
-  function loadVisitorFlag() {
-    var el = document.getElementById("visitor-flag");
-    if (!el) return;
-    fetch("https://api.cnip.io/geoip")
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        var code = (data && data.country_code && String(data.country_code).toLowerCase()) || "";
-        if (!code) return;
-        el.classList.add("fi-" + code, "is-loaded");
-        el.setAttribute("aria-hidden", "false");
-      })
-      .catch(function () {});
-  }
-
   function formatStars(n) {
     if (n >= 1000000) return (n / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
     if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, "") + "k";
@@ -116,7 +102,6 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    loadVisitorFlag();
     loadGitHubStars();
     loadAnnounceRelease();
     loadCfStats();

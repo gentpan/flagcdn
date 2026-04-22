@@ -6,6 +6,14 @@ $canonicalUrl = isset($canonicalUrl) ? $canonicalUrl : '';
 $extraHead = isset($extraHead) ? $extraHead : '';
 $bodyAttr = isset($bodyAttr) ? $bodyAttr : '';
 $siteName = 'flagcdn.io';
+$visitorCountryCode = '';
+
+if (!empty($_SERVER['HTTP_CF_IPCOUNTRY'])) {
+    $cfCountry = strtoupper(trim((string) $_SERVER['HTTP_CF_IPCOUNTRY']));
+    if (preg_match('/^[A-Z]{2}$/', $cfCountry) && $cfCountry !== 'XX' && $cfCountry !== 'T1') {
+        $visitorCountryCode = strtolower($cfCountry);
+    }
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -61,7 +69,7 @@ $siteName = 'flagcdn.io';
   <body<?php echo $bodyAttr ? ' ' . $bodyAttr : ''; ?>>
     <header class="site-header">
       <div class="container site-header-inner">
-        <a class="site-logo" href="/"><span class="hero-logo-flag fi" id="visitor-flag" aria-hidden="true"></span><span class="site-logo-text">flagcdn.io</span></a>
+        <a class="site-logo" href="/"><span class="hero-logo-flag fi<?php echo $visitorCountryCode ? ' fi-' . htmlspecialchars($visitorCountryCode, ENT_QUOTES, 'UTF-8') . ' is-loaded' : ''; ?>" id="visitor-flag" aria-hidden="<?php echo $visitorCountryCode ? 'false' : 'true'; ?>"></span><span class="site-logo-text">flagcdn.io</span></a>
         <nav class="site-nav-center">
           <a href="/changelog/" class="site-nav-link" title="Changelog"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> <span data-i18n="changelog.title">Changelog</span></a>
           <a href="/issues/" class="site-nav-link" title="Feedback"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> <span data-i18n="issues.title">Feedback</span></a>
