@@ -2,6 +2,7 @@
 $footerClass = isset($footerClass) ? $footerClass : '';
 $showFooterNav = isset($showFooterNav) ? $showFooterNav : false;
 $footerScripts = isset($footerScripts) ? $footerScripts : '';
+$siteScriptVersion = @filemtime(__DIR__ . '/assets/site.js');
 ?>
     <footer class="footer<?php echo $footerClass ? ' ' . $footerClass : ''; ?>">
       <div class="footer-main">
@@ -33,6 +34,6 @@ $footerScripts = isset($footerScripts) ? $footerScripts : '';
     </footer>
 
     <?php echo $footerScripts; ?>
-    <script src="/assets/site.js"></script>
+    <script src="/assets/site.js<?php echo $siteScriptVersion ? '?v=' . rawurlencode((string) $siteScriptVersion) : ''; ?>"></script>
   </body>
 </html>
