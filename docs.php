@@ -108,31 +108,6 @@ require __DIR__ . '/header.php';
       <pre>&lt;link rel="stylesheet" href="./css/flag-icons.min.css" /&gt;</pre>
       <button type="button" class="code-copy-btn" data-copy="&lt;link rel=&quot;stylesheet&quot; href=&quot;./css/flag-icons.min.css&quot; /&gt;" aria-label="Copy"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
     </div>
-
-    <p class="docs-cdn-label"><strong>jsDelivr</strong></p>
-    <div class="code-block">
-      <pre>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7/css/flag-icons.min.css" /&gt;</pre>
-      <button type="button" class="code-copy-btn" data-copy="&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/flag-icons@7/css/flag-icons.min.css&quot; /&gt;" aria-label="Copy"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
-    </div>
-
-    <p class="docs-cdn-label"><strong>jsDelivr (static.bluecdn.com)</strong></p>
-    <div class="code-block">
-      <pre>&lt;link rel="stylesheet" href="https://static.bluecdn.com/npm/flag-icons@7/css/flag-icons.min.css" /&gt;</pre>
-      <button type="button" class="code-copy-btn" data-copy="&lt;link rel=&quot;stylesheet&quot; href=&quot;https://static.bluecdn.com/npm/flag-icons@7/css/flag-icons.min.css&quot; /&gt;" aria-label="Copy"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
-    </div>
-
-    <p class="docs-cdn-label"><strong>cdnjs</strong></p>
-    <div class="code-block">
-      <pre>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.5.0/css/flag-icons.min.css" /&gt;</pre>
-      <button type="button" class="code-copy-btn" data-copy="&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.5.0/css/flag-icons.min.css&quot; /&gt;" aria-label="Copy"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
-    </div>
-
-    <p class="docs-cdn-label"><strong>cdnjs (cndjs.bluecdn.com)</strong></p>
-    <div class="code-block">
-      <pre>&lt;link rel="stylesheet" href="https://cndjs.bluecdn.com/ajax/libs/flag-icons/7.5.0/css/flag-icons.min.css" /&gt;</pre>
-      <button type="button" class="code-copy-btn" data-copy="&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cndjs.bluecdn.com/ajax/libs/flag-icons/7.5.0/css/flag-icons.min.css&quot; /&gt;" aria-label="Copy"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
-    </div>
-
     <h2 data-i18n="docs.section2Title">2. HTML usage</h2>
     <p data-i18n-html="docs.section2Intro">Use the <code class="code">fi</code> and <code class="code">fi-xx</code> classes, where <code class="code">xx</code> is the ISO 3166-1-alpha-2 country code (lowercase).</p>
     <p data-i18n="docs.section2AspectNote">We provide two aspect ratios: 4:3 (default) and 1:1. Many other flag CDNs use SVGs with inconsistent or incorrect proportions; we normalize all flags to 4:3 for a cleaner, more consistent look.</p>
