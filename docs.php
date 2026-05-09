@@ -144,6 +144,12 @@ require __DIR__ . '/header.php';
       <button type="button" class="code-copy-btn" data-copy="https://flagcdn.io/flags/1x1/cn.svg" aria-label="Copy"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
     </div>
 
+    <p class="docs-cdn-label" data-i18n="docs.section5ShortPath"><strong>Short URL (4:3 default)</strong></p>
+    <div class="code-block">
+      <pre>https://flagcdn.io/cn.svg</pre>
+      <button type="button" class="code-copy-btn" data-copy="https://flagcdn.io/cn.svg" aria-label="Copy"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
+    </div>
+
     <h2 data-i18n="docs.section6Title">6. License and contact</h2>
     <p data-i18n-html="docs.section6Line1">Icons are from <a href="https://github.com/lipis/flag-icons" target="_blank" rel="noopener">flag-icons</a>, MIT license.</p>
     <p data-i18n-html="docs.section6Line2">Site: <a href="https://flagcdn.io">flagcdn.io</a>. Questions or feedback: <a href="mailto:support@flagcdn.io">support@flagcdn.io</a>.</p>
