@@ -63,6 +63,7 @@ if (!empty($_SERVER['HTTP_CF_IPCOUNTRY'])) {
     <script>
       (function(){ var t = localStorage.getItem("flagcdn-theme"); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); })();
     </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8025712972152197" crossorigin="anonymous"></script>
     <script defer src="https://tongji.giantaccel.com/script.js" data-website-id="95c95579-a91d-435c-a3c0-01f5d328f956"></script>
     <?php echo $extraHead; ?>
   </head>
