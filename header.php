@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/includes/site-config.php';
 $pageTitle = isset($pageTitle) ? $pageTitle : 'Flag Icons | flagcdn.io';
 $pageDescription = isset($pageDescription) ? $pageDescription : '';
 $pageKeywords = isset($pageKeywords) ? $pageKeywords : '';
@@ -68,30 +69,44 @@ if (!empty($_SERVER['HTTP_CF_IPCOUNTRY'])) {
     <?php echo $extraHead; ?>
   </head>
   <body<?php echo $bodyAttr ? ' ' . $bodyAttr : ''; ?>>
-    <header class="site-header">
-      <div class="container site-header-inner">
-        <a class="site-logo" href="/"><span class="hero-logo-flag fi<?php echo $visitorCountryCode ? ' fi-' . htmlspecialchars($visitorCountryCode, ENT_QUOTES, 'UTF-8') . ' is-loaded' : ''; ?>" id="visitor-flag" aria-hidden="<?php echo $visitorCountryCode ? 'false' : 'true'; ?>"></span><span class="site-logo-text">flagcdn.io</span></a>
-        <nav class="site-nav-center">
-          <a href="/changelog/" class="site-nav-link" title="Changelog"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> <span data-i18n="changelog.title">Changelog</span></a>
-          <a href="/issues/" class="site-nav-link" title="Feedback"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> <span data-i18n="issues.title">Feedback</span></a>
-          <span class="site-nav-badge" id="header-requests-badge" title="API requests (7 days)"><i class="fa-solid fa-bolt" aria-hidden="true"></i> <span id="header-requests-count">-</span></span>
-        </nav>
-        <nav class="site-nav">
-          <div class="lang-switcher lang-dropdown">
-            <button type="button" class="lang-dropdown-trigger site-nav-icon" id="lang-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
-              <span class="fi fi-gb lang-dropdown-flag" id="lang-dropdown-flag" aria-hidden="true"></span>
-            </button>
-            <ul class="lang-dropdown-menu" id="lang-dropdown-menu" role="listbox" aria-labelledby="lang-dropdown-trigger" tabindex="-1">
-              <li class="lang-dropdown-option" role="option" data-lang-btn="en" data-lang-flag="gb" data-lang-label="English"><span class="fi fi-gb"></span><span class="lang-option-name">English</span></li>
-              <li class="lang-dropdown-option" role="option" data-lang-btn="zh" data-lang-flag="cn" data-lang-label="中文"><span class="fi fi-cn"></span><span class="lang-option-name">中文</span></li>
-              <li class="lang-dropdown-option" role="option" data-lang-btn="ja" data-lang-flag="jp" data-lang-label="日本語"><span class="fi fi-jp"></span><span class="lang-option-name">日本語</span></li>
-              <li class="lang-dropdown-option" role="option" data-lang-btn="de" data-lang-flag="de" data-lang-label="Deutsch"><span class="fi fi-de"></span><span class="lang-option-name">Deutsch</span></li>
-              <li class="lang-dropdown-option" role="option" data-lang-btn="ru" data-lang-flag="ru" data-lang-label="Русский"><span class="fi fi-ru"></span><span class="lang-option-name">Русский</span></li>
-              <li class="lang-dropdown-option" role="option" data-lang-btn="ar" data-lang-flag="sa" data-lang-label="العربية"><span class="fi fi-sa"></span><span class="lang-option-name">العربية</span></li>
-            </ul>
+    <header class="floating-nav" id="floating-nav">
+      <div class="floating-nav__container">
+        <div class="floating-nav__bar">
+          <a class="floating-nav__logo" href="/">
+            <span class="fi fi-<?php echo $visitorCountryCode ? htmlspecialchars($visitorCountryCode, ENT_QUOTES, 'UTF-8') : 'un'; ?> floating-nav__logo-flag" id="visitor-flag" aria-hidden="true"></span>
+            <span class="floating-nav__logo-text">flagcdn<span class="floating-nav__logo-tld">.io</span></span>
+          </a>
+          <nav class="floating-nav__links" aria-label="Main">
+            <a href="/flags/" class="floating-nav__link"><i class="fa-solid fa-flag" aria-hidden="true"></i> Flags</a>
+            <a href="/docs/" class="floating-nav__link"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> <span data-i18n="hero.cta">Docs</span></a>
+            <a href="/changelog/" class="floating-nav__link"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> <span data-i18n="changelog.title">Changelog</span></a>
+            <a href="/issues/" class="floating-nav__link"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> <span data-i18n="issues.title">Feedback</span></a>
+          </nav>
+          <div class="floating-nav__actions">
+            <span class="floating-nav__badge" id="header-requests-badge" title="API requests (7 days)"><i class="fa-solid fa-bolt" aria-hidden="true"></i> <span id="header-requests-count">-</span></span>
+            <div class="lang-switcher lang-dropdown">
+              <button type="button" class="lang-dropdown-trigger floating-nav__icon-btn" id="lang-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">
+                <span class="fi fi-gb lang-dropdown-flag" id="lang-dropdown-flag" aria-hidden="true"></span>
+              </button>
+              <ul class="lang-dropdown-menu" id="lang-dropdown-menu" role="listbox" aria-labelledby="lang-dropdown-trigger" tabindex="-1">
+                <li class="lang-dropdown-option" role="option" data-lang-btn="en" data-lang-flag="gb" data-lang-label="English"><span class="fi fi-gb"></span><span class="lang-option-name">English</span></li>
+                <li class="lang-dropdown-option" role="option" data-lang-btn="zh" data-lang-flag="cn" data-lang-label="中文"><span class="fi fi-cn"></span><span class="lang-option-name">中文</span></li>
+                <li class="lang-dropdown-option" role="option" data-lang-btn="ja" data-lang-flag="jp" data-lang-label="日本語"><span class="fi fi-jp"></span><span class="lang-option-name">日本語</span></li>
+                <li class="lang-dropdown-option" role="option" data-lang-btn="de" data-lang-flag="de" data-lang-label="Deutsch"><span class="fi fi-de"></span><span class="lang-option-name">Deutsch</span></li>
+                <li class="lang-dropdown-option" role="option" data-lang-btn="ru" data-lang-flag="ru" data-lang-label="Русский"><span class="fi fi-ru"></span><span class="lang-option-name">Русский</span></li>
+                <li class="lang-dropdown-option" role="option" data-lang-btn="ar" data-lang-flag="sa" data-lang-label="العربية"><span class="fi fi-sa"></span><span class="lang-option-name">العربية</span></li>
+              </ul>
+            </div>
+            <a href="<?php echo FLAGCDN_GITHUB_URL; ?>" class="floating-nav__icon-btn" target="_blank" rel="noopener noreferrer" title="GitHub" data-github-repo="<?php echo FLAGCDN_GITHUB_REPO; ?>"><i class="fa-brands fa-github" aria-hidden="true"></i><span class="github-stars-count" id="github-stars"></span></a>
+            <button type="button" class="floating-nav__hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
           </div>
-          <a href="https://github.com/lipis/flag-icons" class="site-nav-link site-nav-link--github" target="_blank" rel="noopener noreferrer" title="Flag Icons on GitHub" aria-label="Flag Icons on GitHub" data-github-repo="lipis/flag-icons"><i class="fa-brands fa-github" aria-hidden="true"></i> <i class="fa-solid fa-star github-star-icon" aria-hidden="true"></i><span class="github-stars-count" id="github-stars"></span></a>
-          <span class="site-nav-version" id="announce-release-content"></span>
-        </nav>
+        </div>
+      </div>
+      <div class="floating-nav__mobile" id="nav-mobile" hidden>
+        <a href="/flags/" class="floating-nav__mobile-link"><i class="fa-solid fa-flag"></i> Flags</a>
+        <a href="/docs/" class="floating-nav__mobile-link"><i class="fa-solid fa-file-lines"></i> Docs</a>
+        <a href="/changelog/" class="floating-nav__mobile-link"><i class="fa-solid fa-clock-rotate-left"></i> Changelog</a>
+        <a href="/issues/" class="floating-nav__mobile-link"><i class="fa-solid fa-comment-dots"></i> Feedback</a>
       </div>
     </header>
+    <div class="floating-nav__spacer" aria-hidden="true"></div>

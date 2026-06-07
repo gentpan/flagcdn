@@ -10,3 +10,8 @@ RewriteRule "(^|/)\." - [F]
 RewriteRule ^docs/?$ /docs.php [L]
 RewriteRule ^issues/?$ /issues.php [L]
 RewriteRule ^changelog/?$ /changelog.php [L]
+RewriteRule ^flags/?$ /flags.php [L]
+RewriteRule ^flag/([a-z0-9][a-z0-9-]{0,15})/?$ /flag.php?cc=$1 [L]
+
+# 预生成栅格图 CDN 短链 → raster/{ratio}/{size}/{cc}.{ext}
+RewriteRule ^i/(1x1|4x3)/(\d+)/([a-z0-9][a-z0-9-]{0,15})\.(png|webp|avif)$ /raster/$1/$2/$3.$4 [L]

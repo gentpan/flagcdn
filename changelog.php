@@ -6,9 +6,9 @@ $canonicalUrl = 'https://flagcdn.io/changelog/';
 $baseHref = '/';
 $extraHead = '<style>
     :root {
-      --cl-accent: #1971c2;
-      --cl-muted: #6c757d;
-      --cl-line: var(--bs-border-color, #e9ecef);
+      --cl-accent: #0f3a5f;
+      --cl-muted: #6b7d92;
+      --cl-line: var(--bs-border-color, #dde4ec);
       --cl-tag-svg: #d63384;
       --cl-tag-svg-bg: rgba(214, 51, 132, 0.08);
       --cl-tag-css: #0d6efd;

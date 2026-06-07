@@ -6,9 +6,9 @@ $canonicalUrl = 'https://flagcdn.io/issues/';
 $baseHref = '/';
 $extraHead = '<style>
     :root {
-      --iss-accent: var(--bs-primary, #4a6178);
-      --iss-muted: var(--bs-tertiary-color, #6c757d);
-      --iss-line: var(--bs-border-color, #e9ecef);
+      --iss-accent: var(--bs-primary, #0f3a5f);
+      --iss-muted: var(--bs-tertiary-color, #6b7d92);
+      --iss-line: var(--bs-border-color, #dde4ec);
       --iss-surface: var(--bs-surface, #fff);
       --iss-input-bg: var(--bs-input-bg, #fff);
       --iss-tag-fix: #d63384;
@@ -102,7 +102,7 @@ $extraHead = '<style>
       cursor: pointer;
       transition: background 0.15s;
     }
-    .iss-btn-submit:hover { background: var(--bs-primary-hover, #3a5068); }
+    .iss-btn-submit:hover { background: var(--bs-primary-hover, #0a2a47); }
     .iss-btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
     .iss-form-msg {
       font-size: 0.85rem;

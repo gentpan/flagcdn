@@ -46,7 +46,10 @@
     var lang = document.documentElement.lang || "en";
     var labels = announceLabels[lang] || announceLabels.en;
     var tag = data.tag_name || "";
-    var url = data.html_url || "https://github.com/lipis/flag-icons/releases/latest";
+    var repoLink = document.querySelector("[data-github-repo]");
+    var repoSlug = repoLink && repoLink.getAttribute("data-github-repo");
+    var fallbackRelease = repoSlug ? "https://github.com/" + repoSlug + "/releases/latest" : "https://github.com/gentpan/flagcdn/releases/latest";
+    var url = data.html_url || fallbackRelease;
     var dateStr = formatReleaseDate(data.published_at, lang);
     el.innerHTML = '<a href="' + url + '" target="_blank" rel="noopener noreferrer">' + tag + '</a> · ' + dateStr;
   }
@@ -54,7 +57,9 @@
   function loadAnnounceRelease() {
     var el = document.getElementById("announce-release-content");
     if (!el) return;
-    fetch("https://api.github.com/repos/lipis/flag-icons/releases/latest", {
+    var repoLink = document.querySelector("[data-github-repo]");
+    var repoSlug = (repoLink && repoLink.getAttribute("data-github-repo")) || "gentpan/flagcdn";
+    fetch("https://api.github.com/repos/" + repoSlug + "/releases/latest", {
       headers: { Accept: "application/vnd.github.v3+json" }
     })
       .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error(r.status)); })
@@ -63,7 +68,7 @@
         renderAnnounceRelease(data);
       })
       .catch(function () {
-        el.textContent = "flag-icons";
+        el.textContent = "flagcdn";
       });
   }
 
@@ -101,11 +106,28 @@
     });
   }
 
+  function bindMobileNav() {
+    var btn = document.getElementById("nav-hamburger");
+    var panel = document.getElementById("nav-mobile");
+    if (!btn || !panel) return;
+    btn.addEventListener("click", function () {
+      var open = panel.hasAttribute("hidden");
+      if (open) {
+        panel.removeAttribute("hidden");
+        btn.setAttribute("aria-expanded", "true");
+      } else {
+        panel.setAttribute("hidden", "");
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     loadGitHubStars();
     loadAnnounceRelease();
     loadCfStats();
     bindBackToTop();
+    bindMobileNav();
   });
 
   document.addEventListener("i18n:changed", function () {

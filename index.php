@@ -7,6 +7,7 @@ $pageTitle = 'Country Flag Icons – Free SVG Flags CDN | flagcdn.io';
 $pageDescription = 'Free SVG country flag icons by ISO 3166-1 alpha-2. One-line CSS, 4:3 & 1:1 aspect ratios. Copy HTML or image URL for any country. Fast CDN delivery.';
 $pageKeywords = 'country flags, flag icons, SVG flags, ISO 3166, flag CDN, country code flags, free flag icons, national flags, flag emoji, world flags';
 $canonicalUrl = 'https://flagcdn.io/';
+$bodyAttr = 'class="page-home"';
 
 $extraHead = '<link rel="stylesheet" href="https://jsd.bluecdn.com/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />';
 
@@ -44,46 +45,39 @@ $footerScripts = implode("\n    ", [
     '<script src="/assets/app.js"></script>',
 ]);
 ?>
-    <section class="welcome">
-      <div class="container welcome-inner">
-        <div class="welcome-content">
-          <h1 class="welcome-title" data-i18n="hero.title">Flag Icons</h1>
-          <p class="welcome-desc" data-i18n="hero.sub">
-            Country flags in SVG. Use the code icon to copy HTML, or the copy button to copy image
-            URL and country code.
+    <section class="hero-home">
+      <div class="container-cleanip hero-home__inner">
+        <div class="hero-home__watermark" aria-hidden="true">flagcdn</div>
+        <div class="hero-home__content">
+          <h1 class="hero-home__title" data-i18n="hero.title">Flag Icons</h1>
+          <p class="hero-home__desc" data-i18n="hero.sub">
+            Country flags in SVG. Copy HTML, download PNG / WebP / AVIF at any size, or browse per-country pages.
           </p>
-          <div class="welcome-cta-row">
-            <a href="/docs/" class="welcome-cta">
-              <i class="fa-solid fa-file-lines welcome-cta-fa" aria-hidden="true"></i>
+          <div class="hero-home__search">
+            <i class="fa-solid fa-magnifying-glass hero-home__search-icon" aria-hidden="true"></i>
+            <input type="search" id="search-flag" class="hero-home__search-input" data-i18n-placeholder="search.placeholder" placeholder="Search country, code, capital…" autocomplete="off" />
+          </div>
+          <div class="hero-home__cta-row">
+            <a href="/docs/" class="hero-home__cta hero-home__cta--primary">
+              <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
               <span data-i18n="hero.cta">View Docs</span>
             </a>
-            <a href="/download/flags.zip" class="welcome-cta welcome-cta--download" id="download-flags-btn" download>
-              <span class="download-btn-tooltip" id="download-btn-tooltip" role="tooltip">flags.zip</span>
-              <span class="download-btn-content">
-                <i class="fa-solid fa-arrow-down-to-line welcome-cta-fa download-btn-icon" aria-hidden="true"></i>
-                <span data-i18n="hero.download">Download</span>
-              </span>
-              <span class="download-btn-number" id="download-count">0</span>
-              <span class="download-btn-spinner" aria-hidden="true"></span>
+            <a href="/flags/" class="hero-home__cta hero-home__cta--ghost">
+              <i class="fa-solid fa-flag" aria-hidden="true"></i>
+              <span>Browse all flags</span>
             </a>
-          </div>
-        </div>
-        <div class="welcome-visual">
-          <div class="welcome-flags">
-            <span class="fi fi-cn" title="4:3"></span>
-            <span class="fi fi-us" title="4:3"></span>
-            <span class="fi fi-gb" title="4:3"></span>
-            <span class="fi fi-jp" title="4:3"></span>
-            <span class="fi fi-de" title="4:3"></span>
-            <span class="fi fi-fr fis" title="1:1"></span>
-            <span class="fi fi-eu fis" title="1:1"></span>
+            <a href="/download/flags.zip" class="hero-home__cta hero-home__cta--ghost" id="download-flags-btn" download>
+              <i class="fa-solid fa-arrow-down-to-line" aria-hidden="true"></i>
+              <span data-i18n="hero.download">Download</span>
+              <span class="hero-home__dl-count" id="download-count">0</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <section class="bento">
-      <div class="container bento-grid">
+      <div class="container-cleanip bento-grid">
         <div class="bento-card bento-feat">
           <div class="bento-feat-header"><i class="fa-solid fa-flag bento-feat-icon" aria-hidden="true"></i><h3 class="bento-feat-title" data-i18n="bento.flagsTitle">270+ Flags</h3></div>
           <p class="bento-feat-desc" data-i18n="bento.flagsDesc">Every ISO 3166-1 country and territory, plus regions and organizations.</p>
@@ -107,11 +101,8 @@ $footerScripts = implode("\n    ", [
       </div>
     </section>
 
-    <main class="container main-content">
-      <div class="controls">
-        <div class="search-box">
-          <input type="text" id="search-flag" data-i18n-placeholder="search.placeholder" placeholder="Search..." />
-        </div>
+    <main class="container-cleanip main-content">
+      <div class="controls controls--compact">
         <div class="filter-continent">
           <label for="continent-select" class="filter-label" data-i18n="filter.continent">Continent</label>
           <select id="continent-select" class="continent-select" data-i18n-title="filter.title" title="Filter by continent">

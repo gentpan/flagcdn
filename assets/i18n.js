@@ -22,7 +22,7 @@
       footerTitle: { xifeng: "Xifeng Blog" },
       action: { copyCode: "Copy HTML code", copyImageUrl: "Copy image URL" },
       hero: { title: "Flag Icons", sub: "Country flags in SVG. Use the code icon to copy HTML, or the copy button to copy image URL and country code.", cta: "View Docs", download: "Download" },
-      announce: { loading: "Loading...", latest: "Latest", released: "Released", text: "4:3 and 1:1 aspect ratios, unified for a cleaner look.", about: "Based on <a href=\"https://github.com/lipis/flag-icons\" target=\"_blank\" rel=\"noopener noreferrer\">lipis/flag-icons</a>. We added more flags, fixed SVG errors, and provide free CDN. A non-profit community project.", starCta: "Star on GitHub" },
+      announce: { loading: "Loading...", latest: "Latest", released: "Released", text: "4:3 and 1:1 aspect ratios, unified for a cleaner look.", about: "Open source at <a href=\"https://github.com/gentpan/flagcdn\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/gentpan/flagcdn</a>. Flag assets from <a href=\"https://github.com/lipis/flag-icons\" target=\"_blank\" rel=\"noopener noreferrer\">lipis/flag-icons</a> (MIT). Free CDN for everyone.", starCta: "Star on GitHub" },
       features: {
         heading: "What does flagcdn provide?",
         aspectTitle: "4:3 & 1:1 aspect ratios",
@@ -60,7 +60,7 @@
         section5ExplicitPath: "4:3 / 1:1 (explicit path)",
         section6Title: "6. License and contact",
         section6Line1: "Icons are from <a href=\"https://github.com/lipis/flag-icons\" target=\"_blank\" rel=\"noopener\">flag-icons</a>, MIT license.",
-        section6Line2: "Site: <a href=\"https://flagcdn.io\">flagcdn.io</a>. Questions or feedback: <a href=\"mailto:support@flagcdn.io\">support@flagcdn.io</a>.",
+        section6Line2: "Site: <a href=\"https://flagcdn.io\">flagcdn.io</a>. Source code: <a href=\"https://github.com/gentpan/flagcdn\" target=\"_blank\" rel=\"noopener\">github.com/gentpan/flagcdn</a>. Questions or feedback: <a href=\"mailto:support@flagcdn.io\">support@flagcdn.io</a>.",
       },
       changelog: {
         title: "Changelog",
@@ -108,7 +108,7 @@
       footerTitle: { xifeng: "西风博客" },
       action: { copyCode: "复制 HTML 代码", copyImageUrl: "复制图片真实地址" },
       hero: { title: "国旗图标", sub: "SVG 国旗图标。点击代码图标复制 HTML，或点击复制按钮获取图片地址与国家代码。", cta: "查看文档", download: "下载" },
-      announce: { loading: "加载中…", latest: "最新版本", released: "更新日期", text: "提供 4:3 与 1:1 比例，统一尺寸更美观。", about: "基于 <a href=\"https://github.com/lipis/flag-icons\" target=\"_blank\" rel=\"noopener noreferrer\">lipis/flag-icons</a> 开源项目，增加了更多国旗、修正了 SVG 错误，并提供免费 CDN 加速。纯公益项目。", starCta: "去 GitHub 点星" },
+      announce: { loading: "加载中…", latest: "最新版本", released: "更新日期", text: "提供 4:3 与 1:1 比例，统一尺寸更美观。", about: "本站开源：<a href=\"https://github.com/gentpan/flagcdn\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/gentpan/flagcdn</a>。国旗素材来自 <a href=\"https://github.com/lipis/flag-icons\" target=\"_blank\" rel=\"noopener noreferrer\">lipis/flag-icons</a>（MIT）。免费 CDN。", starCta: "去 GitHub 点星" },
       features: {
         heading: "flagcdn 提供哪些内容？",
         aspectTitle: "4:3 与 1:1 比例",
@@ -146,7 +146,7 @@
         section5ExplicitPath: "4:3 / 1:1（显式路径）",
         section6Title: "6. 许可与联系",
         section6Line1: "图标基于 <a href=\"https://github.com/lipis/flag-icons\" target=\"_blank\" rel=\"noopener\">flag-icons</a>，采用 MIT 许可。",
-        section6Line2: "本站域名：<a href=\"https://flagcdn.io\">flagcdn.io</a>。问题或建议请联系：<a href=\"mailto:support@flagcdn.io\">support@flagcdn.io</a>。",
+        section6Line2: "本站域名：<a href=\"https://flagcdn.io\">flagcdn.io</a>。开源仓库：<a href=\"https://github.com/gentpan/flagcdn\" target=\"_blank\" rel=\"noopener\">github.com/gentpan/flagcdn</a>。问题或建议请联系：<a href=\"mailto:support@flagcdn.io\">support@flagcdn.io</a>。",
       },
       changelog: {
         title: "更新日志",

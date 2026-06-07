@@ -7,7 +7,7 @@ $baseHref = '/';
 $extraHead = '<style>
     :root {
       --fa-family-classic: "Font Awesome 7 Pro";
-      --accent-dark: #4a6178;
+      --accent-dark: #0f3a5f;
       --text: var(--bs-body-color, #1c4741);
       --line-strong: var(--bs-border-color, #9ebcb6);
       --pane-bg: var(--bs-success-bg-subtle, #e3f9e9);
@@ -16,12 +16,12 @@ $extraHead = '<style>
       --font-body: "Lexend Deca", "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
     }
     html[data-theme="dark"] {
-      --accent-dark: #8fa5b8;
+      --accent-dark: #4a7fa5;
       --pane-bg: var(--bs-surface, #343a40);
     }
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme]) {
-        --accent-dark: #8fa5b8;
+        --accent-dark: #4a7fa5;
         --pane-bg: var(--bs-surface, #343a40);
       }
     }
@@ -78,8 +78,8 @@ $extraHead = '<style>
       color: var(--muted, #5e827d);
       transition: color 0.2s;
     }
-    .code-copy-btn:hover { color: var(--accent-dark, #0b6f45); }
-    .code-copy-btn.copied { color: var(--accent, #0f8b57); }
+    .code-copy-btn:hover { color: var(--accent-dark, #0a2a47); }
+    .code-copy-btn.copied { color: var(--accent, #14532d); }
     .docs-cdn-label { margin-top: 1.25rem; margin-bottom: 0.35rem; font-size: 0.9rem; color: var(--muted, #5e827d); }
     .docs-cdn-label:first-of-type { margin-top: 0; }
   </style>';

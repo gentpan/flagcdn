@@ -5,8 +5,15 @@
 *.log
 tmp/
 .cache/
+raster/
+cache/
+apps/web/node_modules/
+apps/web/.nuxt/
+apps/web/.output/
+bin/
 .idea/
 .vscode/
 *.swp
 *.swo
 Thumbs.db
+flags-pack.zip

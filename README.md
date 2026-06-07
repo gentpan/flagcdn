@@ -1,16 +1,20 @@
 <div align="center">
 
-# FlagCDN.io
+# flagcdn.io
 
-**免费 SVG 国旗图标 CDN — 基于 lipis/flag-icons，提供官方 CSS 类名和 SVG 直链**
+**免费 SVG 国旗图标 CDN — 开源全栈，支持 CSS 类名、SVG 直链与多格式栅格导出**
 
 <p>
-  <img src="https://img.shields.io/badge/PHP-8.4+-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
-  <img src="https://img.shields.io/badge/license-MIT-brightgreen?style=for-the-badge" alt="License">
+  <a href="https://github.com/gentpan/flagcdn"><img src="https://img.shields.io/github/stars/gentpan/flagcdn?style=flat-square" alt="GitHub stars"></a>
+  <img src="https://img.shields.io/badge/license-MIT-brightgreen?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/Nuxt-3-00DC82?style=flat-square&logo=nuxt.js&logoColor=white" alt="Nuxt">
+  <img src="https://img.shields.io/badge/Go-1.22+-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
 </p>
 
 <p>
-  <a href="https://flagcdn.io">flagcdn.io</a> · <a href="https://flagcdn.io/docs/">使用文档</a>
+  <a href="https://flagcdn.io">flagcdn.io</a> ·
+  <a href="https://flagcdn.io/docs">Docs</a> ·
+  <a href="https://github.com/gentpan/flagcdn/issues">Issues</a>
 </p>
 
 </div>
@@ -19,58 +23,88 @@
 
 ## 概述
 
-FlagCDN.io 提供基于 ISO 3166-1 alpha-2 国家代码的 SVG 国旗图标。所有国旗都规整成 4:3 和 1:1 两种比例，可通过 CSS 类名内联，也可直接通过 URL 引用 SVG 文件。
+[flagcdn.io](https://flagcdn.io) 提供基于 ISO 3166-1 alpha-2 的 SVG 国旗图标，规整为 **4:3** 与 **1:1** 两种比例。可通过 CSS 类名内联，也可直接 URL 引用 SVG / PNG / WebP / AVIF。
 
-底层数据来自 [lipis/flag-icons](https://github.com/lipis/flag-icons)（MIT 许可），FlagCDN.io 在其基础上提供 CDN 分发、可视化文档和多语言支持。
+本仓库为**完整源站开源项目**（前端、API、栅格生成、部署配置），欢迎 Star 与 PR。
+
+- **本仓库**：<https://github.com/gentpan/flagcdn>
+- **国旗素材来源**：[lipis/flag-icons](https://github.com/lipis/flag-icons)（MIT，已在 `flags/` 目录同步并扩展）
+
+---
+
+## 仓库结构
+
+```
+apps/web/           Nuxt 3 前端（首页、详情页、文档、SSG）
+cmd/api/            Go HTTP API（/api/v1、/i 栅格）
+cmd/rastergen/      离线批量生成 PNG/WebP/AVIF
+flags/              SVG 源文件
+raster/             预生成栅格（gitignore，本地生成）
+data/country.json   国家元数据
+css/                flag-icons.min.css（对外嵌入）
+```
+
+旧版 PHP 页面（`index.php`、`flag.php` 等）仍保留，与 Nuxt 新栈并行迁移中。详见 [ARCHITECTURE.md](./ARCHITECTURE.md)。
+
+---
+
+## 快速开始
+
+```bash
+# 安装依赖
+make install
+
+# 本地预览（推荐）：Go API :8080 + Nuxt preview :3000
+make dev
+
+# 仅构建前端
+cd apps/web && npm run build && npm run preview -- --port 3000
+
+# 批量生成栅格图
+make rastergen
+make raster-verify
+```
+
+环境变量（可选）：
+
+| 变量 | 说明 |
+|------|------|
+| `SITE_URL` | 站点 URL，默认 `https://flagcdn.io` |
+| `NUXT_PUBLIC_GITHUB_REPO` | GitHub 仓库，默认 `gentpan/flagcdn` |
 
 ---
 
 ## 使用方式
 
-### 1) CSS 类名（推荐）
+### CSS 类名
 
 ```html
 <link rel="stylesheet" href="https://flagcdn.io/css/flag-icons.min.css" />
-
-<span class="fi fi-cn"></span>      <!-- 中国，4:3 默认 -->
-<span class="fi fi-us fis"></span>  <!-- 美国，1:1（fis = squared） -->
-<span class="fi fi-gb fib" style="width:32px;height:24px;display:inline-block;"></span>
+<span class="fi fi-cn"></span>
+<span class="fi fi-us fis"></span>
 ```
 
-类名规则：`fi fi-{ISO 代码小写}`，可选修饰符：
-
-| 修饰符 | 比例 | 说明 |
-|---|---|---|
-| 无 | 4:3 | 默认矩形 |
-| `fis` | 1:1 | 正方形 |
-| `fib` | 4:3 背景图 | 适合自定义宽高 |
-
-### 2) SVG 直链
+### SVG / 栅格直链
 
 ```html
-<!-- 4:3 -->
-<img src="https://flagcdn.io/flags/4x3/cn.svg" alt="中国">
-
-<!-- 1:1 -->
-<img src="https://flagcdn.io/flags/1x1/cn.svg" alt="中国">
-
-<!-- 短链（自动映射到 4:3） -->
-<img src="https://flagcdn.io/cn.svg" alt="中国">
+<img src="https://flagcdn.io/flags/4x3/cn.svg" alt="China">
+<img src="https://flagcdn.io/i/4x3/64/cn.png" alt="China">
 ```
 
-所有 SVG 都包含 `Access-Control-Allow-Origin: *` 响应头，可直接跨域使用。
+完整文档见 <https://flagcdn.io/docs>。
 
 ---
 
-## 技术栈
+## 贡献
 
-- **后端**：PHP 8.4+（FastCGI），用作多语言渲染和 stats API
-- **CDN**：Cloudflare 橙云代理，CDN 边缘缓存 30 天
-- **数据**：lipis/flag-icons 同步，4:3 与 1:1 SVG 全套
-- **样式**：flag-icons.min.css（合并压缩）
+1. Fork <https://github.com/gentpan/flagcdn>
+2. 创建分支并提交 PR
+3. Bug / 旗帜纠错 / 功能建议请开 [GitHub Issues](https://github.com/gentpan/flagcdn/issues)
 
 ---
 
 ## License
 
-MIT — 项目本身。底层国旗素材来自 [lipis/flag-icons](https://github.com/lipis/flag-icons)（同样 MIT）。
+MIT — 本项目代码与文档。
+
+国旗 SVG 素材来自 [lipis/flag-icons](https://github.com/lipis/flag-icons)（MIT），请保留上游署名。

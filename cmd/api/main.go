@@ -1,0 +1,215 @@
+package main
+
+import (
+	"encoding/json"
+	"flag"
+	"log"
+	"net/http"
+	"os"
+	"path/filepath"
+	"strconv"
+	"strings"
+	"time"
+
+	"flagcdn.io/internal/data"
+	"flagcdn.io/internal/raster"
+)
+
+var (
+	addr = flag.String("addr", ":8080", "listen address")
+	root = flag.String("root", ".", "project root")
+)
+
+func main() {
+	flag.Parse()
+	absRoot, err := filepath.Abs(*root)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	store := data.NewStore(absRoot)
+	if err := store.Load(); err != nil {
+		log.Fatal("load countries:", err)
+	}
+
+	mux := http.NewServeMux()
+	mux.HandleFunc("GET /healthz", func(w http.ResponseWriter, _ *http.Request) {
+		w.Write([]byte("ok"))
+	})
+	mux.HandleFunc("GET /api/v1/flags", func(w http.ResponseWriter, _ *http.Request) {
+		writeJSON(w, store.All())
+	})
+	mux.HandleFunc("GET /api/v1/flags/{cc}", func(w http.ResponseWriter, r *http.Request) {
+		cc := r.PathValue("cc")
+		c, ok := store.Get(cc)
+		if !ok {
+			if !isFile(raster.SrcSVG(absRoot, "1x1", cc)) {
+				http.NotFound(w, r)
+				return
+			}
+			writeJSON(w, map[string]any{
+				"code": cc,
+				"name": strings.ToUpper(cc),
+				"iso":  false,
+			})
+			return
+		}
+		related := store.Related(cc, 11)
+		writeJSON(w, map[string]any{
+			"country": c,
+			"related": related,
+			"svg": map[string]string{
+				"1x1": "/flags/1x1/" + cc + ".svg",
+				"4x3": "/flags/4x3/" + cc + ".svg",
+			},
+		})
+	})
+	mux.HandleFunc("GET /flags/{ratio}/{file}", serveFlagSVG(absRoot))
+	mux.HandleFunc("GET /i/{ratio}/{w}/{file}", serveRaster(absRoot))
+	mux.HandleFunc("GET /api/v1/render", serveRender(absRoot))
+
+	srv := &http.Server{
+		Addr:              *addr,
+		Handler:           withCORS(mux),
+		ReadHeaderTimeout: 10 * time.Second,
+	}
+	log.Printf("flagcdn api listening on %s root=%s", *addr, absRoot)
+	log.Fatal(srv.ListenAndServe())
+}
+
+func serveFlagSVG(root string) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		ratio := r.PathValue("ratio")
+		file := r.PathValue("file")
+		if !raster.ValidRatio(ratio) || !strings.HasSuffix(file, ".svg") {
+			http.NotFound(w, r)
+			return
+		}
+		cc := strings.TrimSuffix(file, ".svg")
+		if !raster.ValidCC(cc) {
+			http.NotFound(w, r)
+			return
+		}
+		path := raster.SrcSVG(root, ratio, cc)
+		serveFile(w, r, path, "image/svg+xml")
+	}
+}
+
+func serveRaster(root string) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		ratio := r.PathValue("ratio")
+		wStr := r.PathValue("w")
+		file := r.PathValue("file")
+		if !raster.ValidRatio(ratio) {
+			http.Error(w, "invalid ratio", 400)
+			return
+		}
+		wi, err := strconv.Atoi(wStr)
+		if err != nil || wi < 8 || wi > 2048 {
+			http.Error(w, "invalid width", 400)
+			return
+		}
+		parts := strings.SplitN(file, ".", 2)
+		if len(parts) != 2 {
+			http.NotFound(w, r)
+			return
+		}
+		cc, ext := parts[0], parts[1]
+		if !raster.ValidCC(cc) || !raster.ValidFormat(ext) || ext == "svg" {
+			http.NotFound(w, r)
+			return
+		}
+		out := raster.FilePath(root, ratio, wi, cc, ext)
+		if isFile(out) {
+			w.Header().Set("X-Cache", "HIT")
+			serveFile(w, r, out, raster.ContentType(ext))
+			return
+		}
+		src := raster.SrcSVG(root, ratio, cc)
+		if !isFile(src) {
+			http.NotFound(w, r)
+			return
+		}
+		if err := raster.Render(src, out, ratio, wi, ext); err != nil {
+			log.Println("render:", err)
+			http.Error(w, "render failed", 500)
+			return
+		}
+		w.Header().Set("X-Cache", "MISS")
+		serveFile(w, r, out, raster.ContentType(ext))
+	}
+}
+
+func serveRender(root string) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		q := r.URL.Query()
+		ratio := q.Get("ratio")
+		cc := q.Get("cc")
+		fmtStr := q.Get("fmt")
+		wi, _ := strconv.Atoi(q.Get("w"))
+		if !raster.ValidRatio(ratio) || !raster.ValidCC(cc) || !raster.ValidFormat(fmtStr) || wi < 8 || wi > 2048 {
+			http.Error(w, "bad params", 400)
+			return
+		}
+		src := raster.SrcSVG(root, ratio, cc)
+		if !isFile(src) {
+			http.NotFound(w, r)
+			return
+		}
+		setCacheHeaders(w)
+		if fmtStr == "svg" {
+			b, err := raster.RenderSVGBytes(src, wi, ratio)
+			if err != nil {
+				http.Error(w, "read failed", 500)
+				return
+			}
+			w.Header().Set("Content-Type", "image/svg+xml")
+			w.Write(b)
+			return
+		}
+		out := raster.FilePath(root, ratio, wi, cc, fmtStr)
+		if !isFile(out) {
+			if err := raster.Render(src, out, ratio, wi, fmtStr); err != nil {
+				http.Error(w, "render failed", 500)
+				return
+			}
+		}
+		serveFile(w, r, out, raster.ContentType(fmtStr))
+	}
+}
+
+func serveFile(w http.ResponseWriter, r *http.Request, path, ctype string) {
+	setCacheHeaders(w)
+	w.Header().Set("Content-Type", ctype)
+	http.ServeFile(w, r, path)
+}
+
+func setCacheHeaders(w http.ResponseWriter) {
+	w.Header().Set("Cache-Control", "public, max-age=31536000, immutable")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+}
+
+func writeJSON(w http.ResponseWriter, v any) {
+	setCacheHeaders(w)
+	w.Header().Set("Content-Type", "application/json; charset=utf-8")
+	w.Header().Set("Cache-Control", "public, max-age=300")
+	enc := json.NewEncoder(w)
+	enc.SetEscapeHTML(false)
+	_ = enc.Encode(v)
+}
+
+func isFile(p string) bool {
+	st, err := os.Stat(p)
+	return err == nil && !st.IsDir() && st.Size() > 0
+}
+
+func withCORS(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		if r.Method == http.MethodOptions {
+			w.WriteHeader(204)
+			return
+		}
+		next.ServeHTTP(w, r)
+	})
+}
