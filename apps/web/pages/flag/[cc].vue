@@ -150,7 +150,7 @@ if (detailError.value || !detail.value) {
 
 const { data: svgBundle } = await useAsyncData(
   () => `flag-svg-${cc.value}`,
-  () => $fetch<{ svg1x1: string; svg4x3: string }>(`/api/flag/${cc.value}/svg`),
+  () => $fetch<{ svg1x1: string; svg4x3: string }>(`/api/v1/flags/${cc.value}/svg`),
 );
 
 const country = computed(() => (detail.value as FlagDetailResponse).country);

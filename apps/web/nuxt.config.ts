@@ -4,6 +4,7 @@ import { collectFlagPrerenderRoutes } from "./utils/prerender-routes";
 
 const repoRoot = fileURLToPath(new URL("../..", import.meta.url));
 const flagRoutes = collectFlagPrerenderRoutes(repoRoot);
+const apiBase = process.env.FLAGCDN_API_BASE || "http://127.0.0.1:8080";
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-01-01",
@@ -24,8 +25,9 @@ export default defineNuxtConfig({
   },
   nitro: {
     devProxy: {
-      "/api/v1": { target: "http://127.0.0.1:8080/api/v1", changeOrigin: true },
-      "/i": { target: "http://127.0.0.1:8080/i", changeOrigin: true },
+      "/api/v1": { target: `${apiBase}/api/v1`, changeOrigin: true },
+      "/api/stats": { target: `${apiBase}/api/stats`, changeOrigin: true },
+      "/i": { target: `${apiBase}/i`, changeOrigin: true },
     },
     publicAssets: [
       { dir: repoRoot + "/flags", baseURL: "/flags", maxAge: 60 * 60 * 24 * 365 },
@@ -34,7 +36,7 @@ export default defineNuxtConfig({
     ],
     prerender: {
       crawlLinks: false,
-      routes: ["/", "/flags", "/docs", "/issues", "/sitemap.xml", "/robots.txt", ...flagRoutes],
+      routes: ["/", "/flags", "/docs", "/issues", "/changelog", "/sitemap.xml", "/robots.txt", ...flagRoutes],
     },
   },
   $production: {
@@ -43,10 +45,14 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
+    "/api/v1/**": { proxy: `${apiBase}/api/v1/**` },
+    "/api/stats": { proxy: `${apiBase}/api/stats` },
+    "/i/**": { proxy: `${apiBase}/i/**` },
     "/": { prerender: true, headers: { "Cache-Control": "public, max-age=0, must-revalidate" } },
     "/flags": { prerender: true, headers: { "Cache-Control": "public, max-age=0, must-revalidate" } },
     "/docs": { prerender: true, headers: { "Cache-Control": "public, max-age=0, must-revalidate" } },
     "/issues": { prerender: true, headers: { "Cache-Control": "public, max-age=0, must-revalidate" } },
+    "/changelog": { prerender: true, headers: { "Cache-Control": "public, max-age=0, must-revalidate" } },
     "/sitemap.xml": { prerender: true },
     "/robots.txt": { prerender: true },
     "/flag/**": {
@@ -61,6 +67,7 @@ export default defineNuxtConfig({
       titleTemplate: "%s · flagcdn.io",
       meta: [
         { name: "robots", content: "index, follow" },
+        { name: "theme-color", content: "#22c55e" },
         { property: "og:site_name", content: "flagcdn.io" },
         { name: "twitter:card", content: "summary_large_image" },
       ],
@@ -73,7 +80,12 @@ export default defineNuxtConfig({
         },
       ],
       link: [
+        { rel: "icon", type: "image/svg+xml", href: "/logo.svg" },
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+        { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
+        { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+        { rel: "manifest", href: "/site.webmanifest" },
         { rel: "stylesheet", href: "/css/flag-icons.min.css" },
         {
           rel: "stylesheet",

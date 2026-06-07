@@ -13,6 +13,8 @@ import (
 
 	"flagcdn.io/internal/data"
 	"flagcdn.io/internal/raster"
+	"flagcdn.io/internal/stats"
+	"flagcdn.io/internal/visitor"
 )
 
 var (
@@ -39,30 +41,35 @@ func main() {
 	mux.HandleFunc("GET /api/v1/flags", func(w http.ResponseWriter, _ *http.Request) {
 		writeJSON(w, store.All())
 	})
+	mux.HandleFunc("GET /api/v1/flags/{cc}/svg", func(w http.ResponseWriter, r *http.Request) {
+		cc := strings.ToLower(r.PathValue("cc"))
+		serveFlagSVGJSON(w, r, absRoot, cc)
+	})
 	mux.HandleFunc("GET /api/v1/flags/{cc}", func(w http.ResponseWriter, r *http.Request) {
-		cc := r.PathValue("cc")
-		c, ok := store.Get(cc)
-		if !ok {
-			if !isFile(raster.SrcSVG(absRoot, "1x1", cc)) {
-				http.NotFound(w, r)
-				return
-			}
-			writeJSON(w, map[string]any{
-				"code": cc,
-				"name": strings.ToUpper(cc),
-				"iso":  false,
-			})
+		cc := strings.ToLower(r.PathValue("cc"))
+		writeFlagDetail(w, r, store, absRoot, cc)
+	})
+	mux.HandleFunc("GET /api/v1/visitor-country", func(w http.ResponseWriter, r *http.Request) {
+		code := visitor.FromRequest(r)
+		var out any
+		if code == "" {
+			out = map[string]any{"code": nil}
+		} else {
+			out = map[string]string{"code": code}
+		}
+		writeJSON(w, out)
+	})
+	mux.HandleFunc("GET /api/stats", func(w http.ResponseWriter, r *http.Request) {
+		raw, err := stats.FetchCloudflare(absRoot)
+		if err != nil {
+			log.Println("stats:", err)
+			writeJSON(w, map[string]int{"requests": 0})
 			return
 		}
-		related := store.Related(cc, 11)
-		writeJSON(w, map[string]any{
-			"country": c,
-			"related": related,
-			"svg": map[string]string{
-				"1x1": "/flags/1x1/" + cc + ".svg",
-				"4x3": "/flags/4x3/" + cc + ".svg",
-			},
-		})
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		w.Header().Set("Cache-Control", "public, max-age=300")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Write(raw)
 	})
 	mux.HandleFunc("GET /flags/{ratio}/{file}", serveFlagSVG(absRoot))
 	mux.HandleFunc("GET /i/{ratio}/{w}/{file}", serveRaster(absRoot))
@@ -75,6 +82,51 @@ func main() {
 	}
 	log.Printf("flagcdn api listening on %s root=%s", *addr, absRoot)
 	log.Fatal(srv.ListenAndServe())
+}
+
+func writeFlagDetail(w http.ResponseWriter, r *http.Request, store *data.Store, root, cc string) {
+	c, ok := store.Get(cc)
+	if !ok {
+		if !isFile(raster.SrcSVG(root, "1x1", cc)) {
+			http.NotFound(w, r)
+			return
+		}
+		writeJSON(w, map[string]any{
+			"country": map[string]any{"code": cc, "name": strings.ToUpper(cc), "iso": false},
+			"related": []any{},
+			"svg": map[string]string{
+				"1x1": "/flags/1x1/" + cc + ".svg",
+				"4x3": "/flags/4x3/" + cc + ".svg",
+			},
+		})
+		return
+	}
+	related := store.Related(cc, 11)
+	writeJSON(w, map[string]any{
+		"country": c,
+		"related": related,
+		"svg": map[string]string{
+			"1x1": "/flags/1x1/" + cc + ".svg",
+			"4x3": "/flags/4x3/" + cc + ".svg",
+		},
+	})
+}
+
+func serveFlagSVGJSON(w http.ResponseWriter, r *http.Request, root, cc string) {
+	read := func(ratio string) string {
+		b, err := os.ReadFile(raster.SrcSVG(root, ratio, cc))
+		if err != nil {
+			return ""
+		}
+		return string(b)
+	}
+	svg1x1 := read("1x1")
+	svg4x3 := read("4x3")
+	if svg1x1 == "" && svg4x3 == "" {
+		http.NotFound(w, r)
+		return
+	}
+	writeJSON(w, map[string]string{"svg1x1": svg1x1, "svg4x3": svg4x3})
 }
 
 func serveFlagSVG(root string) http.HandlerFunc {

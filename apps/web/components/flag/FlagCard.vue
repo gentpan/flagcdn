@@ -1,10 +1,10 @@
 <template>
   <NuxtLink :to="`/flag/${country.code}`" class="flag-card animate-fade-in-up">
     <img
-      :src="`/flags/4x3/${country.code}.svg`"
+      :src="`/flags/${ratio}/${country.code}.svg`"
       :alt="country.name"
-      width="48"
-      height="36"
+      :width="ratio === '1x1' ? 40 : 48"
+      :height="ratio === '1x1' ? 40 : 36"
       loading="lazy"
       class="flag-card__img"
     >
@@ -18,7 +18,9 @@
 <script setup lang="ts">
 import type { Country } from "~/types/flag";
 
-const props = defineProps<{ country: Country }>();
+const props = withDefaults(defineProps<{ country: Country; ratio?: "4x3" | "1x1" }>(), {
+  ratio: "4x3",
+});
 const { lang } = useSiteI18n();
 
 const displayName = computed(() => {

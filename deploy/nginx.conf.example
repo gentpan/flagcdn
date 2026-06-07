@@ -1,0 +1,53 @@
+# flagcdn.io — Nuxt + Go 生产示例
+# 假设：
+#   - Nuxt 静态产物在 /var/www/flagcdn/public（make build-static 后 rsync .output/public/）
+#   - Go API 监听 127.0.0.1:8080
+#   - flags/、raster/、css/ 与 public 同根或单独 alias
+
+upstream flagcdn_api {
+    server 127.0.0.1:8080;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name flagcdn.io;
+
+    root /var/www/flagcdn/public;
+    index index.html;
+
+    # 栅格 CDN（静态 miss 时由 Go 即时渲染）
+    location ~ ^/i/(1x1|4x3)/(\d+)/([a-z0-9][a-z0-9-]{0,15})\.(png|webp|avif)$ {
+        try_files /raster/$1/$2/$3.$4 @flagcdn_api;
+    }
+
+    location @flagcdn_api {
+        proxy_pass http://flagcdn_api;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    # Go API
+    location /api/ {
+        proxy_pass http://flagcdn_api;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header CF-IPCountry $http_cf_ipcountry;
+    }
+
+    # SVG 源文件（也可由 Go /flags/ 提供）
+    location /flags/ {
+        alias /var/www/flagcdn/flags/;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+        add_header Access-Control-Allow-Origin "*";
+    }
+
+    location /css/ {
+        alias /var/www/flagcdn/css/;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+
+    # Nuxt 预渲染 + SPA 回退
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}

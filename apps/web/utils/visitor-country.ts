@@ -7,7 +7,7 @@ export function normalizeVisitorCountry(raw: string | undefined | null): string 
   return cc;
 }
 
-/** Read geo country from common CDN / reverse-proxy headers (same rules as header.php). */
+/** Read geo country from common CDN / reverse-proxy headers. */
 export function visitorCountryFromHeaders(
   headers: Record<string, string | string[] | undefined>,
 ): string {

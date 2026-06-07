@@ -4,10 +4,8 @@
       <div class="container-app hero__inner">
         <div class="hero__watermark" aria-hidden="true">flagcdn</div>
         <div class="hero__content">
-          <h1 class="hero__title">Country Flag Icons</h1>
-          <p class="hero__subtitle">
-            270+ ISO flags · SVG / PNG / WebP / AVIF · Copy code or download at any size
-          </p>
+          <h1 class="hero__title">{{ t("hero.title") }}</h1>
+          <p class="hero__subtitle">{{ t("hero.sub") }}</p>
           <div class="hero__search card">
             <i class="fa-solid fa-magnifying-glass hero__search-icon" />
             <input
@@ -19,32 +17,70 @@
             >
           </div>
           <div class="hero__cta">
-            <NuxtLink to="/docs" class="btn-primary"><i class="fa-solid fa-file-lines" /> Docs</NuxtLink>
-            <NuxtLink to="/flags" class="btn-ghost"><i class="fa-solid fa-flag" /> Browse all</NuxtLink>
+            <NuxtLink to="/docs" class="btn-primary"><i class="fa-solid fa-file-lines" /> {{ t("nav.docs") }}</NuxtLink>
+            <NuxtLink to="/flags" class="btn-ghost"><i class="fa-solid fa-flag" /> {{ t("hero.browse") }}</NuxtLink>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="container-app section">
-      <div class="section__head">
-        <h2>Flags</h2>
-        <span class="section__count">{{ filtered.length }} / {{ countries.length }}</span>
+    <section class="container-app bento">
+      <div class="bento__grid">
+        <div v-for="item in bentoItems" :key="item.key" class="bento__card card">
+          <div class="bento__head">
+            <i class="fa-solid" :class="item.icon" />
+            <h3>{{ t(item.title) }}</h3>
+          </div>
+          <p>{{ t(item.desc) }}</p>
+        </div>
       </div>
+    </section>
+
+    <section class="container-app section">
+      <div class="section__controls">
+        <label class="section__label" for="continent-select">{{ t("filter.continent") }}</label>
+        <select id="continent-select" v-model="continent" class="section__select card">
+          <option value="">{{ t("filter.all") }}</option>
+          <option v-for="c in continents" :key="c" :value="c">{{ c }}</option>
+          <option value="non-iso">{{ t("filter.nonIso") }}</option>
+        </select>
+        <div class="section__ratio" role="group" :aria-label="t('filter.ratio')">
+          <button type="button" class="section__ratio-btn" :class="{ active: ratio === '4x3' }" @click="ratio = '4x3'">4:3</button>
+          <button type="button" class="section__ratio-btn" :class="{ active: ratio === '1x1' }" @click="ratio = '1x1'">1:1</button>
+        </div>
+      </div>
+
+      <header class="section__head">
+        <h2>{{ t("section.isoFlags") }}</h2>
+        <span class="section__count">{{ isoFlags.length }} / {{ total }}</span>
+      </header>
       <div class="flags-grid">
-        <FlagCard v-for="c in filtered" :key="c.code" :country="c" />
+        <FlagCard v-for="c in isoFlags" :key="c.code" :country="c" :ratio="ratio" />
+      </div>
+
+      <header v-if="nonIsoFlags.length" class="section__head section__head--spaced">
+        <h2>{{ t("section.otherFlags") }}</h2>
+        <span class="section__count">{{ nonIsoFlags.length }}</span>
+      </header>
+      <div v-if="nonIsoFlags.length" class="flags-grid">
+        <FlagCard v-for="c in nonIsoFlags" :key="c.code" :country="c" :ratio="ratio" />
       </div>
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
-import Fuse from "fuse.js";
-import type { Country } from "~/types/flag";
-
 const config = useRuntimeConfig();
 const siteUrl = config.public.siteUrl as string;
 const { t } = useSiteI18n();
+
+const bentoItems = [
+  { key: "flags", icon: "fa-flag", title: "bento.flagsTitle", desc: "bento.flagsDesc" },
+  { key: "ratio", icon: "fa-crop-simple", title: "bento.ratioTitle", desc: "bento.ratioDesc" },
+  { key: "cdn", icon: "fa-bolt", title: "bento.cdnTitle", desc: "bento.cdnDesc" },
+  { key: "copy", icon: "fa-clipboard", title: "bento.copyTitle", desc: "bento.copyDesc" },
+  { key: "pages", icon: "fa-file-lines", title: "bento.pagesTitle", desc: "bento.pagesDesc" },
+];
 
 useSeoMeta({
   title: "Country Flag Icons – Free SVG Flags CDN",
@@ -59,23 +95,28 @@ useSeoMeta({
 
 useHead({
   link: [{ rel: "canonical", href: siteUrl }],
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        name: "flagcdn.io",
+        url: siteUrl,
+        description: "Free SVG country flag icons by ISO 3166-1 alpha-2.",
+        applicationCategory: "DeveloperApplication",
+        operatingSystem: "Any",
+        offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        license: "https://opensource.org/licenses/MIT",
+      }),
+    },
+  ],
 });
 
 const { fetchAll } = useFlags();
 const { data: countries } = await useAsyncData("home-flags", () => fetchAll(), { default: () => [] });
 
-const query = ref("");
-
-const fuse = computed(() => new Fuse(countries.value || [], {
-  keys: ["name", "name_zh", "code", "capital", "continent"],
-  threshold: 0.35,
-}));
-
-const filtered = computed(() => {
-  const q = query.value.trim();
-  if (!q) return countries.value || [];
-  return fuse.value.search(q).map((r) => r.item);
-});
+const { query, continent, ratio, continents, isoFlags, nonIsoFlags, total } = useFlagFilters(countries);
 </script>
 
 <style scoped>
@@ -97,7 +138,7 @@ const filtered = computed(() => {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(72px, 18vw, 220px);
-  color: rgba(29, 111, 168, 0.08);
+  color: rgba(34, 197, 94, 0.08);
   white-space: nowrap;
   pointer-events: none;
 }
@@ -141,13 +182,80 @@ const filtered = computed(() => {
   justify-content: center;
   flex-wrap: wrap;
 }
+.bento {
+  padding-bottom: 1.5rem;
+}
+.bento__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.65rem;
+}
+.bento__card {
+  padding: 1rem 1.1rem;
+}
+.bento__head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+  color: var(--brand);
+}
+.bento__head h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.bento__card p {
+  font-size: 0.85rem;
+  color: var(--text-body);
+  line-height: 1.5;
+}
 .section { padding-bottom: 2rem; }
+.section__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.section__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.section__select {
+  border: 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  outline: none;
+  min-width: 160px;
+}
+.section__ratio {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-left: auto;
+}
+.section__ratio-btn {
+  border: 0;
+  background: transparent;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+.section__ratio-btn.active {
+  background: var(--brand-muted);
+  color: var(--brand);
+}
 .section__head {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
+.section__head--spaced { margin-top: 2rem; }
 .section__head h2 { font-size: 1.25rem; }
 .section__count { font-size: 0.85rem; color: var(--text-muted); }
 .flags-grid {

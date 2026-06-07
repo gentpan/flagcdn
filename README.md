@@ -44,7 +44,7 @@ data/country.json   国家元数据
 css/                flag-icons.min.css（对外嵌入）
 ```
 
-旧版 PHP 页面（`index.php`、`flag.php` 等）仍保留，与 Nuxt 新栈并行迁移中。详见 [ARCHITECTURE.md](./ARCHITECTURE.md)。
+**站点 = Nuxt 3 前端 + Go 后端**（仓库已无 PHP/HTML 遗留页面）。架构说明见 **[docs/STACK.md](./docs/STACK.md)**。
 
 ---
 
@@ -57,8 +57,12 @@ make install
 # 本地预览（推荐）：Go API :8080 + Nuxt preview :3000
 make dev
 
-# 仅构建前端
-cd apps/web && npm run build && npm run preview -- --port 3000
+# 构建可部署的静态站（含全部国旗详情页 SSG）
+make build-static
+
+# 将构建产物合并到站点根目录（示例）
+rsync -a apps/web/.output/public/ ./site-dist/
+# 再把 site-dist/ 与 flags/、raster/、css/ 等一并上传到服务器
 
 # 批量生成栅格图
 make rastergen

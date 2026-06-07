@@ -48,7 +48,7 @@ css/flag-icons.min.css  对外嵌入 API（保留）
 - Go `flagcdn-api` 处理 `/api/v1/*` 与 `/i/*` fallback 渲染
 - Nuxt SSR：`node apps/web/.output/server/index.mjs` 或使用 `nuxt build` + Nitro
 
-旧 PHP 文件（`index.php` 等）可在切换完成后归档删除。
+**生产站点 = Nuxt 静态输出 + Go API + 静态资源**（`flags/`、`raster/`、`css/`）。仓库无 PHP。
 
 ## 目标
 
@@ -91,7 +91,7 @@ raster/4x3/256/cn.avif
 ```
 
 预设尺寸：`16, 24, 32, 48, 64, 128, 256, 512`  
-自定义尺寸走 `api/flag.php` 即时渲染并落盘。
+自定义尺寸走 Go `GET /api/v1/render?ratio=&cc=&w=&fmt=` 即时渲染并落盘。
 
 ---
 
@@ -114,51 +114,14 @@ go run ./cmd/rastergen -codes cn,us,jp
 
 ## 技术栈演进路线
 
-### 阶段 A — 当前（PHP 单体，已完成骨架）
+### 当前栈（已完成）
 
-- PHP 8.4 渲染页面 + `api/flag.php` fallback
-- 静态 `raster/` 由 Go `rastergen` 预生成
-- 前端原生 JS + `main.css`
+- Nuxt 3 预渲染首页、列表、文档、changelog、271+ 国旗详情页
+- Go `cmd/api`：`/api/v1/*`、`/api/stats`、`/i/*` 栅格
+- `cmd/rastergen` 离线批量生成 `raster/`
 - Cloudflare CDN 边缘缓存
 
-**适合：** 快速上线、SEO、低运维。
-
-### 阶段 B — 推荐目标（Go API + Nuxt 3 前端）
-
-参考 cleanip.io 与 thesvg 的 monorepo 结构：
-
-```
-flagcdn/
-├── apps/
-│   └── web/              # Nuxt 3 + TypeScript
-│       ├── pages/
-│       │   ├── index.vue           # 首页搜索 + 网格
-│       │   └── flag/[cc].vue       # 详情页（thesvg 风格）
-│       └── components/
-│           ├── FlagExportGrid.vue  # 32/64/128… 导出卡片
-│           └── CodeTabs.vue        # SVG / HTML / CDN URL
-├── cmd/
-│   ├── api/              # Go HTTP 服务
-│   │   ├── main.go
-│   │   ├── render/       # SVG→栅格（libvips 或 rsvg 绑定）
-│   │   └── handlers/
-│   └── rastergen/        # 离线批量（已有）
-├── data/
-│   └── country.json
-├── flags/                # SVG 源
-└── raster/               # 预生成输出
-```
-
-| 模块 | 技术 | 理由 |
-|------|------|------|
-| 前端 | **Nuxt 3 + TS** | SSR/SSG、每国旗 SSG 详情页、i18n、与 cleanip 同栈 |
-| 图片 API | **Go + libvips** | 高并发栅格化、比 PHP `exec` 更稳 |
-| 静态资源 | **Nginx / CF** | `/i/*` 直接读盘，零计算 |
-| 数据 | JSON → 后期 SQLite | 270 国 metadata + 反馈 |
-
-**何时迁移：** 详情页交互复杂化（CLI 片段、组件导出、variant）或 PHP `exec` 成为瓶颈时。
-
-### 阶段 C — 产品化（可选）
+### 可选演进
 
 - npm 包 `@flagcdn/icons`（类似 `thesvg`）
 - CLI：`npx flagcdn add cn`
@@ -195,8 +158,8 @@ flagcdn/
 
 1. 本地 `go run ./cmd/rastergen` 生成 `raster/`
 2. `rsync` 到生产（含 `raster/`、`flags/`）
-3. 确认 Apache 已启用 `RewriteRule ^i/...`
-4. 旧 `cache/` 目录可删除
+3. Nginx 反代 Go API（见 `deploy/nginx.conf.example`）
+4. `rsync` Nuxt `apps/web/.output/public/` 到站点根
 
 ---
 
@@ -206,4 +169,4 @@ flagcdn/
 2. ⏳ 跑完全量 `rastergen`（生产机或 CI）
 3. ⏳ 详情页 UI 改成 thesvg 双栏 + Export 卡片网格
 4. ⏳ 初始化 Nuxt `apps/web`，先 SSG `/flag/[cc]`
-5. ⏳ Go `cmd/api` 替换 `api/flag.php` 的 `exec` 路径
+5. ✅ Go `cmd/api` 承担全部栅格与 JSON API

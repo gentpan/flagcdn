@@ -1,16 +1,14 @@
 @import "tailwindcss";
 
 /* ============================================================
-   FlagCDN — Ocean Slate 配色
-   蓝 = 信任 / CDN / 全球  |  灰 = 画布  |  国旗本身提供色彩
-   与 cleanip 绿、thesvg 纯灰黑 形成区分
+   FlagCDN — 绿色品牌色 + 中性画布
    ============================================================ */
 
 :root {
-  --brand: #1d6fa8;
-  --brand-hover: #165a88;
-  --brand-light: #3b93d0;
-  --brand-muted: rgba(29, 111, 168, 0.1);
+  --brand: #16a34a;
+  --brand-hover: #15803d;
+  --brand-light: #4ade80;
+  --brand-muted: rgba(34, 197, 94, 0.12);
 
   --bg-page: #f4f6f9;
   --bg-card: #ffffff;
@@ -41,9 +39,10 @@
   --text-muted: #64748b;
   --border: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.14);
-  --brand: #5ba8e0;
-  --brand-hover: #7bbde8;
-  --brand-muted: rgba(91, 168, 224, 0.12);
+  --brand: #4ade80;
+  --brand-hover: #86efac;
+  --brand-light: #bbf7d0;
+  --brand-muted: rgba(74, 222, 128, 0.12);
 }
 
 @layer base {

@@ -1,4 +1,4 @@
-DirectoryIndex index.php
+DirectoryIndex index.html
 Options -Indexes
 
 RewriteEngine On
@@ -6,12 +6,11 @@ RewriteEngine On
 # Block dotfiles such as .env from direct web access.
 RewriteRule "(^|/)\." - [F]
 
-# Serve PHP entry points behind clean directory URLs.
-RewriteRule ^docs/?$ /docs.php [L]
-RewriteRule ^issues/?$ /issues.php [L]
-RewriteRule ^changelog/?$ /changelog.php [L]
-RewriteRule ^flags/?$ /flags.php [L]
-RewriteRule ^flag/([a-z0-9][a-z0-9-]{0,15})/?$ /flag.php?cc=$1 [L]
-
 # 预生成栅格图 CDN 短链 → raster/{ratio}/{size}/{cc}.{ext}
 RewriteRule ^i/(1x1|4x3)/(\d+)/([a-z0-9][a-z0-9-]{0,15})\.(png|webp|avif)$ /raster/$1/$2/$3.$4 [L]
+
+# Nuxt 静态站（部署：make build-static && rsync apps/web/.output/public/ → 站点根目录）
+# 未命中真实文件时回退到 SPA / 预渲染入口
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]

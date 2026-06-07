@@ -3,7 +3,7 @@
     <div class="nav__shell">
       <div class="nav__bar">
         <NuxtLink to="/" class="nav__logo">
-          <span class="fi nav__logo-flag" :class="`fi-${visitorCountry}`" aria-hidden="true" />
+          <img src="/logo.svg" alt="" width="22" height="22" class="nav__logo-mark" aria-hidden="true" />
           <span>flagcdn<span class="nav__logo-tld">.io</span></span>
         </NuxtLink>
         <nav class="nav__links" aria-label="Main">
@@ -14,6 +14,10 @@
           <NuxtLink to="/docs" class="nav__link">
             <i class="fa-solid fa-file-lines" aria-hidden="true" />
             {{ t("nav.docs") }}
+          </NuxtLink>
+          <NuxtLink to="/changelog" class="nav__link">
+            <i class="fa-solid fa-clock-rotate-left" aria-hidden="true" />
+            {{ t("nav.changelog") }}
           </NuxtLink>
           <NuxtLink to="/issues" class="nav__link">
             <i class="fa-solid fa-comment-dots" aria-hidden="true" />
@@ -52,6 +56,9 @@
       <NuxtLink to="/docs" class="nav__mobile-link" @click="mobileOpen = false">
         <i class="fa-solid fa-file-lines" /> {{ t("nav.docs") }}
       </NuxtLink>
+      <NuxtLink to="/changelog" class="nav__mobile-link" @click="mobileOpen = false">
+        <i class="fa-solid fa-clock-rotate-left" /> {{ t("nav.changelog") }}
+      </NuxtLink>
       <NuxtLink to="/issues" class="nav__mobile-link" @click="mobileOpen = false">
         <i class="fa-solid fa-comment-dots" /> {{ t("nav.feedback") }}
       </NuxtLink>
@@ -62,7 +69,6 @@
 
 <script setup lang="ts">
 const mobileOpen = ref(false);
-const visitorCountry = useVisitorCountry();
 const { t } = useSiteI18n();
 const { requestCount, githubStars, githubRepo } = useNavStats();
 
@@ -126,7 +132,7 @@ function toggleTheme() {
   flex-shrink: 0;
 }
 .nav__logo-tld { color: var(--brand-light); }
-.nav__logo-flag { width: 22px; height: 16px; border-radius: 2px; }
+.nav__logo-mark { width: 22px; height: 22px; flex-shrink: 0; display: block; }
 .nav__links {
   display: flex;
   gap: 2px;

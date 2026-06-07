@@ -19,7 +19,7 @@ export default defineEventHandler((event) => {
   const root = config.repoRoot as string;
   const codes = collectCodes(root);
 
-  const staticPages = ["", "/flags", "/docs"];
+  const staticPages = ["", "/flags", "/docs", "/changelog", "/issues"];
   const urls = [
     ...staticPages.map((p) => ({
       loc: `${base}${p || "/"}`,

@@ -25,8 +25,16 @@ build:
 	@cd $(ROOT) && go build -o bin/flagcdn-api ./cmd/api
 
 # 生产静态站（含 271 个国旗页 SSG + 完整 SEO meta）
+# 构建期间需 Go API 在线（Nuxt 预渲染会请求 /api/v1/*）
 build-static:
-	@cd $(ROOT)apps/web && npm run build
+	@echo "Starting Go API for prerender..."
+	@cd $(ROOT) && go run ./cmd/api -root . & echo $$! > /tmp/flagcdn-api.pid
+	@sleep 1
+	@cd $(ROOT)apps/web && npm run build; \
+		status=$$?; \
+		kill $$(cat /tmp/flagcdn-api.pid) 2>/dev/null || true; \
+		rm -f /tmp/flagcdn-api.pid; \
+		exit $$status
 	@echo "Static output: apps/web/.output/public/ ($(shell ls $(ROOT)apps/web/.output/public/flag 2>/dev/null | wc -l | tr -d ' ') flag pages)"
 
 rastergen:

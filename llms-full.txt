@@ -95,7 +95,7 @@ The full list of 270+ codes is available on the homepage at https://flagcdn.io/ 
 ## 5. API Endpoints
 
 ### Country Data
-`GET https://flagcdn.io/data/country.json`
+`GET https://flagcdn.io/api/v1/flags`
 
 Returns JSON array of all countries with:
 - `code` — ISO alpha-2 code
@@ -106,13 +106,13 @@ Returns JSON array of all countries with:
 - `iso` — Boolean, true if ISO 3166-1
 - `flag_4x3`, `flag_1x1` — SVG file paths
 
-### Download Stats
-`GET https://flagcdn.io/api/download-count.php`
+### Flag Detail
+`GET https://flagcdn.io/api/v1/flags/{cc}`
 
-Returns: `{"count": 12345}`
+Returns country metadata, related flags, and SVG paths.
 
 ### Site Analytics
-`GET https://flagcdn.io/api/stats.php`
+`GET https://flagcdn.io/api/stats`
 
 Returns Cloudflare analytics (30-day):
 ```json
