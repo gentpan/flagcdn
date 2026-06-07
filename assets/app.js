@@ -214,7 +214,7 @@ if (formatSwitchBacktotop) {
   });
 }
 
-const MAPBOX_TOKEN = "";
+const MAPBOX_TOKEN = (typeof window !== "undefined" && window.FLAGCDN_MAPBOX_TOKEN) || "";
 let mapInstance = null;
 
 function openMapModal(country) {
