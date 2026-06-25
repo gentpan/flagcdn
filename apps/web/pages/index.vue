@@ -37,12 +37,40 @@
 
     <section class="container-app section">
       <div class="section__controls">
-        <label class="section__label" for="continent-select">{{ t("filter.continent") }}</label>
-        <select id="continent-select" v-model="continent" class="section__select card">
-          <option value="">{{ t("filter.all") }}</option>
-          <option v-for="c in continents" :key="c" :value="c">{{ c }}</option>
-          <option value="non-iso">{{ t("filter.nonIso") }}</option>
-        </select>
+        <div class="section__tabs" role="tablist" :aria-label="t('filter.continent')">
+          <button
+            type="button"
+            class="section__tab"
+            :class="{ active: !continent }"
+            role="tab"
+            :aria-selected="!continent"
+            @click="continent = ''"
+          >
+            {{ t("filter.all") }}
+          </button>
+          <button
+            v-for="c in continents"
+            :key="c"
+            type="button"
+            class="section__tab"
+            :class="{ active: continent === c }"
+            role="tab"
+            :aria-selected="continent === c"
+            @click="continent = c"
+          >
+            {{ c }}
+          </button>
+          <button
+            type="button"
+            class="section__tab"
+            :class="{ active: continent === 'non-iso' }"
+            role="tab"
+            :aria-selected="continent === 'non-iso'"
+            @click="continent = 'non-iso'"
+          >
+            {{ t("filter.nonIso") }}
+          </button>
+        </div>
         <div class="section__ratio" role="group" :aria-label="t('filter.ratio')">
           <button type="button" class="section__ratio-btn" :class="{ active: ratio === '4x3' }" @click="ratio = '4x3'">4:3</button>
           <button type="button" class="section__ratio-btn" :class="{ active: ratio === '1x1' }" @click="ratio = '1x1'">1:1</button>
@@ -78,7 +106,6 @@ const bentoItems = [
   { key: "ratio", icon: "fa-crop-simple", title: "bento.ratioTitle", desc: "bento.ratioDesc" },
   { key: "cdn", icon: "fa-bolt", title: "bento.cdnTitle", desc: "bento.cdnDesc" },
   { key: "copy", icon: "fa-clipboard", title: "bento.copyTitle", desc: "bento.copyDesc" },
-  { key: "pages", icon: "fa-file-lines", title: "bento.pagesTitle", desc: "bento.pagesDesc" },
 ];
 
 useSeoMeta({
@@ -189,7 +216,7 @@ const { query, continent, ratio, continents, isoFlags, nonIsoFlags, total } = us
 }
 .bento__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.65rem;
 }
 .bento__card {
@@ -214,29 +241,50 @@ const { query, continent, ratio, continents, isoFlags, nonIsoFlags, total } = us
 .section { padding-bottom: 2rem; }
 .section__controls {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 1.25rem;
 }
-.section__label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-muted);
+.section__tabs {
+  display: flex;
+  flex: 1 1 auto;
+  gap: 0.35rem;
+  overflow-x: auto;
+  padding-bottom: 0.1rem;
+  scrollbar-width: none;
 }
-.section__select {
-  border: 0;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.9rem;
-  outline: none;
-  min-width: 160px;
+.section__tabs::-webkit-scrollbar {
+  display: none;
+}
+.section__tab {
+  flex: 0 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-card);
+  color: var(--text-body);
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.55rem 0.8rem;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.section__tab:hover {
+  border-color: var(--border-strong);
+  color: var(--text-heading);
+}
+.section__tab.active {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
 }
 .section__ratio {
+  flex: 0 0 auto;
   display: inline-flex;
   border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
-  margin-left: auto;
 }
 .section__ratio-btn {
   border: 0;
@@ -264,5 +312,22 @@ const { query, continent, ratio, continents, isoFlags, nonIsoFlags, total } = us
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 0.6rem;
+}
+@media (max-width: 860px) {
+  .bento__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .section__controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .section__ratio {
+    align-self: flex-end;
+  }
+}
+@media (max-width: 520px) {
+  .bento__grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
