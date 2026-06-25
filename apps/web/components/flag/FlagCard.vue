@@ -51,19 +51,22 @@ const displayName = computed(() => {
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--bg-card);
+  box-shadow: var(--shadow-card);
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s, box-shadow 0.15s;
 }
 .flag-card:hover {
   border-color: var(--brand);
+  background: var(--bg-elevated);
   transform: translateY(-1px);
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-card-strong);
 }
 .flag-card__img {
   flex-shrink: 0;
   border: 1px solid var(--border);
   border-radius: 2px;
+  background: var(--bg-soft);
   object-fit: cover;
 }
 .flag-card__meta {

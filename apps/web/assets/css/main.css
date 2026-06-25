@@ -10,19 +10,21 @@
   --brand-light: #4ade80;
   --brand-muted: rgba(251, 146, 60, 0.12);
 
-  --bg-page: #f5f6fa;
+  --bg-page: #f4f7fb;
   --bg-card: #ffffff;
-  --bg-elevated: #ffffff;
+  --bg-elevated: #f9fbfe;
+  --bg-soft: #eef3f8;
   --nav-dark: #14141f;
 
   --text-heading: #0f172a;
-  --text-body: #64748b;
-  --text-muted: #94a3b8;
+  --text-body: #526071;
+  --text-muted: #8a98aa;
 
-  --border: rgba(15, 23, 42, 0.08);
-  --border-strong: rgba(15, 23, 42, 0.14);
+  --border: rgba(30, 41, 59, 0.1);
+  --border-strong: rgba(30, 41, 59, 0.18);
   --radius: 10px;
-  --shadow-card: 0 8px 26px rgba(15, 23, 42, 0.05);
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 32px rgba(30, 41, 59, 0.07);
+  --shadow-card-strong: 0 2px 5px rgba(15, 23, 42, 0.06), 0 18px 44px rgba(30, 41, 59, 0.12);
   --container: 1000px;
 
   --font-sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
@@ -34,11 +36,14 @@
   --bg-page: #000000;
   --bg-card: #141418;
   --bg-elevated: #18181d;
+  --bg-soft: #18181b;
   --text-heading: #f8fafc;
   --text-body: #a1a1aa;
   --text-muted: #71717a;
   --border: rgba(255, 255, 255, 0.11);
   --border-strong: rgba(255, 255, 255, 0.2);
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.36);
+  --shadow-card-strong: 0 14px 34px rgba(0, 0, 0, 0.35);
   --brand: #fb923c;
   --brand-hover: #fdba74;
   --brand-light: #4ade80;
@@ -98,23 +103,25 @@
   gap: 0.5rem;
   padding: 0.55rem 1rem;
   border-radius: 8px;
-  background: var(--bg-card);
+  background: var(--bg-elevated);
   color: var(--brand);
   font-weight: 600;
   font-size: 0.9rem;
   text-decoration: none;
   border: 1px solid var(--border);
   cursor: pointer;
+  box-shadow: var(--shadow-card);
 }
 .btn-ghost:hover {
   border-color: var(--brand);
+  background: var(--bg-card);
 }
 
 .chip {
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: var(--bg-card);
+  background: var(--bg-elevated);
   font-size: 0.8rem;
   cursor: pointer;
   color: var(--text-body);
@@ -140,7 +147,7 @@
 }
 
 .flag-preview-bg {
-  background: #f1f5f9;
+  background: var(--bg-soft);
 }
 
 .dark .flag-preview-bg {
@@ -161,15 +168,15 @@
 
 /* —— thesvg-style detail page —— */
 body.flag-detail-body {
-  --flag-detail-bg: #f1f3f8;
+  --flag-detail-bg: #f4f7fb;
   --flag-detail-panel: #ffffff;
-  --flag-detail-panel-soft: rgba(255, 255, 255, 0.9);
+  --flag-detail-panel-soft: #ffffff;
   --flag-detail-control: #ffffff;
   --flag-detail-control-hover: #f8fafc;
-  --flag-detail-chip: rgba(15, 23, 42, 0.07);
-  --flag-detail-border: rgba(15, 23, 42, 0.12);
-  --flag-detail-border-strong: rgba(15, 23, 42, 0.28);
-  --flag-detail-inner-border: rgba(15, 23, 42, 0.06);
+  --flag-detail-chip: #eef3f8;
+  --flag-detail-border: rgba(30, 41, 59, 0.11);
+  --flag-detail-border-strong: rgba(30, 41, 59, 0.22);
+  --flag-detail-inner-border: rgba(30, 41, 59, 0.08);
   --flag-detail-heading: #0f172a;
   --flag-detail-body: #526071;
   --flag-detail-muted: #8b98aa;
@@ -177,8 +184,8 @@ body.flag-detail-body {
   --flag-detail-primary-text: #ffffff;
   --flag-detail-code-bg: #09090b;
   --flag-detail-code-text: #d6f5d6;
-  --flag-detail-shadow: 0 10px 24px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.06);
-  --flag-detail-shadow-strong: 0 16px 34px rgba(15, 23, 42, 0.13), 0 2px 5px rgba(15, 23, 42, 0.08);
+  --flag-detail-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 32px rgba(30, 41, 59, 0.075);
+  --flag-detail-shadow-strong: 0 2px 5px rgba(15, 23, 42, 0.06), 0 18px 44px rgba(30, 41, 59, 0.13);
   --bg-page: var(--flag-detail-bg);
   --bg-card: var(--flag-detail-panel);
   --text-heading: var(--flag-detail-heading);
@@ -218,7 +225,7 @@ body.flag-detail-body .nav__spacer {
 }
 
 .icon-preview-bg {
-  background: #f7f9fc;
+  background: #f8fafc;
 }
 .dark .icon-preview-bg {
   background: #18181b;
@@ -235,7 +242,7 @@ body.flag-detail-body .nav__spacer {
 
 .detail-page {
   --bg-card: var(--flag-detail-panel, #101016);
-  --bg-elevated: #15151d;
+  --bg-elevated: var(--flag-detail-panel-soft, #ffffff);
   --bg-page: var(--flag-detail-bg, #07070a);
   --text-heading: var(--flag-detail-heading, #f8fafc);
   --text-body: var(--flag-detail-body, #a1a1aa);

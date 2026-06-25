@@ -188,6 +188,8 @@ const { query, continent, ratio, continents, isoFlags, nonIsoFlags, total } = us
   padding: 0;
   margin-bottom: 1.25rem;
   overflow: hidden;
+  background: var(--bg-card);
+  box-shadow: var(--shadow-card-strong);
 }
 .hero__search-icon {
   position: absolute;
@@ -221,6 +223,13 @@ const { query, continent, ratio, continents, isoFlags, nonIsoFlags, total } = us
 }
 .bento__card {
   padding: 1rem 1.1rem;
+  background: var(--bg-card);
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+.bento__card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-card-strong);
+  transform: translateY(-1px);
 }
 .bento__head {
   display: flex;
@@ -268,11 +277,14 @@ const { query, continent, ratio, continents, isoFlags, nonIsoFlags, total } = us
   font-weight: 700;
   line-height: 1;
   padding: 0.55rem 0.8rem;
-  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  box-shadow: var(--shadow-card);
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
 }
 .section__tab:hover {
   border-color: var(--border-strong);
+  background: var(--bg-elevated);
   color: var(--text-heading);
+  box-shadow: var(--shadow-card-strong);
 }
 .section__tab.active {
   background: var(--brand);
@@ -284,6 +296,8 @@ const { query, continent, ratio, continents, isoFlags, nonIsoFlags, total } = us
   display: inline-flex;
   border: 1px solid var(--border);
   border-radius: 8px;
+  background: var(--bg-card);
+  box-shadow: var(--shadow-card);
   overflow: hidden;
 }
 .section__ratio-btn {
