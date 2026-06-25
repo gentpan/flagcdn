@@ -105,8 +105,18 @@
               <span class="detail-map__tiles" aria-hidden="true">
                 <img
                   v-for="tile in mapModel.tiles"
-                  :key="tile.key"
-                  :src="tile.src"
+                  :key="`${tile.key}-light`"
+                  class="detail-map__tile detail-map__tile--light"
+                  :src="tile.lightSrc"
+                  alt=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                >
+                <img
+                  v-for="tile in mapModel.tiles"
+                  :key="`${tile.key}-dark`"
+                  class="detail-map__tile detail-map__tile--dark"
+                  :src="tile.darkSrc"
                   alt=""
                   loading="lazy"
                   referrerpolicy="no-referrer"
@@ -282,7 +292,8 @@ const mapModel = computed(() => {
       const tileRow = startY + y;
       tiles.push({
         key: `${zoom}-${wrappedX}-${tileRow}`,
-        src: `https://tile.openstreetmap.org/${zoom}/${wrappedX}/${tileRow}.png`,
+        lightSrc: `https://tiles.mapcdn.io/${zoom}/${wrappedX}/${tileRow}.png`,
+        darkSrc: `https://tiles.mapcdn.io/dark/${zoom}/${wrappedX}/${tileRow}.png`,
       });
     }
   }

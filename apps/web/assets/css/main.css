@@ -549,11 +549,19 @@ a.detail-pill:hover {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
 }
-.detail-map__tiles img {
+.detail-map__tile {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.85) contrast(0.95);
+}
+.detail-map__tile--dark {
+  display: none;
+}
+.dark .detail-map__tile--light {
+  display: none;
+}
+.dark .detail-map__tile--dark {
+  display: block;
 }
 .detail-map__marker {
   position: absolute;
@@ -564,9 +572,6 @@ a.detail-pill:hover {
   background: var(--brand);
   box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.28);
   transform: translate(-50%, -50%);
-}
-.dark .detail-map__tiles img {
-  filter: grayscale(0.2) invert(0.9) hue-rotate(180deg) saturate(0.7) contrast(0.82);
 }
 
 .detail-related__head {
