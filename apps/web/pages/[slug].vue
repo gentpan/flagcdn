@@ -16,7 +16,7 @@
         <NuxtLink
           v-for="item in CONTINENTS"
           :key="item"
-          :to="`/continent/${continentToSlug(item)}`"
+          :to="`/${continentToSlug(item)}`"
           class="continent-switch__item"
           :class="{ active: item === continent }"
         >
@@ -150,7 +150,7 @@ if (!continent) {
 
 const config = useRuntimeConfig();
 const siteUrl = (config.public.siteUrl as string).replace(/\/$/, "");
-const canonical = `${siteUrl}/continent/${continentToSlug(continent)}`;
+const canonical = `${siteUrl}/${continentToSlug(continent)}`;
 const { lang } = useSiteI18n();
 const { fetchAll } = useFlags();
 const { data: countries } = await useAsyncData(`continent-${slug}`, () => fetchAll(), { default: () => [] });

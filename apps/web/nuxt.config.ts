@@ -75,10 +75,6 @@ export default defineNuxtConfig({
       prerender: true,
       headers: { "Cache-Control": "public, max-age=0, must-revalidate" },
     },
-    "/continent/**": {
-      prerender: true,
-      headers: { "Cache-Control": "public, max-age=0, must-revalidate" },
-    },
     "/_nuxt/**": { headers: { "Cache-Control": "public, max-age=31536000, immutable" } },
   },
   app: {

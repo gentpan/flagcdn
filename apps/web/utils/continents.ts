@@ -33,5 +33,5 @@ export function continentFromSlug(slug: string) {
 }
 
 export function collectContinentRoutes() {
-  return CONTINENTS.map((continent) => `/continent/${continentToSlug(continent)}`);
+  return CONTINENTS.map((continent) => `/${continentToSlug(continent)}`);
 }

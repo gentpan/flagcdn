@@ -35,7 +35,7 @@
       <NuxtLink
         v-for="c in continents"
         :key="c"
-        :to="`/continent/${continentToSlug(c)}`"
+        :to="`/${continentToSlug(c)}`"
         class="continent-map-links__item"
       >
         <i class="fa-solid fa-map-location-dot" aria-hidden="true" />
