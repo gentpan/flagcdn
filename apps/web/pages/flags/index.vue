@@ -43,9 +43,9 @@ const canonical = `${(config.public.siteUrl as string).replace(/\/$/, "")}/flags
 const { t } = useSiteI18n();
 
 useSeoMeta({
-  title: "Browse All Country Flags – 270+ SVG Icons",
+  title: "Browse Country Flags and Other Flags – SVG Flag CDN",
   description:
-    "Browse all country and territory flags. Each flag has its own page with SVG code, CDN URLs, and multi-format download.",
+    "Browse country flags, territory flags, regional flags, and organization flags. Each flag page includes SVG code, CDN URLs, PNG/WebP/AVIF exports, metadata, and download options.",
   ogUrl: canonical,
 });
 

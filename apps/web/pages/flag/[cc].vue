@@ -99,6 +99,35 @@
           />
           <FlagExportGrid :key="`${cc}-${activeRatio}`" :cc="cc" :ratio="activeRatio" />
 
+          <section class="detail-about card">
+            <h2 class="detail-about__title">{{ country.name }} flag information</h2>
+            <div class="detail-about__body">
+              <p>
+                The {{ country.name }} flag page provides optimized flag assets for websites,
+                apps, documentation, dashboards, and design systems. Use the SVG file for crisp
+                vector rendering, or export PNG, WebP, and AVIF images for fixed-size UI.
+              </p>
+              <p>
+                Code <span class="detail-inline-code">{{ cc.toUpperCase() }}</span>
+                is listed as {{ country.iso ? "an ISO 3166-1 alpha-2 code" : "a non-ISO extension code" }}.
+                <template v-if="country.continent">
+                  The flag is grouped under {{ country.continent }}.
+                </template>
+                <template v-if="country.capital">
+                  Capital: {{ country.capital }}.
+                </template>
+              </p>
+              <p>
+                CDN SVG URL:
+                <span class="detail-inline-code block">{{ absolute(svgUrl(activeRatio, cc)) }}</span>
+              </p>
+              <p>
+                Available formats: SVG, PNG, WebP, and AVIF. Available ratios: 4:3 and 1:1.
+                Raster exports are available from 16px to 512px.
+              </p>
+            </div>
+          </section>
+
           <section v-if="related.length && country.continent" class="detail-related">
             <div class="detail-related__head">
               <p class="detail-label">Related in {{ country.continent }}</p>

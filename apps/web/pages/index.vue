@@ -82,12 +82,12 @@ const bentoItems = [
 ];
 
 useSeoMeta({
-  title: "Country Flag Icons – Free SVG Flags CDN",
+  title: "Free Country Flag Icons – SVG, PNG, WebP & AVIF CDN",
   description:
-    "270+ free SVG country flags by ISO 3166-1. Download PNG, WebP, AVIF at 8 sizes. Copy HTML or CDN URL.",
-  ogTitle: "Country Flag Icons – Free SVG Flags CDN",
+    "Free country flag icons and regional flags in SVG, PNG, WebP and AVIF. Browse ISO country flags, copy HTML snippets, use CDN URLs, or download 1:1 and 4:3 flag assets.",
+  ogTitle: "Free Country Flag Icons – SVG, PNG, WebP & AVIF CDN",
   ogDescription:
-    "270+ country flags. SVG, PNG, WebP, AVIF. One-line CSS or direct CDN links.",
+    "Search country flags, copy CDN links, embed flag-icons CSS, and download clean SVG, PNG, WebP and AVIF flag assets.",
   ogUrl: siteUrl,
   ogType: "website",
 });
@@ -99,14 +99,29 @@ useHead({
       type: "application/ld+json",
       innerHTML: JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "WebApplication",
-        name: "flagcdn.io",
-        url: siteUrl,
-        description: "Free SVG country flag icons by ISO 3166-1 alpha-2.",
-        applicationCategory: "DeveloperApplication",
-        operatingSystem: "Any",
-        offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-        license: "https://opensource.org/licenses/MIT",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            name: "flagcdn.io",
+            url: siteUrl,
+            description: "Free country flag icons and regional flag assets in SVG, PNG, WebP and AVIF.",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: `${siteUrl.replace(/\/$/, "")}/?q={search_term_string}`,
+              "query-input": "required name=search_term_string",
+            },
+          },
+          {
+            "@type": "WebApplication",
+            name: "flagcdn.io",
+            url: siteUrl,
+            description: "Free country flag icons and regional flag assets in SVG, PNG, WebP and AVIF with CDN links, HTML snippets, and per-flag metadata.",
+            applicationCategory: "DeveloperApplication",
+            operatingSystem: "Any",
+            offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+            license: "https://opensource.org/licenses/MIT",
+          },
+        ],
       }),
     },
   ],

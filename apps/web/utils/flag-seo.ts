@@ -1,4 +1,5 @@
 import type { Country } from "~/types/flag";
+import { isCountryFlag } from "~/utils/country-kind";
 
 export interface FlagSeoInput {
   country: Country;
@@ -24,14 +25,17 @@ export function buildFlagSeo({ country, siteUrl }: FlagSeoInput): FlagSeoPack {
   const ccUpper = cc.toUpperCase();
   const name = country.name || ccUpper;
   const continent = country.continent || "";
+  const flagKind = isCountryFlag(country) ? "country flag" : "regional or territory flag";
+  const codeType = country.iso ? "an ISO 3166-1 alpha-2 code" : "a non-ISO extension code";
 
-  const title = `${ccUpper} Flag – ${name} SVG, PNG, WebP, AVIF Download`;
+  const title = `${name} Flag (${ccUpper}) – SVG, PNG, WebP, AVIF Download`;
   const description =
-    `Download the ${name} flag (${ccUpper}) in SVG, PNG, WebP and AVIF at sizes 16–512px. ` +
-    `Copy inline SVG for HTML, or hotlink CDN URLs. ` +
-    (country.iso ? "ISO 3166-1 alpha-2. " : "Non-ISO extension code. ") +
-    (continent ? `${continent}. ` : "") +
-    "Free, MIT-licensed, fast global CDN.";
+    `Download the ${name} flag (${ccUpper}) as SVG, PNG, WebP or AVIF in 1:1 and 4:3 ratios. ` +
+    `Copy HTML snippets, inline SVG, CSS classes, or direct CDN URLs for websites and apps. ` +
+    `${ccUpper} is ${codeType}; this page is categorized as a ${flagKind}. ` +
+    (continent ? `Region: ${continent}. ` : "") +
+    (country.capital ? `Capital: ${country.capital}. ` : "") +
+    "Free, MIT-licensed, optimized for fast global delivery.";
 
   const keywords = [
     `${name} flag`,
@@ -40,7 +44,15 @@ export function buildFlagSeo({ country, siteUrl }: FlagSeoInput): FlagSeoPack {
     `${ccUpper} country flag`,
     `${name} flag PNG`,
     `${name} flag download`,
+    `${name} flag icon`,
+    `${name} SVG flag`,
+    `${name} PNG flag`,
+    `${ccUpper} SVG flag`,
+    `${ccUpper} flag CDN`,
     "country flag icon",
+    "free flag icons",
+    "SVG flag download",
+    "PNG flag download",
     "flag CDN",
     continent ? `${continent} flag` : "",
     country.capital ? `${country.capital} flag` : "",
@@ -64,6 +76,8 @@ export function buildFlagSeo({ country, siteUrl }: FlagSeoInput): FlagSeoPack {
         contentUrl: svgUrl,
         thumbnailUrl: ogImage,
         encodingFormat: "image/svg+xml",
+        width: 256,
+        height: 256,
         keywords,
         license: "https://opensource.org/licenses/MIT",
         creator: { "@type": "Organization", name: "flagcdn.io", url: base },
@@ -76,6 +90,11 @@ export function buildFlagSeo({ country, siteUrl }: FlagSeoInput): FlagSeoPack {
         url: canonical,
         primaryImageOfPage: { "@id": `${canonical}#image` },
         isPartOf: { "@type": "WebSite", name: "flagcdn.io", url: base },
+        about: {
+          "@type": "Thing",
+          name: `${name} flag`,
+          alternateName: [`${ccUpper} flag`, country.name_zh, country.name_ja, country.name_de, country.name_ru, country.name_ar].filter(Boolean),
+        },
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
