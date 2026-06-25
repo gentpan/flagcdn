@@ -16,7 +16,7 @@ export function extractFlagColors(svg: string, limit = 5) {
 
   for (const match of matches) {
     const color = normalizeSvgColor(match[1]);
-    if (!color) continue;
+    if (!color || isBlackOrWhite(color)) continue;
     const current = counts.get(color);
     if (current) {
       current.count += 1;
@@ -29,7 +29,7 @@ export function extractFlagColors(svg: string, limit = 5) {
   if (!counts.size) {
     for (const match of svg.matchAll(/#(?:[0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})\b/gi)) {
       const color = normalizeSvgColor(match[0]);
-      if (!color) continue;
+      if (!color || isBlackOrWhite(color)) continue;
       const current = counts.get(color);
       if (current) current.count += 1;
       else counts.set(color, { count: 1, firstSeen: order++ });
@@ -63,4 +63,15 @@ function normalizeSvgColor(value: string) {
     : withoutAlpha;
 
   return `#${expanded.toUpperCase()}`;
+}
+
+function isBlackOrWhite(color: string) {
+  const red = parseInt(color.slice(1, 3), 16);
+  const green = parseInt(color.slice(3, 5), 16);
+  const blue = parseInt(color.slice(5, 7), 16);
+  const max = Math.max(red, green, blue);
+  const min = Math.min(red, green, blue);
+  const range = max - min;
+
+  return max <= 18 || (min >= 238 && range <= 20);
 }
