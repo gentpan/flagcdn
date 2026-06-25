@@ -75,7 +75,7 @@
                   <span class="detail-meta__key">Local time</span>
                   <span class="detail-live__value">
                     <strong>{{ localTimeLabel }}</strong>
-                    <small v-if="timezoneLabel">{{ timezoneLabel }}</small>
+                    <small v-if="timezoneOffsetLabel">{{ timezoneOffsetLabel }}</small>
                   </span>
                 </div>
               </div>
@@ -309,6 +309,10 @@ const localTimeLabel = computed(() => {
     timeZone: timezoneLabel.value,
   }).format(localTime.value);
 });
+const timezoneOffsetLabel = computed(() => {
+  if (!timezoneLabel.value || !localTime.value) return "";
+  return formatTimezoneOffset(timezoneLabel.value, localTime.value);
+});
 const weatherLabel = computed(() => {
   if (weatherLoading.value) return "Loading";
   if (weatherError.value || weatherTemp.value === null) return "Unavailable";
@@ -472,6 +476,15 @@ async function resolveWeatherCoords() {
 
 function updateLocalClock() {
   localTime.value = new Date();
+}
+
+function formatTimezoneOffset(timeZone: string, value: Date) {
+  const offsetPart = new Intl.DateTimeFormat("en-US", {
+    timeZone,
+    timeZoneName: "shortOffset",
+  }).formatToParts(value).find((part) => part.type === "timeZoneName")?.value;
+  if (!offsetPart) return "";
+  return offsetPart.replace(/^GMT/, "").replace(":00", "") || "+0";
 }
 
 function formatNumber(value: number) {
