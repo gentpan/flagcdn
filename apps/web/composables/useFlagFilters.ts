@@ -1,5 +1,6 @@
 import Fuse from "fuse.js";
 import type { Country } from "~/types/flag";
+import { isCountryFlag } from "~/utils/country-kind";
 
 const CONTINENTS = [
   "Africa",
@@ -47,12 +48,12 @@ export function useFlagFilters(countries: Ref<Country[] | null | undefined>) {
   const filtered = computed(() => {
     const c = continent.value;
     if (!c) return searched.value;
-    if (c === "non-iso") return searched.value.filter((x) => x.iso === false);
+    if (c === "non-iso") return searched.value.filter((x) => !isCountryFlag(x));
     return searched.value.filter((x) => x.continent === c);
   });
 
-  const isoFlags = computed(() => filtered.value.filter((x) => x.iso !== false));
-  const nonIsoFlags = computed(() => filtered.value.filter((x) => x.iso === false));
+  const isoFlags = computed(() => filtered.value.filter(isCountryFlag));
+  const nonIsoFlags = computed(() => filtered.value.filter((x) => !isCountryFlag(x)));
 
   return {
     query,
