@@ -15,6 +15,21 @@ server {
     root /var/www/flagcdn/public;
     index index.html;
 
+    gzip on;
+    gzip_comp_level 6;
+    gzip_min_length 1024;
+    gzip_types text/css application/javascript application/json image/svg+xml;
+    gzip_static on;
+    # Requires ngx_brotli. Remove these two lines if the module is not installed.
+    brotli on;
+    brotli_static on;
+
+    location /_nuxt/ {
+        try_files $uri =404;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+        add_header Access-Control-Allow-Origin "*";
+    }
+
     # 栅格 CDN（静态 miss 时由 Go 即时渲染）
     location ~ ^/i/(1x1|4x3)/(\d+)/([a-z0-9][a-z0-9-]{0,15})\.(png|webp|avif)$ {
         try_files /raster/$1/$2/$3.$4 @flagcdn_api;

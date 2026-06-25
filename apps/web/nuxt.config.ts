@@ -16,6 +16,18 @@ export default defineNuxtConfig({
   modules: [],
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      cssCodeSplit: false,
+      minify: "esbuild",
+      sourcemap: false,
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes("node_modules")) return "vendor";
+          },
+        },
+      },
+    },
   },
   runtimeConfig: {
     repoRoot,
@@ -27,6 +39,10 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
+    compressPublicAssets: {
+      gzip: true,
+      brotli: true,
+    },
     devProxy: {
       "/api/v1": { target: `${apiBase}/api/v1`, changeOrigin: true },
       "/api/stats": { target: `${apiBase}/api/stats`, changeOrigin: true },
