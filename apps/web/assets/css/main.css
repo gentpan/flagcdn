@@ -10,21 +10,21 @@
   --brand-light: #4ade80;
   --brand-muted: rgba(251, 146, 60, 0.12);
 
-  --bg-page: #f4f7fb;
-  --bg-card: #ffffff;
-  --bg-elevated: #f9fbfe;
-  --bg-soft: #eef3f8;
+  --bg-page: #ffffff;
+  --bg-card: #f4f6fa;
+  --bg-elevated: #edf1f6;
+  --bg-soft: #e8eef5;
   --nav-dark: #14141f;
 
   --text-heading: #0f172a;
   --text-body: #526071;
   --text-muted: #8a98aa;
 
-  --border: rgba(30, 41, 59, 0.1);
-  --border-strong: rgba(30, 41, 59, 0.18);
+  --border: rgba(30, 41, 59, 0.12);
+  --border-strong: rgba(30, 41, 59, 0.22);
   --radius: 10px;
-  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 32px rgba(30, 41, 59, 0.07);
-  --shadow-card-strong: 0 2px 5px rgba(15, 23, 42, 0.06), 0 18px 44px rgba(30, 41, 59, 0.12);
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.05), 0 10px 30px rgba(30, 41, 59, 0.08);
+  --shadow-card-strong: 0 2px 5px rgba(15, 23, 42, 0.08), 0 18px 44px rgba(30, 41, 59, 0.15);
   --container: 1000px;
 
   --font-sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
@@ -34,14 +34,14 @@
 
 .dark {
   --bg-page: #000000;
-  --bg-card: #141418;
-  --bg-elevated: #18181d;
-  --bg-soft: #18181b;
+  --bg-card: #1b1b21;
+  --bg-elevated: #22222a;
+  --bg-soft: #202027;
   --text-heading: #f8fafc;
   --text-body: #a1a1aa;
   --text-muted: #71717a;
-  --border: rgba(255, 255, 255, 0.11);
-  --border-strong: rgba(255, 255, 255, 0.2);
+  --border: rgba(255, 255, 255, 0.13);
+  --border-strong: rgba(255, 255, 255, 0.24);
   --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.36);
   --shadow-card-strong: 0 14px 34px rgba(0, 0, 0, 0.35);
   --brand: #fb923c;
@@ -168,15 +168,15 @@
 
 /* —— thesvg-style detail page —— */
 body.flag-detail-body {
-  --flag-detail-bg: #f4f7fb;
-  --flag-detail-panel: #ffffff;
-  --flag-detail-panel-soft: #ffffff;
-  --flag-detail-control: #ffffff;
-  --flag-detail-control-hover: #f8fafc;
-  --flag-detail-chip: #eef3f8;
-  --flag-detail-border: rgba(30, 41, 59, 0.11);
-  --flag-detail-border-strong: rgba(30, 41, 59, 0.22);
-  --flag-detail-inner-border: rgba(30, 41, 59, 0.08);
+  --flag-detail-bg: #ffffff;
+  --flag-detail-panel: #f4f6fa;
+  --flag-detail-panel-soft: #f4f6fa;
+  --flag-detail-control: #f4f6fa;
+  --flag-detail-control-hover: #e9eef5;
+  --flag-detail-chip: #e7edf5;
+  --flag-detail-border: rgba(30, 41, 59, 0.13);
+  --flag-detail-border-strong: rgba(30, 41, 59, 0.24);
+  --flag-detail-inner-border: rgba(30, 41, 59, 0.1);
   --flag-detail-heading: #0f172a;
   --flag-detail-body: #526071;
   --flag-detail-muted: #8b98aa;
@@ -184,8 +184,8 @@ body.flag-detail-body {
   --flag-detail-primary-text: #ffffff;
   --flag-detail-code-bg: #09090b;
   --flag-detail-code-text: #d6f5d6;
-  --flag-detail-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 32px rgba(30, 41, 59, 0.075);
-  --flag-detail-shadow-strong: 0 2px 5px rgba(15, 23, 42, 0.06), 0 18px 44px rgba(30, 41, 59, 0.13);
+  --flag-detail-shadow: 0 1px 2px rgba(15, 23, 42, 0.05), 0 10px 30px rgba(30, 41, 59, 0.085);
+  --flag-detail-shadow-strong: 0 2px 5px rgba(15, 23, 42, 0.08), 0 18px 44px rgba(30, 41, 59, 0.15);
   --bg-page: var(--flag-detail-bg);
   --bg-card: var(--flag-detail-panel);
   --text-heading: var(--flag-detail-heading);
@@ -198,14 +198,14 @@ body.flag-detail-body {
 
 .dark body.flag-detail-body {
   --flag-detail-bg: #000000;
-  --flag-detail-panel: #141418;
-  --flag-detail-panel-soft: rgba(255, 255, 255, 0.055);
-  --flag-detail-control: rgba(255, 255, 255, 0.06);
-  --flag-detail-control-hover: rgba(255, 255, 255, 0.11);
-  --flag-detail-chip: rgba(255, 255, 255, 0.075);
-  --flag-detail-border: rgba(255, 255, 255, 0.11);
-  --flag-detail-border-strong: rgba(255, 255, 255, 0.2);
-  --flag-detail-inner-border: transparent;
+  --flag-detail-panel: #1b1b21;
+  --flag-detail-panel-soft: rgba(255, 255, 255, 0.085);
+  --flag-detail-control: rgba(255, 255, 255, 0.09);
+  --flag-detail-control-hover: rgba(255, 255, 255, 0.14);
+  --flag-detail-chip: rgba(255, 255, 255, 0.105);
+  --flag-detail-border: rgba(255, 255, 255, 0.13);
+  --flag-detail-border-strong: rgba(255, 255, 255, 0.24);
+  --flag-detail-inner-border: rgba(255, 255, 255, 0.08);
   --flag-detail-heading: #f8fafc;
   --flag-detail-body: #a1a1aa;
   --flag-detail-muted: #71717a;
@@ -225,10 +225,10 @@ body.flag-detail-body .nav__spacer {
 }
 
 .icon-preview-bg {
-  background: #f8fafc;
+  background: #eef2f7;
 }
 .dark .icon-preview-bg {
-  background: #18181b;
+  background: #22222a;
 }
 
 .detail-label {
