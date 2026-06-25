@@ -83,16 +83,37 @@
             <p class="detail-profile__text">{{ countryDescription }}</p>
           </div>
 
-          <div v-if="mapEmbedUrl" class="detail-meta card">
-            <p class="detail-label">Map</p>
-            <div class="detail-map">
-              <iframe
-                :src="mapEmbedUrl"
-                :title="`${country.name} map`"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
+          <div v-if="mapModel" class="detail-meta card">
+            <div class="detail-label-row">
+              <p class="detail-label">Map</p>
+              <a
+                class="detail-map__credits"
+                href="https://www.openstreetmap.org/copyright"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                © OpenStreetMap
+              </a>
             </div>
+            <a
+              class="detail-map"
+              :href="mapModel.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              :aria-label="`Open ${country.name} map on OpenStreetMap`"
+            >
+              <span class="detail-map__tiles" aria-hidden="true">
+                <img
+                  v-for="tile in mapModel.tiles"
+                  :key="tile.key"
+                  :src="tile.src"
+                  alt=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                >
+              </span>
+              <span class="detail-map__marker" :style="mapModel.markerStyle" aria-hidden="true" />
+            </a>
           </div>
         </aside>
 
@@ -234,19 +255,46 @@ const svg1x1 = computed(() => svgBundle.value?.svg1x1 || "");
 const svg4x3 = computed(() => svgBundle.value?.svg4x3 || "");
 const bundleUrl = computed(() => `/api/v1/flags/${encodeURIComponent(cc.value)}/download.zip`);
 const hasProfile = computed(() => Boolean(country.value.population !== undefined || country.value.area || countryDescription.value));
-const mapEmbedUrl = computed(() => {
+const mapModel = computed(() => {
   const coords = country.value.latlng;
-  if (!coords || coords.length < 2) return "";
+  if (!coords || coords.length < 2) return null;
   const [lat, lng] = coords;
-  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return "";
-  const delta = country.value.area && country.value.area < 10000 ? 2.2 : 8;
-  const bbox = [
-    Math.max(-180, lng - delta),
-    Math.max(-85, lat - delta),
-    Math.min(180, lng + delta),
-    Math.min(85, lat + delta),
-  ].map((n) => n.toFixed(4)).join(",");
-  return `https://www.openstreetmap.org/export/embed.html?bbox=${encodeURIComponent(bbox)}&layer=mapnik&marker=${encodeURIComponent(`${lat},${lng}`)}`;
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+
+  const zoom = country.value.area && country.value.area < 1000
+    ? 7
+    : country.value.area && country.value.area < 25000
+      ? 5
+      : country.value.area && country.value.area < 200000
+        ? 4
+        : 3;
+  const scale = 2 ** zoom;
+  const tileX = ((lng + 180) / 360) * scale;
+  const latRad = (lat * Math.PI) / 180;
+  const tileY = ((1 - Math.log(Math.tan(latRad) + 1 / Math.cos(latRad)) / Math.PI) / 2) * scale;
+  const startX = Math.floor(tileX) - 1;
+  const startY = Math.max(0, Math.min(scale - 3, Math.floor(tileY) - 1));
+  const tiles = [];
+
+  for (let y = 0; y < 3; y += 1) {
+    for (let x = 0; x < 3; x += 1) {
+      const wrappedX = ((startX + x) % scale + scale) % scale;
+      const tileRow = startY + y;
+      tiles.push({
+        key: `${zoom}-${wrappedX}-${tileRow}`,
+        src: `https://tile.openstreetmap.org/${zoom}/${wrappedX}/${tileRow}.png`,
+      });
+    }
+  }
+
+  return {
+    href: `https://www.openstreetmap.org/?mlat=${lat.toFixed(5)}&mlon=${lng.toFixed(5)}#map=${zoom}/${lat.toFixed(5)}/${lng.toFixed(5)}`,
+    tiles,
+    markerStyle: {
+      left: `${Math.max(8, Math.min(92, ((tileX - startX) / 3) * 100))}%`,
+      top: `${Math.max(8, Math.min(92, ((tileY - startY) / 3) * 100))}%`,
+    },
+  };
 });
 const countryDescription = computed(() => {
   const parts = [`${country.value.name} is listed in the flagcdn.io flag library under code ${cc.value.toUpperCase()}.`];
