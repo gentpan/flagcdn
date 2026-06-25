@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
+import { collectContinentRoutes } from "../../utils/continents";
 
 function collectCodes(root: string): string[] {
   const codes = new Set<string>();
@@ -19,7 +20,7 @@ export default defineEventHandler((event) => {
   const root = config.repoRoot as string;
   const codes = collectCodes(root);
 
-  const staticPages = ["", "/flags", "/docs", "/changelog", "/issues"];
+  const staticPages = ["", "/flags", "/docs", "/changelog", "/issues", ...collectContinentRoutes()];
   const urls = [
     ...staticPages.map((p) => ({
       loc: `${base}${p || "/"}`,

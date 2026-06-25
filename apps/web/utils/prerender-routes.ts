@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
+import { collectContinentRoutes } from "./continents";
 
 /** 构建时收集所有需要 SSG 的 /flag/{cc} 路由 */
 export function collectFlagPrerenderRoutes(repoRoot: string): string[] {
@@ -26,4 +27,8 @@ export function collectFlagPrerenderRoutes(repoRoot: string): string[] {
   }
 
   return [...codes].sort().map((code) => `/flag/${code}`);
+}
+
+export function collectStaticPrerenderRoutes(repoRoot: string): string[] {
+  return [...collectFlagPrerenderRoutes(repoRoot), ...collectContinentRoutes()];
 }

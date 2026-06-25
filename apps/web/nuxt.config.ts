@@ -1,9 +1,9 @@
 import { fileURLToPath } from "node:url";
 import tailwindcss from "@tailwindcss/vite";
-import { collectFlagPrerenderRoutes } from "./utils/prerender-routes";
+import { collectStaticPrerenderRoutes } from "./utils/prerender-routes";
 
 const repoRoot = fileURLToPath(new URL("../..", import.meta.url));
-const flagRoutes = collectFlagPrerenderRoutes(repoRoot);
+const staticRoutes = collectStaticPrerenderRoutes(repoRoot);
 const apiBase = process.env.FLAGCDN_API_BASE || "http://127.0.0.1:8080";
 
 export default defineNuxtConfig({
@@ -57,7 +57,7 @@ export default defineNuxtConfig({
     ],
     prerender: {
       crawlLinks: false,
-      routes: ["/", "/flags", "/docs", "/issues", "/changelog", "/sitemap.xml", "/robots.txt", ...flagRoutes],
+      routes: ["/", "/flags", "/docs", "/issues", "/changelog", "/sitemap.xml", "/robots.txt", ...staticRoutes],
     },
   },
   routeRules: {
@@ -72,6 +72,10 @@ export default defineNuxtConfig({
     "/sitemap.xml": { prerender: true },
     "/robots.txt": { prerender: true },
     "/flag/**": {
+      prerender: true,
+      headers: { "Cache-Control": "public, max-age=0, must-revalidate" },
+    },
+    "/continent/**": {
       prerender: true,
       headers: { "Cache-Control": "public, max-age=0, must-revalidate" },
     },

@@ -1,16 +1,7 @@
 import Fuse from "fuse.js";
 import type { Country } from "~/types/flag";
+import { CONTINENTS } from "~/utils/continents";
 import { isCountryFlag } from "~/utils/country-kind";
-
-const CONTINENTS = [
-  "Africa",
-  "Asia",
-  "Europe",
-  "North America",
-  "Oceania",
-  "South America",
-  "Antarctica",
-] as const;
 
 export function useFlagFilters(countries: Ref<Country[] | null | undefined>) {
   const query = ref("");

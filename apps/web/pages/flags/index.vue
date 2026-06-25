@@ -31,6 +31,17 @@
         {{ t("filter.nonIso") }}
       </button>
     </div>
+    <div class="continent-map-links">
+      <NuxtLink
+        v-for="c in continents"
+        :key="c"
+        :to="`/continent/${continentToSlug(c)}`"
+        class="continent-map-links__item"
+      >
+        <i class="fa-solid fa-map-location-dot" aria-hidden="true" />
+        {{ c }}
+      </NuxtLink>
+    </div>
     <div class="flags-grid">
       <FlagCard v-for="c in filtered" :key="c.code" :country="c" />
     </div>
@@ -38,6 +49,8 @@
 </template>
 
 <script setup lang="ts">
+import { continentToSlug } from "~/utils/continents";
+
 const config = useRuntimeConfig();
 const canonical = `${(config.public.siteUrl as string).replace(/\/$/, "")}/flags`;
 const { t } = useSiteI18n();
