@@ -86,8 +86,14 @@
                       <span>{{ localTimeLabel }}</span>
                       <template v-if="localTimeSecondLabel">
                         <span class="detail-live__clock-sep">:</span>
-                        <span :key="localTimeSecondLabel" class="detail-live__second">
-                          {{ localTimeSecondLabel }}
+                        <span class="detail-live__second" :aria-label="localTimeSecondLabel">
+                          <span
+                            v-for="(digit, index) in localTimeSecondDigits"
+                            :key="`${index}-${digit}`"
+                            class="detail-live__second-digit"
+                          >
+                            {{ digit }}
+                          </span>
                         </span>
                       </template>
                     </strong>
@@ -327,6 +333,7 @@ const localTimeSecondLabel = computed(() => {
   if (!localTime.value) return "";
   return resolveLocalTimeParts(localTime.value)?.second || "";
 });
+const localTimeSecondDigits = computed(() => localTimeSecondLabel.value.split(""));
 const timezoneOffsetLabel = computed(() => {
   if (!localTime.value) return "";
   const offset = resolveTimezoneOffsetMinutes(localTime.value);

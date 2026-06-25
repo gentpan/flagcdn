@@ -826,11 +826,18 @@ a.detail-pill:hover {
   color: var(--text-heading);
 }
 .detail-live__second {
-  display: inline-block;
+  display: inline-flex;
+  align-items: baseline;
   min-width: 1.18em;
-  transform-origin: center top;
-  animation: flip-second 0.42s ease;
+  perspective: 8rem;
   text-align: left;
+}
+.detail-live__second-digit {
+  display: inline-block;
+  width: 0.59em;
+  transform-origin: center bottom;
+  animation: flip-second-up 0.46s ease both;
+  text-align: center;
 }
 .detail-live__content strong {
   flex: 0 0 auto;
@@ -855,14 +862,14 @@ a.detail-pill:hover {
 .detail-live__title small::before {
   content: none;
 }
-@keyframes flip-second {
+@keyframes flip-second-up {
   0% {
     opacity: 0.2;
-    transform: rotateX(-78deg) translateY(-0.08rem);
+    transform: translateY(0.65em) rotateX(76deg);
   }
   55% {
     opacity: 1;
-    transform: rotateX(12deg);
+    transform: translateY(-0.08em) rotateX(-10deg);
   }
   100% {
     opacity: 1;
