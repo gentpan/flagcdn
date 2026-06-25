@@ -20,7 +20,7 @@ const COUNTRY_CODES = new Set([
   "qa",
   "ro", "rs", "ru", "rw",
   "sa", "sb", "sc", "sd", "se", "sg", "si", "sk", "sl", "sm", "sn", "so", "sr", "ss", "st", "sv", "sy", "sz",
-  "td", "tg", "th", "tj", "tl", "tm", "tn", "to", "tr", "tt", "tv", "tw", "tz",
+  "td", "tg", "th", "tj", "tl", "tm", "tn", "to", "tr", "tt", "tv", "tz",
   "ua", "ug", "us", "uy", "uz",
   "va", "vc", "ve", "vn", "vu",
   "ws",
