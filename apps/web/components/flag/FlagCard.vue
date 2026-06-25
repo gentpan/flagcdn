@@ -1,5 +1,9 @@
 <template>
-  <NuxtLink :to="`/flag/${country.code}`" class="flag-card animate-fade-in-up">
+  <NuxtLink
+    :to="`/flag/${country.code}`"
+    class="flag-card animate-fade-in-up"
+    :class="{ 'has-badge': isChinaRegion }"
+  >
     <img
       :src="`/flags/${ratio}/${country.code}.svg`"
       :alt="country.name"
@@ -12,6 +16,7 @@
       <div class="flag-card__code">{{ country.code.toUpperCase() }}</div>
       <div class="flag-card__name">{{ displayName }}</div>
     </div>
+    <span v-if="isChinaRegion" class="flag-card__badge">CHINA</span>
   </NuxtLink>
 </template>
 
@@ -22,6 +27,7 @@ const props = withDefaults(defineProps<{ country: Country; ratio?: "4x3" | "1x1"
   ratio: "4x3",
 });
 const { lang } = useSiteI18n();
+const isChinaRegion = computed(() => ["hk", "mo", "tw"].includes(props.country.code.toLowerCase()));
 
 const displayName = computed(() => {
   const c = props.country;
@@ -36,6 +42,7 @@ const displayName = computed(() => {
 
 <style scoped>
 .flag-card {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -63,6 +70,9 @@ const displayName = computed(() => {
   min-width: 0;
   flex: 1 1 auto;
 }
+.flag-card.has-badge .flag-card__meta {
+  padding-right: 4.5rem;
+}
 .flag-card__code {
   font-family: var(--font-mono);
   font-size: 0.68rem;
@@ -76,5 +86,20 @@ const displayName = computed(() => {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.flag-card__badge {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.7rem;
+  max-width: 5rem;
+  padding: 0.18rem 0.45rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--brand-light);
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-align: center;
 }
 </style>
