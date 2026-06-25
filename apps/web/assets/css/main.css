@@ -417,6 +417,49 @@ a.detail-pill:hover {
   color: var(--text-body);
   margin: 0;
 }
+.detail-live {
+  display: grid;
+  gap: 0.55rem;
+}
+.detail-live__item {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  gap: 0.65rem;
+  align-items: center;
+  padding: 0.62rem;
+  border-radius: 10px;
+  background: var(--flag-detail-control);
+}
+.detail-live__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 9px;
+  background: var(--brand-muted);
+  color: var(--brand);
+}
+.detail-live__content {
+  min-width: 0;
+}
+.detail-live__content strong {
+  display: block;
+  margin-top: 0.12rem;
+  color: var(--text-heading);
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+.detail-live__content small {
+  display: block;
+  margin-top: 0.12rem;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .detail-main {
   display: flex;

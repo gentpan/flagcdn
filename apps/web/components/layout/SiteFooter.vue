@@ -2,6 +2,7 @@
   <footer class="footer">
     <div class="footer__main container-app">
       <p class="footer__tagline">{{ t("footer.tagline") }}</p>
+      <p class="footer__license">Flag assets and source code are available under the MIT License.</p>
     </div>
     <div class="footer__bar">
       <div class="container-app footer__bar-inner">
@@ -55,6 +56,12 @@ const githubRepo = useRuntimeConfig().public.githubRepo as string;
   color: var(--text-muted);
   font-size: 0.9rem;
   margin: 0;
+}
+.footer__license {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  margin: 0.45rem 0 0;
 }
 .footer__bar {
   background: var(--bg-page);

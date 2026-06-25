@@ -37,7 +37,7 @@ export function buildFlagSeo({ country, siteUrl }: FlagSeoInput): FlagSeoPack {
     (country.capital ? `Capital: ${country.capital}. ` : "") +
     (country.population !== undefined ? `Population estimate: ${country.population.toLocaleString("en-US")}. ` : "") +
     (country.area ? `Area: ${country.area.toLocaleString("en-US")} km². ` : "") +
-    "Free, MIT-licensed, optimized for fast global delivery.";
+    "Free flag assets optimized for fast global delivery.";
 
   const keywords = [
     `${name} flag`,

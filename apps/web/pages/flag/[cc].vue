@@ -33,10 +33,6 @@
 
           <div class="detail-meta card">
             <div class="detail-meta__row">
-              <span class="detail-meta__key">License</span>
-              <span class="detail-meta__val">MIT</span>
-            </div>
-            <div class="detail-meta__row">
               <span class="detail-meta__key">Ratios</span>
               <span class="detail-meta__val">2</span>
             </div>
@@ -66,6 +62,32 @@
           <div v-if="country.name_zh" class="detail-meta card">
             <p class="detail-label">Also known as</p>
             <p class="detail-meta__aliases">{{ country.name_zh }}</p>
+          </div>
+
+          <div v-if="hasLiveInfo" class="detail-meta card">
+            <p class="detail-label">Local info</p>
+            <div class="detail-live">
+              <div class="detail-live__item">
+                <span class="detail-live__icon">
+                  <i class="fa-regular fa-clock" aria-hidden="true" />
+                </span>
+                <div class="detail-live__content">
+                  <span class="detail-meta__key">Local time</span>
+                  <strong>{{ localTimeLabel }}</strong>
+                  <small v-if="timezoneLabel">{{ timezoneLabel }}</small>
+                </div>
+              </div>
+              <div v-if="country.capital" class="detail-live__item">
+                <span class="detail-live__icon">
+                  <i class="fa-solid" :class="weatherIcon" aria-hidden="true" />
+                </span>
+                <div class="detail-live__content">
+                  <span class="detail-meta__key">{{ country.capital }} weather</span>
+                  <strong>{{ weatherLabel }}</strong>
+                  <small v-if="weatherSummary">{{ weatherSummary }}</small>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div v-if="hasProfile" class="detail-meta card">
@@ -265,6 +287,35 @@ const svg1x1 = computed(() => svgBundle.value?.svg1x1 || "");
 const svg4x3 = computed(() => svgBundle.value?.svg4x3 || "");
 const bundleUrl = computed(() => `/api/v1/flags/${encodeURIComponent(cc.value)}/download.zip`);
 const hasProfile = computed(() => Boolean(country.value.population !== undefined || country.value.area || countryDescription.value));
+const localTime = ref<Date | null>(null);
+const timezoneLabel = ref("");
+const weatherTemp = ref<number | null>(null);
+const weatherCode = ref<number | null>(null);
+const weatherLoading = ref(true);
+const weatherError = ref(false);
+let timeTimer: ReturnType<typeof setInterval> | undefined;
+const hasLiveInfo = computed(() => Boolean(country.value.latlng?.length || country.value.capital));
+const localTimeLabel = computed(() => {
+  if (!localTime.value) return "Loading";
+  if (!timezoneLabel.value) return weatherLoading.value ? "Loading" : "Unavailable";
+  return new Intl.DateTimeFormat("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+    timeZone: timezoneLabel.value,
+  }).format(localTime.value);
+});
+const weatherLabel = computed(() => {
+  if (weatherLoading.value) return "Loading";
+  if (weatherError.value || weatherTemp.value === null) return "Unavailable";
+  return `${Math.round(weatherTemp.value)}°C`;
+});
+const weatherSummary = computed(() => {
+  if (weatherLoading.value) return "Fetching current conditions";
+  if (weatherError.value) return "Weather API unavailable";
+  return weatherCode.value === null ? "" : weatherText(weatherCode.value);
+});
+const weatherIcon = computed(() => weatherCode.value === null ? "fa-cloud-sun" : weatherIconClass(weatherCode.value));
 const mapModel = computed(() => {
   const coords = country.value.latlng;
   if (!coords || coords.length < 2) return null;
@@ -307,6 +358,17 @@ const mapModel = computed(() => {
     },
   };
 });
+
+onMounted(() => {
+  updateLocalClock();
+  timeTimer = setInterval(updateLocalClock, 30_000);
+  fetchLiveInfo();
+});
+
+onBeforeUnmount(() => {
+  if (timeTimer) clearInterval(timeTimer);
+});
+
 const countryDescription = computed(() => {
   const parts = [`${country.value.name} is listed in the flagcdn.io flag library under code ${cc.value.toUpperCase()}.`];
   if (country.value.continent) parts.push(`It is grouped in ${country.value.continent}.`);
@@ -350,11 +412,91 @@ async function copyCdn() {
   await copyText(absolute(svgUrl(activeRatio.value, cc.value)));
 }
 
+async function fetchLiveInfo() {
+  if (!country.value.latlng?.length && !country.value.capital) return;
+  weatherLoading.value = true;
+  weatherError.value = false;
+  try {
+    const coords = await resolveWeatherCoords();
+    if (!coords) throw new Error("missing coordinates");
+    const data = await $fetch<{
+      timezone?: string;
+      current?: { temperature_2m?: number; weather_code?: number };
+    }>("https://api.open-meteo.com/v1/forecast", {
+      query: {
+        latitude: coords.lat,
+        longitude: coords.lng,
+        current: "temperature_2m,weather_code",
+        timezone: "auto",
+      },
+    });
+    timezoneLabel.value = data.timezone || timezoneLabel.value;
+    weatherTemp.value = typeof data.current?.temperature_2m === "number" ? data.current.temperature_2m : null;
+    weatherCode.value = typeof data.current?.weather_code === "number" ? data.current.weather_code : null;
+    updateLocalClock();
+  } catch {
+    weatherError.value = true;
+  } finally {
+    weatherLoading.value = false;
+  }
+}
+
+async function resolveWeatherCoords() {
+  if (country.value.capital) {
+    try {
+      const data = await $fetch<{ results?: Array<{ latitude: number; longitude: number; country_code?: string }> }>(
+        "https://geocoding-api.open-meteo.com/v1/search",
+        {
+          query: {
+            name: country.value.capital,
+            count: 5,
+            language: "en",
+            format: "json",
+          },
+        },
+      );
+      const alpha2 = cc.value.toUpperCase();
+      const match = data.results?.find((item) => item.country_code?.toUpperCase() === alpha2) || data.results?.[0];
+      if (match) return { lat: match.latitude, lng: match.longitude };
+    } catch {
+      /* fall back to country coordinates */
+    }
+  }
+  const coords = country.value.latlng;
+  return coords && coords.length >= 2 ? { lat: coords[0], lng: coords[1] } : null;
+}
+
+function updateLocalClock() {
+  localTime.value = new Date();
+}
+
 function formatNumber(value: number) {
   return new Intl.NumberFormat("en-US").format(value);
 }
 
 function formatArea(value: number) {
   return `${new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 }).format(value)} km²`;
+}
+
+function weatherText(code: number) {
+  if (code === 0) return "Clear sky";
+  if ([1, 2, 3].includes(code)) return "Partly cloudy";
+  if ([45, 48].includes(code)) return "Fog";
+  if ([51, 53, 55, 56, 57].includes(code)) return "Drizzle";
+  if ([61, 63, 65, 66, 67, 80, 81, 82].includes(code)) return "Rain";
+  if ([71, 73, 75, 77, 85, 86].includes(code)) return "Snow";
+  if ([95, 96, 99].includes(code)) return "Thunderstorm";
+  return "Current weather";
+}
+
+function weatherIconClass(code: number) {
+  if (code === 0) return "fa-sun";
+  if ([1, 2, 3].includes(code)) return "fa-cloud-sun";
+  if ([45, 48].includes(code)) return "fa-smog";
+  if ([51, 53, 55, 56, 57].includes(code)) return "fa-cloud-rain";
+  if ([61, 63, 65, 66, 67, 80, 81, 82].includes(code)) return "fa-cloud-showers-heavy";
+  if ([71, 73, 75, 77, 85, 86].includes(code)) return "fa-snowflake";
+  if ([95, 96, 99].includes(code)) return "fa-cloud-bolt";
+  return "fa-cloud-sun";
 }
 </script>
