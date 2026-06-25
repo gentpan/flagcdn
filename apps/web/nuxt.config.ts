@@ -9,6 +9,9 @@ const apiBase = process.env.FLAGCDN_API_BASE || "http://127.0.0.1:8080";
 export default defineNuxtConfig({
   compatibilityDate: "2025-01-01",
   devtools: { enabled: true },
+  experimental: {
+    payloadExtraction: false,
+  },
   css: ["~/assets/css/main.css"],
   modules: [],
   vite: {

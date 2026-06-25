@@ -1,4 +1,4 @@
-import { formatCompact, formatStars } from "~/utils/format";
+import { formatCompact } from "~/utils/format";
 
 export function useNavStats() {
   const config = useRuntimeConfig();
@@ -8,24 +8,12 @@ export function useNavStats() {
   const githubStars = ref("");
 
   onMounted(async () => {
-    fetchGitHubStars();
     fetchRequestStats();
   });
 
-  async function fetchGitHubStars() {
-    try {
-      const data = await $fetch<{ stargazers_count?: number }>(
-        `https://api.github.com/repos/${githubRepo}`,
-        { headers: { Accept: "application/vnd.github.v3+json" } },
-      );
-      const n = data?.stargazers_count ?? 0;
-      if (n > 0) githubStars.value = formatStars(n);
-    } catch {
-      /* keep empty */
-    }
-  }
-
   async function fetchRequestStats() {
+    if (import.meta.client && isLocalStaticPreview()) return;
+
     try {
       const data = await $fetch<{ requests?: number }>("/api/stats");
       if (typeof data.requests === "number") {
@@ -34,6 +22,11 @@ export function useNavStats() {
     } catch {
       /* keep dash */
     }
+  }
+
+  function isLocalStaticPreview() {
+    const { hostname, port } = window.location;
+    return (hostname === "localhost" || hostname === "127.0.0.1") && port === "3000";
   }
 
   return { requestCount, githubStars, githubRepo };
