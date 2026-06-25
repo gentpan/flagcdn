@@ -11,6 +11,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   experimental: {
     payloadExtraction: false,
+    appManifest: false,
+    checkOutdatedBuildInterval: false,
   },
   css: ["~/assets/css/main.css"],
   modules: [],
@@ -56,11 +58,6 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: false,
       routes: ["/", "/flags", "/docs", "/issues", "/changelog", "/sitemap.xml", "/robots.txt", ...flagRoutes],
-    },
-  },
-  $production: {
-    experimental: {
-      checkOutdatedBuildInterval: 60_000,
     },
   },
   routeRules: {
