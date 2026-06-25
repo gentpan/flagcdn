@@ -8,10 +8,7 @@
         </NuxtLink>
         <template v-if="country.continent">
           <span class="detail-breadcrumb__sep">/</span>
-          <NuxtLink
-            :to="`/?continent=${encodeURIComponent(country.continent)}`"
-            class="detail-breadcrumb__link"
-          >
+          <NuxtLink to="/" class="detail-breadcrumb__link">
             {{ country.continent }}
           </NuxtLink>
         </template>
@@ -60,10 +57,7 @@
           <div v-if="country.continent" class="detail-meta card">
             <p class="detail-label">Categories</p>
             <div class="detail-pills">
-              <NuxtLink
-                :to="`/?continent=${encodeURIComponent(country.continent)}`"
-                class="detail-pill"
-              >
+              <NuxtLink to="/" class="detail-pill">
                 {{ country.continent }}
               </NuxtLink>
               <span v-if="country.iso" class="detail-pill">ISO 3166</span>

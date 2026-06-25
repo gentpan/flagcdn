@@ -13,22 +13,9 @@ const CONTINENTS = [
 ] as const;
 
 export function useFlagFilters(countries: Ref<Country[] | null | undefined>) {
-  const route = useRoute();
-  const router = useRouter();
-
   const query = ref("");
   const continent = ref("");
   const ratio = ref<"4x3" | "1x1">("4x3");
-
-  onMounted(() => {
-    const q = route.query.continent;
-    if (typeof q === "string") continent.value = q;
-  });
-
-  watch(continent, (value) => {
-    const next = value ? { continent: value } : {};
-    router.replace({ query: next });
-  });
 
   const fuse = computed(
     () =>
