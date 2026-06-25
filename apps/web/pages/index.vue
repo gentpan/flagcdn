@@ -2,7 +2,6 @@
   <div>
     <section class="hero">
       <div class="container-app hero__inner">
-        <div class="hero__watermark" aria-hidden="true">flagcdn</div>
         <div class="hero__content">
           <h1 class="hero__title">{{ t("hero.title") }}</h1>
           <p class="hero__subtitle">{{ t("hero.sub") }}</p>
@@ -129,18 +128,6 @@ const { query, continent, ratio, continents, isoFlags, nonIsoFlags, total } = us
   position: relative;
   text-align: center;
   padding: 2.5rem 0 1.5rem;
-}
-.hero__watermark {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -55%);
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(72px, 18vw, 220px);
-  color: rgba(34, 197, 94, 0.08);
-  white-space: nowrap;
-  pointer-events: none;
 }
 .hero__content { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
 .hero__title {

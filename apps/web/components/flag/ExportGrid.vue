@@ -78,10 +78,10 @@ function fileName(size: number) {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.65rem;
 }
 .ts-export__icon {
-  color: #ea580c;
+  color: #fb923c;
   opacity: 0.75;
 }
 .ts-export__label {
@@ -90,22 +90,22 @@ function fileName(size: number) {
 .ts-export__formats {
   display: flex;
   gap: 0.35rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.65rem;
 }
 .ts-export__fmt {
-  padding: 0.25rem 0.6rem;
+  padding: 0.28rem 0.62rem;
   border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--bg-card);
+  border-radius: 999px;
+  background: var(--flag-detail-control);
   font-size: 0.6875rem;
   font-weight: 600;
   color: var(--text-muted);
   cursor: pointer;
 }
 .ts-export__fmt.is-active {
-  border-color: #ea580c;
-  background: rgba(249, 115, 22, 0.08);
-  color: #ea580c;
+  border-color: rgba(251, 146, 60, 0.5);
+  background: rgba(251, 146, 60, 0.12);
+  color: #fdba74;
 }
 .ts-export__grid {
   display: grid;
@@ -116,26 +116,30 @@ function fileName(size: number) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0.5rem;
+  min-height: 6.1rem;
+  padding: 0.55rem;
   border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--bg-card);
+  border-radius: 14px;
+  background: var(--flag-detail-control);
   box-shadow: var(--shadow-card);
   text-decoration: none;
   color: inherit;
   transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
 }
 .ts-export__card:hover {
-  border-color: rgba(249, 115, 22, 0.35);
-  background: rgba(249, 115, 22, 0.04);
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+  border-color: rgba(251, 146, 60, 0.4);
+  background: rgba(251, 146, 60, 0.07);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
+}
+.dark .ts-export__card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.26);
 }
 .ts-export__preview {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 3.5rem;
-  border-radius: 8px;
+  height: 3.45rem;
+  border-radius: 10px;
 }
 .ts-export__preview img {
   object-fit: contain;

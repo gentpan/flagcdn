@@ -36,7 +36,7 @@ const { svgUrl } = useRaster();
 .ts-variants__grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.55rem;
 }
 .ts-variants__item {
   display: flex;
@@ -45,19 +45,24 @@ const { svgUrl } = useRaster();
   gap: 0.35rem;
   padding: 0.5rem;
   border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--bg-card);
+  border-radius: 14px;
+  background: var(--flag-detail-control);
   box-shadow: var(--shadow-card);
   cursor: pointer;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s, background 0.15s;
 }
 .ts-variants__item:hover {
   border-color: var(--border-strong);
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+  background: var(--flag-detail-control-hover);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
+  transform: translateY(-1px);
 }
 .ts-variants__item.is-active {
-  border-color: var(--text-heading);
-  box-shadow: 0 0 0 2px var(--text-heading);
+  border-color: var(--flag-detail-primary-bg);
+  box-shadow: 0 0 0 2px var(--flag-detail-border-strong);
+}
+.dark .ts-variants__item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.26);
 }
 .ts-variants__thumb {
   display: flex;
@@ -65,7 +70,7 @@ const { svgUrl } = useRaster();
   justify-content: center;
   width: 4rem;
   height: 4rem;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 .ts-variants__img {
   object-fit: contain;

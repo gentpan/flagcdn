@@ -156,7 +156,7 @@ useHead({
   font-family: var(--font-mono);
   display: inline;
   padding: 0.15rem 0.4rem;
-  background: color-mix(in srgb, var(--bg-card) 60%, var(--bg-page));
+  background: var(--bg-card);
   font-size: 0.875rem;
   border: 1px solid var(--border);
   border-radius: 4px;
@@ -164,7 +164,7 @@ useHead({
 .docs :deep(a) {
   color: var(--brand);
   text-decoration: none;
-  border-bottom: 1px dotted color-mix(in srgb, var(--border) 60%, var(--brand) 40%);
+  border-bottom: 1px dotted var(--brand);
 }
 .docs :deep(a:hover) {
   border-bottom-style: solid;

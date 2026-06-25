@@ -59,37 +59,38 @@ async function copy(key: string, text: string) {
 .ts-cmds {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.45rem;
 }
 .ts-cmds__row {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.4rem 0.75rem;
+  min-height: 2.5rem;
+  padding: 0.42rem 0.65rem;
   border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg-card);
+  border-radius: 10px;
+  background: var(--flag-detail-control);
   box-shadow: var(--shadow-card);
 }
 .ts-cmds__tag {
   flex-shrink: 0;
-  padding: 0.15rem 0.4rem;
-  border-radius: 4px;
+  padding: 0.18rem 0.42rem;
+  border-radius: 6px;
   font-family: var(--font-mono);
   font-size: 0.625rem;
   font-weight: 700;
 }
 .ts-cmds__tag--css {
-  background: rgba(29, 111, 168, 0.12);
-  color: var(--brand);
+  background: var(--flag-detail-chip);
+  color: var(--text-muted);
 }
 .ts-cmds__tag--cdn {
-  background: rgba(59, 130, 246, 0.12);
-  color: #2563eb;
+  background: var(--flag-detail-chip);
+  color: var(--text-muted);
 }
 .ts-cmds__tag--img {
-  background: rgba(249, 115, 22, 0.12);
-  color: #ea580c;
+  background: var(--brand-muted);
+  color: var(--brand);
 }
 .ts-cmds__code {
   flex: 1;
@@ -99,17 +100,25 @@ async function copy(key: string, text: string) {
   white-space: nowrap;
   font-family: var(--font-mono);
   font-size: 0.6875rem;
-  color: var(--text-body);
+  color: var(--text-heading);
 }
 .ts-cmds__copy {
   flex-shrink: 0;
-  padding: 0.25rem;
-  border: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 8px;
   background: transparent;
   color: var(--text-muted);
   cursor: pointer;
 }
 .ts-cmds__copy:hover {
+  border-color: var(--border);
+  background: var(--flag-detail-control-hover);
   color: var(--text-heading);
 }
 </style>

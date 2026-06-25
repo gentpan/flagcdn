@@ -99,16 +99,16 @@ async function onCopy() {
 .ts-code {
   overflow: hidden;
   border: 1px solid var(--border);
-  border-radius: 12px;
-  background: color-mix(in srgb, var(--bg-card) 35%, transparent);
+  border-radius: 14px;
+  background: var(--flag-detail-panel-soft);
   box-shadow: var(--shadow-card);
 }
 .ts-code__tabs {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem;
+  gap: 0.6rem;
+  padding: 0.7rem 0.85rem;
   border-bottom: 1px solid var(--border);
 }
 .ts-code__group {
@@ -122,57 +122,57 @@ async function onCopy() {
   background: var(--border);
 }
 .ts-code__tab {
-  padding: 0.25rem 0.55rem;
+  padding: 0.26rem 0.56rem;
   border: none;
-  border-radius: 6px;
-  background: var(--bg-page);
+  border-radius: 999px;
+  background: var(--flag-detail-chip);
   font-size: 0.6875rem;
   font-weight: 600;
   color: var(--text-muted);
   cursor: pointer;
 }
 .ts-code__tab:hover {
-  background: var(--brand-muted);
+  background: var(--flag-detail-control-hover);
   color: var(--text-heading);
 }
 .ts-code__tab.is-active {
-  background: var(--text-heading);
-  color: var(--bg-card);
+  background: var(--flag-detail-primary-bg);
+  color: var(--flag-detail-primary-text);
 }
 .ts-code__body {
   position: relative;
 }
 .ts-code__copy {
   position: absolute;
-  top: 0.5rem;
+  top: 0.65rem;
   right: 0.75rem;
   z-index: 1;
   display: flex;
   align-items: center;
   gap: 0.3rem;
   padding: 0.25rem 0.5rem;
-  border: none;
-  border-radius: 6px;
-  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--flag-detail-control);
   color: #94a3b8;
   font-size: 0.625rem;
   font-weight: 600;
   cursor: pointer;
 }
 .ts-code__copy:hover {
-  background: #1e293b;
-  color: #e2e8f0;
+  background: var(--flag-detail-control-hover);
+  color: var(--text-heading);
 }
 .ts-code__pre {
   margin: 0;
   max-height: 14rem;
   overflow: auto;
-  padding: 1rem 4.5rem 1rem 1rem;
-  background: #09090b;
+  padding: 1rem 4.75rem 1rem 1rem;
+  background: var(--flag-detail-code-bg);
   font-family: var(--font-mono);
   font-size: 0.6875rem;
   line-height: 1.6;
-  color: #d4d4d8;
+  color: var(--flag-detail-code-text);
   white-space: pre-wrap;
   word-break: break-all;
 }

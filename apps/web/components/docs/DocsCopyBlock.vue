@@ -39,7 +39,7 @@ async function onCopy() {
   margin: 0.5rem 0 1rem;
   padding: 0.4rem 0.6rem;
   border: 1px solid var(--border);
-  background: color-mix(in srgb, var(--bg-card) 60%, var(--bg-page));
+  background: var(--bg-card);
   border-radius: 6px;
 }
 .docs-code__pre {

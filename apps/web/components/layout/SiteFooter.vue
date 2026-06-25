@@ -27,8 +27,8 @@
         </div>
       </div>
     </div>
-    <div class="footer__watermark-wrap" aria-hidden="true">
-      <span class="footer__watermark">flagcdn</span>
+    <div class="footer__brand" aria-hidden="true">
+      <span class="footer__brand-text">flagcdn</span>
     </div>
   </footer>
 </template>
@@ -45,6 +45,7 @@ const githubRepo = useRuntimeConfig().public.githubRepo as string;
   padding: 0;
   display: flex;
   flex-direction: column;
+  background: var(--bg-page);
 }
 .footer__main {
   padding: 2rem 0 1.5rem;
@@ -56,8 +57,7 @@ const githubRepo = useRuntimeConfig().public.githubRepo as string;
   margin: 0;
 }
 .footer__bar {
-  border-top: 1px solid var(--border);
-  background: color-mix(in srgb, var(--bg-page) 70%, var(--border) 30%);
+  background: var(--bg-page);
   padding: 0.65rem 0;
 }
 .footer__bar-inner {
@@ -96,27 +96,23 @@ const githubRepo = useRuntimeConfig().public.githubRepo as string;
   color: var(--brand);
   background: var(--brand-muted);
 }
-.footer__watermark-wrap {
+.footer__brand {
   overflow: hidden;
   text-align: center;
-  margin: 0;
-  /* 只显示约 75%，底部 25% 裁切隐藏 */
-  height: clamp(54px, 13.5vw, 150px);
+  height: clamp(58px, 13vw, 150px);
+  margin-top: 0.25rem;
 }
-.footer__watermark {
+.footer__brand-text {
   display: block;
   font-family: var(--font-display);
+  font-size: clamp(78px, 18vw, 210px);
   font-weight: 800;
-  font-size: clamp(72px, 18vw, 200px);
   line-height: 1;
-  color: rgba(29, 111, 168, 0.1);
+  color: rgba(255, 255, 255, 0.08);
   white-space: nowrap;
-  transition: color 0.2s;
+  transition: color 0.18s;
 }
-.footer__watermark-wrap:hover .footer__watermark {
-  color: var(--brand);
-}
-.dark .footer__watermark {
-  color: rgba(91, 168, 224, 0.12);
+.footer__brand:hover .footer__brand-text {
+  color: var(--brand-light);
 }
 </style>

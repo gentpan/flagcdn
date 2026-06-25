@@ -178,6 +178,7 @@ useSeoMeta({
 });
 
 useHead(() => ({
+  bodyAttrs: { class: "flag-detail-body" },
   link: [{ rel: "canonical", href: seo.value.canonical }],
   script: [
     {
