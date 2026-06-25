@@ -10,7 +10,8 @@
           :class="{ 'is-active': tab === t.id }"
           @click="tab = t.id"
         >
-          {{ t.label }}
+          <i v-if="t.icon" :class="t.icon" aria-hidden="true" />
+          <span>{{ t.label }}</span>
         </button>
       </div>
       <div class="ts-code__divider" />
@@ -23,7 +24,8 @@
           :class="{ 'is-active': tab === t.id }"
           @click="tab = t.id"
         >
-          {{ t.label }}
+          <i v-if="t.icon" :class="t.icon" aria-hidden="true" />
+          <span>{{ t.label }}</span>
         </button>
       </div>
     </div>
@@ -48,29 +50,47 @@ const props = defineProps<{
   svg4x3: string;
 }>();
 
-type TabId = "html" | "css" | "svg" | "cdn" | "img";
+type TabId = "react" | "vue" | "html" | "next" | "css" | "svg" | "cdn" | "img";
+type CodeTab = {
+  id: TabId;
+  label: string;
+  icon?: string;
+};
 
-const tab = ref<TabId>("svg");
+const tab = ref<TabId>("next");
 const copied = ref(false);
 const { absolute, rasterUrl, svgUrl } = useRaster();
 const { copyText } = useCopy();
 
-const useTabs = [
-  { id: "html" as const, label: "HTML" },
-  { id: "css" as const, label: "CSS" },
+const useTabs: CodeTab[] = [
+  { id: "react" as const, label: "React", icon: "fa-brands fa-react" },
+  { id: "vue" as const, label: "Vue", icon: "fa-brands fa-vuejs" },
+  { id: "html" as const, label: "HTML", icon: "fa-brands fa-html5" },
+  { id: "next" as const, label: "Next.js", icon: "fa-solid fa-circle-half-stroke" },
+  { id: "css" as const, label: "CSS", icon: "fa-brands fa-css3-alt" },
 ];
-const copyTabs = [
+const copyTabs: CodeTab[] = [
   { id: "svg" as const, label: "SVG" },
   { id: "cdn" as const, label: "CDN" },
   { id: "img" as const, label: "IMG" },
 ];
 
 const rawSvg = computed(() => (props.ratio === "1x1" ? props.svg1x1 : props.svg4x3));
+const flagUrl = computed(() => absolute(svgUrl(props.ratio, props.cc)));
+const flagHeight = computed(() => (props.ratio === "1x1" ? 32 : 24));
 
 const displayCode = computed(() => {
+  if (tab.value === "react") {
+    return `export default function FlagIcon() {\n  return (\n    <img\n      src="${flagUrl.value}"\n      alt="${props.name} flag"\n      width={32}\n      height={${flagHeight.value}}\n    />\n  );\n}`;
+  }
+  if (tab.value === "vue") {
+    return `<template>\n  <img\n    src="${flagUrl.value}"\n    alt="${props.name} flag"\n    width="32"\n    height="${flagHeight.value}"\n  >\n</template>`;
+  }
   if (tab.value === "html") {
-    const h = props.ratio === "1x1" ? 32 : 24;
-    return `<img src="${absolute(svgUrl(props.ratio, props.cc))}" alt="${props.name} flag" width="32" height="${h}" />`;
+    return `<img src="${flagUrl.value}" alt="${props.name} flag" width="32" height="${flagHeight.value}" />`;
+  }
+  if (tab.value === "next") {
+    return `import Image from "next/image";\n\nexport default function FlagIcon() {\n  return (\n    <Image\n      src="${flagUrl.value}"\n      alt="${props.name} flag"\n      width={32}\n      height={${flagHeight.value}}\n      unoptimized\n    />\n  );\n}`;
   }
   if (tab.value === "css") {
     return `<link rel="stylesheet" href="${absolute("/css/flag-icons.min.css")}" />\n<span class="fi fi-${props.cc}"></span>`;
@@ -122,6 +142,9 @@ async function onCopy() {
   background: var(--border);
 }
 .ts-code__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
   padding: 0.26rem 0.56rem;
   border: 1px solid var(--flag-detail-inner-border);
   border-radius: 999px;

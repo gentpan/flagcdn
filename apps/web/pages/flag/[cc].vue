@@ -29,6 +29,17 @@
               :class="activeRatio === '1x1' ? 'is-square' : 'is-wide'"
             >
             <div class="detail-preview__code">{{ cc.toUpperCase() }}</div>
+            <div v-if="flagColors.length" class="detail-preview__colors" aria-label="Main flag colors">
+              <span
+                v-for="color in flagColors"
+                :key="color"
+                class="detail-preview__color"
+                :title="color"
+              >
+                <span class="detail-preview__swatch" :style="{ backgroundColor: color }" />
+                <span>{{ color }}</span>
+              </span>
+            </div>
           </div>
 
           <div class="detail-meta card">
@@ -261,6 +272,7 @@
 
 <script setup lang="ts">
 import type { FlagDetailResponse, Ratio } from "~/types/flag";
+import { extractFlagColors } from "~/utils/flag-colors";
 import { buildFlagSeo } from "~/utils/flag-seo";
 
 const route = useRoute();
@@ -289,6 +301,8 @@ const country = computed(() => (detail.value as FlagDetailResponse).country);
 const related = computed(() => (detail.value as FlagDetailResponse).related || []);
 const svg1x1 = computed(() => svgBundle.value?.svg1x1 || "");
 const svg4x3 = computed(() => svgBundle.value?.svg4x3 || "");
+const activeSvg = computed(() => (activeRatio.value === "1x1" ? svg1x1.value : svg4x3.value));
+const flagColors = computed(() => extractFlagColors(activeSvg.value, 4));
 const bundleUrl = computed(() => `/api/v1/flags/${encodeURIComponent(cc.value)}/download.zip`);
 const hasProfile = computed(() => Boolean(country.value.population !== undefined || country.value.area || countryDescription.value));
 const localTime = ref<Date | null>(null);
