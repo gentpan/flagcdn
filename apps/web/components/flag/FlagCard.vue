@@ -39,6 +39,7 @@ const displayName = computed(() => {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  min-width: 0;
   padding: 0.65rem 0.75rem;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -57,6 +58,10 @@ const displayName = computed(() => {
   border: 1px solid var(--border);
   border-radius: 2px;
   object-fit: cover;
+}
+.flag-card__meta {
+  min-width: 0;
+  flex: 1 1 auto;
 }
 .flag-card__code {
   font-family: var(--font-mono);
