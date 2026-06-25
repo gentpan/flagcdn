@@ -35,6 +35,8 @@ export function buildFlagSeo({ country, siteUrl }: FlagSeoInput): FlagSeoPack {
     `${ccUpper} is ${codeType}; this page is categorized as a ${flagKind}. ` +
     (continent ? `Region: ${continent}. ` : "") +
     (country.capital ? `Capital: ${country.capital}. ` : "") +
+    (country.population !== undefined ? `Population estimate: ${country.population.toLocaleString("en-US")}. ` : "") +
+    (country.area ? `Area: ${country.area.toLocaleString("en-US")} km². ` : "") +
     "Free, MIT-licensed, optimized for fast global delivery.";
 
   const keywords = [
@@ -94,6 +96,12 @@ export function buildFlagSeo({ country, siteUrl }: FlagSeoInput): FlagSeoPack {
           "@type": "Thing",
           name: `${name} flag`,
           alternateName: [`${ccUpper} flag`, country.name_zh, country.name_ja, country.name_de, country.name_ru, country.name_ar].filter(Boolean),
+          additionalProperty: [
+            country.population !== undefined
+              ? { "@type": "PropertyValue", name: "Population estimate", value: country.population }
+              : null,
+            country.area ? { "@type": "PropertyValue", name: "Area", value: `${country.area} km²` } : null,
+          ].filter(Boolean),
         },
         breadcrumb: {
           "@type": "BreadcrumbList",

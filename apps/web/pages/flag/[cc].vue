@@ -67,6 +67,33 @@
             <p class="detail-label">Also known as</p>
             <p class="detail-meta__aliases">{{ country.name_zh }}</p>
           </div>
+
+          <div v-if="hasProfile" class="detail-meta card">
+            <p class="detail-label">Country profile</p>
+            <div class="detail-profile__stats">
+              <div v-if="country.population !== undefined" class="detail-profile__stat">
+                <span class="detail-meta__key">Population estimate</span>
+                <strong>{{ formatNumber(country.population) }}</strong>
+              </div>
+              <div v-if="country.area" class="detail-profile__stat">
+                <span class="detail-meta__key">Area</span>
+                <strong>{{ formatArea(country.area) }}</strong>
+              </div>
+            </div>
+            <p class="detail-profile__text">{{ countryDescription }}</p>
+          </div>
+
+          <div v-if="mapEmbedUrl" class="detail-meta card">
+            <p class="detail-label">Map</p>
+            <div class="detail-map">
+              <iframe
+                :src="mapEmbedUrl"
+                :title="`${country.name} map`"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
         </aside>
 
         <div class="detail-main">
@@ -76,13 +103,32 @@
               <p class="detail-header__slug">{{ cc }}</p>
             </div>
             <div class="detail-header__actions">
-              <a :href="svgUrl(activeRatio, cc)" class="detail-btn detail-btn--primary" download>
+              <a
+                :href="svgUrl(activeRatio, cc)"
+                class="detail-btn detail-btn--square detail-btn--primary"
+                :download="`${cc}_${activeRatio}.svg`"
+                title="Download current SVG"
+                aria-label="Download current SVG"
+              >
                 <i class="fa-solid fa-download" aria-hidden="true" />
-                Download
               </a>
-              <button type="button" class="detail-btn detail-btn--ghost" @click="copyCdn">
+              <a
+                :href="bundleUrl"
+                class="detail-btn detail-btn--square detail-btn--ghost"
+                :download="`${cc}-flag-assets.zip`"
+                title="Download all formats and sizes"
+                aria-label="Download all formats and sizes"
+              >
+                <i class="fa-solid fa-file-zipper" aria-hidden="true" />
+              </a>
+              <button
+                type="button"
+                class="detail-btn detail-btn--square detail-btn--ghost"
+                title="Copy current SVG CDN URL"
+                aria-label="Copy current SVG CDN URL"
+                @click="copyCdn"
+              >
                 <i class="fa-solid fa-link" aria-hidden="true" />
-                Copy URL
               </button>
             </div>
           </div>
@@ -186,6 +232,30 @@ const country = computed(() => (detail.value as FlagDetailResponse).country);
 const related = computed(() => (detail.value as FlagDetailResponse).related || []);
 const svg1x1 = computed(() => svgBundle.value?.svg1x1 || "");
 const svg4x3 = computed(() => svgBundle.value?.svg4x3 || "");
+const bundleUrl = computed(() => `/api/v1/flags/${encodeURIComponent(cc.value)}/download.zip`);
+const hasProfile = computed(() => Boolean(country.value.population !== undefined || country.value.area || countryDescription.value));
+const mapEmbedUrl = computed(() => {
+  const coords = country.value.latlng;
+  if (!coords || coords.length < 2) return "";
+  const [lat, lng] = coords;
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return "";
+  const delta = country.value.area && country.value.area < 10000 ? 2.2 : 8;
+  const bbox = [
+    Math.max(-180, lng - delta),
+    Math.max(-85, lat - delta),
+    Math.min(180, lng + delta),
+    Math.min(85, lat + delta),
+  ].map((n) => n.toFixed(4)).join(",");
+  return `https://www.openstreetmap.org/export/embed.html?bbox=${encodeURIComponent(bbox)}&layer=mapnik&marker=${encodeURIComponent(`${lat},${lng}`)}`;
+});
+const countryDescription = computed(() => {
+  const parts = [`${country.value.name} is listed in the flagcdn.io flag library under code ${cc.value.toUpperCase()}.`];
+  if (country.value.continent) parts.push(`It is grouped in ${country.value.continent}.`);
+  if (country.value.capital) parts.push(`The capital is ${country.value.capital}.`);
+  if (country.value.population !== undefined) parts.push(`Population estimate: ${formatNumber(country.value.population)}.`);
+  if (country.value.area) parts.push(`Area: ${formatArea(country.value.area)}.`);
+  return parts.join(" ");
+});
 
 const config = useRuntimeConfig();
 const seo = computed(() =>
@@ -219,5 +289,13 @@ useHead(() => ({
 
 async function copyCdn() {
   await copyText(absolute(svgUrl(activeRatio.value, cc.value)));
+}
+
+function formatNumber(value: number) {
+  return new Intl.NumberFormat("en-US").format(value);
+}
+
+function formatArea(value: number) {
+  return `${new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 }).format(value)} km²`;
 }
 </script>

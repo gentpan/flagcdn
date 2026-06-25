@@ -11,7 +11,14 @@
     "name_ja": "アフガニスタン",
     "name_de": "Afghanistan",
     "name_ru": "Афганистан",
-    "name_ar": "أفغانستان"
+    "name_ar": "أفغانستان",
+    "latlng": [
+      33,
+      65
+    ],
+    "area": 652230,
+    "cca3": "AFG",
+    "population": 37172386
   },
   {
     "capital": "Mariehamn",
@@ -25,7 +32,14 @@
     "name_ja": "オーランド諸島",
     "name_de": "Ålandinseln",
     "name_ru": "Аландские о-ва",
-    "name_ar": "جزر آلاند"
+    "name_ar": "جزر آلاند",
+    "latlng": [
+      60.116667,
+      19.9
+    ],
+    "area": 1580,
+    "cca3": "ALA",
+    "population": 30000
   },
   {
     "capital": "Tirana",
@@ -39,7 +53,14 @@
     "name_ja": "アルバニア",
     "name_de": "Albanien",
     "name_ru": "Албания",
-    "name_ar": "ألبانيا"
+    "name_ar": "ألبانيا",
+    "latlng": [
+      41,
+      20
+    ],
+    "area": 28748,
+    "cca3": "ALB",
+    "population": 2866376
   },
   {
     "capital": "Algiers",
@@ -53,7 +74,14 @@
     "name_ja": "アルジェリア",
     "name_de": "Algerien",
     "name_ru": "Алжир",
-    "name_ar": "الجزائر"
+    "name_ar": "الجزائر",
+    "latlng": [
+      28,
+      3
+    ],
+    "area": 2381741,
+    "cca3": "DZA",
+    "population": 42228429
   },
   {
     "capital": "Pago Pago",
@@ -67,7 +95,14 @@
     "name_ja": "米領サモア",
     "name_de": "Amerikanisch-Samoa",
     "name_ru": "Американское Самоа",
-    "name_ar": "ساموا الأمريكية"
+    "name_ar": "ساموا الأمريكية",
+    "latlng": [
+      -14.33333333,
+      -170
+    ],
+    "area": 199,
+    "cca3": "ASM",
+    "population": 55465
   },
   {
     "capital": "Andorra la Vella",
@@ -81,7 +116,14 @@
     "name_ja": "アンドラ",
     "name_de": "Andorra",
     "name_ru": "Андорра",
-    "name_ar": "أندورا"
+    "name_ar": "أندورا",
+    "latlng": [
+      42.5,
+      1.5
+    ],
+    "area": 468,
+    "cca3": "AND",
+    "population": 77006
   },
   {
     "capital": "Luanda",
@@ -95,7 +137,14 @@
     "name_ja": "アンゴラ",
     "name_de": "Angola",
     "name_ru": "Ангола",
-    "name_ar": "أنغولا"
+    "name_ar": "أنغولا",
+    "latlng": [
+      -12.5,
+      18.5
+    ],
+    "area": 1246700,
+    "cca3": "AGO",
+    "population": 30809762
   },
   {
     "capital": "The Valley",
@@ -109,7 +158,14 @@
     "name_ja": "アンギラ",
     "name_de": "Anguilla",
     "name_ru": "Ангилья",
-    "name_ar": "أنغويلا"
+    "name_ar": "أنغويلا",
+    "latlng": [
+      18.25,
+      -63.16666666
+    ],
+    "area": 91,
+    "cca3": "AIA",
+    "population": 15094
   },
   {
     "code": "aq",
@@ -121,7 +177,14 @@
     "name_ja": "南極",
     "name_de": "Antarktis",
     "name_ru": "Антарктида",
-    "name_ar": "أنتاركتيكا"
+    "name_ar": "أنتاركتيكا",
+    "latlng": [
+      -90,
+      0
+    ],
+    "area": 14000000,
+    "cca3": "ATA",
+    "population": 1106
   },
   {
     "capital": "St. John's",
@@ -135,7 +198,14 @@
     "name_ja": "アンティグア・バーブーダ",
     "name_de": "Antigua und Barbuda",
     "name_ru": "Антигуа и Барбуда",
-    "name_ar": "أنتيغوا وبربودا"
+    "name_ar": "أنتيغوا وبربودا",
+    "latlng": [
+      17.05,
+      -61.8
+    ],
+    "area": 442,
+    "cca3": "ATG",
+    "population": 96286
   },
   {
     "capital": "Buenos Aires",
@@ -149,7 +219,14 @@
     "name_ja": "アルゼンチン",
     "name_de": "Argentinien",
     "name_ru": "Аргентина",
-    "name_ar": "الأرجنتين"
+    "name_ar": "الأرجنتين",
+    "latlng": [
+      -34,
+      -64
+    ],
+    "area": 2780400,
+    "cca3": "ARG",
+    "population": 44494502
   },
   {
     "capital": "Yerevan",
@@ -163,7 +240,14 @@
     "name_ja": "アルメニア",
     "name_de": "Armenien",
     "name_ru": "Армения",
-    "name_ar": "أرمينيا"
+    "name_ar": "أرمينيا",
+    "latlng": [
+      40,
+      45
+    ],
+    "area": 29743,
+    "cca3": "ARM",
+    "population": 2951776
   },
   {
     "capital": "Oranjestad",
@@ -177,7 +261,14 @@
     "name_ja": "アルバ",
     "name_de": "Aruba",
     "name_ru": "Аруба",
-    "name_ar": "أروبا"
+    "name_ar": "أروبا",
+    "latlng": [
+      12.5,
+      -69.96666666
+    ],
+    "area": 180,
+    "cca3": "ABW",
+    "population": 105845
   },
   {
     "capital": "Georgetown",
@@ -217,7 +308,14 @@
     "name_ja": "オーストラリア",
     "name_de": "Australien",
     "name_ru": "Австралия",
-    "name_ar": "أستراليا"
+    "name_ar": "أستراليا",
+    "latlng": [
+      -27,
+      133
+    ],
+    "area": 7692024,
+    "cca3": "AUS",
+    "population": 24982688
   },
   {
     "capital": "Vienna",
@@ -231,7 +329,14 @@
     "name_ja": "オーストリア",
     "name_de": "Österreich",
     "name_ru": "Австрия",
-    "name_ar": "النمسا"
+    "name_ar": "النمسا",
+    "latlng": [
+      47.33333333,
+      13.33333333
+    ],
+    "area": 83871,
+    "cca3": "AUT",
+    "population": 8840521
   },
   {
     "capital": "Baku",
@@ -245,7 +350,14 @@
     "name_ja": "アゼルバイジャン",
     "name_de": "Aserbaidschan",
     "name_ru": "Азербайджан",
-    "name_ar": "أذربيجان"
+    "name_ar": "أذربيجان",
+    "latlng": [
+      40.5,
+      47.5
+    ],
+    "area": 86600,
+    "cca3": "AZE",
+    "population": 9939800
   },
   {
     "capital": "Nassau",
@@ -259,7 +371,14 @@
     "name_ja": "バハマ",
     "name_de": "Bahamas",
     "name_ru": "Багамы",
-    "name_ar": "جزر البهاما"
+    "name_ar": "جزر البهاما",
+    "latlng": [
+      24.25,
+      -76
+    ],
+    "area": 13943,
+    "cca3": "BHS",
+    "population": 385640
   },
   {
     "capital": "Manama",
@@ -273,7 +392,14 @@
     "name_ja": "バーレーン",
     "name_de": "Bahrain",
     "name_ru": "Бахрейн",
-    "name_ar": "البحرين"
+    "name_ar": "البحرين",
+    "latlng": [
+      26,
+      50.55
+    ],
+    "area": 765,
+    "cca3": "BHR",
+    "population": 1569439
   },
   {
     "capital": "Dhaka",
@@ -287,7 +413,14 @@
     "name_ja": "バングラデシュ",
     "name_de": "Bangladesch",
     "name_ru": "Бангладеш",
-    "name_ar": "بنغلاديش"
+    "name_ar": "بنغلاديش",
+    "latlng": [
+      24,
+      90
+    ],
+    "area": 147570,
+    "cca3": "BGD",
+    "population": 161356039
   },
   {
     "capital": "Bridgetown",
@@ -301,7 +434,14 @@
     "name_ja": "バルバドス",
     "name_de": "Barbados",
     "name_ru": "Барбадос",
-    "name_ar": "بربادوس"
+    "name_ar": "بربادوس",
+    "latlng": [
+      13.16666666,
+      -59.53333333
+    ],
+    "area": 430,
+    "cca3": "BRB",
+    "population": 286641
   },
   {
     "code": "es-pv",
@@ -327,7 +467,14 @@
     "name_ja": "ベラルーシ",
     "name_de": "Belarus",
     "name_ru": "Беларусь",
-    "name_ar": "بيلاروس"
+    "name_ar": "بيلاروس",
+    "latlng": [
+      53,
+      28
+    ],
+    "area": 207600,
+    "cca3": "BLR",
+    "population": 9483499
   },
   {
     "capital": "Brussels",
@@ -341,7 +488,14 @@
     "name_ja": "ベルギー",
     "name_de": "Belgien",
     "name_ru": "Бельгия",
-    "name_ar": "بلجيكا"
+    "name_ar": "بلجيكا",
+    "latlng": [
+      50.83333333,
+      4
+    ],
+    "area": 30528,
+    "cca3": "BEL",
+    "population": 11433256
   },
   {
     "capital": "Belmopan",
@@ -355,7 +509,14 @@
     "name_ja": "ベリーズ",
     "name_de": "Belize",
     "name_ru": "Белиз",
-    "name_ar": "بليز"
+    "name_ar": "بليز",
+    "latlng": [
+      17.25,
+      -88.75
+    ],
+    "area": 22966,
+    "cca3": "BLZ",
+    "population": 383071
   },
   {
     "capital": "Porto-Novo",
@@ -369,7 +530,14 @@
     "name_ja": "ベナン",
     "name_de": "Benin",
     "name_ru": "Бенин",
-    "name_ar": "بنين"
+    "name_ar": "بنين",
+    "latlng": [
+      9.5,
+      2.25
+    ],
+    "area": 112622,
+    "cca3": "BEN",
+    "population": 11485048
   },
   {
     "capital": "Hamilton",
@@ -383,7 +551,14 @@
     "name_ja": "バミューダ",
     "name_de": "Bermuda",
     "name_ru": "Бермудские о-ва",
-    "name_ar": "برمودا"
+    "name_ar": "برمودا",
+    "latlng": [
+      32.33333333,
+      -64.75
+    ],
+    "area": 54,
+    "cca3": "BMU",
+    "population": 63973
   },
   {
     "capital": "Thimphu",
@@ -397,7 +572,14 @@
     "name_ja": "ブータン",
     "name_de": "Bhutan",
     "name_ru": "Бутан",
-    "name_ar": "بوتان"
+    "name_ar": "بوتان",
+    "latlng": [
+      27.5,
+      90.5
+    ],
+    "area": 38394,
+    "cca3": "BTN",
+    "population": 754394
   },
   {
     "capital": "Sucre",
@@ -411,7 +593,14 @@
     "name_ja": "ボリビア",
     "name_de": "Bolivien",
     "name_ru": "Боливия",
-    "name_ar": "بوليفيا"
+    "name_ar": "بوليفيا",
+    "latlng": [
+      -17,
+      -65
+    ],
+    "area": 1098581,
+    "cca3": "BOL",
+    "population": 11353142
   },
   {
     "capital": "Kralendijk",
@@ -425,7 +614,14 @@
     "name_ja": "オランダ領カリブ",
     "name_de": "Karibische Niederlande",
     "name_ru": "Бонэйр, Синт-Э��татиус и Саба",
-    "name_ar": "هولندا الكاريبية"
+    "name_ar": "هولندا الكاريبية",
+    "latlng": [
+      12.18,
+      -68.25
+    ],
+    "area": 328,
+    "cca3": "BES",
+    "population": 30000
   },
   {
     "capital": "Sarajevo",
@@ -439,7 +635,14 @@
     "name_ja": "ボスニア・ヘルツェゴビナ",
     "name_de": "Bosnien und Herzegowina",
     "name_ru": "Босния и Герцеговина",
-    "name_ar": "البوسنة والهرسك"
+    "name_ar": "البوسنة والهرسك",
+    "latlng": [
+      44,
+      18
+    ],
+    "area": 51209,
+    "cca3": "BIH",
+    "population": 3323929
   },
   {
     "capital": "Gaborone",
@@ -453,7 +656,14 @@
     "name_ja": "ボツワナ",
     "name_de": "Botsuana",
     "name_ru": "Ботсвана",
-    "name_ar": "بوتسوانا"
+    "name_ar": "بوتسوانا",
+    "latlng": [
+      -22,
+      24
+    ],
+    "area": 582000,
+    "cca3": "BWA",
+    "population": 2254126
   },
   {
     "code": "bv",
@@ -465,7 +675,14 @@
     "name_ja": "ブーベ島",
     "name_de": "Bouvetinsel",
     "name_ru": "о-в Буве",
-    "name_ar": "جزيرة بوفيه"
+    "name_ar": "جزيرة بوفيه",
+    "latlng": [
+      -54.43333333,
+      3.4
+    ],
+    "area": 49,
+    "cca3": "BVT",
+    "population": 0
   },
   {
     "capital": "Brasília",
@@ -479,7 +696,14 @@
     "name_ja": "ブラジル",
     "name_de": "Brasilien",
     "name_ru": "Бразилия",
-    "name_ar": "البرازيل"
+    "name_ar": "البرازيل",
+    "latlng": [
+      -10,
+      -55
+    ],
+    "area": 8515767,
+    "cca3": "BRA",
+    "population": 209469333
   },
   {
     "capital": "Diego Garcia",
@@ -493,7 +717,14 @@
     "name_ja": "英領インド洋地域",
     "name_de": "Britisches Territorium im Indischen Ozean",
     "name_ru": "Британская территория в Индийском океане",
-    "name_ar": "الإقليم البريطاني في المحيط الهندي"
+    "name_ar": "الإقليم البريطاني في المحيط الهندي",
+    "latlng": [
+      -6,
+      71.5
+    ],
+    "area": 60,
+    "cca3": "IOT",
+    "population": 0
   },
   {
     "capital": "Bandar Seri Begawan",
@@ -507,7 +738,14 @@
     "name_ja": "ブルネイ",
     "name_de": "Brunei Darussalam",
     "name_ru": "Бруней",
-    "name_ar": "بروناي"
+    "name_ar": "بروناي",
+    "latlng": [
+      4.5,
+      114.66666666
+    ],
+    "area": 5765,
+    "cca3": "BRN",
+    "population": 428962
   },
   {
     "capital": "Sofia",
@@ -521,7 +759,14 @@
     "name_ja": "ブルガリア",
     "name_de": "Bulgarien",
     "name_ru": "Болгария",
-    "name_ar": "بلغاريا"
+    "name_ar": "بلغاريا",
+    "latlng": [
+      43,
+      25
+    ],
+    "area": 110879,
+    "cca3": "BGR",
+    "population": 7025037
   },
   {
     "capital": "Ouagadougou",
@@ -535,7 +780,14 @@
     "name_ja": "ブルキナファソ",
     "name_de": "Burkina Faso",
     "name_ru": "Буркина-Фасо",
-    "name_ar": "بوركينا فاسو"
+    "name_ar": "بوركينا فاسو",
+    "latlng": [
+      13,
+      -2
+    ],
+    "area": 272967,
+    "cca3": "BFA",
+    "population": 19751535
   },
   {
     "capital": "Bujumbura",
@@ -549,7 +801,14 @@
     "name_ja": "ブルンジ",
     "name_de": "Burundi",
     "name_ru": "Бурунди",
-    "name_ar": "بوروندي"
+    "name_ar": "بوروندي",
+    "latlng": [
+      -3.5,
+      30
+    ],
+    "area": 27834,
+    "cca3": "BDI",
+    "population": 11175378
   },
   {
     "capital": "Praia",
@@ -563,7 +822,14 @@
     "name_ja": "カーボベルデ",
     "name_de": "Cabo Verde",
     "name_ru": "Кабо-Верде",
-    "name_ar": "الرأس الأخضر"
+    "name_ar": "الرأس الأخضر",
+    "latlng": [
+      16,
+      -24
+    ],
+    "area": 4033,
+    "cca3": "CPV",
+    "population": 555987
   },
   {
     "capital": "Phnom Penh",
@@ -577,7 +843,14 @@
     "name_ja": "カンボジア",
     "name_de": "Kambodscha",
     "name_ru": "Камбоджа",
-    "name_ar": "كمبوديا"
+    "name_ar": "كمبوديا",
+    "latlng": [
+      13,
+      105
+    ],
+    "area": 181035,
+    "cca3": "KHM",
+    "population": 16249798
   },
   {
     "capital": "Yaoundé",
@@ -591,7 +864,14 @@
     "name_ja": "カメルーン",
     "name_de": "Kamerun",
     "name_ru": "Камерун",
-    "name_ar": "الكاميرون"
+    "name_ar": "الكاميرون",
+    "latlng": [
+      6,
+      12
+    ],
+    "area": 475442,
+    "cca3": "CMR",
+    "population": 25216237
   },
   {
     "capital": "Ottawa",
@@ -605,7 +885,14 @@
     "name_ja": "カナダ",
     "name_de": "Kanada",
     "name_ru": "Канада",
-    "name_ar": "كندا"
+    "name_ar": "كندا",
+    "latlng": [
+      60,
+      -95
+    ],
+    "area": 9984670,
+    "cca3": "CAN",
+    "population": 37057765
   },
   {
     "code": "ic",
@@ -617,7 +904,13 @@
     "name_ja": "カナリア諸島",
     "name_de": "Kanarische Inseln",
     "name_ru": "Канарские о-ва",
-    "name_ar": "جزر الكناري"
+    "name_ar": "جزر الكناري",
+    "population": 2200000,
+    "area": 7447,
+    "latlng": [
+      28.2916,
+      -16.6291
+    ]
   },
   {
     "code": "es-ct",
@@ -643,7 +936,14 @@
     "name_ja": "ケイマン諸島",
     "name_de": "Kaimaninseln",
     "name_ru": "о-ва Кайман",
-    "name_ar": "جزر كايمان"
+    "name_ar": "جزر كايمان",
+    "latlng": [
+      19.5,
+      -80.5
+    ],
+    "area": 264,
+    "cca3": "CYM",
+    "population": 64174
   },
   {
     "capital": "Bangui",
@@ -657,7 +957,14 @@
     "name_ja": "中央アフリカ共和国",
     "name_de": "Zentralafrikanische Republik",
     "name_ru": "Центрально-Африканская Республика",
-    "name_ar": "جمهورية أفريقيا الوسطى"
+    "name_ar": "جمهورية أفريقيا الوسطى",
+    "latlng": [
+      7,
+      21
+    ],
+    "area": 622984,
+    "cca3": "CAF",
+    "population": 4666377
   },
   {
     "code": "cefta",
@@ -683,7 +990,14 @@
     "name_ja": "チャド",
     "name_de": "Tschad",
     "name_ru": "Чад",
-    "name_ar": "تشاد"
+    "name_ar": "تشاد",
+    "latlng": [
+      15,
+      19
+    ],
+    "area": 1284000,
+    "cca3": "TCD",
+    "population": 15477751
   },
   {
     "capital": "Santiago",
@@ -697,7 +1011,14 @@
     "name_ja": "チリ",
     "name_de": "Chile",
     "name_ru": "Чили",
-    "name_ar": "تشيلي"
+    "name_ar": "تشيلي",
+    "latlng": [
+      -30,
+      -71
+    ],
+    "area": 756102,
+    "cca3": "CHL",
+    "population": 18729160
   },
   {
     "capital": "Beijing",
@@ -711,7 +1032,14 @@
     "name_ja": "中国",
     "name_de": "China",
     "name_ru": "Китай",
-    "name_ar": "الصين"
+    "name_ar": "الصين",
+    "latlng": [
+      35,
+      105
+    ],
+    "area": 9706961,
+    "cca3": "CHN",
+    "population": 1392730000
   },
   {
     "capital": "Flying Fish Cove",
@@ -725,7 +1053,14 @@
     "name_ja": "クリスマス島",
     "name_de": "Weihnachtsinsel",
     "name_ru": "о-в Рождества",
-    "name_ar": "جزيرة كريسماس"
+    "name_ar": "جزيرة كريسماس",
+    "latlng": [
+      -10.5,
+      105.66666666
+    ],
+    "area": 135,
+    "cca3": "CXR",
+    "population": 1402
   },
   {
     "code": "cp",
@@ -737,7 +1072,13 @@
     "name_ja": "クリッパートン島",
     "name_de": "Clipperton-Insel",
     "name_ru": "о-в Клиппертон",
-    "name_ar": "جزيرة كليبيرتون"
+    "name_ar": "جزيرة كليبيرتون",
+    "population": 0,
+    "area": 6,
+    "latlng": [
+      10.3,
+      -109.2167
+    ]
   },
   {
     "capital": "West Island",
@@ -751,7 +1092,14 @@
     "name_ja": "ココス(キーリング)諸島",
     "name_de": "Kokosinseln",
     "name_ru": "Кокосовые о-ва",
-    "name_ar": "جزر كوكوس (كيلينغ)"
+    "name_ar": "جزر كوكوس (كيلينغ)",
+    "latlng": [
+      -12.5,
+      96.83333333
+    ],
+    "area": 14,
+    "cca3": "CCK",
+    "population": 596
   },
   {
     "capital": "Bogotá",
@@ -765,7 +1113,14 @@
     "name_ja": "コロンビア",
     "name_de": "Kolumbien",
     "name_ru": "Колумбия",
-    "name_ar": "كولومبيا"
+    "name_ar": "كولومبيا",
+    "latlng": [
+      4,
+      -72
+    ],
+    "area": 1141748,
+    "cca3": "COL",
+    "population": 49648685
   },
   {
     "capital": "Moroni",
@@ -779,7 +1134,14 @@
     "name_ja": "コモロ",
     "name_de": "Komoren",
     "name_ru": "Коморы",
-    "name_ar": "جزر القمر"
+    "name_ar": "جزر القمر",
+    "latlng": [
+      -12.16666666,
+      44.25
+    ],
+    "area": 1862,
+    "cca3": "COM",
+    "population": 832322
   },
   {
     "capital": "Avarua",
@@ -793,7 +1155,14 @@
     "name_ja": "クック諸島",
     "name_de": "Cookinseln",
     "name_ru": "о-ва Кука",
-    "name_ar": "جزر كوك"
+    "name_ar": "جزر كوك",
+    "latlng": [
+      -21.23333333,
+      -159.76666666
+    ],
+    "area": 236,
+    "cca3": "COK",
+    "population": 17379
   },
   {
     "capital": "San José",
@@ -807,7 +1176,14 @@
     "name_ja": "コスタリカ",
     "name_de": "Costa Rica",
     "name_ru": "Коста-Рика",
-    "name_ar": "كوستاريكا"
+    "name_ar": "كوستاريكا",
+    "latlng": [
+      10,
+      -84
+    ],
+    "area": 51100,
+    "cca3": "CRI",
+    "population": 4999441
   },
   {
     "capital": "Zagreb",
@@ -821,7 +1197,14 @@
     "name_ja": "クロアチア",
     "name_de": "Kroatien",
     "name_ru": "Хорватия",
-    "name_ar": "كرواتيا"
+    "name_ar": "كرواتيا",
+    "latlng": [
+      45.16666666,
+      15.5
+    ],
+    "area": 56594,
+    "cca3": "HRV",
+    "population": 4087843
   },
   {
     "capital": "Havana",
@@ -835,7 +1218,14 @@
     "name_ja": "キューバ",
     "name_de": "Kuba",
     "name_ru": "Куба",
-    "name_ar": "كوبا"
+    "name_ar": "كوبا",
+    "latlng": [
+      21.5,
+      -80
+    ],
+    "area": 109884,
+    "cca3": "CUB",
+    "population": 11338138
   },
   {
     "capital": "Willemstad",
@@ -849,7 +1239,14 @@
     "name_ja": "キュラソー",
     "name_de": "Curaçao",
     "name_ru": "Кюрасао",
-    "name_ar": "كوراساو"
+    "name_ar": "كوراساو",
+    "latlng": [
+      12.116667,
+      -68.933333
+    ],
+    "area": 444,
+    "cca3": "CUW",
+    "population": 160000
   },
   {
     "capital": "Nicosia",
@@ -863,7 +1260,14 @@
     "name_ja": "キプロス",
     "name_de": "Zypern",
     "name_ru": "Кипр",
-    "name_ar": "قبرص"
+    "name_ar": "قبرص",
+    "latlng": [
+      35,
+      33
+    ],
+    "area": 9251,
+    "cca3": "CYP",
+    "population": 1189265
   },
   {
     "capital": "Prague",
@@ -877,7 +1281,14 @@
     "name_ja": "チェコ",
     "name_de": "Tschechien",
     "name_ru": "Чехия",
-    "name_ar": "التشيك"
+    "name_ar": "التشيك",
+    "latlng": [
+      49.75,
+      15.5
+    ],
+    "area": 78865,
+    "cca3": "CZE",
+    "population": 10629928
   },
   {
     "capital": "Yamoussoukro",
@@ -891,7 +1302,14 @@
     "name_ja": "コートジボワール",
     "name_de": "Côte d’Ivoire",
     "name_ru": "Кот-д’Ивуар",
-    "name_ar": "ساحل العاج"
+    "name_ar": "ساحل العاج",
+    "latlng": [
+      8,
+      -5
+    ],
+    "area": 322463,
+    "cca3": "CIV",
+    "population": 25069229
   },
   {
     "capital": "Kinshasa",
@@ -905,7 +1323,14 @@
     "name_ja": "コンゴ民主共和国(キンシャサ)",
     "name_de": "Kongo-Kinshasa",
     "name_ru": "Конго - Киншаса",
-    "name_ar": "الكونغو - كينشاسا"
+    "name_ar": "الكونغو - كينشاسا",
+    "latlng": [
+      0,
+      25
+    ],
+    "area": 2344858,
+    "cca3": "COD",
+    "population": 84068091
   },
   {
     "capital": "Copenhagen",
@@ -919,7 +1344,14 @@
     "name_ja": "デンマーク",
     "name_de": "Dänemark",
     "name_ru": "Дания",
-    "name_ar": "الدانمرك"
+    "name_ar": "الدانمرك",
+    "latlng": [
+      56,
+      10
+    ],
+    "area": 43094,
+    "cca3": "DNK",
+    "population": 5793636
   },
   {
     "code": "dg",
@@ -931,7 +1363,13 @@
     "name_ja": "ディエゴガルシア島",
     "name_de": "Diego Garcia",
     "name_ru": "Диего-Гарсия",
-    "name_ar": "دييغو غارسيا"
+    "name_ar": "دييغو غارسيا",
+    "population": 4000,
+    "area": 30,
+    "latlng": [
+      -7.3133,
+      72.4111
+    ]
   },
   {
     "capital": "Djibouti",
@@ -945,7 +1383,14 @@
     "name_ja": "ジブチ",
     "name_de": "Dschibuti",
     "name_ru": "Джибути",
-    "name_ar": "جيبوتي"
+    "name_ar": "جيبوتي",
+    "latlng": [
+      11.5,
+      43
+    ],
+    "area": 23200,
+    "cca3": "DJI",
+    "population": 958920
   },
   {
     "capital": "Roseau",
@@ -959,7 +1404,14 @@
     "name_ja": "ドミニカ国",
     "name_de": "Dominica",
     "name_ru": "Доминика",
-    "name_ar": "دومينيكا"
+    "name_ar": "دومينيكا",
+    "latlng": [
+      15.41666666,
+      -61.33333333
+    ],
+    "area": 751,
+    "cca3": "DMA",
+    "population": 71625
   },
   {
     "capital": "Santo Domingo",
@@ -973,7 +1425,14 @@
     "name_ja": "ドミニカ共和国",
     "name_de": "Dominikanische Republik",
     "name_ru": "Доминиканская Республика",
-    "name_ar": "جمهورية الدومينيكان"
+    "name_ar": "جمهورية الدومينيكان",
+    "latlng": [
+      19,
+      -70.66666666
+    ],
+    "area": 48671,
+    "cca3": "DOM",
+    "population": 10627165
   },
   {
     "code": "eac",
@@ -999,7 +1458,14 @@
     "name_ja": "エクアドル",
     "name_de": "Ecuador",
     "name_ru": "Эквадор",
-    "name_ar": "الإكوادور"
+    "name_ar": "الإكوادور",
+    "latlng": [
+      -2,
+      -77.5
+    ],
+    "area": 276841,
+    "cca3": "ECU",
+    "population": 17084357
   },
   {
     "capital": "Cairo",
@@ -1013,7 +1479,14 @@
     "name_ja": "エジプト",
     "name_de": "Ägypten",
     "name_ru": "Египет",
-    "name_ar": "مصر"
+    "name_ar": "مصر",
+    "latlng": [
+      27,
+      30
+    ],
+    "area": 1002450,
+    "cca3": "EGY",
+    "population": 98423595
   },
   {
     "capital": "San Salvador",
@@ -1027,7 +1500,14 @@
     "name_ja": "エルサルバドル",
     "name_de": "El Salvador",
     "name_ru": "Сальвадор",
-    "name_ar": "السلفادور"
+    "name_ar": "السلفادور",
+    "latlng": [
+      13.83333333,
+      -88.91666666
+    ],
+    "area": 21041,
+    "cca3": "SLV",
+    "population": 6420744
   },
   {
     "capital": "London",
@@ -1041,7 +1521,8 @@
     "name_ja": "イングランド",
     "name_de": "England",
     "name_ru": "Англия",
-    "name_ar": "إنجلترا"
+    "name_ar": "إنجلترا",
+    "population": 55619400
   },
   {
     "capital": "Malabo",
@@ -1055,7 +1536,14 @@
     "name_ja": "赤道ギニア",
     "name_de": "Äquatorialguinea",
     "name_ru": "Экваториальная Гвинея",
-    "name_ar": "غينيا الاستوائية"
+    "name_ar": "غينيا الاستوائية",
+    "latlng": [
+      2,
+      10
+    ],
+    "area": 28051,
+    "cca3": "GNQ",
+    "population": 1308974
   },
   {
     "capital": "Asmara",
@@ -1069,7 +1557,14 @@
     "name_ja": "エリトリア",
     "name_de": "Eritrea",
     "name_ru": "Эритрея",
-    "name_ar": "إريتريا"
+    "name_ar": "إريتريا",
+    "latlng": [
+      15,
+      39
+    ],
+    "area": 117600,
+    "cca3": "ERI",
+    "population": 6213972
   },
   {
     "capital": "Tallinn",
@@ -1083,7 +1578,14 @@
     "name_ja": "エストニア",
     "name_de": "Estland",
     "name_ru": "Эстония",
-    "name_ar": "إستونيا"
+    "name_ar": "إستونيا",
+    "latlng": [
+      59,
+      26
+    ],
+    "area": 45227,
+    "cca3": "EST",
+    "population": 1321977
   },
   {
     "capital": "Lobamba, Mbabane",
@@ -1097,7 +1599,14 @@
     "name_ja": "エスワティニ",
     "name_de": "Eswatini",
     "name_ru": "Эсватини",
-    "name_ar": "إسواتيني"
+    "name_ar": "إسواتيني",
+    "latlng": [
+      -26.5,
+      31.5
+    ],
+    "area": 17364,
+    "cca3": "SWZ",
+    "population": 1136191
   },
   {
     "capital": "Addis Ababa",
@@ -1111,7 +1620,14 @@
     "name_ja": "エチオピア",
     "name_de": "Äthiopien",
     "name_ru": "Эфиопия",
-    "name_ar": "إثيوبيا"
+    "name_ar": "إثيوبيا",
+    "latlng": [
+      8,
+      38
+    ],
+    "area": 1104300,
+    "cca3": "ETH",
+    "population": 109224559
   },
   {
     "code": "eu",
@@ -1137,7 +1653,14 @@
     "name_ja": "フォークランド諸島",
     "name_de": "Falklandinseln",
     "name_ru": "Фолклендские о-ва",
-    "name_ar": "جزر فوكلاند"
+    "name_ar": "جزر فوكلاند",
+    "latlng": [
+      -51.75,
+      -59
+    ],
+    "area": 12173,
+    "cca3": "FLK",
+    "population": 2840
   },
   {
     "capital": "Tórshavn",
@@ -1151,7 +1674,14 @@
     "name_ja": "フェロー諸島",
     "name_de": "Färöer",
     "name_ru": "Фарерские о-ва",
-    "name_ar": "جزر فارو"
+    "name_ar": "جزر فارو",
+    "latlng": [
+      62,
+      -7
+    ],
+    "area": 1393,
+    "cca3": "FRO",
+    "population": 48497
   },
   {
     "capital": "Palikir",
@@ -1165,7 +1695,14 @@
     "name_ja": "ミクロネシア連邦",
     "name_de": "Mikronesien",
     "name_ru": "Федеративные Штаты Микронезии",
-    "name_ar": "ميكرونيزيا"
+    "name_ar": "ميكرونيزيا",
+    "latlng": [
+      6.91666666,
+      158.25
+    ],
+    "area": 702,
+    "cca3": "FSM",
+    "population": 112640
   },
   {
     "capital": "Suva",
@@ -1179,7 +1716,14 @@
     "name_ja": "フィジー",
     "name_de": "Fidschi",
     "name_ru": "Фиджи",
-    "name_ar": "فيجي"
+    "name_ar": "فيجي",
+    "latlng": [
+      -18,
+      175
+    ],
+    "area": 18272,
+    "cca3": "FJI",
+    "population": 883483
   },
   {
     "capital": "Helsinki",
@@ -1193,7 +1737,14 @@
     "name_ja": "フィンランド",
     "name_de": "Finnland",
     "name_ru": "Финляндия",
-    "name_ar": "فنلندا"
+    "name_ar": "فنلندا",
+    "latlng": [
+      64,
+      26
+    ],
+    "area": 338424,
+    "cca3": "FIN",
+    "population": 5515525
   },
   {
     "capital": "Paris",
@@ -1207,7 +1758,14 @@
     "name_ja": "フランス",
     "name_de": "Frankreich",
     "name_ru": "Франция",
-    "name_ar": "فرنسا"
+    "name_ar": "فرنسا",
+    "latlng": [
+      46,
+      2
+    ],
+    "area": 551695,
+    "cca3": "FRA",
+    "population": 66977107
   },
   {
     "capital": "Cayenne",
@@ -1221,7 +1779,14 @@
     "name_ja": "仏領ギアナ",
     "name_de": "Französisch-Guayana",
     "name_ru": "Французская Гвиана",
-    "name_ar": "غويانا الفرنسية"
+    "name_ar": "غويانا الفرنسية",
+    "latlng": [
+      4,
+      -53
+    ],
+    "area": 83534,
+    "cca3": "GUF",
+    "population": 290691
   },
   {
     "capital": "Papeete",
@@ -1235,7 +1800,14 @@
     "name_ja": "仏領ポリネシア",
     "name_de": "Französisch-Polynesien",
     "name_ru": "Французская Полинезия",
-    "name_ar": "بولينيزيا الفرنسية"
+    "name_ar": "بولينيزيا الفرنسية",
+    "latlng": [
+      -15,
+      -140
+    ],
+    "area": 4167,
+    "cca3": "PYF",
+    "population": 277679
   },
   {
     "capital": "Saint-Pierre, Réunion",
@@ -1249,7 +1821,14 @@
     "name_ja": "仏領極南諸島",
     "name_de": "Französische Süd- und Antarktisgebiete",
     "name_ru": "Французские Южные территории",
-    "name_ar": "الأقاليم الجنوبية الفرنسية"
+    "name_ar": "الأقاليم الجنوبية الفرنسية",
+    "latlng": [
+      -49.25,
+      69.167
+    ],
+    "area": 7747,
+    "cca3": "ATF",
+    "population": 0
   },
   {
     "capital": "Libreville",
@@ -1263,7 +1842,14 @@
     "name_ja": "ガボン",
     "name_de": "Gabun",
     "name_ru": "Габон",
-    "name_ar": "الغابون"
+    "name_ar": "الغابون",
+    "latlng": [
+      -1,
+      11.75
+    ],
+    "area": 267668,
+    "cca3": "GAB",
+    "population": 2119275
   },
   {
     "code": "es-ga",
@@ -1289,7 +1875,14 @@
     "name_ja": "ガンビア",
     "name_de": "Gambia",
     "name_ru": "Гамбия",
-    "name_ar": "غامبيا"
+    "name_ar": "غامبيا",
+    "latlng": [
+      13.46666666,
+      -16.56666666
+    ],
+    "area": 10689,
+    "cca3": "GMB",
+    "population": 2280102
   },
   {
     "capital": "Tbilisi",
@@ -1303,7 +1896,14 @@
     "name_ja": "ジョージア",
     "name_de": "Georgien",
     "name_ru": "Грузия",
-    "name_ar": "جورجيا"
+    "name_ar": "جورجيا",
+    "latlng": [
+      42,
+      43.5
+    ],
+    "area": 69700,
+    "cca3": "GEO",
+    "population": 3726549
   },
   {
     "capital": "Berlin",
@@ -1317,7 +1917,14 @@
     "name_ja": "ドイツ",
     "name_de": "Deutschland",
     "name_ru": "Германия",
-    "name_ar": "ألمانيا"
+    "name_ar": "ألمانيا",
+    "latlng": [
+      51,
+      9
+    ],
+    "area": 357114,
+    "cca3": "DEU",
+    "population": 82905782
   },
   {
     "capital": "Accra",
@@ -1331,7 +1938,14 @@
     "name_ja": "ガーナ",
     "name_de": "Ghana",
     "name_ru": "Гана",
-    "name_ar": "غانا"
+    "name_ar": "غانا",
+    "latlng": [
+      8,
+      -2
+    ],
+    "area": 238533,
+    "cca3": "GHA",
+    "population": 29767108
   },
   {
     "capital": "Gibraltar",
@@ -1345,7 +1959,14 @@
     "name_ja": "ジブラルタル",
     "name_de": "Gibraltar",
     "name_ru": "Гибралтар",
-    "name_ar": "جبل طارق"
+    "name_ar": "جبل طارق",
+    "latlng": [
+      36.13333333,
+      -5.35
+    ],
+    "area": 6,
+    "cca3": "GIB",
+    "population": 33718
   },
   {
     "capital": "Athens",
@@ -1359,7 +1980,14 @@
     "name_ja": "ギリシャ",
     "name_de": "Griechenland",
     "name_ru": "Греция",
-    "name_ar": "اليونان"
+    "name_ar": "اليونان",
+    "latlng": [
+      39,
+      22
+    ],
+    "area": 131990,
+    "cca3": "GRC",
+    "population": 10731726
   },
   {
     "capital": "Nuuk",
@@ -1373,7 +2001,14 @@
     "name_ja": "グリーンランド",
     "name_de": "Grönland",
     "name_ru": "Гренландия",
-    "name_ar": "غرينلاند"
+    "name_ar": "غرينلاند",
+    "latlng": [
+      72,
+      -40
+    ],
+    "area": 2166086,
+    "cca3": "GRL",
+    "population": 56025
   },
   {
     "capital": "St. George's",
@@ -1387,7 +2022,14 @@
     "name_ja": "グレナダ",
     "name_de": "Grenada",
     "name_ru": "Гренада",
-    "name_ar": "غرينادا"
+    "name_ar": "غرينادا",
+    "latlng": [
+      12.11666666,
+      -61.66666666
+    ],
+    "area": 344,
+    "cca3": "GRD",
+    "population": 111454
   },
   {
     "capital": "Basse-Terre",
@@ -1401,7 +2043,14 @@
     "name_ja": "グアドループ",
     "name_de": "Guadeloupe",
     "name_ru": "Гваделупа",
-    "name_ar": "غوادلوب"
+    "name_ar": "غوادلوب",
+    "latlng": [
+      16.25,
+      -61.583333
+    ],
+    "area": 1628,
+    "cca3": "GLP",
+    "population": 395700
   },
   {
     "capital": "Hagåtña",
@@ -1415,7 +2064,14 @@
     "name_ja": "グアム",
     "name_de": "Guam",
     "name_ru": "Гуам",
-    "name_ar": "غوام"
+    "name_ar": "غوام",
+    "latlng": [
+      13.46666666,
+      144.78333333
+    ],
+    "area": 549,
+    "cca3": "GUM",
+    "population": 165768
   },
   {
     "capital": "Guatemala City",
@@ -1429,7 +2085,14 @@
     "name_ja": "グアテマラ",
     "name_de": "Guatemala",
     "name_ru": "Гватемала",
-    "name_ar": "غواتيمالا"
+    "name_ar": "غواتيمالا",
+    "latlng": [
+      15.5,
+      -90.25
+    ],
+    "area": 108889,
+    "cca3": "GTM",
+    "population": 17247807
   },
   {
     "capital": "Saint Peter Port",
@@ -1443,7 +2106,14 @@
     "name_ja": "ガーンジー",
     "name_de": "Guernsey",
     "name_ru": "Гернси",
-    "name_ar": "غيرنزي"
+    "name_ar": "غيرنزي",
+    "latlng": [
+      49.46666666,
+      -2.58333333
+    ],
+    "area": 78,
+    "cca3": "GGY",
+    "population": 67000
   },
   {
     "capital": "Conakry",
@@ -1457,7 +2127,14 @@
     "name_ja": "ギニア",
     "name_de": "Guinea",
     "name_ru": "Гвинея",
-    "name_ar": "غينيا"
+    "name_ar": "غينيا",
+    "latlng": [
+      11,
+      -10
+    ],
+    "area": 245857,
+    "cca3": "GIN",
+    "population": 12414318
   },
   {
     "capital": "Bissau",
@@ -1471,7 +2148,14 @@
     "name_ja": "ギニアビサウ",
     "name_de": "Guinea-Bissau",
     "name_ru": "Гвинея-Бисау",
-    "name_ar": "غينيا بيساو"
+    "name_ar": "غينيا بيساو",
+    "latlng": [
+      12,
+      -15
+    ],
+    "area": 36125,
+    "cca3": "GNB",
+    "population": 1874309
   },
   {
     "capital": "Georgetown",
@@ -1485,7 +2169,14 @@
     "name_ja": "ガイアナ",
     "name_de": "Guyana",
     "name_ru": "Гайана",
-    "name_ar": "غيانا"
+    "name_ar": "غيانا",
+    "latlng": [
+      5,
+      -59
+    ],
+    "area": 214969,
+    "cca3": "GUY",
+    "population": 779004
   },
   {
     "capital": "Port-au-Prince",
@@ -1499,7 +2190,14 @@
     "name_ja": "ハイチ",
     "name_de": "Haiti",
     "name_ru": "Гаити",
-    "name_ar": "هايتي"
+    "name_ar": "هايتي",
+    "latlng": [
+      19,
+      -72.41666666
+    ],
+    "area": 27750,
+    "cca3": "HTI",
+    "population": 11123176
   },
   {
     "code": "hm",
@@ -1511,7 +2209,14 @@
     "name_ja": "ハード島・マクドナルド諸島",
     "name_de": "Heard und McDonaldinseln",
     "name_ru": "о-ва Херд и Макдональд",
-    "name_ar": "جزيرة هيرد وجزر ماكدونالد"
+    "name_ar": "جزيرة هيرد وجزر ماكدونالد",
+    "latlng": [
+      -53.1,
+      72.51666666
+    ],
+    "area": 412,
+    "cca3": "HMD",
+    "population": 0
   },
   {
     "capital": "Vatican City",
@@ -1525,7 +2230,14 @@
     "name_ja": "バチカン市国",
     "name_de": "Vatikanstadt",
     "name_ru": "Ватикан",
-    "name_ar": "الفاتيكان"
+    "name_ar": "الفاتيكان",
+    "latlng": [
+      41.9,
+      12.45
+    ],
+    "area": 0.44,
+    "cca3": "VAT",
+    "population": 825
   },
   {
     "capital": "Tegucigalpa",
@@ -1539,7 +2251,14 @@
     "name_ja": "ホンジュラス",
     "name_de": "Honduras",
     "name_ru": "Гондурас",
-    "name_ar": "هندوراس"
+    "name_ar": "هندوراس",
+    "latlng": [
+      15,
+      -86.5
+    ],
+    "area": 112492,
+    "cca3": "HND",
+    "population": 9587522
   },
   {
     "capital": "Hong Kong",
@@ -1553,7 +2272,14 @@
     "name_ja": "中華人民共和国香港特別行政区",
     "name_de": "Sonderverwaltungsregion Hongkong",
     "name_ru": "Гонконг (САР)",
-    "name_ar": "هونغ كونغ الصينية (منطقة إدارية خاصة)"
+    "name_ar": "هونغ كونغ الصينية (منطقة إدارية خاصة)",
+    "latlng": [
+      22.267,
+      114.188
+    ],
+    "area": 1104,
+    "cca3": "HKG",
+    "population": 7451000
   },
   {
     "capital": "Budapest",
@@ -1567,7 +2293,14 @@
     "name_ja": "ハンガリー",
     "name_de": "Ungarn",
     "name_ru": "Венгрия",
-    "name_ar": "هنغاريا"
+    "name_ar": "هنغاريا",
+    "latlng": [
+      47,
+      20
+    ],
+    "area": 93028,
+    "cca3": "HUN",
+    "population": 9775564
   },
   {
     "capital": "Reykjavik",
@@ -1581,7 +2314,14 @@
     "name_ja": "アイスランド",
     "name_de": "Island",
     "name_ru": "Исландия",
-    "name_ar": "آيسلندا"
+    "name_ar": "آيسلندا",
+    "latlng": [
+      65,
+      -18
+    ],
+    "area": 103000,
+    "cca3": "ISL",
+    "population": 352721
   },
   {
     "capital": "New Delhi",
@@ -1595,7 +2335,14 @@
     "name_ja": "インド",
     "name_de": "Indien",
     "name_ru": "Индия",
-    "name_ar": "الهند"
+    "name_ar": "الهند",
+    "latlng": [
+      20,
+      77
+    ],
+    "area": 3287590,
+    "cca3": "IND",
+    "population": 1352617328
   },
   {
     "capital": "Jakarta",
@@ -1609,7 +2356,14 @@
     "name_ja": "インドネシア",
     "name_de": "Indonesien",
     "name_ru": "Индонезия",
-    "name_ar": "إندونيسيا"
+    "name_ar": "إندونيسيا",
+    "latlng": [
+      -5,
+      120
+    ],
+    "area": 1904569,
+    "cca3": "IDN",
+    "population": 267663435
   },
   {
     "capital": "Tehran",
@@ -1623,7 +2377,14 @@
     "name_ja": "イラン",
     "name_de": "Iran",
     "name_ru": "Иран",
-    "name_ar": "إيران"
+    "name_ar": "إيران",
+    "latlng": [
+      32,
+      53
+    ],
+    "area": 1648195,
+    "cca3": "IRN",
+    "population": 81800269
   },
   {
     "capital": "Baghdad",
@@ -1637,7 +2398,14 @@
     "name_ja": "イラク",
     "name_de": "Irak",
     "name_ru": "Ирак",
-    "name_ar": "العراق"
+    "name_ar": "العراق",
+    "latlng": [
+      33,
+      44
+    ],
+    "area": 438317,
+    "cca3": "IRQ",
+    "population": 38433600
   },
   {
     "capital": "Dublin",
@@ -1651,7 +2419,14 @@
     "name_ja": "アイルランド",
     "name_de": "Irland",
     "name_ru": "Ирландия",
-    "name_ar": "أيرلندا"
+    "name_ar": "أيرلندا",
+    "latlng": [
+      53,
+      -8
+    ],
+    "area": 70273,
+    "cca3": "IRL",
+    "population": 4867309
   },
   {
     "capital": "Douglas",
@@ -1665,7 +2440,14 @@
     "name_ja": "マン島",
     "name_de": "Isle of Man",
     "name_ru": "о-в Мэн",
-    "name_ar": "جزيرة مان"
+    "name_ar": "جزيرة مان",
+    "latlng": [
+      54.25,
+      -4.5
+    ],
+    "area": 572,
+    "cca3": "IMN",
+    "population": 84000
   },
   {
     "capital": "Jerusalem",
@@ -1679,7 +2461,14 @@
     "name_ja": "イスラエル",
     "name_de": "Israel",
     "name_ru": "Израиль",
-    "name_ar": "إسرائيل"
+    "name_ar": "إسرائيل",
+    "latlng": [
+      31.47,
+      35.13
+    ],
+    "area": 20770,
+    "cca3": "ISR",
+    "population": 8882800
   },
   {
     "capital": "Rome",
@@ -1693,7 +2482,14 @@
     "name_ja": "イタリア",
     "name_de": "Italien",
     "name_ru": "Италия",
-    "name_ar": "إيطاليا"
+    "name_ar": "إيطاليا",
+    "latlng": [
+      42.83333333,
+      12.83333333
+    ],
+    "area": 301336,
+    "cca3": "ITA",
+    "population": 60421760
   },
   {
     "capital": "Kingston",
@@ -1707,7 +2503,14 @@
     "name_ja": "ジャマイカ",
     "name_de": "Jamaika",
     "name_ru": "Ямайка",
-    "name_ar": "جامايكا"
+    "name_ar": "جامايكا",
+    "latlng": [
+      18.25,
+      -77.5
+    ],
+    "area": 10991,
+    "cca3": "JAM",
+    "population": 2934855
   },
   {
     "capital": "Tokyo",
@@ -1721,7 +2524,14 @@
     "name_ja": "日本",
     "name_de": "Japan",
     "name_ru": "Япония",
-    "name_ar": "اليابان"
+    "name_ar": "اليابان",
+    "latlng": [
+      36,
+      138
+    ],
+    "area": 377930,
+    "cca3": "JPN",
+    "population": 126529100
   },
   {
     "capital": "Saint Helier",
@@ -1735,7 +2545,14 @@
     "name_ja": "ジャージー",
     "name_de": "Jersey",
     "name_ru": "Джерси",
-    "name_ar": "جيرسي"
+    "name_ar": "جيرسي",
+    "latlng": [
+      49.25,
+      -2.16666666
+    ],
+    "area": 116,
+    "cca3": "JEY",
+    "population": 103000
   },
   {
     "capital": "Amman",
@@ -1749,7 +2566,14 @@
     "name_ja": "ヨルダン",
     "name_de": "Jordanien",
     "name_ru": "Иордания",
-    "name_ar": "الأردن"
+    "name_ar": "الأردن",
+    "latlng": [
+      31,
+      36
+    ],
+    "area": 89342,
+    "cca3": "JOR",
+    "population": 9956011
   },
   {
     "capital": "Astana",
@@ -1763,7 +2587,14 @@
     "name_ja": "カザフスタン",
     "name_de": "Kasachstan",
     "name_ru": "Казахстан",
-    "name_ar": "كازاخستان"
+    "name_ar": "كازاخستان",
+    "latlng": [
+      48,
+      68
+    ],
+    "area": 2724900,
+    "cca3": "KAZ",
+    "population": 18272430
   },
   {
     "capital": "Nairobi",
@@ -1777,7 +2608,14 @@
     "name_ja": "ケニア",
     "name_de": "Kenia",
     "name_ru": "Кения",
-    "name_ar": "كينيا"
+    "name_ar": "كينيا",
+    "latlng": [
+      1,
+      38
+    ],
+    "area": 580367,
+    "cca3": "KEN",
+    "population": 51393010
   },
   {
     "capital": "South Tarawa",
@@ -1791,7 +2629,14 @@
     "name_ja": "キリバス",
     "name_de": "Kiribati",
     "name_ru": "Ки��ибати",
-    "name_ar": "كيريباتي"
+    "name_ar": "كيريباتي",
+    "latlng": [
+      1.41666666,
+      173
+    ],
+    "area": 811,
+    "cca3": "KIR",
+    "population": 115847
   },
   {
     "capital": "Pristina",
@@ -1805,7 +2650,14 @@
     "name_ja": "コソボ",
     "name_de": "Kosovo",
     "name_ru": "Косово",
-    "name_ar": "كوسوفو"
+    "name_ar": "كوسوفو",
+    "latlng": [
+      42.666667,
+      21.166667
+    ],
+    "area": 10908,
+    "cca3": "UNK",
+    "population": 1760000
   },
   {
     "capital": "Kuwait City",
@@ -1819,7 +2671,14 @@
     "name_ja": "クウェート",
     "name_de": "Kuwait",
     "name_ru": "Кувейт",
-    "name_ar": "الكويت"
+    "name_ar": "الكويت",
+    "latlng": [
+      29.5,
+      45.75
+    ],
+    "area": 17818,
+    "cca3": "KWT",
+    "population": 4137309
   },
   {
     "capital": "Bishkek",
@@ -1833,7 +2692,14 @@
     "name_ja": "キルギス",
     "name_de": "Kirgisistan",
     "name_ru": "Киргизия",
-    "name_ar": "قيرغيزستان"
+    "name_ar": "قيرغيزستان",
+    "latlng": [
+      41,
+      75
+    ],
+    "area": 199951,
+    "cca3": "KGZ",
+    "population": 6322800
   },
   {
     "capital": "Vientiane",
@@ -1847,7 +2713,14 @@
     "name_ja": "ラオス",
     "name_de": "Laos",
     "name_ru": "Лаос",
-    "name_ar": "لاوس"
+    "name_ar": "لاوس",
+    "latlng": [
+      18,
+      105
+    ],
+    "area": 236800,
+    "cca3": "LAO",
+    "population": 7061507
   },
   {
     "capital": "Riga",
@@ -1861,7 +2734,14 @@
     "name_ja": "ラトビア",
     "name_de": "Lettland",
     "name_ru": "Латвия",
-    "name_ar": "لاتفيا"
+    "name_ar": "لاتفيا",
+    "latlng": [
+      57,
+      25
+    ],
+    "area": 64559,
+    "cca3": "LVA",
+    "population": 1927174
   },
   {
     "code": "arab",
@@ -1887,7 +2767,14 @@
     "name_ja": "レバノン",
     "name_de": "Libanon",
     "name_ru": "Ливан",
-    "name_ar": "لبنان"
+    "name_ar": "لبنان",
+    "latlng": [
+      33.83333333,
+      35.83333333
+    ],
+    "area": 10452,
+    "cca3": "LBN",
+    "population": 6848925
   },
   {
     "capital": "Maseru",
@@ -1901,7 +2788,14 @@
     "name_ja": "レソト",
     "name_de": "Lesotho",
     "name_ru": "Лесото",
-    "name_ar": "ليسوتو"
+    "name_ar": "ليسوتو",
+    "latlng": [
+      -29.5,
+      28.5
+    ],
+    "area": 30355,
+    "cca3": "LSO",
+    "population": 2108132
   },
   {
     "capital": "Monrovia",
@@ -1915,7 +2809,14 @@
     "name_ja": "リベリア",
     "name_de": "Liberia",
     "name_ru": "Либерия",
-    "name_ar": "ليبيريا"
+    "name_ar": "ليبيريا",
+    "latlng": [
+      6.5,
+      -9.5
+    ],
+    "area": 111369,
+    "cca3": "LBR",
+    "population": 4818977
   },
   {
     "capital": "Tripoli",
@@ -1929,7 +2830,14 @@
     "name_ja": "リビア",
     "name_de": "Libyen",
     "name_ru": "Ливия",
-    "name_ar": "ليبيا"
+    "name_ar": "ليبيا",
+    "latlng": [
+      25,
+      17
+    ],
+    "area": 1759540,
+    "cca3": "LBY",
+    "population": 6678567
   },
   {
     "capital": "Vaduz",
@@ -1943,7 +2851,14 @@
     "name_ja": "リヒテンシュタイン",
     "name_de": "Liechtenstein",
     "name_ru": "Лихтенштейн",
-    "name_ar": "ليختنشتاين"
+    "name_ar": "ليختنشتاين",
+    "latlng": [
+      47.26666666,
+      9.53333333
+    ],
+    "area": 160,
+    "cca3": "LIE",
+    "population": 37910
   },
   {
     "capital": "Vilnius",
@@ -1957,7 +2872,14 @@
     "name_ja": "リトアニア",
     "name_de": "Litauen",
     "name_ru": "Литва",
-    "name_ar": "ليتوانيا"
+    "name_ar": "ليتوانيا",
+    "latlng": [
+      56,
+      24
+    ],
+    "area": 65300,
+    "cca3": "LTU",
+    "population": 2801543
   },
   {
     "capital": "Luxembourg City",
@@ -1971,7 +2893,14 @@
     "name_ja": "ルクセンブルク",
     "name_de": "Luxemburg",
     "name_ru": "Люксембург",
-    "name_ar": "لوكسمبورغ"
+    "name_ar": "لوكسمبورغ",
+    "latlng": [
+      49.75,
+      6.16666666
+    ],
+    "area": 2586,
+    "cca3": "LUX",
+    "population": 607950
   },
   {
     "capital": "Macau",
@@ -1985,7 +2914,14 @@
     "name_ja": "中華人民共和国マカオ特別行政区",
     "name_de": "Sonderverwaltungsregion Macau",
     "name_ru": "Макао (САР)",
-    "name_ar": "منطقة ماكاو الإدارية الخاصة"
+    "name_ar": "منطقة ماكاو الإدارية الخاصة",
+    "latlng": [
+      22.16666666,
+      113.55
+    ],
+    "area": 30,
+    "cca3": "MAC",
+    "population": 631636
   },
   {
     "capital": "Antananarivo",
@@ -1999,7 +2935,14 @@
     "name_ja": "マダガスカル",
     "name_de": "Madagaskar",
     "name_ru": "Мадагаскар",
-    "name_ar": "مدغشقر"
+    "name_ar": "مدغشقر",
+    "latlng": [
+      -20,
+      47
+    ],
+    "area": 587041,
+    "cca3": "MDG",
+    "population": 26262368
   },
   {
     "capital": "Lilongwe",
@@ -2013,7 +2956,14 @@
     "name_ja": "マラウイ",
     "name_de": "Malawi",
     "name_ru": "Малави",
-    "name_ar": "ملاوي"
+    "name_ar": "ملاوي",
+    "latlng": [
+      -13.5,
+      34
+    ],
+    "area": 118484,
+    "cca3": "MWI",
+    "population": 18143315
   },
   {
     "capital": "Kuala Lumpur",
@@ -2027,7 +2977,14 @@
     "name_ja": "マレーシア",
     "name_de": "Malaysia",
     "name_ru": "Малайзия",
-    "name_ar": "مال��زيا"
+    "name_ar": "مال��زيا",
+    "latlng": [
+      2.5,
+      112.5
+    ],
+    "area": 330803,
+    "cca3": "MYS",
+    "population": 31528585
   },
   {
     "capital": "Malé",
@@ -2041,7 +2998,14 @@
     "name_ja": "モルディブ",
     "name_de": "Malediven",
     "name_ru": "Мальдивы",
-    "name_ar": "جزر المالديف"
+    "name_ar": "جزر المالديف",
+    "latlng": [
+      3.25,
+      73
+    ],
+    "area": 300,
+    "cca3": "MDV",
+    "population": 515696
   },
   {
     "capital": "Bamako",
@@ -2055,7 +3019,14 @@
     "name_ja": "マリ",
     "name_de": "Mali",
     "name_ru": "Мали",
-    "name_ar": "مالي"
+    "name_ar": "مالي",
+    "latlng": [
+      17,
+      -4
+    ],
+    "area": 1240192,
+    "cca3": "MLI",
+    "population": 19077690
   },
   {
     "capital": "Valletta",
@@ -2069,7 +3040,14 @@
     "name_ja": "マルタ",
     "name_de": "Malta",
     "name_ru": "Мальта",
-    "name_ar": "مالطا"
+    "name_ar": "مالطا",
+    "latlng": [
+      35.83333333,
+      14.58333333
+    ],
+    "area": 316,
+    "cca3": "MLT",
+    "population": 484630
   },
   {
     "capital": "Majuro",
@@ -2083,7 +3061,14 @@
     "name_ja": "マーシャル諸島",
     "name_de": "Marshallinseln",
     "name_ru": "Маршалловы о-ва",
-    "name_ar": "جزر مارشال"
+    "name_ar": "جزر مارشال",
+    "latlng": [
+      9,
+      168
+    ],
+    "area": 181,
+    "cca3": "MHL",
+    "population": 58413
   },
   {
     "capital": "Fort-de-France",
@@ -2097,7 +3082,14 @@
     "name_ja": "マルティニーク",
     "name_de": "Martinique",
     "name_ru": "Мартиника",
-    "name_ar": "جزر المارتينيك"
+    "name_ar": "جزر المارتينيك",
+    "latlng": [
+      14.666667,
+      -61
+    ],
+    "area": 1128,
+    "cca3": "MTQ",
+    "population": 376480
   },
   {
     "capital": "Nouakchott",
@@ -2111,7 +3103,14 @@
     "name_ja": "モーリタニア",
     "name_de": "Mauretanien",
     "name_ru": "Мавритания",
-    "name_ar": "موريتانيا"
+    "name_ar": "موريتانيا",
+    "latlng": [
+      20,
+      -12
+    ],
+    "area": 1030700,
+    "cca3": "MRT",
+    "population": 4403319
   },
   {
     "capital": "Port Louis",
@@ -2125,7 +3124,14 @@
     "name_ja": "モーリシャス",
     "name_de": "Mauritius",
     "name_ru": "Маврикий",
-    "name_ar": "موريشيوس"
+    "name_ar": "موريشيوس",
+    "latlng": [
+      -20.28333333,
+      57.55
+    ],
+    "area": 2040,
+    "cca3": "MUS",
+    "population": 1265303
   },
   {
     "capital": "Mamoudzou",
@@ -2139,7 +3145,14 @@
     "name_ja": "マヨット",
     "name_de": "Mayotte",
     "name_ru": "Майотта",
-    "name_ar": "مايوت"
+    "name_ar": "مايوت",
+    "latlng": [
+      -12.83333333,
+      45.16666666
+    ],
+    "area": 374,
+    "cca3": "MYT",
+    "population": 270372
   },
   {
     "capital": "Mexico City",
@@ -2153,7 +3166,14 @@
     "name_ja": "メキシコ",
     "name_de": "Mexiko",
     "name_ru": "Мексика",
-    "name_ar": "المكسيك"
+    "name_ar": "المكسيك",
+    "latlng": [
+      23,
+      -102
+    ],
+    "area": 1964375,
+    "cca3": "MEX",
+    "population": 126190788
   },
   {
     "capital": "Chișinău",
@@ -2167,7 +3187,14 @@
     "name_ja": "モルドバ",
     "name_de": "Republik Moldau",
     "name_ru": "Молдова",
-    "name_ar": "مولدوفا"
+    "name_ar": "مولدوفا",
+    "latlng": [
+      47,
+      29
+    ],
+    "area": 33846,
+    "cca3": "MDA",
+    "population": 2706049
   },
   {
     "capital": "Monaco",
@@ -2181,7 +3208,14 @@
     "name_ja": "モナコ",
     "name_de": "Monaco",
     "name_ru": "Монако",
-    "name_ar": "موناكو"
+    "name_ar": "موناكو",
+    "latlng": [
+      43.73333333,
+      7.4
+    ],
+    "area": 2.02,
+    "cca3": "MCO",
+    "population": 38682
   },
   {
     "capital": "Ulaanbaatar",
@@ -2195,7 +3229,14 @@
     "name_ja": "モンゴル",
     "name_de": "Mongolei",
     "name_ru": "Монголия",
-    "name_ar": "منغوليا"
+    "name_ar": "منغوليا",
+    "latlng": [
+      46,
+      105
+    ],
+    "area": 1564110,
+    "cca3": "MNG",
+    "population": 3170208
   },
   {
     "capital": "Podgorica",
@@ -2209,7 +3250,14 @@
     "name_ja": "モンテネグロ",
     "name_de": "Montenegro",
     "name_ru": "Черногория",
-    "name_ar": "الجبل الأسود"
+    "name_ar": "الجبل الأسود",
+    "latlng": [
+      42.5,
+      19.3
+    ],
+    "area": 13812,
+    "cca3": "MNE",
+    "population": 631219
   },
   {
     "capital": "Little Bay, Brades, Plymouth",
@@ -2223,7 +3271,14 @@
     "name_ja": "モントセラト",
     "name_de": "Montserrat",
     "name_ru": "Монтсеррат",
-    "name_ar": "مونتسرات"
+    "name_ar": "مونتسرات",
+    "latlng": [
+      16.75,
+      -62.2
+    ],
+    "area": 102,
+    "cca3": "MSR",
+    "population": 5900
   },
   {
     "capital": "Rabat",
@@ -2237,7 +3292,14 @@
     "name_ja": "モロッコ",
     "name_de": "Marokko",
     "name_ru": "Марокко",
-    "name_ar": "المغرب"
+    "name_ar": "المغرب",
+    "latlng": [
+      32,
+      -5
+    ],
+    "area": 446550,
+    "cca3": "MAR",
+    "population": 36029138
   },
   {
     "capital": "Maputo",
@@ -2251,7 +3313,14 @@
     "name_ja": "モザンビーク",
     "name_de": "Mosambik",
     "name_ru": "Мозамбик",
-    "name_ar": "موزمبيق"
+    "name_ar": "موزمبيق",
+    "latlng": [
+      -18.25,
+      35
+    ],
+    "area": 801590,
+    "cca3": "MOZ",
+    "population": 29495962
   },
   {
     "capital": "Naypyidaw",
@@ -2265,7 +3334,14 @@
     "name_ja": "ミャンマー (ビルマ)",
     "name_de": "Myanmar",
     "name_ru": "Мьянма (Бирма)",
-    "name_ar": "ميانمار (بورما)"
+    "name_ar": "ميانمار (بورما)",
+    "latlng": [
+      22,
+      98
+    ],
+    "area": 676578,
+    "cca3": "MMR",
+    "population": 53708395
   },
   {
     "capital": "Windhoek",
@@ -2279,7 +3355,14 @@
     "name_ja": "ナミビア",
     "name_de": "Namibia",
     "name_ru": "Намибия",
-    "name_ar": "ناميبيا"
+    "name_ar": "ناميبيا",
+    "latlng": [
+      -22,
+      17
+    ],
+    "area": 825615,
+    "cca3": "NAM",
+    "population": 2448255
   },
   {
     "capital": "Yaren District",
@@ -2293,7 +3376,14 @@
     "name_ja": "ナウル",
     "name_de": "Nauru",
     "name_ru": "Науру",
-    "name_ar": "ناورو"
+    "name_ar": "ناورو",
+    "latlng": [
+      -0.53333333,
+      166.91666666
+    ],
+    "area": 21,
+    "cca3": "NRU",
+    "population": 12704
   },
   {
     "capital": "Kathmandu",
@@ -2307,7 +3397,14 @@
     "name_ja": "ネパール",
     "name_de": "Nepal",
     "name_ru": "Непал",
-    "name_ar": "نيبال"
+    "name_ar": "نيبال",
+    "latlng": [
+      28,
+      84
+    ],
+    "area": 147181,
+    "cca3": "NPL",
+    "population": 28087871
   },
   {
     "capital": "Amsterdam",
@@ -2321,7 +3418,14 @@
     "name_ja": "オランダ",
     "name_de": "Niederlande",
     "name_ru": "Нидерланды",
-    "name_ar": "هولندا"
+    "name_ar": "هولندا",
+    "latlng": [
+      52.5,
+      5.75
+    ],
+    "area": 41850,
+    "cca3": "NLD",
+    "population": 17231624
   },
   {
     "capital": "Nouméa",
@@ -2335,7 +3439,14 @@
     "name_ja": "ニューカレドニア",
     "name_de": "Neukaledonien",
     "name_ru": "Новая Каледония",
-    "name_ar": "كاليدونيا الجديدة"
+    "name_ar": "كاليدونيا الجديدة",
+    "latlng": [
+      -21.5,
+      165.5
+    ],
+    "area": 18575,
+    "cca3": "NCL",
+    "population": 284060
   },
   {
     "capital": "Wellington",
@@ -2349,7 +3460,14 @@
     "name_ja": "ニュージーランド",
     "name_de": "Neuseeland",
     "name_ru": "Новая Зеландия",
-    "name_ar": "نيوزيلندا"
+    "name_ar": "نيوزيلندا",
+    "latlng": [
+      -41,
+      174
+    ],
+    "area": 270467,
+    "cca3": "NZL",
+    "population": 4841000
   },
   {
     "capital": "Managua",
@@ -2363,7 +3481,14 @@
     "name_ja": "ニカラグア",
     "name_de": "Nicaragua",
     "name_ru": "Никарагуа",
-    "name_ar": "نيكاراغوا"
+    "name_ar": "نيكاراغوا",
+    "latlng": [
+      13,
+      -85
+    ],
+    "area": 130373,
+    "cca3": "NIC",
+    "population": 6465513
   },
   {
     "capital": "Niamey",
@@ -2377,7 +3502,14 @@
     "name_ja": "ニジェール",
     "name_de": "Niger",
     "name_ru": "Нигер",
-    "name_ar": "النيجر"
+    "name_ar": "النيجر",
+    "latlng": [
+      16,
+      8
+    ],
+    "area": 1267000,
+    "cca3": "NER",
+    "population": 22442948
   },
   {
     "capital": "Abuja",
@@ -2391,7 +3523,14 @@
     "name_ja": "ナイジェリア",
     "name_de": "Nigeria",
     "name_ru": "Нигерия",
-    "name_ar": "نيجيريا"
+    "name_ar": "نيجيريا",
+    "latlng": [
+      10,
+      8
+    ],
+    "area": 923768,
+    "cca3": "NGA",
+    "population": 195874740
   },
   {
     "capital": "Alofi",
@@ -2405,7 +3544,14 @@
     "name_ja": "ニウエ",
     "name_de": "Niue",
     "name_ru": "Ниуэ",
-    "name_ar": "نيوي"
+    "name_ar": "نيوي",
+    "latlng": [
+      -19.03333333,
+      -169.86666666
+    ],
+    "area": 260,
+    "cca3": "NIU",
+    "population": 1624
   },
   {
     "capital": "Kingston",
@@ -2419,7 +3565,14 @@
     "name_ja": "ノーフォーク島",
     "name_de": "Norfolkinsel",
     "name_ru": "о-в Норфолк",
-    "name_ar": "جزيرة نورفولك"
+    "name_ar": "جزيرة نورفولك",
+    "latlng": [
+      -29.03333333,
+      167.95
+    ],
+    "area": 36,
+    "cca3": "NFK",
+    "population": 2169
   },
   {
     "capital": "Pyongyang",
@@ -2433,7 +3586,14 @@
     "name_ja": "北朝鮮",
     "name_de": "Nordkorea",
     "name_ru": "КНДР",
-    "name_ar": "كوريا الشمالية"
+    "name_ar": "كوريا الشمالية",
+    "latlng": [
+      40,
+      127
+    ],
+    "area": 120538,
+    "cca3": "PRK",
+    "population": 25549819
   },
   {
     "capital": "Skopje",
@@ -2447,7 +3607,14 @@
     "name_ja": "北マケドニア",
     "name_de": "Nordmazedonien",
     "name_ru": "Северная Македония",
-    "name_ar": "مقدونيا الشمالية"
+    "name_ar": "مقدونيا الشمالية",
+    "latlng": [
+      41.83333333,
+      22
+    ],
+    "area": 25713,
+    "cca3": "MKD",
+    "population": 2084367
   },
   {
     "capital": "Belfast",
@@ -2461,7 +3628,8 @@
     "name_ja": "北アイルランド",
     "name_de": "Nordirland",
     "name_ru": "Северная Ирландия",
-    "name_ar": "أيرلندا الشمالية"
+    "name_ar": "أيرلندا الشمالية",
+    "population": 1885400
   },
   {
     "capital": "Saipan",
@@ -2475,7 +3643,14 @@
     "name_ja": "北マリアナ諸島",
     "name_de": "Nördliche Marianen",
     "name_ru": "Северные Марианские о-ва",
-    "name_ar": "جزر ماريانا الشمالية"
+    "name_ar": "جزر ماريانا الشمالية",
+    "latlng": [
+      15.2,
+      145.75
+    ],
+    "area": 464,
+    "cca3": "MNP",
+    "population": 56882
   },
   {
     "capital": "Oslo",
@@ -2489,7 +3664,14 @@
     "name_ja": "ノルウェー",
     "name_de": "Norwegen",
     "name_ru": "Норвегия",
-    "name_ar": "النرويج"
+    "name_ar": "النرويج",
+    "latlng": [
+      62,
+      10
+    ],
+    "area": 323802,
+    "cca3": "NOR",
+    "population": 5311916
   },
   {
     "capital": "Muscat",
@@ -2503,7 +3685,14 @@
     "name_ja": "オマーン",
     "name_de": "Oman",
     "name_ru": "Оман",
-    "name_ar": "عُمان"
+    "name_ar": "عُمان",
+    "latlng": [
+      21,
+      57
+    ],
+    "area": 309500,
+    "cca3": "OMN",
+    "population": 4829483
   },
   {
     "code": "pc",
@@ -2529,7 +3718,14 @@
     "name_ja": "パキスタン",
     "name_de": "Pakistan",
     "name_ru": "Пакистан",
-    "name_ar": "باكستان"
+    "name_ar": "باكستان",
+    "latlng": [
+      30,
+      70
+    ],
+    "area": 881912,
+    "cca3": "PAK",
+    "population": 212215030
   },
   {
     "capital": "Ngerulmud",
@@ -2543,7 +3739,14 @@
     "name_ja": "パラオ",
     "name_de": "Palau",
     "name_ru": "Палау",
-    "name_ar": "بالاو"
+    "name_ar": "بالاو",
+    "latlng": [
+      7.5,
+      134.5
+    ],
+    "area": 459,
+    "cca3": "PLW",
+    "population": 17907
   },
   {
     "capital": "Panama City",
@@ -2557,7 +3760,14 @@
     "name_ja": "パナマ",
     "name_de": "Panama",
     "name_ru": "Панама",
-    "name_ar": "بنما"
+    "name_ar": "بنما",
+    "latlng": [
+      9,
+      -80
+    ],
+    "area": 75417,
+    "cca3": "PAN",
+    "population": 4176873
   },
   {
     "capital": "Port Moresby",
@@ -2571,7 +3781,14 @@
     "name_ja": "パプアニューギニア",
     "name_de": "Papua-Neuguinea",
     "name_ru": "Папуа — Новая Гвинея",
-    "name_ar": "بابوا غينيا الجديدة"
+    "name_ar": "بابوا غينيا الجديدة",
+    "latlng": [
+      -6,
+      147
+    ],
+    "area": 462840,
+    "cca3": "PNG",
+    "population": 8606316
   },
   {
     "capital": "Asunción",
@@ -2585,7 +3802,14 @@
     "name_ja": "パラグアイ",
     "name_de": "Paraguay",
     "name_ru": "Парагвай",
-    "name_ar": "باراغواي"
+    "name_ar": "باراغواي",
+    "latlng": [
+      -23,
+      -58
+    ],
+    "area": 406752,
+    "cca3": "PRY",
+    "population": 6956071
   },
   {
     "capital": "Lima",
@@ -2599,7 +3823,14 @@
     "name_ja": "ペルー",
     "name_de": "Peru",
     "name_ru": "Перу",
-    "name_ar": "بيرو"
+    "name_ar": "بيرو",
+    "latlng": [
+      -10,
+      -76
+    ],
+    "area": 1285216,
+    "cca3": "PER",
+    "population": 31989256
   },
   {
     "capital": "Manila",
@@ -2613,7 +3844,14 @@
     "name_ja": "フィリピン",
     "name_de": "Philippinen",
     "name_ru": "Филиппины",
-    "name_ar": "الفلبين"
+    "name_ar": "الفلبين",
+    "latlng": [
+      13,
+      122
+    ],
+    "area": 342353,
+    "cca3": "PHL",
+    "population": 106651922
   },
   {
     "capital": "Adamstown",
@@ -2627,7 +3865,14 @@
     "name_ja": "ピトケアン諸島",
     "name_de": "Pitcairninseln",
     "name_ru": "о-ва Питкэрн",
-    "name_ar": "جزر بيتكيرن"
+    "name_ar": "جزر بيتكيرن",
+    "latlng": [
+      -25.06666666,
+      -130.1
+    ],
+    "area": 47,
+    "cca3": "PCN",
+    "population": 67
   },
   {
     "capital": "Warsaw",
@@ -2641,7 +3886,14 @@
     "name_ja": "ポーランド",
     "name_de": "Polen",
     "name_ru": "Польша",
-    "name_ar": "بولندا"
+    "name_ar": "بولندا",
+    "latlng": [
+      52,
+      20
+    ],
+    "area": 312679,
+    "cca3": "POL",
+    "population": 37974750
   },
   {
     "capital": "Lisbon",
@@ -2655,7 +3907,14 @@
     "name_ja": "ポルトガル",
     "name_de": "Portugal",
     "name_ru": "Португалия",
-    "name_ar": "البرتغال"
+    "name_ar": "البرتغال",
+    "latlng": [
+      39.5,
+      -8
+    ],
+    "area": 92090,
+    "cca3": "PRT",
+    "population": 10283822
   },
   {
     "capital": "San Juan",
@@ -2669,7 +3928,14 @@
     "name_ja": "プエルトリコ",
     "name_de": "Puerto Rico",
     "name_ru": "Пуэрто-Рико",
-    "name_ar": "بورتوريكو"
+    "name_ar": "بورتوريكو",
+    "latlng": [
+      18.25,
+      -66.5
+    ],
+    "area": 8870,
+    "cca3": "PRI",
+    "population": 3195153
   },
   {
     "capital": "Doha",
@@ -2683,7 +3949,14 @@
     "name_ja": "カタール",
     "name_de": "Katar",
     "name_ru": "Катар",
-    "name_ar": "قطر"
+    "name_ar": "قطر",
+    "latlng": [
+      25.5,
+      51.25
+    ],
+    "area": 11586,
+    "cca3": "QAT",
+    "population": 2781677
   },
   {
     "capital": "Brazzaville",
@@ -2697,7 +3970,14 @@
     "name_ja": "コンゴ共和国(ブラザビル)",
     "name_de": "Kongo-Brazzaville",
     "name_ru": "Конго - Браззавиль",
-    "name_ar": "الكونغو - برازافيل"
+    "name_ar": "الكونغو - برازافيل",
+    "latlng": [
+      -1,
+      15
+    ],
+    "area": 342000,
+    "cca3": "COG",
+    "population": 5244363
   },
   {
     "capital": "Bucharest",
@@ -2711,7 +3991,14 @@
     "name_ja": "ルーマニア",
     "name_de": "Rumänien",
     "name_ru": "Румыния",
-    "name_ar": "رومانيا"
+    "name_ar": "رومانيا",
+    "latlng": [
+      46,
+      25
+    ],
+    "area": 238391,
+    "cca3": "ROU",
+    "population": 19466145
   },
   {
     "capital": "Moscow",
@@ -2725,7 +4012,14 @@
     "name_ja": "ロシア",
     "name_de": "Russland",
     "name_ru": "Россия",
-    "name_ar": "روسيا"
+    "name_ar": "روسيا",
+    "latlng": [
+      60,
+      100
+    ],
+    "area": 17098242,
+    "cca3": "RUS",
+    "population": 144478050
   },
   {
     "capital": "Kigali",
@@ -2739,7 +4033,14 @@
     "name_ja": "ルワンダ",
     "name_de": "Ruanda",
     "name_ru": "Руанда",
-    "name_ar": "رواندا"
+    "name_ar": "رواندا",
+    "latlng": [
+      -2,
+      30
+    ],
+    "area": 26338,
+    "cca3": "RWA",
+    "population": 12301939
   },
   {
     "capital": "Saint-Denis",
@@ -2753,7 +4054,14 @@
     "name_ja": "レユニオン",
     "name_de": "Réunion",
     "name_ru": "Реюньон",
-    "name_ar": "روينيون"
+    "name_ar": "روينيون",
+    "latlng": [
+      -21.15,
+      55.5
+    ],
+    "area": 2511,
+    "cca3": "REU",
+    "population": 859959
   },
   {
     "capital": "Gustavia",
@@ -2767,7 +4075,14 @@
     "name_ja": "サン・バルテルミー",
     "name_de": "St. Barthélemy",
     "name_ru": "Сен-Бартелеми",
-    "name_ar": "سان بارتليمي"
+    "name_ar": "سان بارتليمي",
+    "latlng": [
+      18.5,
+      -63.41666666
+    ],
+    "area": 21,
+    "cca3": "BLM",
+    "population": 11000
   },
   {
     "capital": "Jamestown",
@@ -2781,7 +4096,8 @@
     "name_ja": "セントヘレナ",
     "name_de": "St. Helena",
     "name_ru": "о-в Св. Елены",
-    "name_ar": "سانت هيلينا"
+    "name_ar": "سانت هيلينا",
+    "population": 6600
   },
   {
     "capital": "Jamestown",
@@ -2795,7 +4111,14 @@
     "name_ja": "セントヘレナ",
     "name_de": "St. Helena",
     "name_ru": "о-в Св. Елены",
-    "name_ar": "سانت هيلينا"
+    "name_ar": "سانت هيلينا",
+    "latlng": [
+      -15.95,
+      -5.72
+    ],
+    "area": 394,
+    "cca3": "SHN",
+    "population": 6600
   },
   {
     "capital": "Basseterre",
@@ -2809,7 +4132,14 @@
     "name_ja": "セントクリストファー・ネーヴィス",
     "name_de": "St. Kitts und Nevis",
     "name_ru": "Сент-Китс и Невис",
-    "name_ar": "سانت كيتس ونيفيس"
+    "name_ar": "سانت كيتس ونيفيس",
+    "latlng": [
+      17.33333333,
+      -62.75
+    ],
+    "area": 261,
+    "cca3": "KNA",
+    "population": 52441
   },
   {
     "capital": "Castries",
@@ -2823,7 +4153,14 @@
     "name_ja": "セントルシア",
     "name_de": "St. Lucia",
     "name_ru": "Сент-Люсия",
-    "name_ar": "سانت لوسيا"
+    "name_ar": "سانت لوسيا",
+    "latlng": [
+      13.88333333,
+      -60.96666666
+    ],
+    "area": 616,
+    "cca3": "LCA",
+    "population": 181889
   },
   {
     "capital": "Marigot",
@@ -2837,7 +4174,14 @@
     "name_ja": "サン・マルタン",
     "name_de": "St. Martin",
     "name_ru": "Сен-Мартен",
-    "name_ar": "سان مارتن"
+    "name_ar": "سان مارتن",
+    "latlng": [
+      18.08333333,
+      -63.95
+    ],
+    "area": 53,
+    "cca3": "MAF",
+    "population": 32000
   },
   {
     "capital": "Saint-Pierre",
@@ -2851,7 +4195,14 @@
     "name_ja": "サンピエール島・ミクロン島",
     "name_de": "St. Pierre und Miquelon",
     "name_ru": "Сен-Пьер и Микелон",
-    "name_ar": "سان بيير ومكويلون"
+    "name_ar": "سان بيير ومكويلون",
+    "latlng": [
+      46.83333333,
+      -56.33333333
+    ],
+    "area": 242,
+    "cca3": "SPM",
+    "population": 5888
   },
   {
     "capital": "Kingstown",
@@ -2865,7 +4216,14 @@
     "name_ja": "セントビンセント及びグレナディーン諸島",
     "name_de": "St. Vincent und die Grenadinen",
     "name_ru": "Сент-Винсент и Гренадины",
-    "name_ar": "سانت فنسنت وجزر غرينادين"
+    "name_ar": "سانت فنسنت وجزر غرينادين",
+    "latlng": [
+      13.25,
+      -61.2
+    ],
+    "area": 389,
+    "cca3": "VCT",
+    "population": 110210
   },
   {
     "capital": "Apia",
@@ -2879,7 +4237,14 @@
     "name_ja": "サモア",
     "name_de": "Samoa",
     "name_ru": "Самоа",
-    "name_ar": "ساموا"
+    "name_ar": "ساموا",
+    "latlng": [
+      -13.58333333,
+      -172.33333333
+    ],
+    "area": 2842,
+    "cca3": "WSM",
+    "population": 196130
   },
   {
     "capital": "San Marino",
@@ -2893,7 +4258,14 @@
     "name_ja": "サンマリノ",
     "name_de": "San Marino",
     "name_ru": "Сан-Марино",
-    "name_ar": "سان مارينو"
+    "name_ar": "سان مارينو",
+    "latlng": [
+      43.76666666,
+      12.41666666
+    ],
+    "area": 61,
+    "cca3": "SMR",
+    "population": 33785
   },
   {
     "capital": "São Tomé",
@@ -2907,7 +4279,14 @@
     "name_ja": "サントメ・プリンシペ",
     "name_de": "São Tomé und Príncipe",
     "name_ru": "Сан-Томе и Принсипи",
-    "name_ar": "ساو تومي وبرينسيبي"
+    "name_ar": "ساو تومي وبرينسيبي",
+    "latlng": [
+      1,
+      7
+    ],
+    "area": 964,
+    "cca3": "STP",
+    "population": 211028
   },
   {
     "capital": "Riyadh",
@@ -2921,7 +4300,14 @@
     "name_ja": "サウジアラビア",
     "name_de": "Saudi-Arabien",
     "name_ru": "Саудовская Аравия",
-    "name_ar": "المملكة العربية السعودية"
+    "name_ar": "المملكة العربية السعودية",
+    "latlng": [
+      25,
+      45
+    ],
+    "area": 2149690,
+    "cca3": "SAU",
+    "population": 33699947
   },
   {
     "capital": "Edinburgh",
@@ -2935,7 +4321,8 @@
     "name_ja": "スコットランド",
     "name_de": "Schottland",
     "name_ru": "Шотландия",
-    "name_ar": "اسكتلندا"
+    "name_ar": "اسكتلندا",
+    "population": 5424800
   },
   {
     "capital": "Dakar",
@@ -2949,7 +4336,14 @@
     "name_ja": "セネガル",
     "name_de": "Senegal",
     "name_ru": "Сенегал",
-    "name_ar": "السنغال"
+    "name_ar": "السنغال",
+    "latlng": [
+      14,
+      -14
+    ],
+    "area": 196722,
+    "cca3": "SEN",
+    "population": 15854360
   },
   {
     "capital": "Belgrade",
@@ -2963,7 +4357,14 @@
     "name_ja": "セルビア",
     "name_de": "Serbien",
     "name_ru": "Сербия",
-    "name_ar": "صربيا"
+    "name_ar": "صربيا",
+    "latlng": [
+      44,
+      21
+    ],
+    "area": 88361,
+    "cca3": "SRB",
+    "population": 6963764
   },
   {
     "capital": "Victoria",
@@ -2977,7 +4378,14 @@
     "name_ja": "セーシェル",
     "name_de": "Seychellen",
     "name_ru": "Сейшельские о-ва",
-    "name_ar": "سيشل"
+    "name_ar": "سيشل",
+    "latlng": [
+      -4.58333333,
+      55.66666666
+    ],
+    "area": 452,
+    "cca3": "SYC",
+    "population": 96762
   },
   {
     "capital": "Freetown",
@@ -2991,7 +4399,14 @@
     "name_ja": "シエラレオネ",
     "name_de": "Sierra Leone",
     "name_ru": "Сьерра-Леоне",
-    "name_ar": "سيراليون"
+    "name_ar": "سيراليون",
+    "latlng": [
+      8.5,
+      -11.5
+    ],
+    "area": 71740,
+    "cca3": "SLE",
+    "population": 7650154
   },
   {
     "capital": "Singapore",
@@ -3005,7 +4420,14 @@
     "name_ja": "シンガポール",
     "name_de": "Singapur",
     "name_ru": "Сингапур",
-    "name_ar": "سنغافورة"
+    "name_ar": "سنغافورة",
+    "latlng": [
+      1.36666666,
+      103.8
+    ],
+    "area": 710,
+    "cca3": "SGP",
+    "population": 5638676
   },
   {
     "capital": "Philipsburg",
@@ -3019,7 +4441,14 @@
     "name_ja": "シント・マールテン",
     "name_de": "Sint Maarten",
     "name_ru": "Синт-Мартен",
-    "name_ar": "سانت مارتن"
+    "name_ar": "سانت مارتن",
+    "latlng": [
+      18.033333,
+      -63.05
+    ],
+    "area": 34,
+    "cca3": "SXM",
+    "population": 41000
   },
   {
     "capital": "Bratislava",
@@ -3033,7 +4462,14 @@
     "name_ja": "スロバキア",
     "name_de": "Slowakei",
     "name_ru": "Словакия",
-    "name_ar": "سلوفاكيا"
+    "name_ar": "سلوفاكيا",
+    "latlng": [
+      48.66666666,
+      19.5
+    ],
+    "area": 49037,
+    "cca3": "SVK",
+    "population": 5446771
   },
   {
     "capital": "Ljubljana",
@@ -3047,7 +4483,14 @@
     "name_ja": "スロベニア",
     "name_de": "Slowenien",
     "name_ru": "Словения",
-    "name_ar": "سلوفينيا"
+    "name_ar": "سلوفينيا",
+    "latlng": [
+      46.11666666,
+      14.81666666
+    ],
+    "area": 20273,
+    "cca3": "SVN",
+    "population": 2073894
   },
   {
     "capital": "Honiara",
@@ -3061,7 +4504,14 @@
     "name_ja": "ソロモン諸島",
     "name_de": "Salomonen",
     "name_ru": "Соломоновы о-ва",
-    "name_ar": "جزر سليمان"
+    "name_ar": "جزر سليمان",
+    "latlng": [
+      -8,
+      159
+    ],
+    "area": 28896,
+    "cca3": "SLB",
+    "population": 652858
   },
   {
     "capital": "Mogadishu",
@@ -3075,7 +4525,14 @@
     "name_ja": "ソマリア",
     "name_de": "Somalia",
     "name_ru": "Сомали",
-    "name_ar": "الصومال"
+    "name_ar": "الصومال",
+    "latlng": [
+      10,
+      49
+    ],
+    "area": 637657,
+    "cca3": "SOM",
+    "population": 15008154
   },
   {
     "capital": "Pretoria",
@@ -3089,7 +4546,14 @@
     "name_ja": "南アフリカ",
     "name_de": "Südafrika",
     "name_ru": "Южно-Африканская Республика",
-    "name_ar": "جنوب أفريقيا"
+    "name_ar": "جنوب أفريقيا",
+    "latlng": [
+      -29,
+      24
+    ],
+    "area": 1221037,
+    "cca3": "ZAF",
+    "population": 57779622
   },
   {
     "capital": "King Edward Point",
@@ -3103,7 +4567,14 @@
     "name_ja": "サウスジョージア・サウスサンドウィッチ諸島",
     "name_de": "Südgeorgien und die Südlichen Sandwichinseln",
     "name_ru": "Южная Георгия и Южные Сандвичевы о-ва",
-    "name_ar": "جورجيا الجنوبية وجزر ساندويتش الجنوبية"
+    "name_ar": "جورجيا الجنوبية وجزر ساندويتش الجنوبية",
+    "latlng": [
+      -54.5,
+      -37
+    ],
+    "area": 3903,
+    "cca3": "SGS",
+    "population": 30
   },
   {
     "capital": "Seoul",
@@ -3117,7 +4588,14 @@
     "name_ja": "韓国",
     "name_de": "Südkorea",
     "name_ru": "Республика Корея",
-    "name_ar": "كوريا الجنوبية"
+    "name_ar": "كوريا الجنوبية",
+    "latlng": [
+      37,
+      127.5
+    ],
+    "area": 100210,
+    "cca3": "KOR",
+    "population": 51606633
   },
   {
     "capital": "Juba",
@@ -3131,7 +4609,14 @@
     "name_ja": "南スーダン",
     "name_de": "Südsudan",
     "name_ru": "Южный Судан",
-    "name_ar": "جنوب السودان"
+    "name_ar": "جنوب السودان",
+    "latlng": [
+      7,
+      30
+    ],
+    "area": 619745,
+    "cca3": "SSD",
+    "population": 10975920
   },
   {
     "capital": "Madrid",
@@ -3145,7 +4630,14 @@
     "name_ja": "スペイン",
     "name_de": "Spanien",
     "name_ru": "Испания",
-    "name_ar": "إسبانيا"
+    "name_ar": "إسبانيا",
+    "latlng": [
+      40,
+      -4
+    ],
+    "area": 505992,
+    "cca3": "ESP",
+    "population": 46796540
   },
   {
     "capital": "Sri Jayawardenepura Kotte, Colombo",
@@ -3159,7 +4651,14 @@
     "name_ja": "スリランカ",
     "name_de": "Sri Lanka",
     "name_ru": "Шри-Ланка",
-    "name_ar": "سريلانكا"
+    "name_ar": "سريلانكا",
+    "latlng": [
+      7,
+      81
+    ],
+    "area": 65610,
+    "cca3": "LKA",
+    "population": 21670000
   },
   {
     "capital": "Ramallah",
@@ -3173,7 +4672,14 @@
     "name_ja": "パレスチナ自治区",
     "name_de": "Palästinensische Autonomiegebiete",
     "name_ru": "Палестинские территории",
-    "name_ar": "الأراضي الفلسطينية"
+    "name_ar": "الأراضي الفلسطينية",
+    "latlng": [
+      31.9,
+      35.2
+    ],
+    "area": 6220,
+    "cca3": "PSE",
+    "population": 4569087
   },
   {
     "capital": "Khartoum",
@@ -3187,7 +4693,14 @@
     "name_ja": "スーダン",
     "name_de": "Sudan",
     "name_ru": "Судан",
-    "name_ar": "السودان"
+    "name_ar": "السودان",
+    "latlng": [
+      15,
+      30
+    ],
+    "area": 1886068,
+    "cca3": "SDN",
+    "population": 41801533
   },
   {
     "capital": "Paramaribo",
@@ -3201,7 +4714,14 @@
     "name_ja": "スリナム",
     "name_de": "Suriname",
     "name_ru": "Суринам",
-    "name_ar": "سورينام"
+    "name_ar": "سورينام",
+    "latlng": [
+      4,
+      -56
+    ],
+    "area": 163820,
+    "cca3": "SUR",
+    "population": 575991
   },
   {
     "capital": "Longyearbyen",
@@ -3215,7 +4735,14 @@
     "name_ja": "スバールバル諸島・ヤンマイエン島",
     "name_de": "Spitzbergen und Jan Mayen",
     "name_ru": "Шпицберген и Ян-Майен",
-    "name_ar": "سفالبارد وجان ماين"
+    "name_ar": "سفالبارد وجان ماين",
+    "latlng": [
+      78,
+      20
+    ],
+    "area": -1,
+    "cca3": "SJM",
+    "population": 2572
   },
   {
     "capital": "Stockholm",
@@ -3229,7 +4756,14 @@
     "name_ja": "スウェーデン",
     "name_de": "Schweden",
     "name_ru": "Швеция",
-    "name_ar": "السويد"
+    "name_ar": "السويد",
+    "latlng": [
+      62,
+      15
+    ],
+    "area": 450295,
+    "cca3": "SWE",
+    "population": 10175214
   },
   {
     "capital": "Bern",
@@ -3243,7 +4777,14 @@
     "name_ja": "スイス",
     "name_de": "Schweiz",
     "name_ru": "Швейцария",
-    "name_ar": "سويسرا"
+    "name_ar": "سويسرا",
+    "latlng": [
+      47,
+      8
+    ],
+    "area": 41284,
+    "cca3": "CHE",
+    "population": 8513227
   },
   {
     "capital": "Damascus",
@@ -3257,7 +4798,14 @@
     "name_ja": "シリア",
     "name_de": "Syrien",
     "name_ru": "Сирия",
-    "name_ar": "سوريا"
+    "name_ar": "سوريا",
+    "latlng": [
+      35,
+      38
+    ],
+    "area": 185180,
+    "cca3": "SYR",
+    "population": 16906283
   },
   {
     "capital": "Taipei",
@@ -3271,7 +4819,14 @@
     "name_ja": "台湾",
     "name_de": "Taiwan",
     "name_ru": "Тайвань",
-    "name_ar": "تايوان"
+    "name_ar": "تايوان",
+    "latlng": [
+      23.5,
+      121
+    ],
+    "area": 36193,
+    "cca3": "TWN",
+    "population": 23500000
   },
   {
     "capital": "Dushanbe",
@@ -3285,7 +4840,14 @@
     "name_ja": "タジキスタン",
     "name_de": "Tadschikistan",
     "name_ru": "Таджикистан",
-    "name_ar": "طاجيكستان"
+    "name_ar": "طاجيكستان",
+    "latlng": [
+      39,
+      71
+    ],
+    "area": 143100,
+    "cca3": "TJK",
+    "population": 9100837
   },
   {
     "capital": "Dodoma",
@@ -3299,7 +4861,14 @@
     "name_ja": "タンザニア",
     "name_de": "Tansania",
     "name_ru": "Танзания",
-    "name_ar": "تنزانيا"
+    "name_ar": "تنزانيا",
+    "latlng": [
+      -6,
+      35
+    ],
+    "area": 945087,
+    "cca3": "TZA",
+    "population": 56318348
   },
   {
     "capital": "Bangkok",
@@ -3313,7 +4882,14 @@
     "name_ja": "タイ",
     "name_de": "Thailand",
     "name_ru": "Таиланд",
-    "name_ar": "تايلاند"
+    "name_ar": "تايلاند",
+    "latlng": [
+      15,
+      100
+    ],
+    "area": 513120,
+    "cca3": "THA",
+    "population": 69428524
   },
   {
     "capital": "Dili",
@@ -3327,7 +4903,14 @@
     "name_ja": "東ティモール",
     "name_de": "Timor-Leste",
     "name_ru": "Восточный Тимор",
-    "name_ar": "تيمور - ليشتي"
+    "name_ar": "تيمور - ليشتي",
+    "latlng": [
+      -8.83333333,
+      125.91666666
+    ],
+    "area": 14874,
+    "cca3": "TLS",
+    "population": 1267972
   },
   {
     "capital": "Lomé",
@@ -3341,7 +4924,14 @@
     "name_ja": "トーゴ",
     "name_de": "Togo",
     "name_ru": "Того",
-    "name_ar": "توغو"
+    "name_ar": "توغو",
+    "latlng": [
+      8,
+      1.16666666
+    ],
+    "area": 56785,
+    "cca3": "TGO",
+    "population": 7889094
   },
   {
     "capital": "Nukunonu, Atafu,Tokelau",
@@ -3355,7 +4945,14 @@
     "name_ja": "トケラウ",
     "name_de": "Tokelau",
     "name_ru": "Токелау",
-    "name_ar": "توكيلاو"
+    "name_ar": "توكيلاو",
+    "latlng": [
+      -9,
+      -172
+    ],
+    "area": 12,
+    "cca3": "TKL",
+    "population": 1411
   },
   {
     "capital": "Nukuʻalofa",
@@ -3369,7 +4966,14 @@
     "name_ja": "トンガ",
     "name_de": "Tonga",
     "name_ru": "Тонга",
-    "name_ar": "تونغا"
+    "name_ar": "تونغا",
+    "latlng": [
+      -20,
+      -175
+    ],
+    "area": 747,
+    "cca3": "TON",
+    "population": 103197
   },
   {
     "capital": "Port of Spain",
@@ -3383,7 +4987,14 @@
     "name_ja": "トリニダード・トバゴ",
     "name_de": "Trinidad und Tobago",
     "name_ru": "Тринидад и Тобаго",
-    "name_ar": "ترينيداد وتوباغو"
+    "name_ar": "ترينيداد وتوباغو",
+    "latlng": [
+      11,
+      -61
+    ],
+    "area": 5130,
+    "cca3": "TTO",
+    "population": 1389858
   },
   {
     "capital": "Edinburgh of the Seven Seas",
@@ -3411,7 +5022,14 @@
     "name_ja": "チュニジア",
     "name_de": "Tunesien",
     "name_ru": "Тунис",
-    "name_ar": "تونس"
+    "name_ar": "تونس",
+    "latlng": [
+      34,
+      9
+    ],
+    "area": 163610,
+    "cca3": "TUN",
+    "population": 11565204
   },
   {
     "capital": "Ashgabat",
@@ -3425,7 +5043,14 @@
     "name_ja": "トルクメニスタン",
     "name_de": "Turkmenistan",
     "name_ru": "Туркменистан",
-    "name_ar": "تركمانستان"
+    "name_ar": "تركمانستان",
+    "latlng": [
+      40,
+      60
+    ],
+    "area": 488100,
+    "cca3": "TKM",
+    "population": 5850908
   },
   {
     "capital": "Cockburn Town",
@@ -3439,7 +5064,14 @@
     "name_ja": "タークス・カイコス諸島",
     "name_de": "Turks- und Caicosinseln",
     "name_ru": "Тёркс и Кайкос",
-    "name_ar": "جزر توركس وكايكوس"
+    "name_ar": "جزر توركس وكايكوس",
+    "latlng": [
+      21.75,
+      -71.58333333
+    ],
+    "area": 948,
+    "cca3": "TCA",
+    "population": 37665
   },
   {
     "capital": "Funafuti",
@@ -3453,7 +5085,14 @@
     "name_ja": "ツバル",
     "name_de": "Tuvalu",
     "name_ru": "Тувалу",
-    "name_ar": "توفالو"
+    "name_ar": "توفالو",
+    "latlng": [
+      -8,
+      178
+    ],
+    "area": 26,
+    "cca3": "TUV",
+    "population": 11508
   },
   {
     "capital": "Ankara",
@@ -3467,7 +5106,14 @@
     "name_ja": "トルコ",
     "name_de": "Türkei",
     "name_ru": "Турция",
-    "name_ar": "تركيا"
+    "name_ar": "تركيا",
+    "latlng": [
+      39,
+      35
+    ],
+    "area": 783562,
+    "cca3": "TUR",
+    "population": 82319724
   },
   {
     "capital": "Kampala",
@@ -3481,7 +5127,14 @@
     "name_ja": "ウガンダ",
     "name_de": "Uganda",
     "name_ru": "Уганда",
-    "name_ar": "أوغندا"
+    "name_ar": "أوغندا",
+    "latlng": [
+      1,
+      32
+    ],
+    "area": 241550,
+    "cca3": "UGA",
+    "population": 42723139
   },
   {
     "capital": "Kiev",
@@ -3495,7 +5148,14 @@
     "name_ja": "ウクライナ",
     "name_de": "Ukraine",
     "name_ru": "Украина",
-    "name_ar": "أوكرانيا"
+    "name_ar": "أوكرانيا",
+    "latlng": [
+      49,
+      32
+    ],
+    "area": 603500,
+    "cca3": "UKR",
+    "population": 44622516
   },
   {
     "capital": "Abu Dhabi",
@@ -3509,7 +5169,14 @@
     "name_ja": "アラブ���長国連邦",
     "name_de": "Vereinigte Arabische Emirate",
     "name_ru": "ОАЭ",
-    "name_ar": "الإمارات العربية المتحدة"
+    "name_ar": "الإمارات العربية المتحدة",
+    "latlng": [
+      24,
+      54
+    ],
+    "area": 83600,
+    "cca3": "ARE",
+    "population": 9630959
   },
   {
     "capital": "London",
@@ -3523,7 +5190,14 @@
     "name_ja": "イギリス",
     "name_de": "Vereinigtes Königreich",
     "name_ru": "Великобритания",
-    "name_ar": "المملكة المتحدة"
+    "name_ar": "المملكة المتحدة",
+    "latlng": [
+      54,
+      -2
+    ],
+    "area": 242900,
+    "cca3": "GBR",
+    "population": 66460344
   },
   {
     "code": "un",
@@ -3549,7 +5223,14 @@
     "name_ja": "合衆国領有小離島",
     "name_de": "Amerikanische Überseeinseln",
     "name_ru": "Внешние малые о-ва (США)",
-    "name_ar": "جزر الولايات المتحدة النائية"
+    "name_ar": "جزر الولايات المتحدة النائية",
+    "latlng": [
+      19.3,
+      166.633333
+    ],
+    "area": 34.2,
+    "cca3": "UMI",
+    "population": 300
   },
   {
     "capital": "Washington, D.C.",
@@ -3563,7 +5244,14 @@
     "name_ja": "アメリカ合衆国",
     "name_de": "Vereinigte Staaten",
     "name_ru": "Соединенные Штаты",
-    "name_ar": "الولايات المتحدة"
+    "name_ar": "الولايات المتحدة",
+    "latlng": [
+      38,
+      -97
+    ],
+    "area": 9372610,
+    "cca3": "USA",
+    "population": 326687501
   },
   {
     "capital": "Montevideo",
@@ -3577,7 +5265,14 @@
     "name_ja": "ウルグアイ",
     "name_de": "Uruguay",
     "name_ru": "Уругвай",
-    "name_ar": "أورغواي"
+    "name_ar": "أورغواي",
+    "latlng": [
+      -33,
+      -56
+    ],
+    "area": 181034,
+    "cca3": "URY",
+    "population": 3449299
   },
   {
     "capital": "Tashkent",
@@ -3591,7 +5286,14 @@
     "name_ja": "ウズベキスタン",
     "name_de": "Usbekistan",
     "name_ru": "Узбекистан",
-    "name_ar": "أوزبكستان"
+    "name_ar": "أوزبكستان",
+    "latlng": [
+      41,
+      64
+    ],
+    "area": 447400,
+    "cca3": "UZB",
+    "population": 32955400
   },
   {
     "capital": "Port Vila",
@@ -3605,7 +5307,14 @@
     "name_ja": "バヌアツ",
     "name_de": "Vanuatu",
     "name_ru": "Вануату",
-    "name_ar": "فانواتو"
+    "name_ar": "فانواتو",
+    "latlng": [
+      -16,
+      167
+    ],
+    "area": 12189,
+    "cca3": "VUT",
+    "population": 292680
   },
   {
     "capital": "Caracas",
@@ -3619,7 +5328,14 @@
     "name_ja": "ベネズエラ",
     "name_de": "Venezuela",
     "name_ru": "Венесуэла",
-    "name_ar": "فنزويلا"
+    "name_ar": "فنزويلا",
+    "latlng": [
+      8,
+      -66
+    ],
+    "area": 916445,
+    "cca3": "VEN",
+    "population": 28870195
   },
   {
     "capital": "Hanoi",
@@ -3633,7 +5349,14 @@
     "name_ja": "ベトナム",
     "name_de": "Vietnam",
     "name_ru": "Вьетнам",
-    "name_ar": "فيتنام"
+    "name_ar": "فيتنام",
+    "latlng": [
+      16.16666666,
+      107.83333333
+    ],
+    "area": 331212,
+    "cca3": "VNM",
+    "population": 95540395
   },
   {
     "capital": "Road Town",
@@ -3647,7 +5370,14 @@
     "name_ja": "英領ヴァージン諸島",
     "name_de": "Britische Jungferninseln",
     "name_ru": "Виргинские о-ва (Великобритания)",
-    "name_ar": "جزر فيرجن البريطانية"
+    "name_ar": "جزر فيرجن البريطانية",
+    "latlng": [
+      18.431383,
+      -64.62305
+    ],
+    "area": 151,
+    "cca3": "VGB",
+    "population": 29802
   },
   {
     "capital": "Charlotte Amalie",
@@ -3661,7 +5391,14 @@
     "name_ja": "米領ヴァージン諸島",
     "name_de": "Amerikanische Jungferninseln",
     "name_ru": "Виргинские о-ва (США)",
-    "name_ar": "جزر فيرجن الأمريكية"
+    "name_ar": "جزر فيرجن الأمريكية",
+    "latlng": [
+      18.35,
+      -64.933333
+    ],
+    "area": 347,
+    "cca3": "VIR",
+    "population": 106977
   },
   {
     "capital": "Cardiff",
@@ -3675,7 +5412,8 @@
     "name_ja": "ウェールズ",
     "name_de": "Wales",
     "name_ru": "Уэльс",
-    "name_ar": "ويلز"
+    "name_ar": "ويلز",
+    "population": 3139000
   },
   {
     "capital": "Mata-Utu",
@@ -3689,7 +5427,14 @@
     "name_ja": "ウォリス・フツナ",
     "name_de": "Wallis und Futuna",
     "name_ru": "Уоллис и Футуна",
-    "name_ar": "جزر والس وفوتونا"
+    "name_ar": "جزر والس وفوتونا",
+    "latlng": [
+      -13.3,
+      -176.2
+    ],
+    "area": 142,
+    "cca3": "WLF",
+    "population": 15289
   },
   {
     "capital": "Laayoune",
@@ -3703,7 +5448,14 @@
     "name_ja": "西サハラ",
     "name_de": "Westsahara",
     "name_ru": "Западная Сахара",
-    "name_ar": "الصحراء الغربية"
+    "name_ar": "الصحراء الغربية",
+    "latlng": [
+      24.5,
+      -13
+    ],
+    "area": 266000,
+    "cca3": "ESH",
+    "population": 652271
   },
   {
     "capital": "Sana'a",
@@ -3717,7 +5469,14 @@
     "name_ja": "イエメン",
     "name_de": "Jemen",
     "name_ru": "Йемен",
-    "name_ar": "اليمن"
+    "name_ar": "اليمن",
+    "latlng": [
+      15,
+      48
+    ],
+    "area": 527968,
+    "cca3": "YEM",
+    "population": 28498687
   },
   {
     "capital": "Lusaka",
@@ -3731,7 +5490,14 @@
     "name_ja": "ザンビア",
     "name_de": "Sambia",
     "name_ru": "Замбия",
-    "name_ar": "زامبيا"
+    "name_ar": "زامبيا",
+    "latlng": [
+      -15,
+      30
+    ],
+    "area": 752612,
+    "cca3": "ZMB",
+    "population": 17351822
   },
   {
     "capital": "Harare",
@@ -3745,6 +5511,13 @@
     "name_ja": "ジンバブエ",
     "name_de": "Simbabwe",
     "name_ru": "Зимбабве",
-    "name_ar": "زيمبابوي"
+    "name_ar": "زيمبابوي",
+    "latlng": [
+      -20,
+      30
+    ],
+    "area": 390757,
+    "cca3": "ZWE",
+    "population": 14439018
   }
 ]

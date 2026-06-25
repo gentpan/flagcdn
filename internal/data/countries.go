@@ -7,18 +7,22 @@ import (
 )
 
 type Country struct {
-	Code      string `json:"code"`
-	Name      string `json:"name"`
-	NameZh    string `json:"name_zh,omitempty"`
-	NameJa    string `json:"name_ja,omitempty"`
-	NameDe    string `json:"name_de,omitempty"`
-	NameRu    string `json:"name_ru,omitempty"`
-	NameAr    string `json:"name_ar,omitempty"`
-	Capital   string `json:"capital,omitempty"`
-	Continent string `json:"continent,omitempty"`
-	ISO       bool   `json:"iso"`
-	Flag1x1   string `json:"flag_1x1,omitempty"`
-	Flag4x3   string `json:"flag_4x3,omitempty"`
+	Code       string    `json:"code"`
+	Name       string    `json:"name"`
+	NameZh     string    `json:"name_zh,omitempty"`
+	NameJa     string    `json:"name_ja,omitempty"`
+	NameDe     string    `json:"name_de,omitempty"`
+	NameRu     string    `json:"name_ru,omitempty"`
+	NameAr     string    `json:"name_ar,omitempty"`
+	Capital    string    `json:"capital,omitempty"`
+	Continent  string    `json:"continent,omitempty"`
+	ISO        bool      `json:"iso"`
+	Flag1x1    string    `json:"flag_1x1,omitempty"`
+	Flag4x3    string    `json:"flag_4x3,omitempty"`
+	CCA3       string    `json:"cca3,omitempty"`
+	Population int64     `json:"population,omitempty"`
+	Area       float64   `json:"area,omitempty"`
+	LatLng     []float64 `json:"latlng,omitempty"`
 }
 
 type Store struct {

@@ -1,8 +1,11 @@
 package main
 
 import (
+	"archive/zip"
 	"encoding/json"
 	"flag"
+	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -44,6 +47,10 @@ func main() {
 	mux.HandleFunc("GET /api/v1/flags/{cc}/svg", func(w http.ResponseWriter, r *http.Request) {
 		cc := strings.ToLower(r.PathValue("cc"))
 		serveFlagSVGJSON(w, r, absRoot, cc)
+	})
+	mux.HandleFunc("GET /api/v1/flags/{cc}/download.zip", func(w http.ResponseWriter, r *http.Request) {
+		cc := strings.ToLower(r.PathValue("cc"))
+		serveFlagBundle(w, r, absRoot, cc)
 	})
 	mux.HandleFunc("GET /api/v1/flags/{cc}", func(w http.ResponseWriter, r *http.Request) {
 		cc := strings.ToLower(r.PathValue("cc"))
@@ -110,6 +117,68 @@ func writeFlagDetail(w http.ResponseWriter, r *http.Request, store *data.Store, 
 			"4x3": "/flags/4x3/" + cc + ".svg",
 		},
 	})
+}
+
+func serveFlagBundle(w http.ResponseWriter, r *http.Request, root, cc string) {
+	if !raster.ValidCC(cc) {
+		http.NotFound(w, r)
+		return
+	}
+	if !isFile(raster.SrcSVG(root, "1x1", cc)) && !isFile(raster.SrcSVG(root, "4x3", cc)) {
+		http.NotFound(w, r)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/zip")
+	w.Header().Set("Content-Disposition", fmt.Sprintf(`attachment; filename="%s-flag-assets.zip"`, cc))
+	w.Header().Set("Cache-Control", "public, max-age=31536000, immutable")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+
+	zw := zip.NewWriter(w)
+	defer zw.Close()
+
+	for _, ratio := range raster.Ratios {
+		src := raster.SrcSVG(root, ratio, cc)
+		if isFile(src) {
+			if err := addZipFile(zw, src, fmt.Sprintf("%s/%s/%s_%s.svg", cc, ratio, cc, ratio)); err != nil {
+				log.Println("zip svg:", err)
+				return
+			}
+		}
+		for _, format := range raster.Formats {
+			for _, size := range raster.Sizes {
+				out := raster.FilePath(root, ratio, size, cc, format)
+				if !isFile(out) {
+					if !isFile(src) {
+						continue
+					}
+					if err := raster.Render(src, out, ratio, size, format); err != nil {
+						log.Println("zip render:", err)
+						continue
+					}
+				}
+				name := fmt.Sprintf("%s/%s/%d/%s_%s_%d.%s", cc, ratio, size, cc, ratio, size, format)
+				if err := addZipFile(zw, out, name); err != nil {
+					log.Println("zip raster:", err)
+					return
+				}
+			}
+		}
+	}
+}
+
+func addZipFile(zw *zip.Writer, srcPath, name string) error {
+	f, err := os.Open(srcPath)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+	dst, err := zw.Create(name)
+	if err != nil {
+		return err
+	}
+	_, err = io.Copy(dst, f)
+	return err
 }
 
 func serveFlagSVGJSON(w http.ResponseWriter, r *http.Request, root, cc string) {

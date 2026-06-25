@@ -11,6 +11,10 @@ export interface Country {
   iso: boolean;
   flag_1x1?: string;
   flag_4x3?: string;
+  cca3?: string;
+  population?: number;
+  area?: number;
+  latlng?: [number, number];
 }
 
 export interface FlagDetailResponse {
