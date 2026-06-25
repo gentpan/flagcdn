@@ -123,16 +123,13 @@ async function onCopy() {
 }
 .ts-code__tab {
   padding: 0.26rem 0.56rem;
-  border: 1px solid rgba(15, 23, 42, 0.055);
+  border: 1px solid var(--flag-detail-inner-border);
   border-radius: 999px;
   background: var(--flag-detail-chip);
   font-size: 0.6875rem;
   font-weight: 600;
   color: var(--text-muted);
   cursor: pointer;
-}
-.dark .ts-code__tab {
-  border-color: transparent;
 }
 .ts-code__tab:hover {
   background: var(--flag-detail-control-hover);

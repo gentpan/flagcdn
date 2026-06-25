@@ -68,10 +68,7 @@ const { svgUrl } = useRaster();
   width: 4rem;
   height: 4rem;
   border-radius: 10px;
-  border: 1px solid rgba(15, 23, 42, 0.055);
-}
-.dark .ts-variants__thumb {
-  border-color: transparent;
+  border: 1px solid var(--flag-detail-inner-border);
 }
 .ts-variants__img {
   object-fit: contain;

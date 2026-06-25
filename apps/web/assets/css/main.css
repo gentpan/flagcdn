@@ -169,6 +169,7 @@ body.flag-detail-body {
   --flag-detail-chip: rgba(15, 23, 42, 0.07);
   --flag-detail-border: rgba(15, 23, 42, 0.12);
   --flag-detail-border-strong: rgba(15, 23, 42, 0.28);
+  --flag-detail-inner-border: rgba(15, 23, 42, 0.06);
   --flag-detail-heading: #0f172a;
   --flag-detail-body: #526071;
   --flag-detail-muted: #8b98aa;
@@ -197,6 +198,7 @@ body.flag-detail-body {
   --flag-detail-chip: rgba(255, 255, 255, 0.075);
   --flag-detail-border: rgba(255, 255, 255, 0.11);
   --flag-detail-border-strong: rgba(255, 255, 255, 0.2);
+  --flag-detail-inner-border: transparent;
   --flag-detail-heading: #f8fafc;
   --flag-detail-body: #a1a1aa;
   --flag-detail-muted: #71717a;
@@ -430,10 +432,7 @@ a.detail-pill:hover {
   padding: 0.5rem 0.58rem;
   border-radius: 9px;
   background: var(--flag-detail-control);
-  border: 1px solid rgba(15, 23, 42, 0.06);
-}
-.dark .detail-live__item {
-  border-color: transparent;
+  border: 1px solid var(--flag-detail-inner-border);
 }
 .detail-live__icon {
   display: inline-flex;
@@ -567,10 +566,7 @@ a.detail-pill:hover {
   padding: 0.6rem;
   border-radius: 10px;
   background: var(--flag-detail-control);
-  border: 1px solid rgba(15, 23, 42, 0.06);
-}
-.dark .detail-profile__stat {
-  border-color: transparent;
+  border: 1px solid var(--flag-detail-inner-border);
 }
 .detail-profile__stat strong {
   font-size: 0.9rem;
@@ -699,10 +695,7 @@ a.detail-pill:hover {
 .detail-related__item:hover {
   border-color: var(--border-strong);
   background: var(--flag-detail-control-hover);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
-}
-.dark .detail-related__item:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.26);
+  box-shadow: var(--flag-detail-shadow-strong);
 }
 .detail-related__thumb {
   display: flex;

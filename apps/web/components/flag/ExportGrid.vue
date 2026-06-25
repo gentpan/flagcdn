@@ -144,10 +144,7 @@ function fileName(size: number) {
   justify-content: center;
   height: 3.45rem;
   border-radius: 10px;
-  border: 1px solid rgba(15, 23, 42, 0.055);
-}
-.dark .ts-export__preview {
-  border-color: transparent;
+  border: 1px solid var(--flag-detail-inner-border);
 }
 .ts-export__preview img {
   object-fit: contain;

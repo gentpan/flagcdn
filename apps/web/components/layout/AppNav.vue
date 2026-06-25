@@ -132,7 +132,6 @@ function toggleTheme() {
   flex-shrink: 0;
 }
 .nav__logo-tld { color: var(--brand-light); }
-.dark .nav__logo-tld { color: #4ade80; }
 .nav__logo-mark { width: 22px; height: 22px; flex-shrink: 0; display: block; }
 .nav__links {
   display: flex;
