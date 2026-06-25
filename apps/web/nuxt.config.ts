@@ -89,11 +89,11 @@ export default defineNuxtConfig({
         { rel: "stylesheet", href: "/css/flag-icons.min.css" },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Sora:wght@600;700;800&display=swap",
+          href: "https://static.bluecdn.com/fonts/inter/result.css",
         },
         {
           rel: "stylesheet",
-          href: "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css",
+          href: "https://static.bluecdn.com/libs/fontawesome/7.2.0/css/all.min.css",
         },
       ],
     },
