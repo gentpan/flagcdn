@@ -118,9 +118,12 @@ const githubRepo = useRuntimeConfig().public.githubRepo as string;
   font-size: clamp(78px, 18vw, 210px);
   font-weight: 800;
   line-height: 1;
-  color: rgba(255, 255, 255, 0.08);
+  color: rgba(15, 23, 42, 0.08);
   white-space: nowrap;
   transition: color 0.18s;
+}
+.dark .footer__brand-text {
+  color: rgba(255, 255, 255, 0.08);
 }
 .footer__brand:hover .footer__brand-text {
   color: var(--brand-light);

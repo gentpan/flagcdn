@@ -208,7 +208,7 @@ function toggleTheme() {
   font-weight: 600;
 }
 .nav__menu { display: none; }
-.nav__spacer { height: 80px; }
+.nav__spacer { height: 92px; }
 .nav__mobile {
   pointer-events: auto;
   width: min(1000px, calc(100% - 32px));

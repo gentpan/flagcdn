@@ -54,15 +54,12 @@ const { svgUrl } = useRaster();
 .ts-variants__item:hover {
   border-color: var(--border-strong);
   background: var(--flag-detail-control-hover);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
+  box-shadow: var(--flag-detail-shadow-strong);
   transform: translateY(-1px);
 }
 .ts-variants__item.is-active {
   border-color: var(--flag-detail-primary-bg);
-  box-shadow: 0 0 0 2px var(--flag-detail-border-strong);
-}
-.dark .ts-variants__item:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 0 0 2px var(--flag-detail-border-strong), var(--shadow-card);
 }
 .ts-variants__thumb {
   display: flex;
@@ -71,6 +68,10 @@ const { svgUrl } = useRaster();
   width: 4rem;
   height: 4rem;
   border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.055);
+}
+.dark .ts-variants__thumb {
+  border-color: transparent;
 }
 .ts-variants__img {
   object-fit: contain;

@@ -123,7 +123,7 @@ async function onCopy() {
 }
 .ts-code__tab {
   padding: 0.26rem 0.56rem;
-  border: none;
+  border: 1px solid rgba(15, 23, 42, 0.055);
   border-radius: 999px;
   background: var(--flag-detail-chip);
   font-size: 0.6875rem;
@@ -131,11 +131,16 @@ async function onCopy() {
   color: var(--text-muted);
   cursor: pointer;
 }
+.dark .ts-code__tab {
+  border-color: transparent;
+}
 .ts-code__tab:hover {
   background: var(--flag-detail-control-hover);
   color: var(--text-heading);
+  border-color: var(--border);
 }
 .ts-code__tab.is-active {
+  border-color: transparent;
   background: var(--flag-detail-primary-bg);
   color: var(--flag-detail-primary-text);
 }
@@ -154,12 +159,14 @@ async function onCopy() {
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--flag-detail-control);
-  color: #94a3b8;
+  color: var(--text-muted);
   font-size: 0.625rem;
   font-weight: 600;
   cursor: pointer;
+  box-shadow: var(--shadow-card);
 }
 .ts-code__copy:hover {
+  border-color: var(--border-strong);
   background: var(--flag-detail-control-hover);
   color: var(--text-heading);
 }

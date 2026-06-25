@@ -161,21 +161,23 @@
 
 /* —— thesvg-style detail page —— */
 body.flag-detail-body {
-  --flag-detail-bg: #f5f6fa;
+  --flag-detail-bg: #f1f3f8;
   --flag-detail-panel: #ffffff;
-  --flag-detail-panel-soft: rgba(255, 255, 255, 0.78);
-  --flag-detail-control: rgba(255, 255, 255, 0.86);
-  --flag-detail-control-hover: rgba(255, 255, 255, 0.96);
-  --flag-detail-chip: rgba(15, 23, 42, 0.055);
-  --flag-detail-border: rgba(15, 23, 42, 0.08);
-  --flag-detail-border-strong: rgba(15, 23, 42, 0.16);
+  --flag-detail-panel-soft: rgba(255, 255, 255, 0.9);
+  --flag-detail-control: #ffffff;
+  --flag-detail-control-hover: #f8fafc;
+  --flag-detail-chip: rgba(15, 23, 42, 0.07);
+  --flag-detail-border: rgba(15, 23, 42, 0.12);
+  --flag-detail-border-strong: rgba(15, 23, 42, 0.28);
   --flag-detail-heading: #0f172a;
-  --flag-detail-body: #64748b;
-  --flag-detail-muted: #94a3b8;
+  --flag-detail-body: #526071;
+  --flag-detail-muted: #8b98aa;
   --flag-detail-primary-bg: #111827;
   --flag-detail-primary-text: #ffffff;
   --flag-detail-code-bg: #09090b;
   --flag-detail-code-text: #d6f5d6;
+  --flag-detail-shadow: 0 10px 24px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.06);
+  --flag-detail-shadow-strong: 0 16px 34px rgba(15, 23, 42, 0.13), 0 2px 5px rgba(15, 23, 42, 0.08);
   --bg-page: var(--flag-detail-bg);
   --bg-card: var(--flag-detail-panel);
   --text-heading: var(--flag-detail-heading);
@@ -202,6 +204,8 @@ body.flag-detail-body {
   --flag-detail-primary-text: #09090b;
   --flag-detail-code-bg: #09090b;
   --flag-detail-code-text: #d6f5d6;
+  --flag-detail-shadow: 0 1px 2px rgba(0, 0, 0, 0.36);
+  --flag-detail-shadow-strong: 0 14px 34px rgba(0, 0, 0, 0.35);
   background: var(--flag-detail-bg);
 }
 
@@ -212,7 +216,7 @@ body.flag-detail-body .nav__spacer {
 }
 
 .icon-preview-bg {
-  background: #f8fafc;
+  background: #f7f9fc;
 }
 .dark .icon-preview-bg {
   background: #18181b;
@@ -239,17 +243,14 @@ body.flag-detail-body .nav__spacer {
   --brand: #fb923c;
   --brand-hover: #fdba74;
   --brand-muted: rgba(251, 146, 60, 0.12);
-  --shadow-card: 0 10px 28px rgba(15, 23, 42, 0.06);
+  --shadow-card: var(--flag-detail-shadow);
   min-height: calc(100vh - 80px);
   margin-top: 0;
-  padding: 0.75rem 0 3.25rem;
+  padding: 1.35rem 0 3.25rem;
   background: var(--flag-detail-bg);
   color: var(--text-body);
 }
 
-.dark .detail-page {
-  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.36);
-}
 .detail-page__inner {
   width: min(64rem, calc(100% - 2rem));
   margin-inline: auto;
@@ -326,14 +327,12 @@ body.flag-detail-body .nav__spacer {
   padding: 3rem;
   border-color: var(--border);
   border-radius: 18px;
+  box-shadow: var(--shadow-card);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .detail-preview:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
-}
-.dark .detail-preview:hover {
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--flag-detail-shadow-strong);
 }
 .detail-preview__img {
   object-fit: contain;
@@ -372,6 +371,7 @@ body.flag-detail-body .nav__spacer {
 .detail-meta {
   padding: 0.85rem;
   border-radius: 14px;
+  box-shadow: var(--shadow-card);
 }
 .detail-pills {
   display: flex;
@@ -430,6 +430,10 @@ a.detail-pill:hover {
   padding: 0.5rem 0.58rem;
   border-radius: 9px;
   background: var(--flag-detail-control);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+.dark .detail-live__item {
+  border-color: transparent;
 }
 .detail-live__icon {
   display: inline-flex;
@@ -518,7 +522,12 @@ a.detail-pill:hover {
   text-decoration: none;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: background 0.15s, border-color 0.15s;
+  box-shadow: var(--shadow-card);
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+.detail-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--flag-detail-shadow-strong);
 }
 .detail-btn--square {
   width: 2.625rem;
@@ -536,11 +545,14 @@ a.detail-pill:hover {
 .detail-btn--ghost {
   background: var(--flag-detail-control);
   border-color: var(--border);
-  color: var(--text-body);
+  color: #64748b;
 }
 .detail-btn--ghost:hover {
   border-color: var(--border-strong);
   color: var(--text-heading);
+}
+.dark .detail-btn--ghost {
+  color: var(--text-body);
 }
 
 .detail-profile__stats {
@@ -555,6 +567,10 @@ a.detail-pill:hover {
   padding: 0.6rem;
   border-radius: 10px;
   background: var(--flag-detail-control);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+.dark .detail-profile__stat {
+  border-color: transparent;
 }
 .detail-profile__stat strong {
   font-size: 0.9rem;

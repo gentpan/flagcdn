@@ -101,6 +101,13 @@ function fileName(size: number) {
   font-weight: 600;
   color: var(--text-muted);
   cursor: pointer;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s, color 0.15s;
+}
+.ts-export__fmt:hover {
+  border-color: var(--border-strong);
+  background: var(--flag-detail-control-hover);
+  color: var(--text-heading);
 }
 .ts-export__fmt.is-active {
   border-color: rgba(251, 146, 60, 0.5);
@@ -129,10 +136,7 @@ function fileName(size: number) {
 .ts-export__card:hover {
   border-color: rgba(251, 146, 60, 0.4);
   background: rgba(251, 146, 60, 0.07);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
-}
-.dark .ts-export__card:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.26);
+  box-shadow: var(--flag-detail-shadow-strong);
 }
 .ts-export__preview {
   display: flex;
@@ -140,6 +144,10 @@ function fileName(size: number) {
   justify-content: center;
   height: 3.45rem;
   border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.055);
+}
+.dark .ts-export__preview {
+  border-color: transparent;
 }
 .ts-export__preview img {
   object-fit: contain;

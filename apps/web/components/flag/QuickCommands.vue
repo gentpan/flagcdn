@@ -71,6 +71,12 @@ async function copy(key: string, text: string) {
   border-radius: 10px;
   background: var(--flag-detail-control);
   box-shadow: var(--shadow-card);
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+.ts-cmds__row:hover {
+  border-color: var(--border-strong);
+  background: var(--flag-detail-control-hover);
+  box-shadow: var(--flag-detail-shadow-strong);
 }
 .ts-cmds__tag {
   flex-shrink: 0;
@@ -110,14 +116,14 @@ async function copy(key: string, text: string) {
   align-items: center;
   justify-content: center;
   padding: 0;
-  border: 1px solid transparent;
+  border: 1px solid var(--border);
   border-radius: 8px;
-  background: transparent;
+  background: var(--flag-detail-control-hover);
   color: var(--text-muted);
   cursor: pointer;
 }
 .ts-cmds__copy:hover {
-  border-color: var(--border);
+  border-color: var(--border-strong);
   background: var(--flag-detail-control-hover);
   color: var(--text-heading);
 }
