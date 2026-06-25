@@ -6,7 +6,7 @@
     <div class="footer__bar">
       <div class="container-app footer__bar-inner">
         <p class="footer__copy">
-          © {{ year }} <span class="footer__domain">flagcdn.io</span> {{ t("footer.rights") }}
+          © {{ year }} <span class="footer__domain">flagcdn<span class="footer__domain-tld">.io</span></span> {{ t("footer.rights") }}
         </p>
         <div class="footer__icons">
           <NuxtLink to="/docs" class="footer__icon" title="Docs">
@@ -75,6 +75,9 @@ const githubRepo = useRuntimeConfig().public.githubRepo as string;
 .footer__domain {
   color: var(--text-body);
   font-weight: 600;
+}
+.footer__domain-tld {
+  color: var(--brand-light);
 }
 .footer__icons {
   display: flex;
