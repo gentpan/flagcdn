@@ -77,10 +77,20 @@
                   <i class="fa-regular fa-clock" aria-hidden="true" />
                 </span>
                 <div class="detail-live__content">
-                  <span class="detail-meta__key">Local time</span>
-                  <span class="detail-live__value">
-                    <strong>{{ localTimeLabel }}</strong>
+                  <span class="detail-meta__key detail-live__title">
+                    <span>Local time</span>
                     <small v-if="timezoneOffsetLabel">{{ timezoneOffsetLabel }}</small>
+                  </span>
+                  <span class="detail-live__value">
+                    <strong class="detail-live__clock">
+                      <span>{{ localTimeLabel }}</span>
+                      <template v-if="localTimeSecondLabel">
+                        <span class="detail-live__clock-sep">:</span>
+                        <span :key="localTimeSecondLabel" class="detail-live__second">
+                          {{ localTimeSecondLabel }}
+                        </span>
+                      </template>
+                    </strong>
                   </span>
                 </div>
               </div>
@@ -89,7 +99,7 @@
                   <i class="fa-solid" :class="weatherIcon" aria-hidden="true" />
                 </span>
                 <div class="detail-live__content">
-                  <span class="detail-meta__key">{{ country.capital }} weather</span>
+                  <span class="detail-meta__key">{{ country.capital }}</span>
                   <span class="detail-live__value">
                     <strong>{{ weatherLabel }}</strong>
                     <small v-if="weatherSummary">{{ weatherSummary }}</small>
@@ -301,6 +311,7 @@ const bundleUrl = computed(() => `/api/v1/flags/${encodeURIComponent(cc.value)}/
 const hasProfile = computed(() => Boolean(country.value.population !== undefined || country.value.area || countryDescription.value));
 const localTime = ref<Date | null>(null);
 const timezoneLabel = ref("");
+const timezoneOffsetMinutes = ref<number | null>(null);
 const weatherTemp = ref<number | null>(null);
 const weatherCode = ref<number | null>(null);
 const weatherLoading = ref(true);
@@ -309,17 +320,17 @@ let timeTimer: ReturnType<typeof setInterval> | undefined;
 const hasLiveInfo = computed(() => Boolean(country.value.latlng?.length || country.value.capital));
 const localTimeLabel = computed(() => {
   if (!localTime.value) return "Loading";
-  if (!timezoneLabel.value) return weatherLoading.value ? "Loading" : "Unavailable";
-  return new Intl.DateTimeFormat("en-US", {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-    timeZone: timezoneLabel.value,
-  }).format(localTime.value);
+  const parts = resolveLocalTimeParts(localTime.value);
+  return parts ? parts.time : "Unavailable";
+});
+const localTimeSecondLabel = computed(() => {
+  if (!localTime.value) return "";
+  return resolveLocalTimeParts(localTime.value)?.second || "";
 });
 const timezoneOffsetLabel = computed(() => {
-  if (!timezoneLabel.value || !localTime.value) return "";
-  return formatTimezoneOffset(timezoneLabel.value, localTime.value);
+  if (!localTime.value) return "";
+  const offset = resolveTimezoneOffsetMinutes(localTime.value);
+  return offset === null ? "" : formatOffsetLabel(offset);
 });
 const weatherLabel = computed(() => {
   if (weatherLoading.value) return "Loading";
@@ -375,9 +386,38 @@ const mapModel = computed(() => {
   };
 });
 
+function resolveLocalTimeParts(value: Date) {
+  if (timezoneLabel.value) return formatLocalTimeParts(timezoneLabel.value, value);
+  if (timezoneOffsetMinutes.value !== null) return formatLocalTimePartsFromOffset(timezoneOffsetMinutes.value, value);
+  return null;
+}
+
+function formatLocalTimeParts(timeZone: string, value: Date) {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+    timeZone,
+  }).formatToParts(value);
+  const hour = parts.find((part) => part.type === "hour")?.value || "00";
+  const minute = parts.find((part) => part.type === "minute")?.value || "00";
+  const second = parts.find((part) => part.type === "second")?.value || "00";
+  return { time: `${hour}:${minute}`, second };
+}
+
+function formatLocalTimePartsFromOffset(offsetMinutes: number, value: Date) {
+  const shifted = new Date(value.getTime() + offsetMinutes * 60_000);
+  const hour = String(shifted.getUTCHours()).padStart(2, "0");
+  const minute = String(shifted.getUTCMinutes()).padStart(2, "0");
+  const second = String(shifted.getUTCSeconds()).padStart(2, "0");
+  return { time: `${hour}:${minute}`, second };
+}
+
 onMounted(() => {
   updateLocalClock();
-  timeTimer = setInterval(updateLocalClock, 30_000);
+  applyEstimatedTimezone();
+  timeTimer = setInterval(updateLocalClock, 1_000);
   fetchLiveInfo();
 });
 
@@ -433,22 +473,27 @@ async function fetchLiveInfo() {
   weatherLoading.value = true;
   weatherError.value = false;
   try {
-    const coords = await resolveWeatherCoords();
-    if (!coords) throw new Error("missing coordinates");
+    const coords = country.value.latlng;
+    if (!coords || coords.length < 2) throw new Error("missing coordinates");
     const data = await $fetch<{
       timezone?: string;
-      current?: { temperature_2m?: number; weather_code?: number };
-    }>("https://api.open-meteo.com/v1/forecast", {
+      timezoneOffsetSeconds?: number | null;
+      temperature?: number | null;
+      weatherCode?: number | null;
+    }>("/api/live-info", {
       query: {
-        latitude: coords.lat,
-        longitude: coords.lng,
-        current: "temperature_2m,weather_code",
-        timezone: "auto",
+        lat: coords[0],
+        lng: coords[1],
+        capital: country.value.capital || "",
+        country: cc.value.toUpperCase(),
       },
     });
     timezoneLabel.value = data.timezone || timezoneLabel.value;
-    weatherTemp.value = typeof data.current?.temperature_2m === "number" ? data.current.temperature_2m : null;
-    weatherCode.value = typeof data.current?.weather_code === "number" ? data.current.weather_code : null;
+    if (typeof data.timezoneOffsetSeconds === "number") {
+      timezoneOffsetMinutes.value = Math.round(data.timezoneOffsetSeconds / 60);
+    }
+    weatherTemp.value = typeof data.temperature === "number" ? data.temperature : null;
+    weatherCode.value = typeof data.weatherCode === "number" ? data.weatherCode : null;
     updateLocalClock();
   } catch {
     weatherError.value = true;
@@ -457,42 +502,50 @@ async function fetchLiveInfo() {
   }
 }
 
-async function resolveWeatherCoords() {
-  if (country.value.capital) {
-    try {
-      const data = await $fetch<{ results?: Array<{ latitude: number; longitude: number; country_code?: string }> }>(
-        "https://geocoding-api.open-meteo.com/v1/search",
-        {
-          query: {
-            name: country.value.capital,
-            count: 5,
-            language: "en",
-            format: "json",
-          },
-        },
-      );
-      const alpha2 = cc.value.toUpperCase();
-      const match = data.results?.find((item) => item.country_code?.toUpperCase() === alpha2) || data.results?.[0];
-      if (match) return { lat: match.latitude, lng: match.longitude };
-    } catch {
-      /* fall back to country coordinates */
-    }
-  }
+function applyEstimatedTimezone() {
   const coords = country.value.latlng;
-  return coords && coords.length >= 2 ? { lat: coords[0], lng: coords[1] } : null;
+  if (!coords || coords.length < 2 || !Number.isFinite(coords[1])) return;
+  timezoneOffsetMinutes.value = estimateOffsetFromLongitude(coords[1]);
 }
 
 function updateLocalClock() {
   localTime.value = new Date();
 }
 
-function formatTimezoneOffset(timeZone: string, value: Date) {
+function resolveTimezoneOffsetMinutes(value: Date) {
+  if (timezoneLabel.value) {
+    const offset = getTimezoneOffsetMinutes(timezoneLabel.value, value);
+    if (offset !== null) return offset;
+  }
+  if (typeof timezoneOffsetMinutes.value === "number") return timezoneOffsetMinutes.value;
+  return null;
+}
+
+function getTimezoneOffsetMinutes(timeZone: string, value: Date) {
   const offsetPart = new Intl.DateTimeFormat("en-US", {
     timeZone,
     timeZoneName: "shortOffset",
   }).formatToParts(value).find((part) => part.type === "timeZoneName")?.value;
-  if (!offsetPart) return "";
-  return offsetPart.replace(/^GMT/, "").replace(":00", "") || "+0";
+  if (!offsetPart) return null;
+  const match = offsetPart.match(/^GMT(?:(?<sign>[+-])(?<hour>\d{1,2})(?::(?<minute>\d{2}))?)?$/);
+  if (!match?.groups?.sign) return 0;
+  const hours = Number(match.groups.hour);
+  const minutes = Number(match.groups.minute || 0);
+  const direction = match.groups.sign === "-" ? -1 : 1;
+  return direction * (hours * 60 + minutes);
+}
+
+function estimateOffsetFromLongitude(lng: number) {
+  const offset = Math.round((lng / 15) * 2) * 30;
+  return Math.max(-12 * 60, Math.min(14 * 60, offset));
+}
+
+function formatOffsetLabel(offsetMinutes: number) {
+  const sign = offsetMinutes < 0 ? "-" : "+";
+  const abs = Math.abs(offsetMinutes);
+  const hours = Math.floor(abs / 60);
+  const minutes = String(abs % 60).padStart(2, "0");
+  return `UTC ${sign}${hours}:${minutes}`;
 }
 
 function formatNumber(value: number) {
