@@ -24,29 +24,3 @@ useSeoMeta({
   description: "Report flag errors, request new flags, or suggest improvements to flagcdn.io.",
 });
 </script>
-
-<style scoped>
-.issues-page {
-  padding: 0.5rem 0 2rem;
-}
-.issues-page__hero {
-  margin-bottom: 1.25rem;
-}
-.issues-page__hero h1 {
-  font-size: 1.75rem;
-  font-weight: 800;
-  margin-bottom: 0.35rem;
-}
-.issues-page__hero p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-.issues-page__card {
-  padding: 1.25rem 1.5rem;
-  color: var(--text-body);
-  line-height: 1.65;
-}
-.issues-page__card a {
-  color: var(--brand);
-}
-</style>

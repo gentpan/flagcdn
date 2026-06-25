@@ -11,19 +11,3 @@ import type { NuxtError } from "#app";
 
 defineProps<{ error: NuxtError }>();
 </script>
-
-<style scoped>
-.error-page {
-  text-align: center;
-  padding: 4rem 1rem;
-}
-.error-page h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-}
-.error-page p {
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
-}
-</style>
