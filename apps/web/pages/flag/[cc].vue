@@ -73,8 +73,10 @@
                 </span>
                 <div class="detail-live__content">
                   <span class="detail-meta__key">Local time</span>
-                  <strong>{{ localTimeLabel }}</strong>
-                  <small v-if="timezoneLabel">{{ timezoneLabel }}</small>
+                  <span class="detail-live__value">
+                    <strong>{{ localTimeLabel }}</strong>
+                    <small v-if="timezoneLabel">{{ timezoneLabel }}</small>
+                  </span>
                 </div>
               </div>
               <div v-if="country.capital" class="detail-live__item">
@@ -83,8 +85,10 @@
                 </span>
                 <div class="detail-live__content">
                   <span class="detail-meta__key">{{ country.capital }} weather</span>
-                  <strong>{{ weatherLabel }}</strong>
-                  <small v-if="weatherSummary">{{ weatherSummary }}</small>
+                  <span class="detail-live__value">
+                    <strong>{{ weatherLabel }}</strong>
+                    <small v-if="weatherSummary">{{ weatherSummary }}</small>
+                  </span>
                 </div>
               </div>
             </div>
