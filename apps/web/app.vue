@@ -6,7 +6,10 @@
     </main>
     <LayoutSiteFooter />
     <Transition name="toast">
-      <div v-if="toast" class="global-toast">{{ toast }}</div>
+      <div v-if="toast" class="global-toast global-toast--success" role="status" aria-live="polite">
+        <i class="fa-solid fa-circle-check" aria-hidden="true" />
+        <span>{{ toast }}</span>
+      </div>
     </Transition>
   </div>
 </template>
