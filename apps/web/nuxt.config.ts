@@ -109,7 +109,11 @@ export default defineNuxtConfig({
         },
         {
           rel: "stylesheet",
-          href: "https://static.bluecdn.com/libs/fontawesome/7.2.0/css/all.min.css",
+          href: "https://static.bluecdn.com/fonts/sora/result.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://static.bluecdn.com/libs/fontawesome/7.3.0/css/all.min.css",
         },
       ],
     },
