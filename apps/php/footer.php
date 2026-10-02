@@ -25,7 +25,7 @@ $siteScriptVersion = @filemtime(__DIR__ . '/assets/site.js');
           <p class="footer-copy">© 2026 <span class="footer-copy-domain">flagcdn.io</span> All rights reserved.</p>
           <div class="footer-icons">
             <a href="mailto:support@flagcdn.io" class="footer-icon" title="support@flagcdn.io" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://x.com/TheSecondUncle" class="footer-icon" target="_blank" rel="noopener noreferrer" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://x.com/gentpan" class="footer-icon" target="_blank" rel="noopener noreferrer" title="X"><i class="fa-brands fa-x-twitter"></i></a>
             <a href="https://github.com/gentpan/flagcdn" class="footer-icon" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
             <a href="https://xifeng.net" class="footer-icon" target="_blank" rel="noopener noreferrer" data-i18n-title="footerTitle.xifeng" title="Xifeng Blog"><i class="fa-brands fa-red-river"></i></a>
           </div>
