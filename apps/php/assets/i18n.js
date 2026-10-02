@@ -235,8 +235,9 @@
   function apply(lang) {
     var L = t[lang] || t.en;
     if (lang === "ja" || lang === "de" || lang === "ru" || lang === "ar") L = Object.assign({}, t.en, L);
-    document.querySelectorAll("[data-i18n]").forEach(function (el) {
-      var key = el.getAttribute("data-i18n");
+    document.querySelectorAll("[data-i18n], [data-i18n-html]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n") || el.getAttribute("data-i18n-html");
+      if (!key) return;
       var val = getByPath(L, key);
       if (val === undefined) return;
       if (el.getAttribute("data-i18n-html") !== null) {
