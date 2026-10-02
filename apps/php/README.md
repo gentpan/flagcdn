@@ -83,9 +83,9 @@ The map uses country coordinates from the repository and OpenStreetMap tiles wit
 
 ## Homepage advertisement
 
-The three-frame LISAHOST carousel appears below the download area and above the five feature cards, at their shared content width. Original Chinese and localized English artwork live in `assets/images/lisahost-banner-zh.png` and `lisahost-banner-en.png`. CSS crops the three rows while preserving the original artwork.
+The three-frame LISAHOST carousel appears below the download area and above the five feature cards, at their shared content width. Original Chinese and localized English artwork live in `assets/images/lisahost-banner-zh.png` and `lisahost-banner-en.png`. CSS crops the three rows and fills a fixed-height viewport, keeping each row's full content with slight vertical scaling and no exposed background strips.
 
-Cloudflare visitor countries CN, HK, MO and TW receive Chinese; other or unknown countries receive English. This choice is independent of the site's language selector. The homepage is private and uncacheable to keep visitor-specific artwork separate. The artwork submits a native GET form to the configured affiliate URL, so hovering does not show a link URL. See [crop coordinates, controls and English generation prompt](../../docs/lisahost-ad.md).
+Cloudflare visitor countries CN, HK, MO and TW initially receive Chinese; other or unknown countries receive English. A saved site-language preference overrides that country default. The language selector switches the artwork and its control labels immediately: Chinese uses the Chinese image, and all other supported languages use English. The homepage is private and uncacheable to keep visitor-specific artwork separate. The artwork submits a native GET form to the configured affiliate URL, so hovering does not show a link URL. See [crop coordinates, controls and English generation prompt](../../docs/lisahost-ad.md).
 
 ## GitHub and assets
 

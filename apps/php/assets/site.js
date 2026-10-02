@@ -39,6 +39,8 @@
       var selectors = Array.from(carousel.querySelectorAll("[data-banner-select]"));
       var controls = carousel.querySelector("[data-banner-controls]");
       var toggle = carousel.querySelector("[data-banner-toggle]");
+      var configElement = carousel.querySelector("[data-banner-config]");
+      var config = configElement ? JSON.parse(configElement.textContent) : null;
       if (slides.length < 2 || !controls || !toggle) return;
 
       var current = 0;
@@ -83,6 +85,44 @@
         }
         schedule();
       }
+
+      function updateLanguage(siteLanguage) {
+        var language = siteLanguage === "zh" ? "zh" : "en";
+        if (!config || carousel.getAttribute("data-banner-language") === language) return;
+        var variant = config.variants[language];
+        var labels = config.labels[language];
+        var banner = carousel.closest(".sponsor-banner");
+        banner.lang = language === "zh" ? "zh-CN" : "en";
+        banner.setAttribute("aria-label", labels.region);
+        carousel.setAttribute("data-banner-language", language);
+        carousel.setAttribute("aria-label", labels.region);
+        carousel.setAttribute("aria-roledescription", labels.carousel);
+        carousel.querySelector(".sponsor-banner-visual").setAttribute("aria-label", labels.visit);
+        carousel.querySelector(".sponsor-banner-label").textContent = labels.advertisement;
+        slides.forEach(function (slide, index) {
+          var frame = variant.frames[index];
+          var crop = slide.querySelector(".sponsor-banner-crop");
+          var image = crop.querySelector("img");
+          crop.style.setProperty("--banner-offset", (-100 * frame.start / frame.height) + "%");
+          crop.style.setProperty("--banner-image-height", (100 * variant.height / frame.height) + "%");
+          image.src = variant.image;
+          image.alt = frame.alt;
+        });
+        selectors.forEach(function (selector, index) {
+          selector.setAttribute("aria-label", labels.select.replace("%d", String(index + 1)));
+        });
+        toggle.setAttribute("data-pause-label", labels.pause);
+        toggle.setAttribute("data-play-label", labels.play);
+        updatePlayback();
+      }
+
+      document.addEventListener("i18n:changed", function (event) {
+        updateLanguage(event.detail.lang);
+      });
+      try {
+        var savedLanguage = localStorage.getItem("flagcdn-lang");
+        if (/^(en|zh|ja|de|ru|ar)$/.test(savedLanguage)) updateLanguage(savedLanguage);
+      } catch (e) {}
 
       selectors.forEach(function (selector) {
         selector.addEventListener("click", function () {

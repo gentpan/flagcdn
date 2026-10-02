@@ -607,13 +607,11 @@ html[data-theme='dark'] .theme-toggle-icon--dark {
   width: 100%;
   overflow: hidden;
   border-radius: inherit;
-  background: #075bd0;
 }
 .sponsor-banner-slide {
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
+  display: block;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.55s ease, visibility 0s linear 0.55s;
@@ -628,6 +626,7 @@ html[data-theme='dark'] .theme-toggle-icon--dark {
   position: relative;
   display: block;
   width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 .sponsor-banner-crop img {
@@ -637,7 +636,7 @@ html[data-theme='dark'] .theme-toggle-icon--dark {
   display: block;
   width: 100%;
   max-width: none;
-  height: auto;
+  height: var(--banner-image-height);
 }
 .sponsor-banner-meta {
   display: flex;

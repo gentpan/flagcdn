@@ -47,7 +47,7 @@ $footerScripts = implode("\n    ", [
     '<script src="/assets/app.js?v=' . rawurlencode((string) filemtime(__DIR__ . '/assets/app.js')) . '"></script>',
 ]);
 
-// 广告语言由访客 IP 所属地区决定，不随网站语言选择变化。
+// 首次访问按 IP 地区选择广告；手动选择的网站语言优先，由前端同步。
 $bannerLanguage = in_array($visitorCountryCode, ['cn', 'hk', 'mo', 'tw'], true) ? 'zh' : 'en';
 $bannerVariants = [
     'zh' => [
@@ -71,7 +71,7 @@ $bannerVariants = [
         ],
     ],
 ];
-$bannerLabels = $bannerLanguage === 'zh' ? [
+$bannerLabelVariants = ['zh' => [
     'region' => '丽萨主机广告',
     'carousel' => '轮播',
     'visit' => '访问丽萨主机',
@@ -79,7 +79,7 @@ $bannerLabels = $bannerLanguage === 'zh' ? [
     'select' => '显示广告 %d',
     'pause' => '暂停广告轮播',
     'play' => '播放广告轮播',
-] : [
+], 'en' => [
     'region' => 'LISAHOST advertisement',
     'carousel' => 'carousel',
     'visit' => 'Visit LISAHOST',
@@ -87,9 +87,12 @@ $bannerLabels = $bannerLanguage === 'zh' ? [
     'select' => 'Show ad %d',
     'pause' => 'Pause advertisement slideshow',
     'play' => 'Play advertisement slideshow',
-];
+]];
+$bannerLabels = $bannerLabelVariants[$bannerLanguage];
 $banner = $bannerVariants[$bannerLanguage];
-$bannerMaxFrameHeight = max(array_column($banner['frames'], 'height'));
+$bannerMaxFrameHeight = max(array_map(function ($variant) {
+    return max(array_column($variant['frames'], 'height'));
+}, $bannerVariants));
 ?>
     <section class="welcome">
       <div class="container welcome-inner">
@@ -138,14 +141,15 @@ $bannerMaxFrameHeight = max(array_column($banner['frames'], 'height'));
 
     <aside class="sponsor-banner" lang="<?php echo $bannerLanguage === 'zh' ? 'zh-CN' : 'en'; ?>" aria-label="<?php echo htmlspecialchars($bannerLabels['region'], ENT_QUOTES, 'UTF-8'); ?>">
       <div class="container">
-        <div class="sponsor-banner-carousel" data-banner-carousel role="group" aria-label="<?php echo htmlspecialchars($bannerLabels['region'], ENT_QUOTES, 'UTF-8'); ?>" aria-roledescription="<?php echo htmlspecialchars($bannerLabels['carousel'], ENT_QUOTES, 'UTF-8'); ?>">
+        <div class="sponsor-banner-carousel" data-banner-carousel data-banner-language="<?php echo $bannerLanguage; ?>" role="group" aria-label="<?php echo htmlspecialchars($bannerLabels['region'], ENT_QUOTES, 'UTF-8'); ?>" aria-roledescription="<?php echo htmlspecialchars($bannerLabels['carousel'], ENT_QUOTES, 'UTF-8'); ?>">
+          <script type="application/json" data-banner-config><?php echo json_encode(['variants' => $bannerVariants, 'labels' => $bannerLabelVariants], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
           <form class="sponsor-banner-form" action="https://lisahost.com/aff.php" method="get">
             <input type="hidden" name="aff" value="7877" />
             <button type="submit" class="sponsor-banner-visual" aria-label="<?php echo htmlspecialchars($bannerLabels['visit'], ENT_QUOTES, 'UTF-8'); ?>">
               <span class="sponsor-banner-viewport" style="aspect-ratio: <?php echo $banner['width']; ?> / <?php echo $bannerMaxFrameHeight; ?>;" aria-live="off">
 <?php foreach ($banner['frames'] as $bannerIndex => $bannerFrame): ?>
                 <span class="sponsor-banner-slide<?php echo $bannerIndex === 0 ? ' is-active' : ''; ?>" data-banner-slide aria-hidden="<?php echo $bannerIndex === 0 ? 'false' : 'true'; ?>">
-                  <span class="sponsor-banner-crop" style="aspect-ratio: <?php echo $banner['width']; ?> / <?php echo $bannerFrame['height']; ?>; --banner-offset: <?php echo number_format(-100 * $bannerFrame['start'] / $bannerFrame['height'], 8, '.', ''); ?>%;">
+                  <span class="sponsor-banner-crop" style="--banner-offset: <?php echo number_format(-100 * $bannerFrame['start'] / $bannerFrame['height'], 8, '.', ''); ?>%; --banner-image-height: <?php echo number_format(100 * $banner['height'] / $bannerFrame['height'], 8, '.', ''); ?>%;">
                     <img src="<?php echo htmlspecialchars($banner['image'], ENT_QUOTES, 'UTF-8'); ?>" width="<?php echo $banner['width']; ?>" height="<?php echo $banner['height']; ?>" alt="<?php echo htmlspecialchars($bannerFrame['alt'], ENT_QUOTES, 'UTF-8'); ?>" decoding="async" />
                   </span>
                 </span>

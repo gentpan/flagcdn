@@ -4,7 +4,7 @@ The homepage shows a three-frame carousel between the download area and the five
 
 ## Assets and crops
 
-The original Chinese artwork is preserved byte-for-byte in `apps/php/assets/images/lisahost-banner-zh.png`. The English artwork is `apps/php/assets/images/lisahost-banner-en.png`. Both are 2141 × 734px. The site crops each row with CSS, leaving the white separators outside the viewport.
+The original Chinese artwork is preserved byte-for-byte in `apps/php/assets/images/lisahost-banner-zh.png`. The English artwork is `apps/php/assets/images/lisahost-banner-en.png`. Both are 2141 × 734px. The site crops each row with CSS, leaving the white separators outside the viewport. Each crop fills the fixed-height viewport; the full row is retained with slight vertical scaling to accommodate its original height. No background strips appear above or below shorter rows.
 
 | Artwork | Frame | Start Y | Height |
 | --- | --- | --- | --- |
@@ -15,7 +15,7 @@ The original Chinese artwork is preserved byte-for-byte in `apps/php/assets/imag
 | English | 2 | 246 | 237 |
 | English | 3 | 491 | 243 |
 
-Cloudflare's visitor-country header selects Chinese for CN, HK, MO and TW; all other or unknown countries receive English. The choice is independent of the site's language selector. Homepage responses are private and uncacheable so visitor-specific artwork is not shared.
+Without a saved site-language preference, Cloudflare's visitor-country header selects Chinese for CN, HK, MO and TW; all other or unknown countries receive English. Choosing Chinese in the site's language selector immediately switches to the Chinese artwork; choosing any other supported language switches to English. A saved language preference takes priority over the country default on later visits. Image descriptions and carousel control labels switch with the artwork. Homepage responses are private and uncacheable so visitor-specific artwork is not shared.
 
 ## Interaction
 
@@ -55,5 +55,4 @@ Final user-requested edit prompt:
 ```text
 Use case: text-localization edit. Image 1 is the current approved English advertisement, THREE stacked wide banner strips. Make exactly this user-requested change in the MIDDLE blue strip: replace the large lime-green words "Dual ISP" with "ISP IP", and replace the small floating blue house-side label "Dual ISP" with "ISP IP". The complete main headline becomes "Residential IPs · ISP IP". Match the existing fonts, colors, size hierarchy, spacing and alignment; center the shorter lime-green "ISP IP" within its current title area. The brand at the left MUST remain exactly "LISAHOST" (L I S A H O S T). Preserve all other English text verbatim, every app logo, globe, house, benefit checks, original blue/white/dark three-row design, two white separator lines and the full 2141×734 canvas. Change no Chinese artwork, add no new words, URLs, QR codes, or elements. No "Dual ISP" text may remain in this English image. Keep the three strips full-width so each can be cropped independently.
 ```
-
 
