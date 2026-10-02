@@ -244,35 +244,6 @@ html[lang='zh-CN'] body {
   font-size: 0.65rem;
   opacity: 0.8;
 }
-.github-star-icon {
-  color: #e6b800;
-  font-size: 0.7rem;
-  margin-right: 0.1rem;
-}
-.github-stars-count {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--bs-tertiary-color);
-}
-.github-stars-count:empty {
-  display: none;
-}
-.github-stars-count:empty + .github-star-icon,
-.github-star-icon:has(+ .github-stars-count:empty) {
-  display: none;
-}
-.site-nav-version {
-  font-size: 0.7rem;
-  color: var(--bs-tertiary-color);
-  white-space: nowrap;
-}
-.site-nav-version a {
-  color: var(--bs-accent);
-  text-decoration: none;
-}
-.site-nav-version a:hover {
-  text-decoration: underline;
-}
 .lang-switcher {
   display: inline-flex;
   align-items: center;

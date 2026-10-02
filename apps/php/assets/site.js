@@ -1,74 +1,4 @@
 (function () {
-  function formatStars(n) {
-    if (n >= 1000000) return (n / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
-    if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, "") + "k";
-    return String(n);
-  }
-
-  function loadGitHubStars() {
-    var el = document.getElementById("github-stars");
-    var link = document.querySelector("[data-github-repo]");
-    if (!el || !link) return;
-    var repo = link.getAttribute("data-github-repo");
-    if (!repo) return;
-    fetch("https://api.github.com/repos/" + repo, { headers: { Accept: "application/vnd.github.v3+json" }, signal: AbortSignal.timeout(5000) })
-      .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error(r.status)); })
-      .then(function (data) {
-        var n = data && typeof data.stargazers_count === "number" ? data.stargazers_count : 0;
-        if (n > 0) {
-          var icon = link.querySelector(".github-star-icon");
-          if (icon) { icon.hidden = false; icon.style.removeProperty("display"); }
-          el.textContent = formatStars(n);
-          el.setAttribute("aria-hidden", "false");
-        }
-      })
-      .catch(function () {});
-  }
-
-  var announceLabels = {
-    en: { latest: "Latest", released: "Released" },
-    "zh-CN": { latest: "最新版本", released: "更新日期" }
-  };
-
-  function formatReleaseDate(isoString, lang) {
-    if (!isoString) return "";
-    var d = new Date(isoString);
-    if (lang === "zh-CN") {
-      return d.getFullYear() + "年" + (d.getMonth() + 1) + "月" + d.getDate() + "日";
-    }
-    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    return months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
-  }
-
-  var lastAnnounceRelease = null;
-
-  function renderAnnounceRelease(data) {
-    var el = document.getElementById("announce-release-content");
-    if (!el || !data) return;
-    var lang = document.documentElement.lang || "en";
-    var labels = announceLabels[lang] || announceLabels.en;
-    var tag = data.tag_name || "";
-    var url = data.html_url || "https://github.com/lipis/flag-icons/releases/latest";
-    var dateStr = formatReleaseDate(data.published_at, lang);
-    el.innerHTML = '<a href="' + url + '" target="_blank" rel="noopener noreferrer">' + tag + '</a> · ' + dateStr;
-  }
-
-  function loadAnnounceRelease() {
-    var el = document.getElementById("announce-release-content");
-    if (!el) return;
-    fetch("https://api.github.com/repos/lipis/flag-icons/releases/latest", {
-      headers: { Accept: "application/vnd.github.v3+json" }
-    })
-      .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error(r.status)); })
-      .then(function (data) {
-        lastAnnounceRelease = data;
-        renderAnnounceRelease(data);
-      })
-      .catch(function () {
-        el.textContent = "flag-icons";
-      });
-  }
-
   function formatNumber(n) {
     if (n >= 1e9) return (n / 1e9).toFixed(1).replace(/\.0$/, "") + "B";
     if (n >= 1e6) return (n / 1e6).toFixed(1).replace(/\.0$/, "") + "M";
@@ -104,13 +34,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    loadGitHubStars();
-    loadAnnounceRelease();
     loadCfStats();
     bindBackToTop();
-  });
-
-  document.addEventListener("i18n:changed", function () {
-    if (lastAnnounceRelease) renderAnnounceRelease(lastAnnounceRelease);
   });
 })();

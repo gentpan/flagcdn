@@ -83,6 +83,6 @@ The map uses country coordinates from the repository and OpenStreetMap tiles wit
 
 ## GitHub and assets
 
-The GitHub button links to `gentpan/flagcdn` and reads that repository's Star count. The count and star icon stay hidden if GitHub cannot be reached or the repository has no stars. Flag asset attribution and upstream release information continue to identify [lipis/flag-icons](https://github.com/lipis/flag-icons).
+The header shows only a GitHub icon linking to `gentpan/flagcdn`. It does not fetch or display star counts, release versions, or update dates. Flag asset attribution continues to identify [lipis/flag-icons](https://github.com/lipis/flag-icons).
 
 Project code is MIT licensed; see the root [`LICENSE`](../../LICENSE). Flag SVGs originate from the MIT-licensed `lipis/flag-icons` project. Leaflet's bundled license header and font attribution files are retained alongside their assets.

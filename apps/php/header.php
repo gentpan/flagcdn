@@ -55,7 +55,6 @@ if (!empty($_SERVER['HTTP_CF_IPCOUNTRY'])) {
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://static.bluecdn.com" crossorigin />
     <link rel="preconnect" href="https://fonts.bluecdn.com" crossorigin />
-    <link rel="dns-prefetch" href="https://api.github.com" />
     <link href="https://fonts.bluecdn.com/css2?family=Lexend+Deca:wght@400;500;600;700;800&family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link href="https://static.bluecdn.com/libs/fontawesome/7.3.0/css/all.min.css" rel="stylesheet" />
     <link href="/css/flag-icons.min.css" rel="stylesheet" />
@@ -90,8 +89,7 @@ if (!empty($_SERVER['HTTP_CF_IPCOUNTRY'])) {
               <li class="lang-dropdown-option" role="option" data-lang-btn="ar" data-lang-flag="sa" data-lang-label="العربية"><span class="fi fi-sa"></span><span class="lang-option-name">العربية</span></li>
             </ul>
           </div>
-          <a href="https://github.com/gentpan/flagcdn" class="site-nav-link site-nav-link--github" target="_blank" rel="noopener noreferrer" title="flagcdn on GitHub" aria-label="flagcdn on GitHub" data-github-repo="gentpan/flagcdn"><i class="fa-brands fa-github" aria-hidden="true"></i> <i class="fa-solid fa-star github-star-icon" aria-hidden="true" hidden style="display:none"></i><span class="github-stars-count" id="github-stars"></span></a>
-          <span class="site-nav-version" id="announce-release-content"></span>
+          <a href="https://github.com/gentpan/flagcdn" class="site-nav-link site-nav-link--github" target="_blank" rel="noopener noreferrer" title="flagcdn on GitHub" aria-label="flagcdn on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
         </nav>
       </div>
     </header>
