@@ -552,6 +552,7 @@ html[data-theme='dark'] .theme-toggle-icon--dark {
 }
 .welcome-visual {
   flex-shrink: 0;
+  max-width: 100%;
 }
 .welcome-flags {
   display: flex;
@@ -582,6 +583,127 @@ html[data-theme='dark'] .theme-toggle-icon--dark {
 }
 .welcome--compact .welcome-desc {
   margin-bottom: 0;
+}
+
+/* Sponsor carousel: crop the original three-row artwork without changing it. */
+.sponsor-banner {
+  padding: 0 0 1.5rem;
+}
+.sponsor-banner-form {
+  margin: 0;
+}
+.sponsor-banner-visual {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+.sponsor-banner-viewport {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+  background: #075bd0;
+}
+.sponsor-banner-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.55s ease, visibility 0s linear 0.55s;
+}
+.sponsor-banner-slide.is-active {
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+.sponsor-banner-crop {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+.sponsor-banner-crop img {
+  position: absolute;
+  top: var(--banner-offset);
+  left: 0;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+.sponsor-banner-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 2rem;
+  padding-top: 0.25rem;
+}
+.sponsor-banner-label {
+  color: var(--bs-tertiary-color);
+  font-size: 0.7rem;
+}
+.sponsor-banner-controls,
+.sponsor-banner-dots {
+  display: flex;
+  align-items: center;
+}
+.sponsor-banner-controls[hidden] {
+  display: none;
+}
+.sponsor-banner-controls {
+  gap: 0.4rem;
+}
+.sponsor-banner-dot,
+.sponsor-banner-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--bs-secondary-color);
+  cursor: pointer;
+}
+.sponsor-banner-dot span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--bs-border-color);
+  transition: background 0.2s;
+}
+.sponsor-banner-dot.is-active span {
+  background: var(--bs-primary);
+}
+.sponsor-banner-dot:hover,
+.sponsor-banner-toggle:hover {
+  background: var(--bs-border-color);
+}
+.sponsor-banner-toggle {
+  font-size: 0.65rem;
+}
+.sponsor-banner-visual:focus-visible,
+.sponsor-banner-dot:focus-visible,
+.sponsor-banner-toggle:focus-visible {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sponsor-banner-slide,
+  .sponsor-banner-dot span {
+    transition: none;
+  }
 }
 
 /* Bento Grid — 5 cards in one row */

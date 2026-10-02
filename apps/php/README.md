@@ -81,6 +81,12 @@ The generated raster CSS uses 64px images with 128px `image-set()` choices for h
 
 The map uses country coordinates from the repository and OpenStreetMap tiles with visible attribution; no Mapbox access token is needed.
 
+## Homepage advertisement
+
+The three-frame LISAHOST carousel appears below the download area and above the five feature cards, at their shared content width. Original Chinese and localized English artwork live in `assets/images/lisahost-banner-zh.png` and `lisahost-banner-en.png`. CSS crops the three rows while preserving the original artwork.
+
+Cloudflare visitor countries CN, HK, MO and TW receive Chinese; other or unknown countries receive English. This choice is independent of the site's language selector. The homepage is private and uncacheable to keep visitor-specific artwork separate. The artwork submits a native GET form to the configured affiliate URL, so hovering does not show a link URL. See [crop coordinates, controls and English generation prompt](../../docs/lisahost-ad.md).
+
 ## GitHub and assets
 
 The header shows only a GitHub icon linking to `gentpan/flagcdn`. It does not fetch or display star counts, release versions, or update dates. Flag asset attribution continues to identify [lipis/flag-icons](https://github.com/lipis/flag-icons).

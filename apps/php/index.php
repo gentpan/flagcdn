@@ -8,6 +8,9 @@ $pageDescription = 'Free SVG country flag icons by ISO 3166-1 alpha-2. One-line 
 $pageKeywords = 'country flags, flag icons, SVG flags, ISO 3166, flag CDN, country code flags, free flag icons, national flags, flag emoji, world flags';
 $canonicalUrl = 'https://flagcdn.io/';
 
+// 首页广告按 IP 地区选择语言，禁止共享 HTML 缓存串地区。
+header('Cache-Control: private, no-store');
+
 $extraHead = '<link rel="stylesheet" href="/assets/leaflet/leaflet.css" />';
 
 require __DIR__ . '/header.php';
@@ -43,6 +46,50 @@ $footerScripts = implode("\n    ", [
     '<script src="/assets/i18n.js?v=' . rawurlencode((string) filemtime(__DIR__ . '/assets/i18n.js')) . '"></script>',
     '<script src="/assets/app.js?v=' . rawurlencode((string) filemtime(__DIR__ . '/assets/app.js')) . '"></script>',
 ]);
+
+// 广告语言由访客 IP 所属地区决定，不随网站语言选择变化。
+$bannerLanguage = in_array($visitorCountryCode, ['cn', 'hk', 'mo', 'tw'], true) ? 'zh' : 'en';
+$bannerVariants = [
+    'zh' => [
+        'image' => '/assets/images/lisahost-banner-zh.png',
+        'width' => 2141,
+        'height' => 734,
+        'frames' => [
+            ['start' => 0, 'height' => 238, 'alt' => '选 VPS，更要选好 IP。更纯净的网络环境，打开更多可能。'],
+            ['start' => 247, 'height' => 239, 'alt' => '丽萨主机：原生住宅、双 ISP，真实家庭网络，多地区可选，独享 IP，稳定高速。'],
+            ['start' => 495, 'height' => 239, 'alt' => 'Netflix、ChatGPT、Claude，全平台稳定畅享。'],
+        ],
+    ],
+    'en' => [
+        'image' => '/assets/images/lisahost-banner-en.png',
+        'width' => 2141,
+        'height' => 734,
+        'frames' => [
+            ['start' => 0, 'height' => 237, 'alt' => 'Choose a VPS with a better IP. A cleaner network opens more possibilities.'],
+            ['start' => 246, 'height' => 237, 'alt' => 'LISAHOST: Native residential IPs and ISP IP. Multiple locations, dedicated IPs, stable high speeds.'],
+            ['start' => 491, 'height' => 243, 'alt' => 'Netflix, ChatGPT and Claude. Enjoy reliable access across platforms.'],
+        ],
+    ],
+];
+$bannerLabels = $bannerLanguage === 'zh' ? [
+    'region' => '丽萨主机广告',
+    'carousel' => '轮播',
+    'visit' => '访问丽萨主机',
+    'advertisement' => '广告',
+    'select' => '显示广告 %d',
+    'pause' => '暂停广告轮播',
+    'play' => '播放广告轮播',
+] : [
+    'region' => 'LISAHOST advertisement',
+    'carousel' => 'carousel',
+    'visit' => 'Visit LISAHOST',
+    'advertisement' => 'Advertisement',
+    'select' => 'Show ad %d',
+    'pause' => 'Pause advertisement slideshow',
+    'play' => 'Play advertisement slideshow',
+];
+$banner = $bannerVariants[$bannerLanguage];
+$bannerMaxFrameHeight = max(array_column($banner['frames'], 'height'));
 ?>
     <section class="welcome">
       <div class="container welcome-inner">
@@ -88,6 +135,38 @@ $footerScripts = implode("\n    ", [
         </div>
       </div>
     </section>
+
+    <aside class="sponsor-banner" lang="<?php echo $bannerLanguage === 'zh' ? 'zh-CN' : 'en'; ?>" aria-label="<?php echo htmlspecialchars($bannerLabels['region'], ENT_QUOTES, 'UTF-8'); ?>">
+      <div class="container">
+        <div class="sponsor-banner-carousel" data-banner-carousel role="group" aria-label="<?php echo htmlspecialchars($bannerLabels['region'], ENT_QUOTES, 'UTF-8'); ?>" aria-roledescription="<?php echo htmlspecialchars($bannerLabels['carousel'], ENT_QUOTES, 'UTF-8'); ?>">
+          <form class="sponsor-banner-form" action="https://lisahost.com/aff.php" method="get">
+            <input type="hidden" name="aff" value="7877" />
+            <button type="submit" class="sponsor-banner-visual" aria-label="<?php echo htmlspecialchars($bannerLabels['visit'], ENT_QUOTES, 'UTF-8'); ?>">
+              <span class="sponsor-banner-viewport" style="aspect-ratio: <?php echo $banner['width']; ?> / <?php echo $bannerMaxFrameHeight; ?>;" aria-live="off">
+<?php foreach ($banner['frames'] as $bannerIndex => $bannerFrame): ?>
+                <span class="sponsor-banner-slide<?php echo $bannerIndex === 0 ? ' is-active' : ''; ?>" data-banner-slide aria-hidden="<?php echo $bannerIndex === 0 ? 'false' : 'true'; ?>">
+                  <span class="sponsor-banner-crop" style="aspect-ratio: <?php echo $banner['width']; ?> / <?php echo $bannerFrame['height']; ?>; --banner-offset: <?php echo number_format(-100 * $bannerFrame['start'] / $bannerFrame['height'], 8, '.', ''); ?>%;">
+                    <img src="<?php echo htmlspecialchars($banner['image'], ENT_QUOTES, 'UTF-8'); ?>" width="<?php echo $banner['width']; ?>" height="<?php echo $banner['height']; ?>" alt="<?php echo htmlspecialchars($bannerFrame['alt'], ENT_QUOTES, 'UTF-8'); ?>" decoding="async" />
+                  </span>
+                </span>
+<?php endforeach; ?>
+              </span>
+            </button>
+          </form>
+          <div class="sponsor-banner-meta">
+            <span class="sponsor-banner-label"><?php echo htmlspecialchars($bannerLabels['advertisement'], ENT_QUOTES, 'UTF-8'); ?></span>
+            <div class="sponsor-banner-controls" data-banner-controls hidden>
+              <div class="sponsor-banner-dots">
+<?php foreach ($banner['frames'] as $bannerIndex => $bannerFrame): ?>
+                <button type="button" class="sponsor-banner-dot<?php echo $bannerIndex === 0 ? ' is-active' : ''; ?>" data-banner-select="<?php echo $bannerIndex; ?>" aria-label="<?php echo htmlspecialchars(sprintf($bannerLabels['select'], $bannerIndex + 1), ENT_QUOTES, 'UTF-8'); ?>" aria-pressed="<?php echo $bannerIndex === 0 ? 'true' : 'false'; ?>"><span aria-hidden="true"></span></button>
+<?php endforeach; ?>
+              </div>
+              <button type="button" class="sponsor-banner-toggle" data-banner-toggle data-pause-label="<?php echo htmlspecialchars($bannerLabels['pause'], ENT_QUOTES, 'UTF-8'); ?>" data-play-label="<?php echo htmlspecialchars($bannerLabels['play'], ENT_QUOTES, 'UTF-8'); ?>" aria-label="<?php echo htmlspecialchars($bannerLabels['pause'], ENT_QUOTES, 'UTF-8'); ?>" aria-pressed="false"><i class="fa-solid fa-pause" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
 
     <section class="bento">
       <div class="container bento-grid">
