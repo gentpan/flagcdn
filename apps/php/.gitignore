@@ -8,3 +8,6 @@
 *.log
 /raster/
 /download/flags-*.zip
+/1x1/
+/4x3/
+/original/

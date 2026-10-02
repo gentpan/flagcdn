@@ -44,7 +44,7 @@ python3 scripts/test-php-download-count.py
 
 The library contains 543 SVG sources: 271 codes in each of the 1:1 and 4:3 ratios, plus one standalone original variant. All SVGs have lossless PNG, WebP, and AVIF exports at widths 16, 24, 32, 48, 64, 128, 256, and 512px: 4,344 files per raster format, 13,032 raster files total. WebP uses `-lossless -exact`; AVIF uses `--lossless` to preserve RGB and alpha, including transparent edges. Lossless AVIF may be larger than WebP or PNG for flag graphics.
 
-The homepage's copy format and image width controls apply to both card copy buttons. SVG HTML uses the existing CSS classes; raster HTML includes an absolute image URL, dimensions and an escaped country name. The 4:3 / 1:1 switch also controls copied URLs and HTML. Raster URLs include `?v=lossless-1` to avoid reusing cached lossy exports.
+The homepage's copy format and image width controls apply to both card copy buttons. SVG HTML uses the existing CSS classes; raster HTML includes an absolute image URL, dimensions and an escaped country name. The 4:3 / 1:1 switch also controls copied URLs and HTML. Image and archive URLs have no query parameters.
 
 The homepage offers a complete bundle plus separate SVG, PNG, WebP, and AVIF archives. Ready-to-use downloads are also published in [GitHub Releases](https://github.com/gentpan/flagcdn/releases). Generated files are excluded from Git and distributed as release assets.
 
@@ -54,7 +54,7 @@ To reproduce the exports, install Go, `rsvg-convert`, `cwebp`, `avifenc`, and Py
 python3 scripts/build-flag-assets.py
 ```
 
-Output appears in `apps/php/raster/` and `apps/php/download/flags-*.zip`. The asset manifest records counts and SHA-256 archive hashes. The `i` symlink maps CDN URLs such as `/i/4x3/64/cn.png`, `/i/1x1/128/us.webp`, and `/i/4x3/512/jp.avif` to the generated files. Deploy the generated folders and retain the symlink. The original standalone SVG uses `original/` exports to preserve its native proportions.
+Image exports appear directly in `apps/php/4x3/`, `apps/php/1x1/`, and `apps/php/original/`; archives appear in `apps/php/download/flags-*.zip`. The asset manifest records counts and SHA-256 archive hashes. CDN URLs such as `/4x3/64/cn.png`, `/1x1/128/us.webp`, and `/4x3/512/jp.avif` map directly to these files. Deploy the generated folders alongside the PHP application. The original standalone SVG uses `original/` exports to preserve its native proportions.
 
 The build regenerates existing images rather than retaining older lossy encodings, then verifies every decoded RGBA pixel against a fresh SVG render before writing any release archive. `--package-only` skips generation but still runs full pixel validation. Counts, exact matches and error totals are included in the manifest. Independent validation:
 

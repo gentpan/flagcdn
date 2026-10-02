@@ -32,7 +32,7 @@ function getCopySettings() {
 function getFlagImageUrl(country, settings = getCopySettings()) {
   const path = settings.format === "svg"
     ? toRootPath(currentFormat === "4x3" ? country.flag_4x3 : country.flag_1x1)
-    : `/i/${currentFormat}/${settings.width}/${country.code}.${settings.format}?v=lossless-1`;
+    : `/${currentFormat}/${settings.width}/${country.code}.${settings.format}`;
   return new URL(path, window.location.origin || "https://flagcdn.io").href;
 }
 

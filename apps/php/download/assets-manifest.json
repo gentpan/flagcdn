@@ -22,9 +22,8 @@
     "webp": "lossless-exact",
     "avif": "lossless-rgb"
   },
-  "asset_revision": "lossless-1",
   "validation": {
-    "created_at": "2026-10-02T10:34:14.168927+00:00",
+    "created_at": "2026-10-02T11:34:47.351320+00:00",
     "svg_count": 543,
     "comparisons": 13032,
     "require_lossless": true,
@@ -72,28 +71,28 @@
   "archives": [
     {
       "file": "flags-svg.zip",
-      "bytes": 1953588,
-      "sha256": "fd30790fabfc8e225d11456815a0320fc58ebaaf5d42405c314d6848e155fba2"
+      "bytes": 1953638,
+      "sha256": "48a0bb1afc955a38855721290b99e93f0572501e5c928c7671a47ba1e4941295"
     },
     {
       "file": "flags-png.zip",
-      "bytes": 17074229,
-      "sha256": "7fb3a5d5b29ff63453a42c1988423c8fae19d6c21d239d112c314c3f7887c9d8"
+      "bytes": 17074279,
+      "sha256": "abec33dad31b4f5421f8443c5e31e36bbb99327b4eb0d84839f90434f2439378"
     },
     {
       "file": "flags-webp.zip",
-      "bytes": 9700635,
-      "sha256": "96abad9c499b2e6b98adec19f02586051920072374c5a52bc463d13155ce786d"
+      "bytes": 9700685,
+      "sha256": "3d439af9a780401c34fb273a7e586272a905e6d3df126c14f2775df6a1e603f4"
     },
     {
       "file": "flags-avif.zip",
-      "bytes": 22203697,
-      "sha256": "68d2a51abcc2fd2ac082779335ca3ced96690adad227f04ec55ee1e5993cb76b"
+      "bytes": 22203747,
+      "sha256": "594eab202eed40f10cf1df2a91b107d36665ce28078f4b386d8c550ee12a3d10"
     },
     {
       "file": "flags-all-formats.zip",
-      "bytes": 49251981,
-      "sha256": "8ac9d66f733dca8a9c6a6183ec32f81f5f8fcdfda8488ab04697488e7271d27d"
+      "bytes": 49252031,
+      "sha256": "bc6272a620587740fbd6f24f60702cc2820b599ee1108cec0ed83ad8adab8843"
     }
   ]
 }

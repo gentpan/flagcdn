@@ -3,8 +3,8 @@
 ## Stack
 
 - **Frontend:** Nuxt 3 (`apps/web/`) — SSG pages, SEO, i18n
-- **Backend:** Go (`cmd/api/`) — `/api/v1/*`, `/api/stats`, `/i/*` raster CDN
-- **Assets:** `flags/`, `raster/`, `css/flag-icons.min.css`, `data/country.json`
+- **Backend:** Go (`cmd/api/`) — `/api/v1/*`, `/api/stats`, `/1x1/*`, `/4x3/*` raster CDN
+- **Assets:** `flags/`, `1x1/`, `4x3/`, `css/flag-icons.min.css`, `data/country.json`
 - **Current public site:** PHP source in `apps/php/`, served by FrankenPHP/Caddy
 
 ## Local dev

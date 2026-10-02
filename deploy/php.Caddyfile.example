@@ -8,7 +8,11 @@ flagcdn.io, www.flagcdn.io {
         respond 404
     }
 
-    @static path /flags/* /assets/* /css/* /download/*
+    # Keep previously shared raster links working at the new canonical URL.
+    @legacy_raster path_regexp legacy_raster ^/i/((1x1|4x3|original)/[0-9]+/[a-z0-9][a-z0-9-]*\.(png|webp|avif))$
+    redir @legacy_raster /{re.legacy_raster.1} 308
+
+    @static path /flags/* /assets/* /css/* /download/* /1x1/* /4x3/* /original/*
     handle @static {
         file_server
     }

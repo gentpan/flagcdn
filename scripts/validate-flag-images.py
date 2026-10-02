@@ -75,7 +75,7 @@ def compare_job(site, source, width, report_dir, keep_references, require_lossle
 
     results = []
     for format in FORMATS:
-        path = site / "raster" / ratio / str(width) / (stem + "." + format)
+        path = site / ratio / str(width) / (stem + "." + format)
         result = {"file": str(path.relative_to(site)), "format": format,
                   "source": str(relative), "width": width,
                   "expected_size": list(reference.size), "errors": []}
@@ -160,12 +160,12 @@ def contact_sheet(site, records, report_dir):
     for index, title in enumerate(("Fresh SVG render (PNG)", "WebP", "AVIF")):
         draw.text((index * cell_w + 12, 15), title, fill="#182e40")
     for row, selected in enumerate(chosen):
-        ratio = selected["file"].split("/")[1]
+        ratio = selected["file"].split("/")[0]
         stem = Path(selected["source"]).stem
         width = selected["width"]
         reference_path = report_dir / "reference" / ratio / str(width) / (stem + ".png")
         for col, format in enumerate(FORMATS):
-            path = reference_path if format == "png" else site / "raster" / ratio / str(width) / (stem + "." + format)
+            path = reference_path if format == "png" else site / ratio / str(width) / (stem + "." + format)
             with Image.open(path) as source:
                 image = source.convert("RGBA")
             target_w = 288
@@ -244,7 +244,9 @@ def main():
     selected_files = {item["file"] for item in records}
     unexpected = []
     if not selected_codes and set(widths) == set(WIDTHS):
-        unexpected = sorted(str(path.relative_to(site)) for path in (site / "raster").rglob("*")
+        unexpected = sorted(str(path.relative_to(site))
+                            for ratio in ("1x1", "4x3", "original")
+                            for path in (site / ratio).rglob("*")
                             if path.is_file() and path.suffix[1:] in FORMATS and str(path.relative_to(site)) not in selected_files)
     summary = summarize(records)
     sheet = contact_sheet(site, records, report_dir) if args.keep_references else None

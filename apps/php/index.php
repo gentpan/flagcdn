@@ -56,7 +56,7 @@ $footerScripts = implode("\n    ", [
               <i class="fa-solid fa-file-lines welcome-cta-fa" aria-hidden="true"></i>
               <span data-i18n="hero.cta">View Docs</span>
             </a>
-            <a href="/download/flags-all-formats.zip?v=lossless-1" class="welcome-cta welcome-cta--download" id="download-flags-btn" download>
+            <a href="/download/flags-all-formats.zip" class="welcome-cta welcome-cta--download" id="download-flags-btn" download>
               <span class="download-btn-tooltip" id="download-btn-tooltip" role="tooltip">flags.zip</span>
               <span class="download-btn-content">
                 <i class="fa-solid fa-arrow-down-to-line welcome-cta-fa download-btn-icon" aria-hidden="true"></i>
@@ -68,10 +68,10 @@ $footerScripts = implode("\n    ", [
           </div>
           <div class="download-format-options" aria-label="Download formats">
             <span data-i18n="hero.formats">All formats above, or choose:</span>
-            <a href="/download/flags-svg.zip?v=lossless-1" class="download-format-link" data-download-format="svg" download>SVG</a>
-            <a href="/download/flags-png.zip?v=lossless-1" class="download-format-link" data-download-format="png" download>PNG</a>
-            <a href="/download/flags-webp.zip?v=lossless-1" class="download-format-link" data-download-format="webp" download>WebP</a>
-            <a href="/download/flags-avif.zip?v=lossless-1" class="download-format-link" data-download-format="avif" download>AVIF</a>
+            <a href="/download/flags-svg.zip" class="download-format-link" data-download-format="svg" download>SVG</a>
+            <a href="/download/flags-png.zip" class="download-format-link" data-download-format="png" download>PNG</a>
+            <a href="/download/flags-webp.zip" class="download-format-link" data-download-format="webp" download>WebP</a>
+            <a href="/download/flags-avif.zip" class="download-format-link" data-download-format="avif" download>AVIF</a>
           </div>
           <p class="download-format-summary" data-i18n="hero.assetSummary">543 SVGs · 13,032 raster images · 8 sizes (16–512px)</p>
         </div>

@@ -37,10 +37,10 @@
 ```
 apps/web/           Nuxt 3 前端（首页、详情页、文档、SSG）
 apps/php/           当前线上 PHP 站点（页面、下载计数、反馈、统计）
-cmd/api/            Go HTTP API（/api/v1、/i 栅格）
+cmd/api/            Go HTTP API（/api/v1、/1x1 与 /4x3 栅格）
 cmd/rastergen/      离线批量生成 PNG/WebP/AVIF
 flags/              SVG 源文件
-raster/             预生成栅格（gitignore，本地生成）
+1x1/、4x3/          预生成栅格（gitignore，本地生成）
 data/country.json   国家元数据
 css/                flag-icons.min.css（对外嵌入）
 ```
@@ -65,7 +65,7 @@ make build-static
 
 # 将构建产物合并到站点根目录（示例）
 rsync -a apps/web/.output/public/ ./site-dist/
-# 再把 site-dist/ 与 flags/、raster/、css/ 等一并上传到服务器
+# 再把 site-dist/ 与 flags/、1x1/、4x3/、css/ 等一并上传到服务器
 
 # 批量生成栅格图
 make rastergen
@@ -99,7 +99,7 @@ make raster-verify
 
 ```html
 <img src="https://flagcdn.io/flags/4x3/cn.svg" alt="China">
-<img src="https://flagcdn.io/i/4x3/64/cn.png" alt="China">
+<img src="https://flagcdn.io/4x3/64/cn.png" alt="China">
 ```
 
 首页可选择 SVG、PNG、WebP、AVIF 及 16–512px 宽度，再复制对应图片地址或 HTML。所有栅格格式采用无损编码，打包前使用 `python3 scripts/validate-flag-images.py --require-lossless` 对全部 13,032 张图片与 SVG 重新渲染结果做逐像素校验，包含透明通道。

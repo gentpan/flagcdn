@@ -64,7 +64,7 @@ export function buildFlagSeo({ country, siteUrl }: FlagSeoInput): FlagSeoPack {
     .join(", ");
 
   const canonical = `${base}/flag/${cc}`;
-  const ogImage = `${base}/i/1x1/256/${cc}.png`;
+  const ogImage = `${base}/1x1/256/${cc}.png`;
   const svgUrl = `${base}/flags/1x1/${cc}.svg`;
 
   const jsonLd = {

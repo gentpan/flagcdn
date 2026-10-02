@@ -5,7 +5,7 @@
 ```
 浏览器 → Nuxt 3（页面 / SSG / SEO）
        → Go API（JSON、栅格渲染、统计）
-       → 静态文件（flags/、raster/、css/）
+       → 静态文件（flags/、1x1/、4x3/、css/）
 ```
 
 本文描述 Nuxt + Go 版本。当前线上域名使用 `apps/php/` 中的 PHP 站点，见 [PHP 部署说明](../apps/php/README.md)。
@@ -20,7 +20,7 @@
 | `/api/v1/visitor-country` | Go |
 | `/api/stats` | Go |
 | `/api/v1/render` | Go（动态尺寸渲染） |
-| `/i/:ratio/:w/:cc.:ext` | Go |
+| `/:ratio/:w/:cc.:ext`（ratio 为 1x1 或 4x3） | Go |
 | `/flags/:ratio/:cc.svg` | Go 或静态 |
 | `/sitemap.xml`、`/robots.txt` | Nuxt Nitro |
 
@@ -31,14 +31,14 @@ make install
 make dev
 ```
 
-Nuxt 通过 `routeRules` 将 `/api/*`、`/i/*` 代理到 Go（默认 `http://127.0.0.1:8080`）。
+Nuxt 通过 `routeRules` 将 `/api/*`、`/1x1/*`、`/4x3/*` 代理到 Go（默认 `http://127.0.0.1:8080`）。
 
 ## 生产
 
 ```bash
 make build-static
 rsync -a apps/web/.output/public/ ./site-dist/
-# 与 flags/、raster/、css/ 一并部署；Nginx 反代 Go，见 deploy/nginx.conf.example
+# 与 flags/、1x1/、4x3/、css/ 一并部署；Nginx 反代 Go，见 deploy/nginx.conf.example
 ```
 
 `.env`（仓库根目录，勿提交）：

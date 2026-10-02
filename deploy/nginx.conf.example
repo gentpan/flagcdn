@@ -2,7 +2,7 @@
 # 假设：
 #   - Nuxt 静态产物在 /var/www/flagcdn/public（make build-static 后 rsync .output/public/）
 #   - Go API 监听 127.0.0.1:8080
-#   - flags/、raster/、css/ 与 public 同根或单独 alias
+#   - flags/、1x1/、4x3/、css/ 与 public 同根或单独 alias
 
 upstream flagcdn_api {
     server 127.0.0.1:8080;
@@ -31,8 +31,8 @@ server {
     }
 
     # 栅格 CDN（静态 miss 时由 Go 即时渲染）
-    location ~ ^/i/(1x1|4x3)/(\d+)/([a-z0-9][a-z0-9-]{0,15})\.(png|webp|avif)$ {
-        try_files /raster/$1/$2/$3.$4 @flagcdn_api;
+    location ~ ^/(1x1|4x3)/(\d+)/([a-z0-9][a-z0-9-]{0,15})\.(png|webp|avif)$ {
+        try_files $uri @flagcdn_api;
     }
 
     location @flagcdn_api {

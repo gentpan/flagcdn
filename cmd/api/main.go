@@ -79,7 +79,7 @@ func main() {
 		w.Write(raw)
 	})
 	mux.HandleFunc("GET /flags/{ratio}/{file}", serveFlagSVG(absRoot))
-	mux.HandleFunc("GET /i/{ratio}/{w}/{file}", serveRaster(absRoot))
+	mux.HandleFunc("GET /{ratio}/{w}/{file}", serveRaster(absRoot))
 	mux.HandleFunc("GET /api/v1/render", serveRender(absRoot))
 
 	srv := &http.Server{

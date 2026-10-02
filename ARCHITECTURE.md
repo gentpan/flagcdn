@@ -33,22 +33,22 @@ make raster-verify
 
 ```
 apps/web/          Nuxt 3 + TS 前端
-cmd/api/           Go HTTP 服务（flags API + /i/ 栅格）
+cmd/api/           Go HTTP 服务（flags API + /1x1/、/4x3/ 栅格）
 cmd/rastergen/     离线批量生成
 internal/          Go 共享库
 flags/             SVG 源
-raster/            预生成 PNG/WebP/AVIF
+1x1/、4x3/         预生成 PNG/WebP/AVIF
 data/country.json  国家元数据
 css/flag-icons.min.css  对外嵌入 API（保留）
 ```
 
 ## 生产部署建议
 
-- Nginx：静态 `/flags/`、`/raster/`、`/css/` 直出
-- Go `flagcdn-api` 处理 `/api/v1/*` 与 `/i/*` fallback 渲染
+- Nginx：静态 `/flags/`、`/1x1/`、`/4x3/`、`/css/` 直出
+- Go `flagcdn-api` 处理 `/api/v1/*` 与 `/1x1/*`、`/4x3/*` fallback 渲染
 - Nuxt SSR：`node apps/web/.output/server/index.mjs` 或使用 `nuxt build` + Nitro
 
-**Nuxt 版本部署 = Nuxt 静态输出 + Go API + 静态资源**（`flags/`、`raster/`、`css/`）。当前线上 PHP 站点源码在 `apps/php/`，部署见该目录 README。
+**Nuxt 版本部署 = Nuxt 静态输出 + Go API + 静态资源**（`flags/`、`1x1/`、`4x3/`、`css/`）。当前线上 PHP 站点源码在 `apps/php/`，部署见该目录 README。
 
 ## 目标
 
@@ -62,13 +62,13 @@ css/flag-icons.min.css  对外嵌入 API（保留）
 |----|------|------|----------|
 | **嵌入 API** | `css/flag-icons.min.css` | 仅 SVG：`fi fi-cn` / `fis` 1:1 / `fib` 背景图 | **保留不动**（对外兼容 lipis 用法） |
 | **站点 UI** | `assets/main.css` | 导航、首页、详情页、暗色主题 | **继续用**，不必拆成多个 |
-| **栅格资源** | `raster/{ratio}/{size}/{cc}.{ext}` | PNG / WebP / AVIF 静态文件 | **不走 CSS** |
+| **栅格资源** | `{ratio}/{size}/{cc}.{ext}` | PNG / WebP / AVIF 静态文件 | **直链与对应格式 CSS** |
 
-**结论：不要**为每种格式/尺寸写 CSS。栅格图用 URL 引用：
+默认 SVG CSS 保留。PNG、WebP、AVIF 各有一份使用相同类名的 CSS，引用 64px/128px 图片；其他尺寸通过直接 URL 引用：
 
 ```
-/i/1x1/64/cn.png
-/i/4x3/128/cn.webp
+/1x1/64/cn.png
+/4x3/128/cn.webp
 /flags/1x1/cn.svg          ← SVG 源文件
 /css/flag-icons.min.css    ← 类名嵌入
 ```
@@ -80,14 +80,14 @@ css/flag-icons.min.css  对外嵌入 API（保留）
 ```
 flags/1x1/cn.svg              # 源 SVG
 flags/4x3/cn.svg
-raster/1x1/64/cn.png          # 预生成栅格
-raster/4x3/256/cn.avif
+1x1/64/cn.png          # 预生成栅格
+4x3/256/cn.avif
 ```
 
-公开 URL（Apache `.htaccess`）：
+公开 URL 直接对应静态文件：
 
 ```
-/i/1x1/64/cn.png   →  raster/1x1/64/cn.png
+/1x1/64/cn.png   →  1x1/64/cn.png
 ```
 
 预设尺寸：`16, 24, 32, 48, 64, 128, 256, 512`  
@@ -117,8 +117,8 @@ go run ./cmd/rastergen -codes cn,us,jp
 ### 当前栈（已完成）
 
 - Nuxt 3 预渲染首页、列表、文档、changelog、271+ 国旗详情页
-- Go `cmd/api`：`/api/v1/*`、`/api/stats`、`/i/*` 栅格
-- `cmd/rastergen` 离线批量生成 `raster/`
+- Go `cmd/api`：`/api/v1/*`、`/api/stats`、`/1x1/*`、`/4x3/*` 栅格
+- `cmd/rastergen` 离线批量生成 `1x1/`、`4x3/`
 - Cloudflare CDN 边缘缓存
 
 ### 可选演进
@@ -156,8 +156,8 @@ go run ./cmd/rastergen -codes cn,us,jp
 
 ## 部署清单
 
-1. 本地 `go run ./cmd/rastergen` 生成 `raster/`
-2. `rsync` 到生产（含 `raster/`、`flags/`）
+1. 本地 `go run ./cmd/rastergen` 生成 `1x1/`、`4x3/`
+2. `rsync` 到生产（含 `1x1/`、`4x3/`、`flags/`）
 3. Nginx 反代 Go API（见 `deploy/nginx.conf.example`）
 4. `rsync` Nuxt `apps/web/.output/public/` 到站点根
 
@@ -165,7 +165,7 @@ go run ./cmd/rastergen -codes cn,us,jp
 
 ## 下一步建议（优先级）
 
-1. ✅ 新路径 + `rastergen` + `/i/` URL
+1. ✅ 直接路径 + `rastergen` + `/1x1/`、`/4x3/` URL
 2. ⏳ 跑完全量 `rastergen`（生产机或 CI）
 3. ⏳ 详情页 UI 改成 thesvg 双栏 + Export 卡片网格
 4. ⏳ 初始化 Nuxt `apps/web`，先 SSG `/flag/[cc]`

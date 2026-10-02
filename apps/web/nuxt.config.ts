@@ -48,12 +48,14 @@ export default defineNuxtConfig({
     devProxy: {
       "/api/v1": { target: `${apiBase}/api/v1`, changeOrigin: true },
       "/api/stats": { target: `${apiBase}/api/stats`, changeOrigin: true },
-      "/i": { target: `${apiBase}/i`, changeOrigin: true },
+      "/1x1": { target: `${apiBase}/1x1`, changeOrigin: true },
+      "/4x3": { target: `${apiBase}/4x3`, changeOrigin: true },
     },
     publicAssets: [
       { dir: repoRoot + "/flags", baseURL: "/flags", maxAge: 60 * 60 * 24 * 365 },
       { dir: repoRoot + "/css", baseURL: "/css", maxAge: 60 * 60 * 24 * 365 },
-      { dir: repoRoot + "/raster", baseURL: "/raster", maxAge: 60 * 60 * 24 * 365 },
+      { dir: repoRoot + "/1x1", baseURL: "/1x1", maxAge: 60 * 60 * 24 * 365 },
+      { dir: repoRoot + "/4x3", baseURL: "/4x3", maxAge: 60 * 60 * 24 * 365 },
     ],
     prerender: {
       crawlLinks: false,
@@ -63,7 +65,8 @@ export default defineNuxtConfig({
   routeRules: {
     "/api/v1/**": { proxy: `${apiBase}/api/v1/**` },
     "/api/stats": { proxy: `${apiBase}/api/stats` },
-    "/i/**": { proxy: `${apiBase}/i/**` },
+    "/1x1/**": { proxy: `${apiBase}/1x1/**` },
+    "/4x3/**": { proxy: `${apiBase}/4x3/**` },
     "/": { prerender: true, headers: { "Cache-Control": "public, max-age=0, must-revalidate" } },
     "/flags": { prerender: true, headers: { "Cache-Control": "public, max-age=0, must-revalidate" } },
     "/docs": { prerender: true, headers: { "Cache-Control": "public, max-age=0, must-revalidate" } },

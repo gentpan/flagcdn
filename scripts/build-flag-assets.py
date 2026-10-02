@@ -20,7 +20,7 @@ def run(*args):
 
 
 def render_original(source, width):
-    output = SITE / "raster/original" / str(width)
+    output = SITE / "original" / str(width)
     output.mkdir(parents=True, exist_ok=True)
     png = output / (source.stem + ".png")
     run("rsvg-convert", "-w", str(width), "-a", str(source), "-o", str(png))
@@ -84,10 +84,11 @@ def main():
         relative = source.relative_to(SITE / "flags")
         entry = "svg/" + str(relative if len(relative.parts) > 1 else Path("original") / relative)
         entries["svg"].append((source, entry))
-    for source in sorted((SITE / "raster").rglob("*")):
-        if source.is_file() and source.suffix[1:] in FORMATS:
-            format = source.suffix[1:]
-            entries[format].append((source, format + "/" + str(source.relative_to(SITE / "raster"))))
+    for ratio in ("1x1", "4x3", "original"):
+        for source in sorted((SITE / ratio).rglob("*")):
+            if source.is_file() and source.suffix[1:] in FORMATS:
+                format = source.suffix[1:]
+                entries[format].append((source, format + "/" + str(source.relative_to(SITE))))
 
     expected = len(entries["svg"]) * len(SIZES)
     for format in FORMATS:
@@ -101,7 +102,6 @@ def main():
         "ratios": ["1x1", "4x3"],
         "original_variants": len(originals),
         "encoding": {"png": "lossless", "webp": "lossless-exact", "avif": "lossless-rgb"},
-        "asset_revision": "lossless-1",
         "validation": validation,
         "format_counts": {format: len(items) for format, items in entries.items()},
         "raster_count": sum(len(entries[format]) for format in FORMATS),
@@ -113,6 +113,7 @@ def main():
         "Widths: " + ", ".join(map(str, SIZES)) + " px.\n"
         "1x1 and 4x3 variants retain those ratios. original/ preserves native SVG proportions.\n"
         "SVG/PNG/WebP/AVIF are under separate format directories.\n"
+        "CDN image URLs: https://flagcdn.io/{ratio}/{width}/{code}.{format} (no prefix or query parameters).\n"
         "All raster formats are lossless. Every decoded RGBA pixel is verified against a fresh SVG render before packaging.\n"
         "assets-manifest.json lists exact counts and SHA-256 hashes.\n"
     )

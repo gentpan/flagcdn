@@ -20,7 +20,7 @@ func Height(ratio string, w int) int {
 }
 
 func FilePath(root, ratio string, w int, cc, ext string) string {
-	return filepath.Join(root, "raster", ratio, fmt.Sprint(w), cc+"."+ext)
+	return filepath.Join(root, ratio, fmt.Sprint(w), cc+"."+ext)
 }
 
 func SrcSVG(root, ratio, cc string) string {
@@ -28,7 +28,7 @@ func SrcSVG(root, ratio, cc string) string {
 }
 
 func PublicURL(ratio string, w int, cc, ext string) string {
-	return fmt.Sprintf("/i/%s/%d/%s.%s", ratio, w, cc, ext)
+	return fmt.Sprintf("/%s/%d/%s.%s", ratio, w, cc, ext)
 }
 
 func ValidRatio(r string) bool {

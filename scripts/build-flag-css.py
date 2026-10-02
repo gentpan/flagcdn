@@ -14,7 +14,6 @@ import tempfile
 
 
 FORMATS = ("png", "webp", "avif")
-IMAGE_VERSION = "lossless-1"
 RULE = re.compile(r"([^{}]+)\{([^{}]*)\}")
 SVG_BACKGROUND = re.compile(
     r"background-image:url\(\.\./flags/(1x1|4x3)/([a-z0-9-]+)\.svg\)"
@@ -51,14 +50,11 @@ def render_stylesheet(template, css_dir, image_format):
         source = css_dir / f"../flags/{ratio}/{code}.svg"
         if not source.is_file():
             raise ValueError(f"Missing source SVG: {source}")
-        normal = f"../i/{ratio}/64/{code}.{image_format}"
-        dense = f"../i/{ratio}/128/{code}.{image_format}"
+        normal = f"../{ratio}/64/{code}.{image_format}"
+        dense = f"../{ratio}/128/{code}.{image_format}"
         for relative_path in (normal, dense):
             if not (css_dir / relative_path).is_file():
                 raise ValueError(f"Missing raster image: {css_dir / relative_path}")
-        # Separate old cached lossy assets from the lossless raster release.
-        normal += f"?v={IMAGE_VERSION}"
-        dense += f"?v={IMAGE_VERSION}"
         replaced.append((selector, normal, dense))
         return (
             f"{selector}{{background-image:url({normal});"

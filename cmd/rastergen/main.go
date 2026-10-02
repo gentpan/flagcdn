@@ -1,11 +1,11 @@
 // rastergen — 批量将 SVG 国旗栅格化为 PNG / WebP / AVIF
 //
-// 输出: raster/{ratio}/{size}/{cc}.{ext}
-// URL:  /i/{ratio}/{size}/{cc}.{ext}
+// 输出: {ratio}/{size}/{cc}.{ext}
+// URL:  /{ratio}/{size}/{cc}.{ext}
 //
-//   go run ./cmd/rastergen
-//   go run ./cmd/rastergen -verify
-//   go run ./cmd/rastergen -codes cn,us -workers 8
+//	go run ./cmd/rastergen
+//	go run ./cmd/rastergen -verify
+//	go run ./cmd/rastergen -codes cn,us -workers 8
 package main
 
 import (
@@ -48,7 +48,7 @@ func main() {
 
 	srcRoot := *root
 	flagsDir := filepath.Join(srcRoot, "flags")
-	outRoot := filepath.Join(srcRoot, "raster")
+	outRoot := srcRoot
 
 	allCodes := collectCodes(flagsDir)
 	if len(allCodes) == 0 {

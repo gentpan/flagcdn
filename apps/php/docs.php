@@ -161,11 +161,11 @@ require __DIR__ . '/header.php';
     <p class="docs-cdn-label" data-i18n="docs.section5Raster">PNG / WebP / AVIF URLs</p>
 <?php foreach (['png', 'webp', 'avif'] as $format): ?>
     <div class="code-block">
-      <pre>https://flagcdn.io/i/4x3/64/cn.<?= $format ?>?v=lossless-1</pre>
-      <button type="button" class="code-copy-btn" data-copy="https://flagcdn.io/i/4x3/64/cn.<?= $format ?>?v=lossless-1" aria-label="Copy"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
+      <pre>https://flagcdn.io/4x3/64/cn.<?= $format ?></pre>
+      <button type="button" class="code-copy-btn" data-copy="https://flagcdn.io/4x3/64/cn.<?= $format ?>" aria-label="Copy"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
     </div>
 <?php endforeach; ?>
-    <p data-i18n="docs.section5RasterNote">Raster URL: /i/{ratio}/{width}/{code}.{format}. Ratios: 4x3 or 1x1. Widths: 16, 24, 32, 48, 64, 128, 256 or 512px. On the homepage, choose a copy format and width, then use the card's HTML or URL button. SVG copies CSS classes; raster HTML includes a ready-to-use img tag.</p>
+    <p data-i18n="docs.section5RasterNote">Raster URL: /{ratio}/{width}/{code}.{format}. Ratios: 4x3 or 1x1. Widths: 16, 24, 32, 48, 64, 128, 256 or 512px. On the homepage, choose a copy format and width, then use the card's HTML or URL button. SVG copies CSS classes; raster HTML includes a ready-to-use img tag.</p>
 
     <h2 data-i18n="docs.section6Title">6. License and contact</h2>
     <p data-i18n-html="docs.section6Line1">Icons are from <a href="https://github.com/lipis/flag-icons" target="_blank" rel="noopener">flag-icons</a>, MIT license.</p>

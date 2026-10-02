@@ -4,7 +4,7 @@ export function useRaster() {
   const config = useRuntimeConfig();
 
   function rasterUrl(ratio: Ratio, w: number, cc: string, fmt: RasterFormat) {
-    return `/i/${ratio}/${w}/${encodeURIComponent(cc)}.${fmt}`;
+    return `/${ratio}/${w}/${encodeURIComponent(cc)}.${fmt}`;
   }
 
   /** 页面内展示、预览一律走 SVG */
