@@ -49,15 +49,14 @@ $footerScripts = implode("\n    ", [
         <div class="welcome-content">
           <h1 class="welcome-title" data-i18n="hero.title">Flag Icons</h1>
           <p class="welcome-desc" data-i18n="hero.sub">
-            Country flags in SVG. Use the code icon to copy HTML, or the copy button to copy image
-            URL and country code.
+            Country flags in SVG, PNG, WebP and AVIF. Choose a format below, then copy HTML or an image URL.
           </p>
           <div class="welcome-cta-row">
             <a href="/docs/" class="welcome-cta">
               <i class="fa-solid fa-file-lines welcome-cta-fa" aria-hidden="true"></i>
               <span data-i18n="hero.cta">View Docs</span>
             </a>
-            <a href="/download/flags-all-formats.zip" class="welcome-cta welcome-cta--download" id="download-flags-btn" download>
+            <a href="/download/flags-all-formats.zip?v=lossless-1" class="welcome-cta welcome-cta--download" id="download-flags-btn" download>
               <span class="download-btn-tooltip" id="download-btn-tooltip" role="tooltip">flags.zip</span>
               <span class="download-btn-content">
                 <i class="fa-solid fa-arrow-down-to-line welcome-cta-fa download-btn-icon" aria-hidden="true"></i>
@@ -69,10 +68,10 @@ $footerScripts = implode("\n    ", [
           </div>
           <div class="download-format-options" aria-label="Download formats">
             <span data-i18n="hero.formats">All formats above, or choose:</span>
-            <a href="/download/flags-svg.zip" class="download-format-link" data-download-format="svg" download>SVG</a>
-            <a href="/download/flags-png.zip" class="download-format-link" data-download-format="png" download>PNG</a>
-            <a href="/download/flags-webp.zip" class="download-format-link" data-download-format="webp" download>WebP</a>
-            <a href="/download/flags-avif.zip" class="download-format-link" data-download-format="avif" download>AVIF</a>
+            <a href="/download/flags-svg.zip?v=lossless-1" class="download-format-link" data-download-format="svg" download>SVG</a>
+            <a href="/download/flags-png.zip?v=lossless-1" class="download-format-link" data-download-format="png" download>PNG</a>
+            <a href="/download/flags-webp.zip?v=lossless-1" class="download-format-link" data-download-format="webp" download>WebP</a>
+            <a href="/download/flags-avif.zip?v=lossless-1" class="download-format-link" data-download-format="avif" download>AVIF</a>
           </div>
           <p class="download-format-summary" data-i18n="hero.assetSummary">543 SVGs · 13,032 raster images · 8 sizes (16–512px)</p>
         </div>
@@ -106,7 +105,7 @@ $footerScripts = implode("\n    ", [
         </div>
         <div class="bento-card bento-feat">
           <div class="bento-feat-header"><i class="fa-solid fa-clipboard bento-feat-icon" aria-hidden="true"></i><h3 class="bento-feat-title" data-i18n="bento.copyTitle">Click to Copy</h3></div>
-          <p class="bento-feat-desc" data-i18n="bento.copyDesc">Copy HTML snippet or SVG image URL with a single click.</p>
+          <p class="bento-feat-desc" data-i18n="bento.copyDesc">Choose a format, then copy HTML or an image URL with a single click.</p>
         </div>
         <div class="bento-card bento-feat">
           <div class="bento-feat-header"><i class="fa-solid fa-earth-americas bento-feat-icon" aria-hidden="true"></i><h3 class="bento-feat-title" data-i18n="bento.mapTitle">Map View</h3></div>
@@ -134,6 +133,31 @@ $footerScripts = implode("\n    ", [
             <option value="non-iso">Non-ISO</option>
           </select>
         </div>
+      </div>
+      <div class="copy-options" aria-describedby="copy-options-hint">
+        <div class="copy-option-field">
+          <label for="copy-format" class="filter-label" data-i18n="copy.format">Copy format</label>
+          <select id="copy-format" class="copy-select">
+            <option value="svg">SVG</option>
+            <option value="png">PNG</option>
+            <option value="webp">WebP</option>
+            <option value="avif">AVIF</option>
+          </select>
+        </div>
+        <div class="copy-option-field">
+          <label for="copy-width" class="filter-label" data-i18n="copy.width">Image width</label>
+          <select id="copy-width" class="copy-select" disabled>
+            <option value="16">16px</option>
+            <option value="24">24px</option>
+            <option value="32">32px</option>
+            <option value="48">48px</option>
+            <option value="64" selected>64px</option>
+            <option value="128">128px</option>
+            <option value="256">256px</option>
+            <option value="512">512px</option>
+          </select>
+        </div>
+        <p id="copy-options-hint" class="copy-options-hint" data-i18n="copy.hint">Card buttons copy HTML or an image URL in your selected format.</p>
       </div>
       <header class="section-header">
         <span class="section-header-icon" aria-hidden="true"><i class="fa-solid fa-flag"></i></span>

@@ -19,3 +19,4 @@ Thumbs.db
 NameDeal/
 .claude/
 flags-pack.zip
+__pycache__/

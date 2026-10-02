@@ -17,6 +17,28 @@ const continentSelect = document.getElementById("continent-select");
 const format4x3Btn = document.getElementById("format-4x3");
 const format1x1Btn = document.getElementById("format-1x1");
 const copyToast = document.getElementById("copy-toast");
+const copyFormatSelect = document.getElementById("copy-format");
+const copyWidthSelect = document.getElementById("copy-width");
+
+const copyImageFormats = new Set(["svg", "png", "webp", "avif"]);
+const copyImageWidths = new Set([16, 24, 32, 48, 64, 128, 256, 512]);
+
+function getCopySettings() {
+  const format = copyImageFormats.has(copyFormatSelect?.value) ? copyFormatSelect.value : "svg";
+  const selectedWidth = Number(copyWidthSelect?.value);
+  return { format, width: copyImageWidths.has(selectedWidth) ? selectedWidth : 64 };
+}
+
+function getFlagImageUrl(country, settings = getCopySettings()) {
+  const path = settings.format === "svg"
+    ? toRootPath(currentFormat === "4x3" ? country.flag_4x3 : country.flag_1x1)
+    : `/i/${currentFormat}/${settings.width}/${country.code}.${settings.format}?v=lossless-1`;
+  return new URL(path, window.location.origin || "https://flagcdn.io").href;
+}
+
+function escapeHtmlAttribute(value) {
+  return String(value).replace(/[&<>\"]/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '\"': "&quot;" })[character]);
+}
 
 let currentFormat = "4x3";
 let allFlags = [];
@@ -133,15 +155,17 @@ function createFlagCard(country) {
 
   function onCodeClick(e) {
     e.stopPropagation();
+    const settings = getCopySettings();
     const fmt = currentFormat === "4x3" ? "" : " fis";
-    const html = "<span class=\"fi fi-" + country.code + fmt + "\"></span>";
+    const height = currentFormat === "4x3" ? settings.width * 3 / 4 : settings.width;
+    const html = settings.format === "svg"
+      ? "<span class=\"fi fi-" + country.code + fmt + "\"></span>"
+      : `<img src="${escapeHtmlAttribute(getFlagImageUrl(country, settings))}" width="${settings.width}" height="${height}" alt="${escapeHtmlAttribute(getCountryDisplayName(country))}">`;
     navigator.clipboard.writeText(html).then(() => showCopyToast()).catch(() => {});
   }
   function onCopyImgClick(e) {
     e.stopPropagation();
-    const base = window.location.origin || "https://flagcdn.io";
-    const path = toRootPath(currentFormat === "4x3" ? country.flag_4x3 : country.flag_1x1);
-    const imageUrl = path.startsWith("http") ? path : base + path;
+    const imageUrl = getFlagImageUrl(country);
     navigator.clipboard.writeText(imageUrl).then(() => showCopyToast()).catch(() => {});
   }
   function onMapClick(e) {
@@ -195,6 +219,11 @@ function debounce(fn, ms) {
 
 searchInput.addEventListener("input", () => debounce(filterFlags, 150));
 if (continentSelect) continentSelect.addEventListener("change", filterFlags);
+if (copyFormatSelect && copyWidthSelect) {
+  copyFormatSelect.addEventListener("change", () => {
+    copyWidthSelect.disabled = getCopySettings().format === "svg";
+  });
+}
 format4x3Btn.addEventListener("click", () => setFormat("4x3"));
 format1x1Btn.addEventListener("click", () => setFormat("1x1"));
 

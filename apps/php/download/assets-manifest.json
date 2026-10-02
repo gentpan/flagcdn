@@ -17,6 +17,51 @@
     "4x3"
   ],
   "original_variants": 1,
+  "encoding": {
+    "png": "lossless",
+    "webp": "lossless-exact",
+    "avif": "lossless-rgb"
+  },
+  "asset_revision": "lossless-1",
+  "validation": {
+    "created_at": "2026-10-02T10:34:14.168927+00:00",
+    "svg_count": 543,
+    "comparisons": 13032,
+    "require_lossless": true,
+    "pillow_version": "12.3.0",
+    "summary": {
+      "png": {
+        "files": 4344,
+        "measured_files": 4344,
+        "files_with_errors": 0,
+        "exact_rgba_matches": 4344,
+        "alpha_mismatches": 0,
+        "pixel_weighted_visible_mae": 0.0,
+        "pixel_weighted_visible_psnr_db": null,
+        "visual_review_files": 0
+      },
+      "webp": {
+        "files": 4344,
+        "measured_files": 4344,
+        "files_with_errors": 0,
+        "exact_rgba_matches": 4344,
+        "alpha_mismatches": 0,
+        "pixel_weighted_visible_mae": 0.0,
+        "pixel_weighted_visible_psnr_db": null,
+        "visual_review_files": 0
+      },
+      "avif": {
+        "files": 4344,
+        "measured_files": 4344,
+        "files_with_errors": 0,
+        "exact_rgba_matches": 4344,
+        "alpha_mismatches": 0,
+        "pixel_weighted_visible_mae": 0.0,
+        "pixel_weighted_visible_psnr_db": null,
+        "visual_review_files": 0
+      }
+    }
+  },
   "format_counts": {
     "svg": 543,
     "png": 4344,
@@ -27,28 +72,28 @@
   "archives": [
     {
       "file": "flags-svg.zip",
-      "bytes": 1953004,
-      "sha256": "5a7c904cfb479df8b486485909df08f3ac28d8523a1ec3284581a93253d68659"
+      "bytes": 1953588,
+      "sha256": "fd30790fabfc8e225d11456815a0320fc58ebaaf5d42405c314d6848e155fba2"
     },
     {
       "file": "flags-png.zip",
-      "bytes": 17073645,
-      "sha256": "79edf61ebba899e7c319648d70400aa23206b899b19700cf5ba2a910c12baa77"
+      "bytes": 17074229,
+      "sha256": "7fb3a5d5b29ff63453a42c1988423c8fae19d6c21d239d112c314c3f7887c9d8"
     },
     {
       "file": "flags-webp.zip",
-      "bytes": 9632954,
-      "sha256": "81693fe774df291c10b568899f7697107c57442b292ff70a66106bedaecfbad8"
+      "bytes": 9700635,
+      "sha256": "96abad9c499b2e6b98adec19f02586051920072374c5a52bc463d13155ce786d"
     },
     {
       "file": "flags-avif.zip",
-      "bytes": 6316110,
-      "sha256": "0865bf6828217a3b5d8adc51c2e7cc2e7f7f3fe219d8e8ed66fe38e0baff26a7"
+      "bytes": 22203697,
+      "sha256": "68d2a51abcc2fd2ac082779335ca3ced96690adad227f04ec55ee1e5993cb76b"
     },
     {
       "file": "flags-all-formats.zip",
-      "bytes": 33297297,
-      "sha256": "e9d28f3614f3aa8765a804ad2f133fda2da9a37e5c26e1800289274260df0d0e"
+      "bytes": 49251981,
+      "sha256": "8ac9d66f733dca8a9c6a6183ec32f81f5f8fcdfda8488ab04697488e7271d27d"
     }
   ]
 }

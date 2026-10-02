@@ -250,13 +250,13 @@ func render(srcSVG, outFile, ratio string, w int, ext string) error {
 	case "png":
 		err = os.Rename(tmpPNG, outFile)
 	case "webp":
-		cmd = exec.Command("cwebp", "-q", "90", "-quiet", "-m", "6", tmpPNG, "-o", outFile)
+		cmd = exec.Command("cwebp", "-lossless", "-exact", "-q", "90", "-quiet", "-m", "6", tmpPNG, "-o", outFile)
 		if out, e := cmd.CombinedOutput(); e != nil {
 			err = fmt.Errorf("cwebp: %w %s", e, trimOut(out))
 		}
 		os.Remove(tmpPNG)
 	case "avif":
-		cmd = exec.Command("avifenc", "-q", "60", tmpPNG, outFile)
+		cmd = exec.Command("avifenc", "--lossless", "-j", "2", "-s", "6", tmpPNG, outFile)
 		if out, e := cmd.CombinedOutput(); e != nil {
 			err = fmt.Errorf("avifenc: %w %s", e, trimOut(out))
 		}

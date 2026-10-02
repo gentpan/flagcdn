@@ -93,12 +93,16 @@ make raster-verify
 <span class="fi fi-us fis"></span>
 ```
 
+默认使用 SVG。需要栅格图片时，将样式表换为 `flag-icons-png.min.css`、`flag-icons-webp.min.css` 或 `flag-icons-avif.min.css`，类名不变。三个版本从同一份 SVG CSS 自动生成，使用 64px 图片及 128px 高像素密度版本。文档页可一键复制各版本的引入代码。
+
 ### SVG / 栅格直链
 
 ```html
 <img src="https://flagcdn.io/flags/4x3/cn.svg" alt="China">
 <img src="https://flagcdn.io/i/4x3/64/cn.png" alt="China">
 ```
+
+首页可选择 SVG、PNG、WebP、AVIF 及 16–512px 宽度，再复制对应图片地址或 HTML。所有栅格格式采用无损编码，打包前使用 `python3 scripts/validate-flag-images.py --require-lossless` 对全部 13,032 张图片与 SVG 重新渲染结果做逐像素校验，包含透明通道。
 
 完整文档见 <https://flagcdn.io/docs>。
 

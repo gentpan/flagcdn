@@ -102,6 +102,15 @@ require __DIR__ . '/header.php';
       <pre>&lt;link rel="stylesheet" href="https://flagcdn.io/css/flag-icons.min.css" /&gt;</pre>
       <button type="button" class="code-copy-btn" data-copy="&lt;link rel=&quot;stylesheet&quot; href=&quot;https://flagcdn.io/css/flag-icons.min.css&quot; /&gt;" aria-label="Copy"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
     </div>
+    <p class="docs-cdn-label" data-i18n="docs.section1Raster">Or choose a raster format:</p>
+<?php foreach (['png' => 'PNG', 'webp' => 'WebP', 'avif' => 'AVIF'] as $format => $label): ?>
+    <p class="docs-cdn-label"><strong><?= $label ?></strong></p>
+    <div class="code-block">
+      <pre>&lt;link rel="stylesheet" href="https://flagcdn.io/css/flag-icons-<?= $format ?>.min.css" /&gt;</pre>
+      <button type="button" class="code-copy-btn" data-copy="&lt;link rel=&quot;stylesheet&quot; href=&quot;https://flagcdn.io/css/flag-icons-<?= $format ?>.min.css&quot; /&gt;" aria-label="Copy"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
+    </div>
+<?php endforeach; ?>
+    <p data-i18n="docs.section1FormatNote">Include one stylesheet. All four use the same fi / fi-xx / fis classes. Raster stylesheets use 64px images and 128px on high-density displays; use a direct image URL for larger flags. Choose a format supported by your target browsers.</p>
     <h2 data-i18n="docs.section2Title">2. HTML usage</h2>
     <p data-i18n-html="docs.section2Intro">Use the <code class="code">fi</code> and <code class="code">fi-xx</code> classes, where <code class="code">xx</code> is the ISO 3166-1-alpha-2 country code (lowercase).</p>
     <p data-i18n="docs.section2AspectNote">We provide two aspect ratios: 4:3 (default) and 1:1. Many other flag CDNs use SVGs with inconsistent or incorrect proportions; we normalize all flags to 4:3 for a cleaner, more consistent look.</p>
@@ -132,8 +141,8 @@ require __DIR__ . '/header.php';
       <li data-i18n-html="docs.section4Line2"><code class="code">de</code> Germany · <code class="code">fr</code> France · <code class="code">eu</code> European Union</li>
     </ul>
 
-    <h2 data-i18n="docs.section5Title">5. Direct SVG URL</h2>
-    <p data-i18n-html="docs.section5UrlIntro">You can link to a flag SVG directly by using the explicit asset path. Use it in <code class="code">&lt;img src="..."&gt;</code> or as background-image.</p>
+    <h2 data-i18n="docs.section5Title">5. Direct image URLs</h2>
+    <p data-i18n-html="docs.section5UrlIntro">Link to any format with <code class="code">&lt;img src="..."&gt;</code> or background-image. SVG paths:</p>
     <p class="docs-cdn-label" data-i18n="docs.section5ExplicitPath"><strong>4:3 / 1:1 (explicit path)</strong></p>
     <div class="code-block">
       <pre>https://flagcdn.io/flags/4x3/cn.svg</pre>
@@ -149,6 +158,14 @@ require __DIR__ . '/header.php';
       <pre>https://flagcdn.io/cn.svg</pre>
       <button type="button" class="code-copy-btn" data-copy="https://flagcdn.io/cn.svg" aria-label="Copy"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
     </div>
+    <p class="docs-cdn-label" data-i18n="docs.section5Raster">PNG / WebP / AVIF URLs</p>
+<?php foreach (['png', 'webp', 'avif'] as $format): ?>
+    <div class="code-block">
+      <pre>https://flagcdn.io/i/4x3/64/cn.<?= $format ?>?v=lossless-1</pre>
+      <button type="button" class="code-copy-btn" data-copy="https://flagcdn.io/i/4x3/64/cn.<?= $format ?>?v=lossless-1" aria-label="Copy"><i class="fa-regular fa-copy" aria-hidden="true"></i></button>
+    </div>
+<?php endforeach; ?>
+    <p data-i18n="docs.section5RasterNote">Raster URL: /i/{ratio}/{width}/{code}.{format}. Ratios: 4x3 or 1x1. Widths: 16, 24, 32, 48, 64, 128, 256 or 512px. On the homepage, choose a copy format and width, then use the card's HTML or URL button. SVG copies CSS classes; raster HTML includes a ready-to-use img tag.</p>
 
     <h2 data-i18n="docs.section6Title">6. License and contact</h2>
     <p data-i18n-html="docs.section6Line1">Icons are from <a href="https://github.com/lipis/flag-icons" target="_blank" rel="noopener">flag-icons</a>, MIT license.</p>
@@ -162,7 +179,7 @@ $footerClass = 'docs-footer';
 $showFooterNav = true;
 ob_start();
 ?>
-  <script src="/assets/i18n.js"></script>
+  <script src="/assets/i18n.js?v=<?= rawurlencode((string) filemtime(__DIR__ . '/assets/i18n.js')) ?>"></script>
   <script>
     (function () {
       var toast = document.getElementById("copy-toast");
