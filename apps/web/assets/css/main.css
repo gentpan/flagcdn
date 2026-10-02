@@ -1258,6 +1258,7 @@ a.detail-pill:hover {
   border-radius: 28px;
   padding: 6px;
   box-shadow: 0 10px 40px rgba(15, 23, 42, 0.15);
+  font-family: var(--font-display);
 }
 .nav__bar {
   display: flex;
@@ -1380,6 +1381,7 @@ a.detail-pill:hover {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  font-family: var(--font-display);
 }
 .nav__mobile-link {
   display: flex;

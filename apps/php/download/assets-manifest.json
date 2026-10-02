@@ -1,0 +1,54 @@
+{
+  "repository": "https://github.com/gentpan/flagcdn",
+  "svg_count": 543,
+  "flag_codes": 271,
+  "widths": [
+    16,
+    24,
+    32,
+    48,
+    64,
+    128,
+    256,
+    512
+  ],
+  "ratios": [
+    "1x1",
+    "4x3"
+  ],
+  "original_variants": 1,
+  "format_counts": {
+    "svg": 543,
+    "png": 4344,
+    "webp": 4344,
+    "avif": 4344
+  },
+  "raster_count": 13032,
+  "archives": [
+    {
+      "file": "flags-svg.zip",
+      "bytes": 1953004,
+      "sha256": "5a7c904cfb479df8b486485909df08f3ac28d8523a1ec3284581a93253d68659"
+    },
+    {
+      "file": "flags-png.zip",
+      "bytes": 17073645,
+      "sha256": "79edf61ebba899e7c319648d70400aa23206b899b19700cf5ba2a910c12baa77"
+    },
+    {
+      "file": "flags-webp.zip",
+      "bytes": 9632954,
+      "sha256": "81693fe774df291c10b568899f7697107c57442b292ff70a66106bedaecfbad8"
+    },
+    {
+      "file": "flags-avif.zip",
+      "bytes": 6316110,
+      "sha256": "0865bf6828217a3b5d8adc51c2e7cc2e7f7f3fe219d8e8ed66fe38e0baff26a7"
+    },
+    {
+      "file": "flags-all-formats.zip",
+      "bytes": 33297297,
+      "sha256": "e9d28f3614f3aa8765a804ad2f133fda2da9a37e5c26e1800289274260df0d0e"
+    }
+  ]
+}

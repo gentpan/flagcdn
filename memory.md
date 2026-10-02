@@ -5,7 +5,7 @@
 - **Frontend:** Nuxt 3 (`apps/web/`) — SSG pages, SEO, i18n
 - **Backend:** Go (`cmd/api/`) — `/api/v1/*`, `/api/stats`, `/i/*` raster CDN
 - **Assets:** `flags/`, `raster/`, `css/flag-icons.min.css`, `data/country.json`
-- **No PHP** in this repository
+- **Current public site:** PHP source in `apps/php/`, served by FrankenPHP/Caddy
 
 ## Local dev
 
@@ -21,5 +21,6 @@ make dev    # Go :8080 + Nuxt preview :3000
 
 ## Deployment server
 
-- Production: `136.243.151.32` (`hz-sites`), path `/opt/1panel/www/sites/flagcdn.io/index`
+- Public PHP site path: `/var/www/flagcdn.io`
+- Nuxt + Go project path: `/opt/flagcdn/app`; keep its deployment separate from the PHP site
 - GitHub: `https://github.com/gentpan/flagcdn`

@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+/data/download-count.txt
+/data/issues.json
+/data/cache/
+*.bak*
+*.log
+/raster/
+/download/flags-*.zip

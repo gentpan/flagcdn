@@ -1,0 +1,56 @@
+# flagcdn.io
+
+> Free SVG country flag icons with CDN delivery. ISO 3166-1 alpha-2 codes. 4:3 and 1:1 aspect ratios.
+
+flagcdn.io provides free, open-source SVG country flag icons for developers. All flags follow ISO 3166-1 alpha-2 country codes. Includes 270+ flags in both 4:3 and 1:1 aspect ratios. One line of CSS to get started. MIT licensed, based on lipis/flag-icons.
+
+## Quick Start
+
+Include the CSS:
+```html
+<link rel="stylesheet" href="https://flagcdn.io/css/flag-icons.min.css" />
+```
+
+Use a flag:
+```html
+<span class="fi fi-us"></span>        <!-- 4:3 ratio -->
+<span class="fi fi-us fis"></span>    <!-- 1:1 square -->
+```
+
+## Direct SVG URLs
+
+- 4:3: `https://flagcdn.io/flags/4x3/{code}.svg`
+- 1:1: `https://flagcdn.io/flags/1x1/{code}.svg`
+- Short: `https://flagcdn.io/{code}.svg` (4:3)
+
+Where `{code}` is the lowercase ISO 3166-1 alpha-2 code (e.g., `us`, `cn`, `gb`, `jp`).
+
+## Features
+
+- 270+ country and territory flags
+- SVG format (scalable, lightweight)
+- Two aspect ratios: 4:3 (default) and 1:1
+- CSS class-based (`fi fi-xx`) or direct SVG URL
+- Background image mode with `fib` class
+- Free CDN delivery via flagcdn.io, jsDelivr, or cdnjs
+- Multilingual interface (EN, ZH, JA, DE, RU, AR)
+- Interactive map view for each country
+- MIT license
+
+## Pages
+
+- Homepage: https://flagcdn.io/
+- Documentation: https://flagcdn.io/docs/
+- Changelog: https://flagcdn.io/changelog/
+- Feedback: https://flagcdn.io/issues/
+
+## Full documentation
+
+For complete API details, country code list, and advanced usage:
+- [llms-full.txt](https://flagcdn.io/llms-full.txt)
+
+## Contact
+
+- Email: support@flagcdn.io
+- GitHub: https://github.com/gentpan
+- Source: https://github.com/lipis/flag-icons

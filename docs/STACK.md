@@ -8,7 +8,7 @@
        → 静态文件（flags/、raster/、css/）
 ```
 
-仓库内**无 PHP / 无遗留 HTML 页面**。
+本文描述 Nuxt + Go 版本。当前线上域名使用 `apps/php/` 中的 PHP 站点，见 [PHP 部署说明](../apps/php/README.md)。
 
 ## 路由
 

@@ -1,0 +1,40 @@
+# Requires FrankenPHP (php_server), not the standalone Caddy binary.
+flagcdn.io, www.flagcdn.io {
+    root * /var/www/flagcdn.io
+    encode zstd gzip
+
+    @private path /.env* /.git/* /data/download-count.txt /data/issues.json /data/cache/* /api/*.bak*
+    handle @private {
+        respond 404
+    }
+
+    @static path /flags/* /assets/* /css/* /download/*
+    handle @static {
+        file_server
+    }
+
+    @flag_svg path_regexp flag ^/[a-z]{2}(-[a-z0-9]+)?\.svg$
+    handle @flag_svg {
+        rewrite * /flags/4x3{path}
+        file_server
+    }
+
+    @docs path /docs /docs/
+    handle @docs {
+        rewrite * /docs.php
+        php_server
+    }
+    @changelog path /changelog /changelog/
+    handle @changelog {
+        rewrite * /changelog.php
+        php_server
+    }
+    @issues path /issues /issues/
+    handle @issues {
+        rewrite * /issues.php
+        php_server
+    }
+    handle {
+        php_server
+    }
+}

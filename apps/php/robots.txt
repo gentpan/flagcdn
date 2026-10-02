@@ -1,0 +1,14 @@
+# flagcdn.io robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /data/
+Disallow: /scripts/
+Disallow: /chrome-extension/
+Disallow: /download/
+
+# Sitemaps
+Sitemap: https://flagcdn.io/sitemap.xml
+
+# AI / LLM discovery
+# See https://flagcdn.io/llms.txt for structured site info

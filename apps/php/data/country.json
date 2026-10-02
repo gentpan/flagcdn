@@ -1,0 +1,5015 @@
+[
+  {
+    "capital": "Kabul",
+    "code": "af",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/af.svg",
+    "flag_4x3": "flags/4x3/af.svg",
+    "iso": true,
+    "name": "Afghanistan",
+    "name_zh": "阿富汗",
+    "name_ja": "アフガニスタン",
+    "name_de": "Afghanistan",
+    "name_ru": "Афганистан",
+    "name_ar": "أفغانستان",
+    "latlng": [
+      33,
+      65
+    ],
+    "area": 652230
+  },
+  {
+    "capital": "Mariehamn",
+    "code": "ax",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/ax.svg",
+    "flag_4x3": "flags/4x3/ax.svg",
+    "iso": true,
+    "name": "Aland Islands",
+    "name_zh": "奥兰群岛",
+    "name_ja": "オーランド諸島",
+    "name_de": "Ålandinseln",
+    "name_ru": "Аландские о-ва",
+    "name_ar": "جزر آلاند",
+    "latlng": [
+      60.116667,
+      19.9
+    ],
+    "area": 1580
+  },
+  {
+    "capital": "Tirana",
+    "code": "al",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/al.svg",
+    "flag_4x3": "flags/4x3/al.svg",
+    "iso": true,
+    "name": "Albania",
+    "name_zh": "阿尔巴尼亚",
+    "name_ja": "アルバニア",
+    "name_de": "Albanien",
+    "name_ru": "Албания",
+    "name_ar": "ألبانيا",
+    "latlng": [
+      41,
+      20
+    ],
+    "area": 28748
+  },
+  {
+    "capital": "Algiers",
+    "code": "dz",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/dz.svg",
+    "flag_4x3": "flags/4x3/dz.svg",
+    "iso": true,
+    "name": "Algeria",
+    "name_zh": "阿尔及利亚",
+    "name_ja": "アルジェリア",
+    "name_de": "Algerien",
+    "name_ru": "Алжир",
+    "name_ar": "الجزائر",
+    "latlng": [
+      28,
+      3
+    ],
+    "area": 2381741
+  },
+  {
+    "capital": "Pago Pago",
+    "code": "as",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/as.svg",
+    "flag_4x3": "flags/4x3/as.svg",
+    "iso": true,
+    "name": "American Samoa",
+    "name_zh": "美属萨摩亚",
+    "name_ja": "米領サモア",
+    "name_de": "Amerikanisch-Samoa",
+    "name_ru": "Американское Самоа",
+    "name_ar": "ساموا الأمريكية",
+    "latlng": [
+      -14.33333333,
+      -170
+    ],
+    "area": 199
+  },
+  {
+    "capital": "Andorra la Vella",
+    "code": "ad",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/ad.svg",
+    "flag_4x3": "flags/4x3/ad.svg",
+    "iso": true,
+    "name": "Andorra",
+    "name_zh": "安道尔",
+    "name_ja": "アンドラ",
+    "name_de": "Andorra",
+    "name_ru": "Андорра",
+    "name_ar": "أندورا",
+    "latlng": [
+      42.5,
+      1.5
+    ],
+    "area": 468
+  },
+  {
+    "capital": "Luanda",
+    "code": "ao",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/ao.svg",
+    "flag_4x3": "flags/4x3/ao.svg",
+    "iso": true,
+    "name": "Angola",
+    "name_zh": "安哥拉",
+    "name_ja": "アンゴラ",
+    "name_de": "Angola",
+    "name_ru": "Ангола",
+    "name_ar": "أنغولا",
+    "latlng": [
+      -12.5,
+      18.5
+    ],
+    "area": 1246700
+  },
+  {
+    "capital": "The Valley",
+    "code": "ai",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/ai.svg",
+    "flag_4x3": "flags/4x3/ai.svg",
+    "iso": true,
+    "name": "Anguilla",
+    "name_zh": "安圭拉",
+    "name_ja": "アンギラ",
+    "name_de": "Anguilla",
+    "name_ru": "Ангилья",
+    "name_ar": "أنغويلا",
+    "latlng": [
+      18.25,
+      -63.16666666
+    ],
+    "area": 91
+  },
+  {
+    "code": "aq",
+    "flag_1x1": "flags/1x1/aq.svg",
+    "flag_4x3": "flags/4x3/aq.svg",
+    "iso": true,
+    "name": "Antarctica",
+    "name_zh": "南极洲",
+    "name_ja": "南極",
+    "name_de": "Antarktis",
+    "name_ru": "Антарктида",
+    "name_ar": "أنتاركتيكا",
+    "latlng": [
+      -90,
+      0
+    ],
+    "area": 14000000
+  },
+  {
+    "capital": "St. John's",
+    "code": "ag",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/ag.svg",
+    "flag_4x3": "flags/4x3/ag.svg",
+    "iso": true,
+    "name": "Antigua and Barbuda",
+    "name_zh": "安提瓜和巴布达",
+    "name_ja": "アンティグア・バーブーダ",
+    "name_de": "Antigua und Barbuda",
+    "name_ru": "Антигуа и Барбуда",
+    "name_ar": "أنتيغوا وبربودا",
+    "latlng": [
+      17.05,
+      -61.8
+    ],
+    "area": 442
+  },
+  {
+    "capital": "Buenos Aires",
+    "code": "ar",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/ar.svg",
+    "flag_4x3": "flags/4x3/ar.svg",
+    "iso": true,
+    "name": "Argentina",
+    "name_zh": "阿根廷",
+    "name_ja": "アルゼンチン",
+    "name_de": "Argentinien",
+    "name_ru": "Аргентина",
+    "name_ar": "الأرجنتين",
+    "latlng": [
+      -34,
+      -64
+    ],
+    "area": 2780400
+  },
+  {
+    "capital": "Yerevan",
+    "code": "am",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/am.svg",
+    "flag_4x3": "flags/4x3/am.svg",
+    "iso": true,
+    "name": "Armenia",
+    "name_zh": "亚美尼亚",
+    "name_ja": "アルメニア",
+    "name_de": "Armenien",
+    "name_ru": "Армения",
+    "name_ar": "أرمينيا",
+    "latlng": [
+      40,
+      45
+    ],
+    "area": 29743
+  },
+  {
+    "capital": "Oranjestad",
+    "code": "aw",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/aw.svg",
+    "flag_4x3": "flags/4x3/aw.svg",
+    "iso": true,
+    "name": "Aruba",
+    "name_zh": "阿鲁巴",
+    "name_ja": "アルバ",
+    "name_de": "Aruba",
+    "name_ru": "Аруба",
+    "name_ar": "أروبا",
+    "latlng": [
+      12.5,
+      -69.96666666
+    ],
+    "area": 180
+  },
+  {
+    "capital": "Georgetown",
+    "code": "sh-ac",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/sh-ac.svg",
+    "flag_4x3": "flags/4x3/sh-ac.svg",
+    "iso": false,
+    "name": "Ascension Island",
+    "name_zh": "阿森松岛",
+    "name_ja": "アセンション島",
+    "name_de": "Ascension",
+    "name_ru": "о-в Вознесения",
+    "name_ar": "جزيرة أسينشيون"
+  },
+  {
+    "code": "asean",
+    "flag_1x1": "flags/1x1/asean.svg",
+    "flag_4x3": "flags/4x3/asean.svg",
+    "iso": false,
+    "name": "Association of Southeast Asian Nations",
+    "name_zh": "东盟",
+    "name_ja": "東南アジア諸国連合",
+    "name_de": "ASEAN",
+    "name_ru": "АСЕАН",
+    "name_ar": "آسيان"
+  },
+  {
+    "capital": "Canberra",
+    "code": "au",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/au.svg",
+    "flag_4x3": "flags/4x3/au.svg",
+    "iso": true,
+    "name": "Australia",
+    "name_zh": "澳大利亚",
+    "name_ja": "オーストラリア",
+    "name_de": "Australien",
+    "name_ru": "Австралия",
+    "name_ar": "أستراليا",
+    "latlng": [
+      -27,
+      133
+    ],
+    "area": 7692024
+  },
+  {
+    "capital": "Vienna",
+    "code": "at",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/at.svg",
+    "flag_4x3": "flags/4x3/at.svg",
+    "iso": true,
+    "name": "Austria",
+    "name_zh": "奥地利",
+    "name_ja": "オーストリア",
+    "name_de": "Österreich",
+    "name_ru": "Австрия",
+    "name_ar": "النمسا",
+    "latlng": [
+      47.33333333,
+      13.33333333
+    ],
+    "area": 83871
+  },
+  {
+    "capital": "Baku",
+    "code": "az",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/az.svg",
+    "flag_4x3": "flags/4x3/az.svg",
+    "iso": true,
+    "name": "Azerbaijan",
+    "name_zh": "阿塞拜疆",
+    "name_ja": "アゼルバイジャン",
+    "name_de": "Aserbaidschan",
+    "name_ru": "Азербайджан",
+    "name_ar": "أذربيجان",
+    "latlng": [
+      40.5,
+      47.5
+    ],
+    "area": 86600
+  },
+  {
+    "capital": "Nassau",
+    "code": "bs",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/bs.svg",
+    "flag_4x3": "flags/4x3/bs.svg",
+    "iso": true,
+    "name": "Bahamas",
+    "name_zh": "巴哈马",
+    "name_ja": "バハマ",
+    "name_de": "Bahamas",
+    "name_ru": "Багамы",
+    "name_ar": "جزر البهاما",
+    "latlng": [
+      24.25,
+      -76
+    ],
+    "area": 13943
+  },
+  {
+    "capital": "Manama",
+    "code": "bh",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/bh.svg",
+    "flag_4x3": "flags/4x3/bh.svg",
+    "iso": true,
+    "name": "Bahrain",
+    "name_zh": "巴林",
+    "name_ja": "バーレーン",
+    "name_de": "Bahrain",
+    "name_ru": "Бахрейн",
+    "name_ar": "البحرين",
+    "latlng": [
+      26,
+      50.55
+    ],
+    "area": 765
+  },
+  {
+    "capital": "Dhaka",
+    "code": "bd",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/bd.svg",
+    "flag_4x3": "flags/4x3/bd.svg",
+    "iso": true,
+    "name": "Bangladesh",
+    "name_zh": "孟加拉国",
+    "name_ja": "バングラデシュ",
+    "name_de": "Bangladesch",
+    "name_ru": "Бангладеш",
+    "name_ar": "بنغلاديش",
+    "latlng": [
+      24,
+      90
+    ],
+    "area": 147570
+  },
+  {
+    "capital": "Bridgetown",
+    "code": "bb",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/bb.svg",
+    "flag_4x3": "flags/4x3/bb.svg",
+    "iso": true,
+    "name": "Barbados",
+    "name_zh": "巴巴多斯",
+    "name_ja": "バルバドス",
+    "name_de": "Barbados",
+    "name_ru": "Барбадос",
+    "name_ar": "بربادوس",
+    "latlng": [
+      13.16666666,
+      -59.53333333
+    ],
+    "area": 430
+  },
+  {
+    "code": "es-pv",
+    "flag_1x1": "flags/1x1/es-pv.svg",
+    "flag_4x3": "flags/4x3/es-pv.svg",
+    "iso": false,
+    "name": "Basque Country",
+    "name_zh": "巴斯克",
+    "name_ja": "バスク",
+    "name_de": "Baskenland",
+    "name_ru": "Страна Басков",
+    "name_ar": "إقليم الباسك"
+  },
+  {
+    "capital": "Minsk",
+    "code": "by",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/by.svg",
+    "flag_4x3": "flags/4x3/by.svg",
+    "iso": true,
+    "name": "Belarus",
+    "name_zh": "白俄罗斯",
+    "name_ja": "ベラルーシ",
+    "name_de": "Belarus",
+    "name_ru": "Беларусь",
+    "name_ar": "بيلاروس",
+    "latlng": [
+      53,
+      28
+    ],
+    "area": 207600
+  },
+  {
+    "capital": "Brussels",
+    "code": "be",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/be.svg",
+    "flag_4x3": "flags/4x3/be.svg",
+    "iso": true,
+    "name": "Belgium",
+    "name_zh": "比利时",
+    "name_ja": "ベルギー",
+    "name_de": "Belgien",
+    "name_ru": "Бельгия",
+    "name_ar": "بلجيكا",
+    "latlng": [
+      50.83333333,
+      4
+    ],
+    "area": 30528
+  },
+  {
+    "capital": "Belmopan",
+    "code": "bz",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/bz.svg",
+    "flag_4x3": "flags/4x3/bz.svg",
+    "iso": true,
+    "name": "Belize",
+    "name_zh": "伯利兹",
+    "name_ja": "ベリーズ",
+    "name_de": "Belize",
+    "name_ru": "Белиз",
+    "name_ar": "بليز",
+    "latlng": [
+      17.25,
+      -88.75
+    ],
+    "area": 22966
+  },
+  {
+    "capital": "Porto-Novo",
+    "code": "bj",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/bj.svg",
+    "flag_4x3": "flags/4x3/bj.svg",
+    "iso": true,
+    "name": "Benin",
+    "name_zh": "贝宁",
+    "name_ja": "ベナン",
+    "name_de": "Benin",
+    "name_ru": "Бенин",
+    "name_ar": "بنين",
+    "latlng": [
+      9.5,
+      2.25
+    ],
+    "area": 112622
+  },
+  {
+    "capital": "Hamilton",
+    "code": "bm",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/bm.svg",
+    "flag_4x3": "flags/4x3/bm.svg",
+    "iso": true,
+    "name": "Bermuda",
+    "name_zh": "百慕大",
+    "name_ja": "バミューダ",
+    "name_de": "Bermuda",
+    "name_ru": "Бермудские о-ва",
+    "name_ar": "برمودا",
+    "latlng": [
+      32.33333333,
+      -64.75
+    ],
+    "area": 54
+  },
+  {
+    "capital": "Thimphu",
+    "code": "bt",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/bt.svg",
+    "flag_4x3": "flags/4x3/bt.svg",
+    "iso": true,
+    "name": "Bhutan",
+    "name_zh": "不丹",
+    "name_ja": "ブータン",
+    "name_de": "Bhutan",
+    "name_ru": "Бутан",
+    "name_ar": "بوتان",
+    "latlng": [
+      27.5,
+      90.5
+    ],
+    "area": 38394
+  },
+  {
+    "capital": "Sucre",
+    "code": "bo",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/bo.svg",
+    "flag_4x3": "flags/4x3/bo.svg",
+    "iso": true,
+    "name": "Bolivia",
+    "name_zh": "玻利维亚",
+    "name_ja": "ボリビア",
+    "name_de": "Bolivien",
+    "name_ru": "Боливия",
+    "name_ar": "بوليفيا",
+    "latlng": [
+      -17,
+      -65
+    ],
+    "area": 1098581
+  },
+  {
+    "capital": "Kralendijk",
+    "code": "bq",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/bq.svg",
+    "flag_4x3": "flags/4x3/bq.svg",
+    "iso": true,
+    "name": "Bonaire, Sint Eustatius and Saba",
+    "name_zh": "荷兰加勒比区",
+    "name_ja": "オランダ領カリブ",
+    "name_de": "Karibische Niederlande",
+    "name_ru": "Бонэйр, Синт-Э��татиус и Саба",
+    "name_ar": "هولندا الكاريبية",
+    "latlng": [
+      12.18,
+      -68.25
+    ],
+    "area": 328
+  },
+  {
+    "capital": "Sarajevo",
+    "code": "ba",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/ba.svg",
+    "flag_4x3": "flags/4x3/ba.svg",
+    "iso": true,
+    "name": "Bosnia and Herzegovina",
+    "name_zh": "波黑",
+    "name_ja": "ボスニア・ヘルツェゴビナ",
+    "name_de": "Bosnien und Herzegowina",
+    "name_ru": "Босния и Герцеговина",
+    "name_ar": "البوسنة والهرسك",
+    "latlng": [
+      44,
+      18
+    ],
+    "area": 51209
+  },
+  {
+    "capital": "Gaborone",
+    "code": "bw",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/bw.svg",
+    "flag_4x3": "flags/4x3/bw.svg",
+    "iso": true,
+    "name": "Botswana",
+    "name_zh": "博茨瓦纳",
+    "name_ja": "ボツワナ",
+    "name_de": "Botsuana",
+    "name_ru": "Ботсвана",
+    "name_ar": "بوتسوانا",
+    "latlng": [
+      -22,
+      24
+    ],
+    "area": 582000
+  },
+  {
+    "code": "bv",
+    "flag_1x1": "flags/1x1/bv.svg",
+    "flag_4x3": "flags/4x3/bv.svg",
+    "iso": true,
+    "name": "Bouvet Island",
+    "name_zh": "布韦岛",
+    "name_ja": "ブーベ島",
+    "name_de": "Bouvetinsel",
+    "name_ru": "о-в Буве",
+    "name_ar": "جزيرة بوفيه",
+    "latlng": [
+      -54.43333333,
+      3.4
+    ],
+    "area": 49
+  },
+  {
+    "capital": "Brasília",
+    "code": "br",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/br.svg",
+    "flag_4x3": "flags/4x3/br.svg",
+    "iso": true,
+    "name": "Brazil",
+    "name_zh": "巴西",
+    "name_ja": "ブラジル",
+    "name_de": "Brasilien",
+    "name_ru": "Бразилия",
+    "name_ar": "البرازيل",
+    "latlng": [
+      -10,
+      -55
+    ],
+    "area": 8515767
+  },
+  {
+    "capital": "Diego Garcia",
+    "code": "io",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/io.svg",
+    "flag_4x3": "flags/4x3/io.svg",
+    "iso": true,
+    "name": "British Indian Ocean Territory",
+    "name_zh": "英属印度洋领地",
+    "name_ja": "英領インド洋地域",
+    "name_de": "Britisches Territorium im Indischen Ozean",
+    "name_ru": "Британская территория в Индийском океане",
+    "name_ar": "الإقليم البريطاني في المحيط الهندي",
+    "latlng": [
+      -6,
+      71.5
+    ],
+    "area": 60
+  },
+  {
+    "capital": "Bandar Seri Begawan",
+    "code": "bn",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/bn.svg",
+    "flag_4x3": "flags/4x3/bn.svg",
+    "iso": true,
+    "name": "Brunei Darussalam",
+    "name_zh": "文莱",
+    "name_ja": "ブルネイ",
+    "name_de": "Brunei Darussalam",
+    "name_ru": "Бруней",
+    "name_ar": "بروناي",
+    "latlng": [
+      4.5,
+      114.66666666
+    ],
+    "area": 5765
+  },
+  {
+    "capital": "Sofia",
+    "code": "bg",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/bg.svg",
+    "flag_4x3": "flags/4x3/bg.svg",
+    "iso": true,
+    "name": "Bulgaria",
+    "name_zh": "保加利亚",
+    "name_ja": "ブルガリア",
+    "name_de": "Bulgarien",
+    "name_ru": "Болгария",
+    "name_ar": "بلغاريا",
+    "latlng": [
+      43,
+      25
+    ],
+    "area": 110879
+  },
+  {
+    "capital": "Ouagadougou",
+    "code": "bf",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/bf.svg",
+    "flag_4x3": "flags/4x3/bf.svg",
+    "iso": true,
+    "name": "Burkina Faso",
+    "name_zh": "布基纳法索",
+    "name_ja": "ブルキナファソ",
+    "name_de": "Burkina Faso",
+    "name_ru": "Буркина-Фасо",
+    "name_ar": "بوركينا فاسو",
+    "latlng": [
+      13,
+      -2
+    ],
+    "area": 272967
+  },
+  {
+    "capital": "Bujumbura",
+    "code": "bi",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/bi.svg",
+    "flag_4x3": "flags/4x3/bi.svg",
+    "iso": true,
+    "name": "Burundi",
+    "name_zh": "布隆迪",
+    "name_ja": "ブルンジ",
+    "name_de": "Burundi",
+    "name_ru": "Бурунди",
+    "name_ar": "بوروندي",
+    "latlng": [
+      -3.5,
+      30
+    ],
+    "area": 27834
+  },
+  {
+    "capital": "Praia",
+    "code": "cv",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/cv.svg",
+    "flag_4x3": "flags/4x3/cv.svg",
+    "iso": true,
+    "name": "Cabo Verde",
+    "name_zh": "佛得角",
+    "name_ja": "カーボベルデ",
+    "name_de": "Cabo Verde",
+    "name_ru": "Кабо-Верде",
+    "name_ar": "الرأس الأخضر",
+    "latlng": [
+      16,
+      -24
+    ],
+    "area": 4033
+  },
+  {
+    "capital": "Phnom Penh",
+    "code": "kh",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/kh.svg",
+    "flag_4x3": "flags/4x3/kh.svg",
+    "iso": true,
+    "name": "Cambodia",
+    "name_zh": "柬埔寨",
+    "name_ja": "カンボジア",
+    "name_de": "Kambodscha",
+    "name_ru": "Камбоджа",
+    "name_ar": "كمبوديا",
+    "latlng": [
+      13,
+      105
+    ],
+    "area": 181035
+  },
+  {
+    "capital": "Yaoundé",
+    "code": "cm",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/cm.svg",
+    "flag_4x3": "flags/4x3/cm.svg",
+    "iso": true,
+    "name": "Cameroon",
+    "name_zh": "喀麦隆",
+    "name_ja": "カメルーン",
+    "name_de": "Kamerun",
+    "name_ru": "Камерун",
+    "name_ar": "الكاميرون",
+    "latlng": [
+      6,
+      12
+    ],
+    "area": 475442
+  },
+  {
+    "capital": "Ottawa",
+    "code": "ca",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/ca.svg",
+    "flag_4x3": "flags/4x3/ca.svg",
+    "iso": true,
+    "name": "Canada",
+    "name_zh": "加拿大",
+    "name_ja": "カナダ",
+    "name_de": "Kanada",
+    "name_ru": "Канада",
+    "name_ar": "كندا",
+    "latlng": [
+      60,
+      -95
+    ],
+    "area": 9984670
+  },
+  {
+    "code": "ic",
+    "flag_1x1": "flags/1x1/ic.svg",
+    "flag_4x3": "flags/4x3/ic.svg",
+    "iso": false,
+    "name": "Canary Islands",
+    "name_zh": "加那利群岛",
+    "name_ja": "カナリア諸島",
+    "name_de": "Kanarische Inseln",
+    "name_ru": "Канарские о-ва",
+    "name_ar": "جزر الكناري",
+    "latlng": [
+      28.2916,
+      -16.6291
+    ],
+    "area": 7447
+  },
+  {
+    "code": "es-ct",
+    "flag_1x1": "flags/1x1/es-ct.svg",
+    "flag_4x3": "flags/4x3/es-ct.svg",
+    "iso": false,
+    "name": "Catalonia",
+    "name_zh": "加泰罗尼亚",
+    "name_ja": "カタルーニャ",
+    "name_de": "Katalonien",
+    "name_ru": "Каталония",
+    "name_ar": "كاتالونيا"
+  },
+  {
+    "capital": "George Town",
+    "code": "ky",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/ky.svg",
+    "flag_4x3": "flags/4x3/ky.svg",
+    "iso": true,
+    "name": "Cayman Islands",
+    "name_zh": "开曼群岛",
+    "name_ja": "ケイマン諸島",
+    "name_de": "Kaimaninseln",
+    "name_ru": "о-ва Кайман",
+    "name_ar": "جزر كايمان",
+    "latlng": [
+      19.5,
+      -80.5
+    ],
+    "area": 264
+  },
+  {
+    "capital": "Bangui",
+    "code": "cf",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/cf.svg",
+    "flag_4x3": "flags/4x3/cf.svg",
+    "iso": true,
+    "name": "Central African Republic",
+    "name_zh": "中非",
+    "name_ja": "中央アフリカ共和国",
+    "name_de": "Zentralafrikanische Republik",
+    "name_ru": "Центрально-Африканская Республика",
+    "name_ar": "جمهورية أفريقيا الوسطى",
+    "latlng": [
+      7,
+      21
+    ],
+    "area": 622984
+  },
+  {
+    "code": "cefta",
+    "flag_1x1": "flags/1x1/cefta.svg",
+    "flag_4x3": "flags/4x3/cefta.svg",
+    "iso": false,
+    "name": "Central European Free Trade Agreement",
+    "name_zh": "中欧自贸区",
+    "name_ja": "中欧自由貿易協定",
+    "name_de": "CEFTA",
+    "name_ru": "ЦЕФТА",
+    "name_ar": "سيفتا"
+  },
+  {
+    "capital": "N'Djamena",
+    "code": "td",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/td.svg",
+    "flag_4x3": "flags/4x3/td.svg",
+    "iso": true,
+    "name": "Chad",
+    "name_zh": "乍得",
+    "name_ja": "チャド",
+    "name_de": "Tschad",
+    "name_ru": "Чад",
+    "name_ar": "تشاد",
+    "latlng": [
+      15,
+      19
+    ],
+    "area": 1284000
+  },
+  {
+    "capital": "Santiago",
+    "code": "cl",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/cl.svg",
+    "flag_4x3": "flags/4x3/cl.svg",
+    "iso": true,
+    "name": "Chile",
+    "name_zh": "智利",
+    "name_ja": "チリ",
+    "name_de": "Chile",
+    "name_ru": "Чили",
+    "name_ar": "تشيلي",
+    "latlng": [
+      -30,
+      -71
+    ],
+    "area": 756102
+  },
+  {
+    "capital": "Beijing",
+    "code": "cn",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/cn.svg",
+    "flag_4x3": "flags/4x3/cn.svg",
+    "iso": true,
+    "name": "China",
+    "name_zh": "中国",
+    "name_ja": "中国",
+    "name_de": "China",
+    "name_ru": "Китай",
+    "name_ar": "الصين",
+    "latlng": [
+      35,
+      105
+    ],
+    "area": 9706961
+  },
+  {
+    "capital": "Flying Fish Cove",
+    "code": "cx",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/cx.svg",
+    "flag_4x3": "flags/4x3/cx.svg",
+    "iso": true,
+    "name": "Christmas Island",
+    "name_zh": "圣诞岛",
+    "name_ja": "クリスマス島",
+    "name_de": "Weihnachtsinsel",
+    "name_ru": "о-в Рождества",
+    "name_ar": "جزيرة كريسماس",
+    "latlng": [
+      -10.5,
+      105.66666666
+    ],
+    "area": 135
+  },
+  {
+    "code": "cp",
+    "flag_1x1": "flags/1x1/cp.svg",
+    "flag_4x3": "flags/4x3/cp.svg",
+    "iso": false,
+    "name": "Clipperton Island",
+    "name_zh": "克利珀顿岛",
+    "name_ja": "クリッパートン島",
+    "name_de": "Clipperton-Insel",
+    "name_ru": "о-в Клиппертон",
+    "name_ar": "جزيرة كليبيرتون",
+    "latlng": [
+      10.3,
+      -109.2167
+    ],
+    "area": 6
+  },
+  {
+    "capital": "West Island",
+    "code": "cc",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/cc.svg",
+    "flag_4x3": "flags/4x3/cc.svg",
+    "iso": true,
+    "name": "Cocos (Keeling) Islands",
+    "name_zh": "科科斯群岛",
+    "name_ja": "ココス(キーリング)諸島",
+    "name_de": "Kokosinseln",
+    "name_ru": "Кокосовые о-ва",
+    "name_ar": "جزر كوكوس (كيلينغ)",
+    "latlng": [
+      -12.5,
+      96.83333333
+    ],
+    "area": 14
+  },
+  {
+    "capital": "Bogotá",
+    "code": "co",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/co.svg",
+    "flag_4x3": "flags/4x3/co.svg",
+    "iso": true,
+    "name": "Colombia",
+    "name_zh": "哥伦比亚",
+    "name_ja": "コロンビア",
+    "name_de": "Kolumbien",
+    "name_ru": "Колумбия",
+    "name_ar": "كولومبيا",
+    "latlng": [
+      4,
+      -72
+    ],
+    "area": 1141748
+  },
+  {
+    "capital": "Moroni",
+    "code": "km",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/km.svg",
+    "flag_4x3": "flags/4x3/km.svg",
+    "iso": true,
+    "name": "Comoros",
+    "name_zh": "科摩罗",
+    "name_ja": "コモロ",
+    "name_de": "Komoren",
+    "name_ru": "Коморы",
+    "name_ar": "جزر القمر",
+    "latlng": [
+      -12.16666666,
+      44.25
+    ],
+    "area": 1862
+  },
+  {
+    "capital": "Avarua",
+    "code": "ck",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/ck.svg",
+    "flag_4x3": "flags/4x3/ck.svg",
+    "iso": true,
+    "name": "Cook Islands",
+    "name_zh": "库克群岛",
+    "name_ja": "クック諸島",
+    "name_de": "Cookinseln",
+    "name_ru": "о-ва Кука",
+    "name_ar": "جزر كوك",
+    "latlng": [
+      -21.23333333,
+      -159.76666666
+    ],
+    "area": 236
+  },
+  {
+    "capital": "San José",
+    "code": "cr",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/cr.svg",
+    "flag_4x3": "flags/4x3/cr.svg",
+    "iso": true,
+    "name": "Costa Rica",
+    "name_zh": "哥斯达黎加",
+    "name_ja": "コスタリカ",
+    "name_de": "Costa Rica",
+    "name_ru": "Коста-Рика",
+    "name_ar": "كوستاريكا",
+    "latlng": [
+      10,
+      -84
+    ],
+    "area": 51100
+  },
+  {
+    "capital": "Zagreb",
+    "code": "hr",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/hr.svg",
+    "flag_4x3": "flags/4x3/hr.svg",
+    "iso": true,
+    "name": "Croatia",
+    "name_zh": "克罗地亚",
+    "name_ja": "クロアチア",
+    "name_de": "Kroatien",
+    "name_ru": "Хорватия",
+    "name_ar": "كرواتيا",
+    "latlng": [
+      45.16666666,
+      15.5
+    ],
+    "area": 56594
+  },
+  {
+    "capital": "Havana",
+    "code": "cu",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/cu.svg",
+    "flag_4x3": "flags/4x3/cu.svg",
+    "iso": true,
+    "name": "Cuba",
+    "name_zh": "古巴",
+    "name_ja": "キューバ",
+    "name_de": "Kuba",
+    "name_ru": "Куба",
+    "name_ar": "كوبا",
+    "latlng": [
+      21.5,
+      -80
+    ],
+    "area": 109884
+  },
+  {
+    "capital": "Willemstad",
+    "code": "cw",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/cw.svg",
+    "flag_4x3": "flags/4x3/cw.svg",
+    "iso": true,
+    "name": "Curaçao",
+    "name_zh": "库拉索",
+    "name_ja": "キュラソー",
+    "name_de": "Curaçao",
+    "name_ru": "Кюрасао",
+    "name_ar": "كوراساو",
+    "latlng": [
+      12.116667,
+      -68.933333
+    ],
+    "area": 444
+  },
+  {
+    "capital": "Nicosia",
+    "code": "cy",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/cy.svg",
+    "flag_4x3": "flags/4x3/cy.svg",
+    "iso": true,
+    "name": "Cyprus",
+    "name_zh": "塞浦路斯",
+    "name_ja": "キプロス",
+    "name_de": "Zypern",
+    "name_ru": "Кипр",
+    "name_ar": "قبرص",
+    "latlng": [
+      35,
+      33
+    ],
+    "area": 9251
+  },
+  {
+    "capital": "Prague",
+    "code": "cz",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/cz.svg",
+    "flag_4x3": "flags/4x3/cz.svg",
+    "iso": true,
+    "name": "Czech Republic",
+    "name_zh": "捷克",
+    "name_ja": "チェコ",
+    "name_de": "Tschechien",
+    "name_ru": "Чехия",
+    "name_ar": "التشيك",
+    "latlng": [
+      49.75,
+      15.5
+    ],
+    "area": 78865
+  },
+  {
+    "capital": "Yamoussoukro",
+    "code": "ci",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/ci.svg",
+    "flag_4x3": "flags/4x3/ci.svg",
+    "iso": true,
+    "name": "Côte d'Ivoire",
+    "name_zh": "科特迪瓦",
+    "name_ja": "コートジボワール",
+    "name_de": "Côte d’Ivoire",
+    "name_ru": "Кот-д’Ивуар",
+    "name_ar": "ساحل العاج",
+    "latlng": [
+      8,
+      -5
+    ],
+    "area": 322463
+  },
+  {
+    "capital": "Kinshasa",
+    "code": "cd",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/cd.svg",
+    "flag_4x3": "flags/4x3/cd.svg",
+    "iso": true,
+    "name": "Democratic Republic of the Congo",
+    "name_zh": "刚果（金）",
+    "name_ja": "コンゴ民主共和国(キンシャサ)",
+    "name_de": "Kongo-Kinshasa",
+    "name_ru": "Конго - Киншаса",
+    "name_ar": "الكونغو - كينشاسا",
+    "latlng": [
+      0,
+      25
+    ],
+    "area": 2344858
+  },
+  {
+    "capital": "Copenhagen",
+    "code": "dk",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/dk.svg",
+    "flag_4x3": "flags/4x3/dk.svg",
+    "iso": true,
+    "name": "Denmark",
+    "name_zh": "丹麦",
+    "name_ja": "デンマーク",
+    "name_de": "Dänemark",
+    "name_ru": "Дания",
+    "name_ar": "الدانمرك",
+    "latlng": [
+      56,
+      10
+    ],
+    "area": 43094
+  },
+  {
+    "code": "dg",
+    "flag_1x1": "flags/1x1/dg.svg",
+    "flag_4x3": "flags/4x3/dg.svg",
+    "iso": false,
+    "name": "Diego Garcia",
+    "name_zh": "迪戈加西亚",
+    "name_ja": "ディエゴガルシア島",
+    "name_de": "Diego Garcia",
+    "name_ru": "Диего-Гарсия",
+    "name_ar": "دييغو غارسيا",
+    "latlng": [
+      -7.3133,
+      72.4111
+    ],
+    "area": 30
+  },
+  {
+    "capital": "Djibouti",
+    "code": "dj",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/dj.svg",
+    "flag_4x3": "flags/4x3/dj.svg",
+    "iso": true,
+    "name": "Djibouti",
+    "name_zh": "吉布提",
+    "name_ja": "ジブチ",
+    "name_de": "Dschibuti",
+    "name_ru": "Джибути",
+    "name_ar": "جيبوتي",
+    "latlng": [
+      11.5,
+      43
+    ],
+    "area": 23200
+  },
+  {
+    "capital": "Roseau",
+    "code": "dm",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/dm.svg",
+    "flag_4x3": "flags/4x3/dm.svg",
+    "iso": true,
+    "name": "Dominica",
+    "name_zh": "多米尼克",
+    "name_ja": "ドミニカ国",
+    "name_de": "Dominica",
+    "name_ru": "Доминика",
+    "name_ar": "دومينيكا",
+    "latlng": [
+      15.41666666,
+      -61.33333333
+    ],
+    "area": 751
+  },
+  {
+    "capital": "Santo Domingo",
+    "code": "do",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/do.svg",
+    "flag_4x3": "flags/4x3/do.svg",
+    "iso": true,
+    "name": "Dominican Republic",
+    "name_zh": "多米尼加",
+    "name_ja": "ドミニカ共和国",
+    "name_de": "Dominikanische Republik",
+    "name_ru": "Доминиканская Республика",
+    "name_ar": "جمهورية الدومينيكان",
+    "latlng": [
+      19,
+      -70.66666666
+    ],
+    "area": 48671
+  },
+  {
+    "code": "eac",
+    "flag_1x1": "flags/1x1/eac.svg",
+    "flag_4x3": "flags/4x3/eac.svg",
+    "iso": false,
+    "name": "East African Community",
+    "name_zh": "东非共同体",
+    "name_ja": "東アフリカ共同体",
+    "name_de": "Ostafrikanische Gemeinschaft",
+    "name_ru": "Восточноафриканское сообщество",
+    "name_ar": "الجماعة الشرق أفريقية"
+  },
+  {
+    "capital": "Quito",
+    "code": "ec",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/ec.svg",
+    "flag_4x3": "flags/4x3/ec.svg",
+    "iso": true,
+    "name": "Ecuador",
+    "name_zh": "厄瓜多尔",
+    "name_ja": "エクアドル",
+    "name_de": "Ecuador",
+    "name_ru": "Эквадор",
+    "name_ar": "الإكوادور",
+    "latlng": [
+      -2,
+      -77.5
+    ],
+    "area": 276841
+  },
+  {
+    "capital": "Cairo",
+    "code": "eg",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/eg.svg",
+    "flag_4x3": "flags/4x3/eg.svg",
+    "iso": true,
+    "name": "Egypt",
+    "name_zh": "埃及",
+    "name_ja": "エジプト",
+    "name_de": "Ägypten",
+    "name_ru": "Египет",
+    "name_ar": "مصر",
+    "latlng": [
+      27,
+      30
+    ],
+    "area": 1002450
+  },
+  {
+    "capital": "San Salvador",
+    "code": "sv",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/sv.svg",
+    "flag_4x3": "flags/4x3/sv.svg",
+    "iso": true,
+    "name": "El Salvador",
+    "name_zh": "萨尔瓦多",
+    "name_ja": "エルサルバドル",
+    "name_de": "El Salvador",
+    "name_ru": "Сальвадор",
+    "name_ar": "السلفادور",
+    "latlng": [
+      13.83333333,
+      -88.91666666
+    ],
+    "area": 21041
+  },
+  {
+    "capital": "London",
+    "code": "gb-eng",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/gb-eng.svg",
+    "flag_4x3": "flags/4x3/gb-eng.svg",
+    "iso": false,
+    "name": "England",
+    "name_zh": "英格兰",
+    "name_ja": "イングランド",
+    "name_de": "England",
+    "name_ru": "Англия",
+    "name_ar": "إنجلترا"
+  },
+  {
+    "capital": "Malabo",
+    "code": "gq",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/gq.svg",
+    "flag_4x3": "flags/4x3/gq.svg",
+    "iso": true,
+    "name": "Equatorial Guinea",
+    "name_zh": "赤道几内亚",
+    "name_ja": "赤道ギニア",
+    "name_de": "Äquatorialguinea",
+    "name_ru": "Экваториальная Гвинея",
+    "name_ar": "غينيا الاستوائية",
+    "latlng": [
+      2,
+      10
+    ],
+    "area": 28051
+  },
+  {
+    "capital": "Asmara",
+    "code": "er",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/er.svg",
+    "flag_4x3": "flags/4x3/er.svg",
+    "iso": true,
+    "name": "Eritrea",
+    "name_zh": "厄立特里亚",
+    "name_ja": "エリトリア",
+    "name_de": "Eritrea",
+    "name_ru": "Эритрея",
+    "name_ar": "إريتريا",
+    "latlng": [
+      15,
+      39
+    ],
+    "area": 117600
+  },
+  {
+    "capital": "Tallinn",
+    "code": "ee",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/ee.svg",
+    "flag_4x3": "flags/4x3/ee.svg",
+    "iso": true,
+    "name": "Estonia",
+    "name_zh": "爱沙尼亚",
+    "name_ja": "エストニア",
+    "name_de": "Estland",
+    "name_ru": "Эстония",
+    "name_ar": "إستونيا",
+    "latlng": [
+      59,
+      26
+    ],
+    "area": 45227
+  },
+  {
+    "capital": "Lobamba, Mbabane",
+    "code": "sz",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/sz.svg",
+    "flag_4x3": "flags/4x3/sz.svg",
+    "iso": true,
+    "name": "Eswatini",
+    "name_zh": "斯威士兰",
+    "name_ja": "エスワティニ",
+    "name_de": "Eswatini",
+    "name_ru": "Эсватини",
+    "name_ar": "إسواتيني",
+    "latlng": [
+      -26.5,
+      31.5
+    ],
+    "area": 17364
+  },
+  {
+    "capital": "Addis Ababa",
+    "code": "et",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/et.svg",
+    "flag_4x3": "flags/4x3/et.svg",
+    "iso": true,
+    "name": "Ethiopia",
+    "name_zh": "埃塞俄比亚",
+    "name_ja": "エチオピア",
+    "name_de": "Äthiopien",
+    "name_ru": "Эфиопия",
+    "name_ar": "إثيوبيا",
+    "latlng": [
+      8,
+      38
+    ],
+    "area": 1104300
+  },
+  {
+    "code": "eu",
+    "flag_1x1": "flags/1x1/eu.svg",
+    "flag_4x3": "flags/4x3/eu.svg",
+    "iso": false,
+    "name": "Europe",
+    "name_zh": "欧盟",
+    "name_ja": "欧州連合",
+    "name_de": "Europäische Union",
+    "name_ru": "Европейский союз",
+    "name_ar": "الاتحاد الأوروبي"
+  },
+  {
+    "capital": "Stanley",
+    "code": "fk",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/fk.svg",
+    "flag_4x3": "flags/4x3/fk.svg",
+    "iso": true,
+    "name": "Falkland Islands",
+    "name_zh": "福克兰群岛",
+    "name_ja": "フォークランド諸島",
+    "name_de": "Falklandinseln",
+    "name_ru": "Фолклендские о-ва",
+    "name_ar": "جزر فوكلاند",
+    "latlng": [
+      -51.75,
+      -59
+    ],
+    "area": 12173
+  },
+  {
+    "capital": "Tórshavn",
+    "code": "fo",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/fo.svg",
+    "flag_4x3": "flags/4x3/fo.svg",
+    "iso": true,
+    "name": "Faroe Islands",
+    "name_zh": "法罗群岛",
+    "name_ja": "フェロー諸島",
+    "name_de": "Färöer",
+    "name_ru": "Фарерские о-ва",
+    "name_ar": "جزر فارو",
+    "latlng": [
+      62,
+      -7
+    ],
+    "area": 1393
+  },
+  {
+    "capital": "Palikir",
+    "code": "fm",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/fm.svg",
+    "flag_4x3": "flags/4x3/fm.svg",
+    "iso": true,
+    "name": "Federated States of Micronesia",
+    "name_zh": "密克罗尼西亚",
+    "name_ja": "ミクロネシア連邦",
+    "name_de": "Mikronesien",
+    "name_ru": "Федеративные Штаты Микронезии",
+    "name_ar": "ميكرونيزيا",
+    "latlng": [
+      6.91666666,
+      158.25
+    ],
+    "area": 702
+  },
+  {
+    "capital": "Suva",
+    "code": "fj",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/fj.svg",
+    "flag_4x3": "flags/4x3/fj.svg",
+    "iso": true,
+    "name": "Fiji",
+    "name_zh": "斐济",
+    "name_ja": "フィジー",
+    "name_de": "Fidschi",
+    "name_ru": "Фиджи",
+    "name_ar": "فيجي",
+    "latlng": [
+      -18,
+      175
+    ],
+    "area": 18272
+  },
+  {
+    "capital": "Helsinki",
+    "code": "fi",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/fi.svg",
+    "flag_4x3": "flags/4x3/fi.svg",
+    "iso": true,
+    "name": "Finland",
+    "name_zh": "芬兰",
+    "name_ja": "フィンランド",
+    "name_de": "Finnland",
+    "name_ru": "Финляндия",
+    "name_ar": "فنلندا",
+    "latlng": [
+      64,
+      26
+    ],
+    "area": 338424
+  },
+  {
+    "capital": "Paris",
+    "code": "fr",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/fr.svg",
+    "flag_4x3": "flags/4x3/fr.svg",
+    "iso": true,
+    "name": "France",
+    "name_zh": "法国",
+    "name_ja": "フランス",
+    "name_de": "Frankreich",
+    "name_ru": "Франция",
+    "name_ar": "فرنسا",
+    "latlng": [
+      46,
+      2
+    ],
+    "area": 551695
+  },
+  {
+    "capital": "Cayenne",
+    "code": "gf",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/gf.svg",
+    "flag_4x3": "flags/4x3/gf.svg",
+    "iso": true,
+    "name": "French Guiana",
+    "name_zh": "法属圭亚那",
+    "name_ja": "仏領ギアナ",
+    "name_de": "Französisch-Guayana",
+    "name_ru": "Французская Гвиана",
+    "name_ar": "غويانا الفرنسية",
+    "latlng": [
+      4,
+      -53
+    ],
+    "area": 83534
+  },
+  {
+    "capital": "Papeete",
+    "code": "pf",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/pf.svg",
+    "flag_4x3": "flags/4x3/pf.svg",
+    "iso": true,
+    "name": "French Polynesia",
+    "name_zh": "法属波利尼西亚",
+    "name_ja": "仏領ポリネシア",
+    "name_de": "Französisch-Polynesien",
+    "name_ru": "Французская Полинезия",
+    "name_ar": "بولينيزيا الفرنسية",
+    "latlng": [
+      -15,
+      -140
+    ],
+    "area": 4167
+  },
+  {
+    "capital": "Saint-Pierre, Réunion",
+    "code": "tf",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/tf.svg",
+    "flag_4x3": "flags/4x3/tf.svg",
+    "iso": true,
+    "name": "French Southern Territories",
+    "name_zh": "法属南部领地",
+    "name_ja": "仏領極南諸島",
+    "name_de": "Französische Süd- und Antarktisgebiete",
+    "name_ru": "Французские Южные территории",
+    "name_ar": "الأقاليم الجنوبية الفرنسية",
+    "latlng": [
+      -49.25,
+      69.167
+    ],
+    "area": 7747
+  },
+  {
+    "capital": "Libreville",
+    "code": "ga",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/ga.svg",
+    "flag_4x3": "flags/4x3/ga.svg",
+    "iso": true,
+    "name": "Gabon",
+    "name_zh": "加蓬",
+    "name_ja": "ガボン",
+    "name_de": "Gabun",
+    "name_ru": "Габон",
+    "name_ar": "الغابون",
+    "latlng": [
+      -1,
+      11.75
+    ],
+    "area": 267668
+  },
+  {
+    "code": "es-ga",
+    "flag_1x1": "flags/1x1/es-ga.svg",
+    "flag_4x3": "flags/4x3/es-ga.svg",
+    "iso": false,
+    "name": "Galicia",
+    "name_zh": "加利西亚",
+    "name_ja": "ガリシア",
+    "name_de": "Galizien",
+    "name_ru": "Галисия",
+    "name_ar": "غاليسيا"
+  },
+  {
+    "capital": "Banjul",
+    "code": "gm",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/gm.svg",
+    "flag_4x3": "flags/4x3/gm.svg",
+    "iso": true,
+    "name": "Gambia",
+    "name_zh": "冈比亚",
+    "name_ja": "ガンビア",
+    "name_de": "Gambia",
+    "name_ru": "Гамбия",
+    "name_ar": "غامبيا",
+    "latlng": [
+      13.46666666,
+      -16.56666666
+    ],
+    "area": 10689
+  },
+  {
+    "capital": "Tbilisi",
+    "code": "ge",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/ge.svg",
+    "flag_4x3": "flags/4x3/ge.svg",
+    "iso": true,
+    "name": "Georgia",
+    "name_zh": "格鲁吉亚",
+    "name_ja": "ジョージア",
+    "name_de": "Georgien",
+    "name_ru": "Грузия",
+    "name_ar": "جورجيا",
+    "latlng": [
+      42,
+      43.5
+    ],
+    "area": 69700
+  },
+  {
+    "capital": "Berlin",
+    "code": "de",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/de.svg",
+    "flag_4x3": "flags/4x3/de.svg",
+    "iso": true,
+    "name": "Germany",
+    "name_zh": "德国",
+    "name_ja": "ドイツ",
+    "name_de": "Deutschland",
+    "name_ru": "Германия",
+    "name_ar": "ألمانيا",
+    "latlng": [
+      51,
+      9
+    ],
+    "area": 357114
+  },
+  {
+    "capital": "Accra",
+    "code": "gh",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/gh.svg",
+    "flag_4x3": "flags/4x3/gh.svg",
+    "iso": true,
+    "name": "Ghana",
+    "name_zh": "加纳",
+    "name_ja": "ガーナ",
+    "name_de": "Ghana",
+    "name_ru": "Гана",
+    "name_ar": "غانا",
+    "latlng": [
+      8,
+      -2
+    ],
+    "area": 238533
+  },
+  {
+    "capital": "Gibraltar",
+    "code": "gi",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/gi.svg",
+    "flag_4x3": "flags/4x3/gi.svg",
+    "iso": true,
+    "name": "Gibraltar",
+    "name_zh": "直布罗陀",
+    "name_ja": "ジブラルタル",
+    "name_de": "Gibraltar",
+    "name_ru": "Гибралтар",
+    "name_ar": "جبل طارق",
+    "latlng": [
+      36.13333333,
+      -5.35
+    ],
+    "area": 6
+  },
+  {
+    "capital": "Athens",
+    "code": "gr",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/gr.svg",
+    "flag_4x3": "flags/4x3/gr.svg",
+    "iso": true,
+    "name": "Greece",
+    "name_zh": "希腊",
+    "name_ja": "ギリシャ",
+    "name_de": "Griechenland",
+    "name_ru": "Греция",
+    "name_ar": "اليونان",
+    "latlng": [
+      39,
+      22
+    ],
+    "area": 131990
+  },
+  {
+    "capital": "Nuuk",
+    "code": "gl",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/gl.svg",
+    "flag_4x3": "flags/4x3/gl.svg",
+    "iso": true,
+    "name": "Greenland",
+    "name_zh": "格陵兰",
+    "name_ja": "グリーンランド",
+    "name_de": "Grönland",
+    "name_ru": "Гренландия",
+    "name_ar": "غرينلاند",
+    "latlng": [
+      72,
+      -40
+    ],
+    "area": 2166086
+  },
+  {
+    "capital": "St. George's",
+    "code": "gd",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/gd.svg",
+    "flag_4x3": "flags/4x3/gd.svg",
+    "iso": true,
+    "name": "Grenada",
+    "name_zh": "格林纳达",
+    "name_ja": "グレナダ",
+    "name_de": "Grenada",
+    "name_ru": "Гренада",
+    "name_ar": "غرينادا",
+    "latlng": [
+      12.11666666,
+      -61.66666666
+    ],
+    "area": 344
+  },
+  {
+    "capital": "Basse-Terre",
+    "code": "gp",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/gp.svg",
+    "flag_4x3": "flags/4x3/gp.svg",
+    "iso": true,
+    "name": "Guadeloupe",
+    "name_zh": "瓜德罗普",
+    "name_ja": "グアドループ",
+    "name_de": "Guadeloupe",
+    "name_ru": "Гваделупа",
+    "name_ar": "غوادلوب",
+    "latlng": [
+      16.25,
+      -61.583333
+    ],
+    "area": 1628
+  },
+  {
+    "capital": "Hagåtña",
+    "code": "gu",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/gu.svg",
+    "flag_4x3": "flags/4x3/gu.svg",
+    "iso": true,
+    "name": "Guam",
+    "name_zh": "关岛",
+    "name_ja": "グアム",
+    "name_de": "Guam",
+    "name_ru": "Гуам",
+    "name_ar": "غوام",
+    "latlng": [
+      13.46666666,
+      144.78333333
+    ],
+    "area": 549
+  },
+  {
+    "capital": "Guatemala City",
+    "code": "gt",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/gt.svg",
+    "flag_4x3": "flags/4x3/gt.svg",
+    "iso": true,
+    "name": "Guatemala",
+    "name_zh": "危地马拉",
+    "name_ja": "グアテマラ",
+    "name_de": "Guatemala",
+    "name_ru": "Гватемала",
+    "name_ar": "غواتيمالا",
+    "latlng": [
+      15.5,
+      -90.25
+    ],
+    "area": 108889
+  },
+  {
+    "capital": "Saint Peter Port",
+    "code": "gg",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/gg.svg",
+    "flag_4x3": "flags/4x3/gg.svg",
+    "iso": true,
+    "name": "Guernsey",
+    "name_zh": "根西岛",
+    "name_ja": "ガーンジー",
+    "name_de": "Guernsey",
+    "name_ru": "Гернси",
+    "name_ar": "غيرنزي",
+    "latlng": [
+      49.46666666,
+      -2.58333333
+    ],
+    "area": 78
+  },
+  {
+    "capital": "Conakry",
+    "code": "gn",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/gn.svg",
+    "flag_4x3": "flags/4x3/gn.svg",
+    "iso": true,
+    "name": "Guinea",
+    "name_zh": "几内亚",
+    "name_ja": "ギニア",
+    "name_de": "Guinea",
+    "name_ru": "Гвинея",
+    "name_ar": "غينيا",
+    "latlng": [
+      11,
+      -10
+    ],
+    "area": 245857
+  },
+  {
+    "capital": "Bissau",
+    "code": "gw",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/gw.svg",
+    "flag_4x3": "flags/4x3/gw.svg",
+    "iso": true,
+    "name": "Guinea-Bissau",
+    "name_zh": "几内亚比绍",
+    "name_ja": "ギニアビサウ",
+    "name_de": "Guinea-Bissau",
+    "name_ru": "Гвинея-Бисау",
+    "name_ar": "غينيا بيساو",
+    "latlng": [
+      12,
+      -15
+    ],
+    "area": 36125
+  },
+  {
+    "capital": "Georgetown",
+    "code": "gy",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/gy.svg",
+    "flag_4x3": "flags/4x3/gy.svg",
+    "iso": true,
+    "name": "Guyana",
+    "name_zh": "圭亚那",
+    "name_ja": "ガイアナ",
+    "name_de": "Guyana",
+    "name_ru": "Гайана",
+    "name_ar": "غيانا",
+    "latlng": [
+      5,
+      -59
+    ],
+    "area": 214969
+  },
+  {
+    "capital": "Port-au-Prince",
+    "code": "ht",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/ht.svg",
+    "flag_4x3": "flags/4x3/ht.svg",
+    "iso": true,
+    "name": "Haiti",
+    "name_zh": "海地",
+    "name_ja": "ハイチ",
+    "name_de": "Haiti",
+    "name_ru": "Гаити",
+    "name_ar": "هايتي",
+    "latlng": [
+      19,
+      -72.41666666
+    ],
+    "area": 27750
+  },
+  {
+    "code": "hm",
+    "flag_1x1": "flags/1x1/hm.svg",
+    "flag_4x3": "flags/4x3/hm.svg",
+    "iso": true,
+    "name": "Heard Island and McDonald Islands",
+    "name_zh": "赫德岛和麦克唐纳群岛",
+    "name_ja": "ハード島・マクドナルド諸島",
+    "name_de": "Heard und McDonaldinseln",
+    "name_ru": "о-ва Херд и Макдональд",
+    "name_ar": "جزيرة هيرد وجزر ماكدونالد",
+    "latlng": [
+      -53.1,
+      72.51666666
+    ],
+    "area": 412
+  },
+  {
+    "capital": "Vatican City",
+    "code": "va",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/va.svg",
+    "flag_4x3": "flags/4x3/va.svg",
+    "iso": true,
+    "name": "Holy See",
+    "name_zh": "梵蒂冈",
+    "name_ja": "バチカン市国",
+    "name_de": "Vatikanstadt",
+    "name_ru": "Ватикан",
+    "name_ar": "الفاتيكان",
+    "latlng": [
+      41.9,
+      12.45
+    ],
+    "area": 0.44
+  },
+  {
+    "capital": "Tegucigalpa",
+    "code": "hn",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/hn.svg",
+    "flag_4x3": "flags/4x3/hn.svg",
+    "iso": true,
+    "name": "Honduras",
+    "name_zh": "洪都拉斯",
+    "name_ja": "ホンジュラス",
+    "name_de": "Honduras",
+    "name_ru": "Гондурас",
+    "name_ar": "هندوراس",
+    "latlng": [
+      15,
+      -86.5
+    ],
+    "area": 112492
+  },
+  {
+    "capital": "Hong Kong",
+    "code": "hk",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/hk.svg",
+    "flag_4x3": "flags/4x3/hk.svg",
+    "iso": true,
+    "name": "Hong Kong",
+    "name_zh": "香港",
+    "name_ja": "中華人民共和国香港特別行政区",
+    "name_de": "Sonderverwaltungsregion Hongkong",
+    "name_ru": "Гонконг (САР)",
+    "name_ar": "هونغ كونغ الصينية (منطقة إدارية خاصة)",
+    "latlng": [
+      22.267,
+      114.188
+    ],
+    "area": 1104
+  },
+  {
+    "capital": "Budapest",
+    "code": "hu",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/hu.svg",
+    "flag_4x3": "flags/4x3/hu.svg",
+    "iso": true,
+    "name": "Hungary",
+    "name_zh": "匈牙利",
+    "name_ja": "ハンガリー",
+    "name_de": "Ungarn",
+    "name_ru": "Венгрия",
+    "name_ar": "هنغاريا",
+    "latlng": [
+      47,
+      20
+    ],
+    "area": 93028
+  },
+  {
+    "capital": "Reykjavik",
+    "code": "is",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/is.svg",
+    "flag_4x3": "flags/4x3/is.svg",
+    "iso": true,
+    "name": "Iceland",
+    "name_zh": "冰岛",
+    "name_ja": "アイスランド",
+    "name_de": "Island",
+    "name_ru": "Исландия",
+    "name_ar": "آيسلندا",
+    "latlng": [
+      65,
+      -18
+    ],
+    "area": 103000
+  },
+  {
+    "capital": "New Delhi",
+    "code": "in",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/in.svg",
+    "flag_4x3": "flags/4x3/in.svg",
+    "iso": true,
+    "name": "India",
+    "name_zh": "印度",
+    "name_ja": "インド",
+    "name_de": "Indien",
+    "name_ru": "Индия",
+    "name_ar": "الهند",
+    "latlng": [
+      20,
+      77
+    ],
+    "area": 3287590
+  },
+  {
+    "capital": "Jakarta",
+    "code": "id",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/id.svg",
+    "flag_4x3": "flags/4x3/id.svg",
+    "iso": true,
+    "name": "Indonesia",
+    "name_zh": "印度尼西亚",
+    "name_ja": "インドネシア",
+    "name_de": "Indonesien",
+    "name_ru": "Индонезия",
+    "name_ar": "إندونيسيا",
+    "latlng": [
+      -5,
+      120
+    ],
+    "area": 1904569
+  },
+  {
+    "capital": "Tehran",
+    "code": "ir",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/ir.svg",
+    "flag_4x3": "flags/4x3/ir.svg",
+    "iso": true,
+    "name": "Iran",
+    "name_zh": "伊朗",
+    "name_ja": "イラン",
+    "name_de": "Iran",
+    "name_ru": "Иран",
+    "name_ar": "إيران",
+    "latlng": [
+      32,
+      53
+    ],
+    "area": 1648195
+  },
+  {
+    "capital": "Baghdad",
+    "code": "iq",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/iq.svg",
+    "flag_4x3": "flags/4x3/iq.svg",
+    "iso": true,
+    "name": "Iraq",
+    "name_zh": "伊拉克",
+    "name_ja": "イラク",
+    "name_de": "Irak",
+    "name_ru": "Ирак",
+    "name_ar": "العراق",
+    "latlng": [
+      33,
+      44
+    ],
+    "area": 438317
+  },
+  {
+    "capital": "Dublin",
+    "code": "ie",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/ie.svg",
+    "flag_4x3": "flags/4x3/ie.svg",
+    "iso": true,
+    "name": "Ireland",
+    "name_zh": "爱尔兰",
+    "name_ja": "アイルランド",
+    "name_de": "Irland",
+    "name_ru": "Ирландия",
+    "name_ar": "أيرلندا",
+    "latlng": [
+      53,
+      -8
+    ],
+    "area": 70273
+  },
+  {
+    "capital": "Douglas",
+    "code": "im",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/im.svg",
+    "flag_4x3": "flags/4x3/im.svg",
+    "iso": true,
+    "name": "Isle of Man",
+    "name_zh": "马恩岛",
+    "name_ja": "マン島",
+    "name_de": "Isle of Man",
+    "name_ru": "о-в Мэн",
+    "name_ar": "جزيرة مان",
+    "latlng": [
+      54.25,
+      -4.5
+    ],
+    "area": 572
+  },
+  {
+    "capital": "Jerusalem",
+    "code": "il",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/il.svg",
+    "flag_4x3": "flags/4x3/il.svg",
+    "iso": true,
+    "name": "Israel",
+    "name_zh": "以色列",
+    "name_ja": "イスラエル",
+    "name_de": "Israel",
+    "name_ru": "Израиль",
+    "name_ar": "إسرائيل",
+    "latlng": [
+      31.47,
+      35.13
+    ],
+    "area": 20770
+  },
+  {
+    "capital": "Rome",
+    "code": "it",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/it.svg",
+    "flag_4x3": "flags/4x3/it.svg",
+    "iso": true,
+    "name": "Italy",
+    "name_zh": "意大利",
+    "name_ja": "イタリア",
+    "name_de": "Italien",
+    "name_ru": "Италия",
+    "name_ar": "إيطاليا",
+    "latlng": [
+      42.83333333,
+      12.83333333
+    ],
+    "area": 301336
+  },
+  {
+    "capital": "Kingston",
+    "code": "jm",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/jm.svg",
+    "flag_4x3": "flags/4x3/jm.svg",
+    "iso": true,
+    "name": "Jamaica",
+    "name_zh": "牙买加",
+    "name_ja": "ジャマイカ",
+    "name_de": "Jamaika",
+    "name_ru": "Ямайка",
+    "name_ar": "جامايكا",
+    "latlng": [
+      18.25,
+      -77.5
+    ],
+    "area": 10991
+  },
+  {
+    "capital": "Tokyo",
+    "code": "jp",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/jp.svg",
+    "flag_4x3": "flags/4x3/jp.svg",
+    "iso": true,
+    "name": "Japan",
+    "name_zh": "日本",
+    "name_ja": "日本",
+    "name_de": "Japan",
+    "name_ru": "Япония",
+    "name_ar": "اليابان",
+    "latlng": [
+      36,
+      138
+    ],
+    "area": 377930
+  },
+  {
+    "capital": "Saint Helier",
+    "code": "je",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/je.svg",
+    "flag_4x3": "flags/4x3/je.svg",
+    "iso": true,
+    "name": "Jersey",
+    "name_zh": "泽西岛",
+    "name_ja": "ジャージー",
+    "name_de": "Jersey",
+    "name_ru": "Джерси",
+    "name_ar": "جيرسي",
+    "latlng": [
+      49.25,
+      -2.16666666
+    ],
+    "area": 116
+  },
+  {
+    "capital": "Amman",
+    "code": "jo",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/jo.svg",
+    "flag_4x3": "flags/4x3/jo.svg",
+    "iso": true,
+    "name": "Jordan",
+    "name_zh": "约旦",
+    "name_ja": "ヨルダン",
+    "name_de": "Jordanien",
+    "name_ru": "Иордания",
+    "name_ar": "الأردن",
+    "latlng": [
+      31,
+      36
+    ],
+    "area": 89342
+  },
+  {
+    "capital": "Astana",
+    "code": "kz",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/kz.svg",
+    "flag_4x3": "flags/4x3/kz.svg",
+    "iso": true,
+    "name": "Kazakhstan",
+    "name_zh": "哈萨克斯坦",
+    "name_ja": "カザフスタン",
+    "name_de": "Kasachstan",
+    "name_ru": "Казахстан",
+    "name_ar": "كازاخستان",
+    "latlng": [
+      48,
+      68
+    ],
+    "area": 2724900
+  },
+  {
+    "capital": "Nairobi",
+    "code": "ke",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/ke.svg",
+    "flag_4x3": "flags/4x3/ke.svg",
+    "iso": true,
+    "name": "Kenya",
+    "name_zh": "肯尼亚",
+    "name_ja": "ケニア",
+    "name_de": "Kenia",
+    "name_ru": "Кения",
+    "name_ar": "كينيا",
+    "latlng": [
+      1,
+      38
+    ],
+    "area": 580367
+  },
+  {
+    "capital": "South Tarawa",
+    "code": "ki",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/ki.svg",
+    "flag_4x3": "flags/4x3/ki.svg",
+    "iso": true,
+    "name": "Kiribati",
+    "name_zh": "基里巴斯",
+    "name_ja": "キリバス",
+    "name_de": "Kiribati",
+    "name_ru": "Ки��ибати",
+    "name_ar": "كيريباتي",
+    "latlng": [
+      1.41666666,
+      173
+    ],
+    "area": 811
+  },
+  {
+    "capital": "Pristina",
+    "code": "xk",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/xk.svg",
+    "flag_4x3": "flags/4x3/xk.svg",
+    "iso": false,
+    "name": "Kosovo",
+    "name_zh": "科索沃",
+    "name_ja": "コソボ",
+    "name_de": "Kosovo",
+    "name_ru": "Косово",
+    "name_ar": "كوسوفو",
+    "latlng": [
+      42.666667,
+      21.166667
+    ],
+    "area": 10908
+  },
+  {
+    "capital": "Kuwait City",
+    "code": "kw",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/kw.svg",
+    "flag_4x3": "flags/4x3/kw.svg",
+    "iso": true,
+    "name": "Kuwait",
+    "name_zh": "科威特",
+    "name_ja": "クウェート",
+    "name_de": "Kuwait",
+    "name_ru": "Кувейт",
+    "name_ar": "الكويت",
+    "latlng": [
+      29.5,
+      45.75
+    ],
+    "area": 17818
+  },
+  {
+    "capital": "Bishkek",
+    "code": "kg",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/kg.svg",
+    "flag_4x3": "flags/4x3/kg.svg",
+    "iso": true,
+    "name": "Kyrgyzstan",
+    "name_zh": "吉尔吉斯斯坦",
+    "name_ja": "キルギス",
+    "name_de": "Kirgisistan",
+    "name_ru": "Киргизия",
+    "name_ar": "قيرغيزستان",
+    "latlng": [
+      41,
+      75
+    ],
+    "area": 199951
+  },
+  {
+    "capital": "Vientiane",
+    "code": "la",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/la.svg",
+    "flag_4x3": "flags/4x3/la.svg",
+    "iso": true,
+    "name": "Laos",
+    "name_zh": "老挝",
+    "name_ja": "ラオス",
+    "name_de": "Laos",
+    "name_ru": "Лаос",
+    "name_ar": "لاوس",
+    "latlng": [
+      18,
+      105
+    ],
+    "area": 236800
+  },
+  {
+    "capital": "Riga",
+    "code": "lv",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/lv.svg",
+    "flag_4x3": "flags/4x3/lv.svg",
+    "iso": true,
+    "name": "Latvia",
+    "name_zh": "拉脱维亚",
+    "name_ja": "ラトビア",
+    "name_de": "Lettland",
+    "name_ru": "Латвия",
+    "name_ar": "لاتفيا",
+    "latlng": [
+      57,
+      25
+    ],
+    "area": 64559
+  },
+  {
+    "code": "arab",
+    "flag_1x1": "flags/1x1/arab.svg",
+    "flag_4x3": "flags/4x3/arab.svg",
+    "iso": false,
+    "name": "League of Arab States",
+    "name_zh": "阿拉伯联盟",
+    "name_ja": "アラブ連盟",
+    "name_de": "Arabische Liga",
+    "name_ru": "Лига арабских государств",
+    "name_ar": "جامعة الدول العربية"
+  },
+  {
+    "capital": "Beirut",
+    "code": "lb",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/lb.svg",
+    "flag_4x3": "flags/4x3/lb.svg",
+    "iso": true,
+    "name": "Lebanon",
+    "name_zh": "黎巴嫩",
+    "name_ja": "レバノン",
+    "name_de": "Libanon",
+    "name_ru": "Ливан",
+    "name_ar": "لبنان",
+    "latlng": [
+      33.83333333,
+      35.83333333
+    ],
+    "area": 10452
+  },
+  {
+    "capital": "Maseru",
+    "code": "ls",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/ls.svg",
+    "flag_4x3": "flags/4x3/ls.svg",
+    "iso": true,
+    "name": "Lesotho",
+    "name_zh": "莱索托",
+    "name_ja": "レソト",
+    "name_de": "Lesotho",
+    "name_ru": "Лесото",
+    "name_ar": "ليسوتو",
+    "latlng": [
+      -29.5,
+      28.5
+    ],
+    "area": 30355
+  },
+  {
+    "capital": "Monrovia",
+    "code": "lr",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/lr.svg",
+    "flag_4x3": "flags/4x3/lr.svg",
+    "iso": true,
+    "name": "Liberia",
+    "name_zh": "利比里亚",
+    "name_ja": "リベリア",
+    "name_de": "Liberia",
+    "name_ru": "Либерия",
+    "name_ar": "ليبيريا",
+    "latlng": [
+      6.5,
+      -9.5
+    ],
+    "area": 111369
+  },
+  {
+    "capital": "Tripoli",
+    "code": "ly",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/ly.svg",
+    "flag_4x3": "flags/4x3/ly.svg",
+    "iso": true,
+    "name": "Libya",
+    "name_zh": "利比亚",
+    "name_ja": "リビア",
+    "name_de": "Libyen",
+    "name_ru": "Ливия",
+    "name_ar": "ليبيا",
+    "latlng": [
+      25,
+      17
+    ],
+    "area": 1759540
+  },
+  {
+    "capital": "Vaduz",
+    "code": "li",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/li.svg",
+    "flag_4x3": "flags/4x3/li.svg",
+    "iso": true,
+    "name": "Liechtenstein",
+    "name_zh": "列支敦士登",
+    "name_ja": "リヒテンシュタイン",
+    "name_de": "Liechtenstein",
+    "name_ru": "Лихтенштейн",
+    "name_ar": "ليختنشتاين",
+    "latlng": [
+      47.26666666,
+      9.53333333
+    ],
+    "area": 160
+  },
+  {
+    "capital": "Vilnius",
+    "code": "lt",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/lt.svg",
+    "flag_4x3": "flags/4x3/lt.svg",
+    "iso": true,
+    "name": "Lithuania",
+    "name_zh": "立陶宛",
+    "name_ja": "リトアニア",
+    "name_de": "Litauen",
+    "name_ru": "Литва",
+    "name_ar": "ليتوانيا",
+    "latlng": [
+      56,
+      24
+    ],
+    "area": 65300
+  },
+  {
+    "capital": "Luxembourg City",
+    "code": "lu",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/lu.svg",
+    "flag_4x3": "flags/4x3/lu.svg",
+    "iso": true,
+    "name": "Luxembourg",
+    "name_zh": "卢森堡",
+    "name_ja": "ルクセンブルク",
+    "name_de": "Luxemburg",
+    "name_ru": "Люксембург",
+    "name_ar": "لوكسمبورغ",
+    "latlng": [
+      49.75,
+      6.16666666
+    ],
+    "area": 2586
+  },
+  {
+    "capital": "Macau",
+    "code": "mo",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/mo.svg",
+    "flag_4x3": "flags/4x3/mo.svg",
+    "iso": true,
+    "name": "Macau",
+    "name_zh": "澳门",
+    "name_ja": "中華人民共和国マカオ特別行政区",
+    "name_de": "Sonderverwaltungsregion Macau",
+    "name_ru": "Макао (САР)",
+    "name_ar": "منطقة ماكاو الإدارية الخاصة",
+    "latlng": [
+      22.16666666,
+      113.55
+    ],
+    "area": 30
+  },
+  {
+    "capital": "Antananarivo",
+    "code": "mg",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/mg.svg",
+    "flag_4x3": "flags/4x3/mg.svg",
+    "iso": true,
+    "name": "Madagascar",
+    "name_zh": "马达加斯加",
+    "name_ja": "マダガスカル",
+    "name_de": "Madagaskar",
+    "name_ru": "Мадагаскар",
+    "name_ar": "مدغشقر",
+    "latlng": [
+      -20,
+      47
+    ],
+    "area": 587041
+  },
+  {
+    "capital": "Lilongwe",
+    "code": "mw",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/mw.svg",
+    "flag_4x3": "flags/4x3/mw.svg",
+    "iso": true,
+    "name": "Malawi",
+    "name_zh": "马拉维",
+    "name_ja": "マラウイ",
+    "name_de": "Malawi",
+    "name_ru": "Малави",
+    "name_ar": "ملاوي",
+    "latlng": [
+      -13.5,
+      34
+    ],
+    "area": 118484
+  },
+  {
+    "capital": "Kuala Lumpur",
+    "code": "my",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/my.svg",
+    "flag_4x3": "flags/4x3/my.svg",
+    "iso": true,
+    "name": "Malaysia",
+    "name_zh": "马来西亚",
+    "name_ja": "マレーシア",
+    "name_de": "Malaysia",
+    "name_ru": "Малайзия",
+    "name_ar": "مال��زيا",
+    "latlng": [
+      2.5,
+      112.5
+    ],
+    "area": 330803
+  },
+  {
+    "capital": "Malé",
+    "code": "mv",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/mv.svg",
+    "flag_4x3": "flags/4x3/mv.svg",
+    "iso": true,
+    "name": "Maldives",
+    "name_zh": "马尔代夫",
+    "name_ja": "モルディブ",
+    "name_de": "Malediven",
+    "name_ru": "Мальдивы",
+    "name_ar": "جزر المالديف",
+    "latlng": [
+      3.25,
+      73
+    ],
+    "area": 300
+  },
+  {
+    "capital": "Bamako",
+    "code": "ml",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/ml.svg",
+    "flag_4x3": "flags/4x3/ml.svg",
+    "iso": true,
+    "name": "Mali",
+    "name_zh": "马里",
+    "name_ja": "マリ",
+    "name_de": "Mali",
+    "name_ru": "Мали",
+    "name_ar": "مالي",
+    "latlng": [
+      17,
+      -4
+    ],
+    "area": 1240192
+  },
+  {
+    "capital": "Valletta",
+    "code": "mt",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/mt.svg",
+    "flag_4x3": "flags/4x3/mt.svg",
+    "iso": true,
+    "name": "Malta",
+    "name_zh": "马耳他",
+    "name_ja": "マルタ",
+    "name_de": "Malta",
+    "name_ru": "Мальта",
+    "name_ar": "مالطا",
+    "latlng": [
+      35.83333333,
+      14.58333333
+    ],
+    "area": 316
+  },
+  {
+    "capital": "Majuro",
+    "code": "mh",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/mh.svg",
+    "flag_4x3": "flags/4x3/mh.svg",
+    "iso": true,
+    "name": "Marshall Islands",
+    "name_zh": "马绍尔群岛",
+    "name_ja": "マーシャル諸島",
+    "name_de": "Marshallinseln",
+    "name_ru": "Маршалловы о-ва",
+    "name_ar": "جزر مارشال",
+    "latlng": [
+      9,
+      168
+    ],
+    "area": 181
+  },
+  {
+    "capital": "Fort-de-France",
+    "code": "mq",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/mq.svg",
+    "flag_4x3": "flags/4x3/mq.svg",
+    "iso": true,
+    "name": "Martinique",
+    "name_zh": "马提尼克",
+    "name_ja": "マルティニーク",
+    "name_de": "Martinique",
+    "name_ru": "Мартиника",
+    "name_ar": "جزر المارتينيك",
+    "latlng": [
+      14.666667,
+      -61
+    ],
+    "area": 1128
+  },
+  {
+    "capital": "Nouakchott",
+    "code": "mr",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/mr.svg",
+    "flag_4x3": "flags/4x3/mr.svg",
+    "iso": true,
+    "name": "Mauritania",
+    "name_zh": "毛里塔尼亚",
+    "name_ja": "モーリタニア",
+    "name_de": "Mauretanien",
+    "name_ru": "Мавритания",
+    "name_ar": "موريتانيا",
+    "latlng": [
+      20,
+      -12
+    ],
+    "area": 1030700
+  },
+  {
+    "capital": "Port Louis",
+    "code": "mu",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/mu.svg",
+    "flag_4x3": "flags/4x3/mu.svg",
+    "iso": true,
+    "name": "Mauritius",
+    "name_zh": "毛里求斯",
+    "name_ja": "モーリシャス",
+    "name_de": "Mauritius",
+    "name_ru": "Маврикий",
+    "name_ar": "موريشيوس",
+    "latlng": [
+      -20.28333333,
+      57.55
+    ],
+    "area": 2040
+  },
+  {
+    "capital": "Mamoudzou",
+    "code": "yt",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/yt.svg",
+    "flag_4x3": "flags/4x3/yt.svg",
+    "iso": true,
+    "name": "Mayotte",
+    "name_zh": "马约特",
+    "name_ja": "マヨット",
+    "name_de": "Mayotte",
+    "name_ru": "Майотта",
+    "name_ar": "مايوت",
+    "latlng": [
+      -12.83333333,
+      45.16666666
+    ],
+    "area": 374
+  },
+  {
+    "capital": "Mexico City",
+    "code": "mx",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/mx.svg",
+    "flag_4x3": "flags/4x3/mx.svg",
+    "iso": true,
+    "name": "Mexico",
+    "name_zh": "墨西哥",
+    "name_ja": "メキシコ",
+    "name_de": "Mexiko",
+    "name_ru": "Мексика",
+    "name_ar": "المكسيك",
+    "latlng": [
+      23,
+      -102
+    ],
+    "area": 1964375
+  },
+  {
+    "capital": "Chișinău",
+    "code": "md",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/md.svg",
+    "flag_4x3": "flags/4x3/md.svg",
+    "iso": true,
+    "name": "Moldova",
+    "name_zh": "摩尔多瓦",
+    "name_ja": "モルドバ",
+    "name_de": "Republik Moldau",
+    "name_ru": "Молдова",
+    "name_ar": "مولدوفا",
+    "latlng": [
+      47,
+      29
+    ],
+    "area": 33846
+  },
+  {
+    "capital": "Monaco",
+    "code": "mc",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/mc.svg",
+    "flag_4x3": "flags/4x3/mc.svg",
+    "iso": true,
+    "name": "Monaco",
+    "name_zh": "摩纳哥",
+    "name_ja": "モナコ",
+    "name_de": "Monaco",
+    "name_ru": "Монако",
+    "name_ar": "موناكو",
+    "latlng": [
+      43.73333333,
+      7.4
+    ],
+    "area": 2.02
+  },
+  {
+    "capital": "Ulaanbaatar",
+    "code": "mn",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/mn.svg",
+    "flag_4x3": "flags/4x3/mn.svg",
+    "iso": true,
+    "name": "Mongolia",
+    "name_zh": "蒙古",
+    "name_ja": "モンゴル",
+    "name_de": "Mongolei",
+    "name_ru": "Монголия",
+    "name_ar": "منغوليا",
+    "latlng": [
+      46,
+      105
+    ],
+    "area": 1564110
+  },
+  {
+    "capital": "Podgorica",
+    "code": "me",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/me.svg",
+    "flag_4x3": "flags/4x3/me.svg",
+    "iso": true,
+    "name": "Montenegro",
+    "name_zh": "黑山",
+    "name_ja": "モンテネグロ",
+    "name_de": "Montenegro",
+    "name_ru": "Черногория",
+    "name_ar": "الجبل الأسود",
+    "latlng": [
+      42.5,
+      19.3
+    ],
+    "area": 13812
+  },
+  {
+    "capital": "Little Bay, Brades, Plymouth",
+    "code": "ms",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/ms.svg",
+    "flag_4x3": "flags/4x3/ms.svg",
+    "iso": true,
+    "name": "Montserrat",
+    "name_zh": "蒙特塞拉特",
+    "name_ja": "モントセラト",
+    "name_de": "Montserrat",
+    "name_ru": "Монтсеррат",
+    "name_ar": "مونتسرات",
+    "latlng": [
+      16.75,
+      -62.2
+    ],
+    "area": 102
+  },
+  {
+    "capital": "Rabat",
+    "code": "ma",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/ma.svg",
+    "flag_4x3": "flags/4x3/ma.svg",
+    "iso": true,
+    "name": "Morocco",
+    "name_zh": "摩洛哥",
+    "name_ja": "モロッコ",
+    "name_de": "Marokko",
+    "name_ru": "Марокко",
+    "name_ar": "المغرب",
+    "latlng": [
+      32,
+      -5
+    ],
+    "area": 446550
+  },
+  {
+    "capital": "Maputo",
+    "code": "mz",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/mz.svg",
+    "flag_4x3": "flags/4x3/mz.svg",
+    "iso": true,
+    "name": "Mozambique",
+    "name_zh": "莫桑比克",
+    "name_ja": "モザンビーク",
+    "name_de": "Mosambik",
+    "name_ru": "Мозамбик",
+    "name_ar": "موزمبيق",
+    "latlng": [
+      -18.25,
+      35
+    ],
+    "area": 801590
+  },
+  {
+    "capital": "Naypyidaw",
+    "code": "mm",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/mm.svg",
+    "flag_4x3": "flags/4x3/mm.svg",
+    "iso": true,
+    "name": "Myanmar",
+    "name_zh": "缅甸",
+    "name_ja": "ミャンマー (ビルマ)",
+    "name_de": "Myanmar",
+    "name_ru": "Мьянма (Бирма)",
+    "name_ar": "ميانمار (بورما)",
+    "latlng": [
+      22,
+      98
+    ],
+    "area": 676578
+  },
+  {
+    "capital": "Windhoek",
+    "code": "na",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/na.svg",
+    "flag_4x3": "flags/4x3/na.svg",
+    "iso": true,
+    "name": "Namibia",
+    "name_zh": "纳米比亚",
+    "name_ja": "ナミビア",
+    "name_de": "Namibia",
+    "name_ru": "Намибия",
+    "name_ar": "ناميبيا",
+    "latlng": [
+      -22,
+      17
+    ],
+    "area": 825615
+  },
+  {
+    "capital": "Yaren District",
+    "code": "nr",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/nr.svg",
+    "flag_4x3": "flags/4x3/nr.svg",
+    "iso": true,
+    "name": "Nauru",
+    "name_zh": "瑙鲁",
+    "name_ja": "ナウル",
+    "name_de": "Nauru",
+    "name_ru": "Науру",
+    "name_ar": "ناورو",
+    "latlng": [
+      -0.53333333,
+      166.91666666
+    ],
+    "area": 21
+  },
+  {
+    "capital": "Kathmandu",
+    "code": "np",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/np.svg",
+    "flag_4x3": "flags/4x3/np.svg",
+    "iso": true,
+    "name": "Nepal",
+    "name_zh": "尼泊尔",
+    "name_ja": "ネパール",
+    "name_de": "Nepal",
+    "name_ru": "Непал",
+    "name_ar": "نيبال",
+    "latlng": [
+      28,
+      84
+    ],
+    "area": 147181
+  },
+  {
+    "capital": "Amsterdam",
+    "code": "nl",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/nl.svg",
+    "flag_4x3": "flags/4x3/nl.svg",
+    "iso": true,
+    "name": "Netherlands",
+    "name_zh": "荷兰",
+    "name_ja": "オランダ",
+    "name_de": "Niederlande",
+    "name_ru": "Нидерланды",
+    "name_ar": "هولندا",
+    "latlng": [
+      52.5,
+      5.75
+    ],
+    "area": 41850
+  },
+  {
+    "capital": "Nouméa",
+    "code": "nc",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/nc.svg",
+    "flag_4x3": "flags/4x3/nc.svg",
+    "iso": true,
+    "name": "New Caledonia",
+    "name_zh": "新喀里多尼亚",
+    "name_ja": "ニューカレドニア",
+    "name_de": "Neukaledonien",
+    "name_ru": "Новая Каледония",
+    "name_ar": "كاليدونيا الجديدة",
+    "latlng": [
+      -21.5,
+      165.5
+    ],
+    "area": 18575
+  },
+  {
+    "capital": "Wellington",
+    "code": "nz",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/nz.svg",
+    "flag_4x3": "flags/4x3/nz.svg",
+    "iso": true,
+    "name": "New Zealand",
+    "name_zh": "新西兰",
+    "name_ja": "ニュージーランド",
+    "name_de": "Neuseeland",
+    "name_ru": "Новая Зеландия",
+    "name_ar": "نيوزيلندا",
+    "latlng": [
+      -41,
+      174
+    ],
+    "area": 270467
+  },
+  {
+    "capital": "Managua",
+    "code": "ni",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/ni.svg",
+    "flag_4x3": "flags/4x3/ni.svg",
+    "iso": true,
+    "name": "Nicaragua",
+    "name_zh": "尼加拉瓜",
+    "name_ja": "ニカラグア",
+    "name_de": "Nicaragua",
+    "name_ru": "Никарагуа",
+    "name_ar": "نيكاراغوا",
+    "latlng": [
+      13,
+      -85
+    ],
+    "area": 130373
+  },
+  {
+    "capital": "Niamey",
+    "code": "ne",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/ne.svg",
+    "flag_4x3": "flags/4x3/ne.svg",
+    "iso": true,
+    "name": "Niger",
+    "name_zh": "尼日尔",
+    "name_ja": "ニジェール",
+    "name_de": "Niger",
+    "name_ru": "Нигер",
+    "name_ar": "النيجر",
+    "latlng": [
+      16,
+      8
+    ],
+    "area": 1267000
+  },
+  {
+    "capital": "Abuja",
+    "code": "ng",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/ng.svg",
+    "flag_4x3": "flags/4x3/ng.svg",
+    "iso": true,
+    "name": "Nigeria",
+    "name_zh": "尼日利亚",
+    "name_ja": "ナイジェリア",
+    "name_de": "Nigeria",
+    "name_ru": "Нигерия",
+    "name_ar": "نيجيريا",
+    "latlng": [
+      10,
+      8
+    ],
+    "area": 923768
+  },
+  {
+    "capital": "Alofi",
+    "code": "nu",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/nu.svg",
+    "flag_4x3": "flags/4x3/nu.svg",
+    "iso": true,
+    "name": "Niue",
+    "name_zh": "纽埃",
+    "name_ja": "ニウエ",
+    "name_de": "Niue",
+    "name_ru": "Ниуэ",
+    "name_ar": "نيوي",
+    "latlng": [
+      -19.03333333,
+      -169.86666666
+    ],
+    "area": 260
+  },
+  {
+    "capital": "Kingston",
+    "code": "nf",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/nf.svg",
+    "flag_4x3": "flags/4x3/nf.svg",
+    "iso": true,
+    "name": "Norfolk Island",
+    "name_zh": "诺福克岛",
+    "name_ja": "ノーフォーク島",
+    "name_de": "Norfolkinsel",
+    "name_ru": "о-в Норфолк",
+    "name_ar": "جزيرة نورفولك",
+    "latlng": [
+      -29.03333333,
+      167.95
+    ],
+    "area": 36
+  },
+  {
+    "capital": "Pyongyang",
+    "code": "kp",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/kp.svg",
+    "flag_4x3": "flags/4x3/kp.svg",
+    "iso": true,
+    "name": "North Korea",
+    "name_zh": "朝鲜",
+    "name_ja": "北朝鮮",
+    "name_de": "Nordkorea",
+    "name_ru": "КНДР",
+    "name_ar": "كوريا الشمالية",
+    "latlng": [
+      40,
+      127
+    ],
+    "area": 120538
+  },
+  {
+    "capital": "Skopje",
+    "code": "mk",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/mk.svg",
+    "flag_4x3": "flags/4x3/mk.svg",
+    "iso": true,
+    "name": "North Macedonia",
+    "name_zh": "北马其顿",
+    "name_ja": "北マケドニア",
+    "name_de": "Nordmazedonien",
+    "name_ru": "Северная Македония",
+    "name_ar": "مقدونيا الشمالية",
+    "latlng": [
+      41.83333333,
+      22
+    ],
+    "area": 25713
+  },
+  {
+    "capital": "Belfast",
+    "code": "gb-nir",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/gb-nir.svg",
+    "flag_4x3": "flags/4x3/gb-nir.svg",
+    "iso": false,
+    "name": "Northern Ireland",
+    "name_zh": "北爱尔兰",
+    "name_ja": "北アイルランド",
+    "name_de": "Nordirland",
+    "name_ru": "Северная Ирландия",
+    "name_ar": "أيرلندا الشمالية"
+  },
+  {
+    "capital": "Saipan",
+    "code": "mp",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/mp.svg",
+    "flag_4x3": "flags/4x3/mp.svg",
+    "iso": true,
+    "name": "Northern Mariana Islands",
+    "name_zh": "北马里亚纳群岛",
+    "name_ja": "北マリアナ諸島",
+    "name_de": "Nördliche Marianen",
+    "name_ru": "Северные Марианские о-ва",
+    "name_ar": "جزر ماريانا الشمالية",
+    "latlng": [
+      15.2,
+      145.75
+    ],
+    "area": 464
+  },
+  {
+    "capital": "Oslo",
+    "code": "no",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/no.svg",
+    "flag_4x3": "flags/4x3/no.svg",
+    "iso": true,
+    "name": "Norway",
+    "name_zh": "挪威",
+    "name_ja": "ノルウェー",
+    "name_de": "Norwegen",
+    "name_ru": "Норвегия",
+    "name_ar": "النرويج",
+    "latlng": [
+      62,
+      10
+    ],
+    "area": 323802
+  },
+  {
+    "capital": "Muscat",
+    "code": "om",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/om.svg",
+    "flag_4x3": "flags/4x3/om.svg",
+    "iso": true,
+    "name": "Oman",
+    "name_zh": "阿曼",
+    "name_ja": "オマーン",
+    "name_de": "Oman",
+    "name_ru": "Оман",
+    "name_ar": "عُمان",
+    "latlng": [
+      21,
+      57
+    ],
+    "area": 309500
+  },
+  {
+    "code": "pc",
+    "flag_1x1": "flags/1x1/pc.svg",
+    "flag_4x3": "flags/4x3/pc.svg",
+    "iso": false,
+    "name": "Pacific Community",
+    "name_zh": "太平洋群岛",
+    "name_ja": "太平洋共同体",
+    "name_de": "Pazifikgemeinschaft",
+    "name_ru": "Тихоокеанское сообщество",
+    "name_ar": "مجتمع المحيط الهادئ"
+  },
+  {
+    "capital": "Islamabad",
+    "code": "pk",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/pk.svg",
+    "flag_4x3": "flags/4x3/pk.svg",
+    "iso": true,
+    "name": "Pakistan",
+    "name_zh": "巴基斯坦",
+    "name_ja": "パキスタン",
+    "name_de": "Pakistan",
+    "name_ru": "Пакистан",
+    "name_ar": "باكستان",
+    "latlng": [
+      30,
+      70
+    ],
+    "area": 881912
+  },
+  {
+    "capital": "Ngerulmud",
+    "code": "pw",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/pw.svg",
+    "flag_4x3": "flags/4x3/pw.svg",
+    "iso": true,
+    "name": "Palau",
+    "name_zh": "帕劳",
+    "name_ja": "パラオ",
+    "name_de": "Palau",
+    "name_ru": "Палау",
+    "name_ar": "بالاو",
+    "latlng": [
+      7.5,
+      134.5
+    ],
+    "area": 459
+  },
+  {
+    "capital": "Panama City",
+    "code": "pa",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/pa.svg",
+    "flag_4x3": "flags/4x3/pa.svg",
+    "iso": true,
+    "name": "Panama",
+    "name_zh": "巴拿马",
+    "name_ja": "パナマ",
+    "name_de": "Panama",
+    "name_ru": "Панама",
+    "name_ar": "بنما",
+    "latlng": [
+      9,
+      -80
+    ],
+    "area": 75417
+  },
+  {
+    "capital": "Port Moresby",
+    "code": "pg",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/pg.svg",
+    "flag_4x3": "flags/4x3/pg.svg",
+    "iso": true,
+    "name": "Papua New Guinea",
+    "name_zh": "巴布亚新几内亚",
+    "name_ja": "パプアニューギニア",
+    "name_de": "Papua-Neuguinea",
+    "name_ru": "Папуа — Новая Гвинея",
+    "name_ar": "بابوا غينيا الجديدة",
+    "latlng": [
+      -6,
+      147
+    ],
+    "area": 462840
+  },
+  {
+    "capital": "Asunción",
+    "code": "py",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/py.svg",
+    "flag_4x3": "flags/4x3/py.svg",
+    "iso": true,
+    "name": "Paraguay",
+    "name_zh": "巴拉圭",
+    "name_ja": "パラグアイ",
+    "name_de": "Paraguay",
+    "name_ru": "Парагвай",
+    "name_ar": "باراغواي",
+    "latlng": [
+      -23,
+      -58
+    ],
+    "area": 406752
+  },
+  {
+    "capital": "Lima",
+    "code": "pe",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/pe.svg",
+    "flag_4x3": "flags/4x3/pe.svg",
+    "iso": true,
+    "name": "Peru",
+    "name_zh": "秘鲁",
+    "name_ja": "ペルー",
+    "name_de": "Peru",
+    "name_ru": "Перу",
+    "name_ar": "بيرو",
+    "latlng": [
+      -10,
+      -76
+    ],
+    "area": 1285216
+  },
+  {
+    "capital": "Manila",
+    "code": "ph",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/ph.svg",
+    "flag_4x3": "flags/4x3/ph.svg",
+    "iso": true,
+    "name": "Philippines",
+    "name_zh": "菲律宾",
+    "name_ja": "フィリピン",
+    "name_de": "Philippinen",
+    "name_ru": "Филиппины",
+    "name_ar": "الفلبين",
+    "latlng": [
+      13,
+      122
+    ],
+    "area": 342353
+  },
+  {
+    "capital": "Adamstown",
+    "code": "pn",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/pn.svg",
+    "flag_4x3": "flags/4x3/pn.svg",
+    "iso": true,
+    "name": "Pitcairn",
+    "name_zh": "皮特凯恩群岛",
+    "name_ja": "ピトケアン諸島",
+    "name_de": "Pitcairninseln",
+    "name_ru": "о-ва Питкэрн",
+    "name_ar": "جزر بيتكيرن",
+    "latlng": [
+      -25.06666666,
+      -130.1
+    ],
+    "area": 47
+  },
+  {
+    "capital": "Warsaw",
+    "code": "pl",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/pl.svg",
+    "flag_4x3": "flags/4x3/pl.svg",
+    "iso": true,
+    "name": "Poland",
+    "name_zh": "波兰",
+    "name_ja": "ポーランド",
+    "name_de": "Polen",
+    "name_ru": "Польша",
+    "name_ar": "بولندا",
+    "latlng": [
+      52,
+      20
+    ],
+    "area": 312679
+  },
+  {
+    "capital": "Lisbon",
+    "code": "pt",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/pt.svg",
+    "flag_4x3": "flags/4x3/pt.svg",
+    "iso": true,
+    "name": "Portugal",
+    "name_zh": "葡萄牙",
+    "name_ja": "ポルトガル",
+    "name_de": "Portugal",
+    "name_ru": "Португалия",
+    "name_ar": "البرتغال",
+    "latlng": [
+      39.5,
+      -8
+    ],
+    "area": 92090
+  },
+  {
+    "capital": "San Juan",
+    "code": "pr",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/pr.svg",
+    "flag_4x3": "flags/4x3/pr.svg",
+    "iso": true,
+    "name": "Puerto Rico",
+    "name_zh": "波多黎各",
+    "name_ja": "プエルトリコ",
+    "name_de": "Puerto Rico",
+    "name_ru": "Пуэрто-Рико",
+    "name_ar": "بورتوريكو",
+    "latlng": [
+      18.25,
+      -66.5
+    ],
+    "area": 8870
+  },
+  {
+    "capital": "Doha",
+    "code": "qa",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/qa.svg",
+    "flag_4x3": "flags/4x3/qa.svg",
+    "iso": true,
+    "name": "Qatar",
+    "name_zh": "卡塔尔",
+    "name_ja": "カタール",
+    "name_de": "Katar",
+    "name_ru": "Катар",
+    "name_ar": "قطر",
+    "latlng": [
+      25.5,
+      51.25
+    ],
+    "area": 11586
+  },
+  {
+    "capital": "Brazzaville",
+    "code": "cg",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/cg.svg",
+    "flag_4x3": "flags/4x3/cg.svg",
+    "iso": true,
+    "name": "Republic of the Congo",
+    "name_zh": "刚果（布）",
+    "name_ja": "コンゴ共和国(ブラザビル)",
+    "name_de": "Kongo-Brazzaville",
+    "name_ru": "Конго - Браззавиль",
+    "name_ar": "الكونغو - برازافيل",
+    "latlng": [
+      -1,
+      15
+    ],
+    "area": 342000
+  },
+  {
+    "capital": "Bucharest",
+    "code": "ro",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/ro.svg",
+    "flag_4x3": "flags/4x3/ro.svg",
+    "iso": true,
+    "name": "Romania",
+    "name_zh": "罗马尼亚",
+    "name_ja": "ルーマニア",
+    "name_de": "Rumänien",
+    "name_ru": "Румыния",
+    "name_ar": "رومانيا",
+    "latlng": [
+      46,
+      25
+    ],
+    "area": 238391
+  },
+  {
+    "capital": "Moscow",
+    "code": "ru",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/ru.svg",
+    "flag_4x3": "flags/4x3/ru.svg",
+    "iso": true,
+    "name": "Russia",
+    "name_zh": "俄罗斯",
+    "name_ja": "ロシア",
+    "name_de": "Russland",
+    "name_ru": "Россия",
+    "name_ar": "روسيا",
+    "latlng": [
+      60,
+      100
+    ],
+    "area": 17098242
+  },
+  {
+    "capital": "Kigali",
+    "code": "rw",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/rw.svg",
+    "flag_4x3": "flags/4x3/rw.svg",
+    "iso": true,
+    "name": "Rwanda",
+    "name_zh": "卢旺达",
+    "name_ja": "ルワンダ",
+    "name_de": "Ruanda",
+    "name_ru": "Руанда",
+    "name_ar": "رواندا",
+    "latlng": [
+      -2,
+      30
+    ],
+    "area": 26338
+  },
+  {
+    "capital": "Saint-Denis",
+    "code": "re",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/re.svg",
+    "flag_4x3": "flags/4x3/re.svg",
+    "iso": true,
+    "name": "Réunion",
+    "name_zh": "留尼汪",
+    "name_ja": "レユニオン",
+    "name_de": "Réunion",
+    "name_ru": "Реюньон",
+    "name_ar": "روينيون",
+    "latlng": [
+      -21.15,
+      55.5
+    ],
+    "area": 2511
+  },
+  {
+    "capital": "Gustavia",
+    "code": "bl",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/bl.svg",
+    "flag_4x3": "flags/4x3/bl.svg",
+    "iso": true,
+    "name": "Saint Barthélemy",
+    "name_zh": "圣巴泰勒米",
+    "name_ja": "サン・バルテルミー",
+    "name_de": "St. Barthélemy",
+    "name_ru": "Сен-Бартелеми",
+    "name_ar": "سان بارتليمي",
+    "latlng": [
+      18.5,
+      -63.41666666
+    ],
+    "area": 21
+  },
+  {
+    "capital": "Jamestown",
+    "code": "sh-hl",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/sh-hl.svg",
+    "flag_4x3": "flags/4x3/sh-hl.svg",
+    "iso": false,
+    "name": "Saint Helena",
+    "name_zh": "圣赫勒拿",
+    "name_ja": "セントヘレナ",
+    "name_de": "St. Helena",
+    "name_ru": "о-в Св. Елены",
+    "name_ar": "سانت هيلينا"
+  },
+  {
+    "capital": "Jamestown",
+    "code": "sh",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/sh.svg",
+    "flag_4x3": "flags/4x3/sh.svg",
+    "iso": true,
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "name_zh": "圣赫勒拿",
+    "name_ja": "セントヘレナ",
+    "name_de": "St. Helena",
+    "name_ru": "о-в Св. Елены",
+    "name_ar": "سانت هيلينا",
+    "latlng": [
+      -15.95,
+      -5.72
+    ],
+    "area": 394
+  },
+  {
+    "capital": "Basseterre",
+    "code": "kn",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/kn.svg",
+    "flag_4x3": "flags/4x3/kn.svg",
+    "iso": true,
+    "name": "Saint Kitts and Nevis",
+    "name_zh": "圣基茨和尼维斯",
+    "name_ja": "セントクリストファー・ネーヴィス",
+    "name_de": "St. Kitts und Nevis",
+    "name_ru": "Сент-Китс и Невис",
+    "name_ar": "سانت كيتس ونيفيس",
+    "latlng": [
+      17.33333333,
+      -62.75
+    ],
+    "area": 261
+  },
+  {
+    "capital": "Castries",
+    "code": "lc",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/lc.svg",
+    "flag_4x3": "flags/4x3/lc.svg",
+    "iso": true,
+    "name": "Saint Lucia",
+    "name_zh": "圣卢西亚",
+    "name_ja": "セントルシア",
+    "name_de": "St. Lucia",
+    "name_ru": "Сент-Люсия",
+    "name_ar": "سانت لوسيا",
+    "latlng": [
+      13.88333333,
+      -60.96666666
+    ],
+    "area": 616
+  },
+  {
+    "capital": "Marigot",
+    "code": "mf",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/mf.svg",
+    "flag_4x3": "flags/4x3/mf.svg",
+    "iso": true,
+    "name": "Saint Martin",
+    "name_zh": "圣马丁",
+    "name_ja": "サン・マルタン",
+    "name_de": "St. Martin",
+    "name_ru": "Сен-Мартен",
+    "name_ar": "سان مارتن",
+    "latlng": [
+      18.08333333,
+      -63.95
+    ],
+    "area": 53
+  },
+  {
+    "capital": "Saint-Pierre",
+    "code": "pm",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/pm.svg",
+    "flag_4x3": "flags/4x3/pm.svg",
+    "iso": true,
+    "name": "Saint Pierre and Miquelon",
+    "name_zh": "圣皮埃尔和密克隆",
+    "name_ja": "サンピエール島・ミクロン島",
+    "name_de": "St. Pierre und Miquelon",
+    "name_ru": "Сен-Пьер и Микелон",
+    "name_ar": "سان بيير ومكويلون",
+    "latlng": [
+      46.83333333,
+      -56.33333333
+    ],
+    "area": 242
+  },
+  {
+    "capital": "Kingstown",
+    "code": "vc",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/vc.svg",
+    "flag_4x3": "flags/4x3/vc.svg",
+    "iso": true,
+    "name": "Saint Vincent and the Grenadines",
+    "name_zh": "圣文森特和格林纳丁斯",
+    "name_ja": "セントビンセント及びグレナディーン諸島",
+    "name_de": "St. Vincent und die Grenadinen",
+    "name_ru": "Сент-Винсент и Гренадины",
+    "name_ar": "سانت فنسنت وجزر غرينادين",
+    "latlng": [
+      13.25,
+      -61.2
+    ],
+    "area": 389
+  },
+  {
+    "capital": "Apia",
+    "code": "ws",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/ws.svg",
+    "flag_4x3": "flags/4x3/ws.svg",
+    "iso": true,
+    "name": "Samoa",
+    "name_zh": "萨摩亚",
+    "name_ja": "サモア",
+    "name_de": "Samoa",
+    "name_ru": "Самоа",
+    "name_ar": "ساموا",
+    "latlng": [
+      -13.58333333,
+      -172.33333333
+    ],
+    "area": 2842
+  },
+  {
+    "capital": "San Marino",
+    "code": "sm",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/sm.svg",
+    "flag_4x3": "flags/4x3/sm.svg",
+    "iso": true,
+    "name": "San Marino",
+    "name_zh": "圣马力诺",
+    "name_ja": "サンマリノ",
+    "name_de": "San Marino",
+    "name_ru": "Сан-Марино",
+    "name_ar": "سان مارينو",
+    "latlng": [
+      43.76666666,
+      12.41666666
+    ],
+    "area": 61
+  },
+  {
+    "capital": "São Tomé",
+    "code": "st",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/st.svg",
+    "flag_4x3": "flags/4x3/st.svg",
+    "iso": true,
+    "name": "Sao Tome and Principe",
+    "name_zh": "圣多美和普林西比",
+    "name_ja": "サントメ・プリンシペ",
+    "name_de": "São Tomé und Príncipe",
+    "name_ru": "Сан-Томе и Принсипи",
+    "name_ar": "ساو تومي وبرينسيبي",
+    "latlng": [
+      1,
+      7
+    ],
+    "area": 964
+  },
+  {
+    "capital": "Riyadh",
+    "code": "sa",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/sa.svg",
+    "flag_4x3": "flags/4x3/sa.svg",
+    "iso": true,
+    "name": "Saudi Arabia",
+    "name_zh": "沙特阿拉伯",
+    "name_ja": "サウジアラビア",
+    "name_de": "Saudi-Arabien",
+    "name_ru": "Саудовская Аравия",
+    "name_ar": "المملكة العربية السعودية",
+    "latlng": [
+      25,
+      45
+    ],
+    "area": 2149690
+  },
+  {
+    "capital": "Edinburgh",
+    "code": "gb-sct",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/gb-sct.svg",
+    "flag_4x3": "flags/4x3/gb-sct.svg",
+    "iso": false,
+    "name": "Scotland",
+    "name_zh": "苏格兰",
+    "name_ja": "スコットランド",
+    "name_de": "Schottland",
+    "name_ru": "Шотландия",
+    "name_ar": "اسكتلندا"
+  },
+  {
+    "capital": "Dakar",
+    "code": "sn",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/sn.svg",
+    "flag_4x3": "flags/4x3/sn.svg",
+    "iso": true,
+    "name": "Senegal",
+    "name_zh": "塞内加尔",
+    "name_ja": "セネガル",
+    "name_de": "Senegal",
+    "name_ru": "Сенегал",
+    "name_ar": "السنغال",
+    "latlng": [
+      14,
+      -14
+    ],
+    "area": 196722
+  },
+  {
+    "capital": "Belgrade",
+    "code": "rs",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/rs.svg",
+    "flag_4x3": "flags/4x3/rs.svg",
+    "iso": true,
+    "name": "Serbia",
+    "name_zh": "塞尔维亚",
+    "name_ja": "セルビア",
+    "name_de": "Serbien",
+    "name_ru": "Сербия",
+    "name_ar": "صربيا",
+    "latlng": [
+      44,
+      21
+    ],
+    "area": 88361
+  },
+  {
+    "capital": "Victoria",
+    "code": "sc",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/sc.svg",
+    "flag_4x3": "flags/4x3/sc.svg",
+    "iso": true,
+    "name": "Seychelles",
+    "name_zh": "塞舌尔",
+    "name_ja": "セーシェル",
+    "name_de": "Seychellen",
+    "name_ru": "Сейшельские о-ва",
+    "name_ar": "سيشل",
+    "latlng": [
+      -4.58333333,
+      55.66666666
+    ],
+    "area": 452
+  },
+  {
+    "capital": "Freetown",
+    "code": "sl",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/sl.svg",
+    "flag_4x3": "flags/4x3/sl.svg",
+    "iso": true,
+    "name": "Sierra Leone",
+    "name_zh": "塞拉利昂",
+    "name_ja": "シエラレオネ",
+    "name_de": "Sierra Leone",
+    "name_ru": "Сьерра-Леоне",
+    "name_ar": "سيراليون",
+    "latlng": [
+      8.5,
+      -11.5
+    ],
+    "area": 71740
+  },
+  {
+    "capital": "Singapore",
+    "code": "sg",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/sg.svg",
+    "flag_4x3": "flags/4x3/sg.svg",
+    "iso": true,
+    "name": "Singapore",
+    "name_zh": "新加坡",
+    "name_ja": "シンガポール",
+    "name_de": "Singapur",
+    "name_ru": "Сингапур",
+    "name_ar": "سنغافورة",
+    "latlng": [
+      1.36666666,
+      103.8
+    ],
+    "area": 710
+  },
+  {
+    "capital": "Philipsburg",
+    "code": "sx",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/sx.svg",
+    "flag_4x3": "flags/4x3/sx.svg",
+    "iso": true,
+    "name": "Sint Maarten",
+    "name_zh": "荷属圣马丁",
+    "name_ja": "シント・マールテン",
+    "name_de": "Sint Maarten",
+    "name_ru": "Синт-Мартен",
+    "name_ar": "سانت مارتن",
+    "latlng": [
+      18.033333,
+      -63.05
+    ],
+    "area": 34
+  },
+  {
+    "capital": "Bratislava",
+    "code": "sk",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/sk.svg",
+    "flag_4x3": "flags/4x3/sk.svg",
+    "iso": true,
+    "name": "Slovakia",
+    "name_zh": "斯洛伐克",
+    "name_ja": "スロバキア",
+    "name_de": "Slowakei",
+    "name_ru": "Словакия",
+    "name_ar": "سلوفاكيا",
+    "latlng": [
+      48.66666666,
+      19.5
+    ],
+    "area": 49037
+  },
+  {
+    "capital": "Ljubljana",
+    "code": "si",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/si.svg",
+    "flag_4x3": "flags/4x3/si.svg",
+    "iso": true,
+    "name": "Slovenia",
+    "name_zh": "斯洛文尼亚",
+    "name_ja": "スロベニア",
+    "name_de": "Slowenien",
+    "name_ru": "Словения",
+    "name_ar": "سلوفينيا",
+    "latlng": [
+      46.11666666,
+      14.81666666
+    ],
+    "area": 20273
+  },
+  {
+    "capital": "Honiara",
+    "code": "sb",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/sb.svg",
+    "flag_4x3": "flags/4x3/sb.svg",
+    "iso": true,
+    "name": "Solomon Islands",
+    "name_zh": "所罗门群岛",
+    "name_ja": "ソロモン諸島",
+    "name_de": "Salomonen",
+    "name_ru": "Соломоновы о-ва",
+    "name_ar": "جزر سليمان",
+    "latlng": [
+      -8,
+      159
+    ],
+    "area": 28896
+  },
+  {
+    "capital": "Mogadishu",
+    "code": "so",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/so.svg",
+    "flag_4x3": "flags/4x3/so.svg",
+    "iso": true,
+    "name": "Somalia",
+    "name_zh": "索马里",
+    "name_ja": "ソマリア",
+    "name_de": "Somalia",
+    "name_ru": "Сомали",
+    "name_ar": "الصومال",
+    "latlng": [
+      10,
+      49
+    ],
+    "area": 637657
+  },
+  {
+    "capital": "Pretoria",
+    "code": "za",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/za.svg",
+    "flag_4x3": "flags/4x3/za.svg",
+    "iso": true,
+    "name": "South Africa",
+    "name_zh": "南非",
+    "name_ja": "南アフリカ",
+    "name_de": "Südafrika",
+    "name_ru": "Южно-Африканская Республика",
+    "name_ar": "جنوب أفريقيا",
+    "latlng": [
+      -29,
+      24
+    ],
+    "area": 1221037
+  },
+  {
+    "capital": "King Edward Point",
+    "code": "gs",
+    "continent": "Antarctica",
+    "flag_1x1": "flags/1x1/gs.svg",
+    "flag_4x3": "flags/4x3/gs.svg",
+    "iso": true,
+    "name": "South Georgia and the South Sandwich Islands",
+    "name_zh": "南乔治亚和南桑威奇群岛",
+    "name_ja": "サウスジョージア・サウスサンドウィッチ諸島",
+    "name_de": "Südgeorgien und die Südlichen Sandwichinseln",
+    "name_ru": "Южная Георгия и Южные Сандвичевы о-ва",
+    "name_ar": "جورجيا الجنوبية وجزر ساندويتش الجنوبية",
+    "latlng": [
+      -54.5,
+      -37
+    ],
+    "area": 3903
+  },
+  {
+    "capital": "Seoul",
+    "code": "kr",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/kr.svg",
+    "flag_4x3": "flags/4x3/kr.svg",
+    "iso": true,
+    "name": "South Korea",
+    "name_zh": "韩国",
+    "name_ja": "韓国",
+    "name_de": "Südkorea",
+    "name_ru": "Республика Корея",
+    "name_ar": "كوريا الجنوبية",
+    "latlng": [
+      37,
+      127.5
+    ],
+    "area": 100210
+  },
+  {
+    "capital": "Juba",
+    "code": "ss",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/ss.svg",
+    "flag_4x3": "flags/4x3/ss.svg",
+    "iso": true,
+    "name": "South Sudan",
+    "name_zh": "南苏丹",
+    "name_ja": "南スーダン",
+    "name_de": "Südsudan",
+    "name_ru": "Южный Судан",
+    "name_ar": "جنوب السودان",
+    "latlng": [
+      7,
+      30
+    ],
+    "area": 619745
+  },
+  {
+    "capital": "Madrid",
+    "code": "es",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/es.svg",
+    "flag_4x3": "flags/4x3/es.svg",
+    "iso": true,
+    "name": "Spain",
+    "name_zh": "西班牙",
+    "name_ja": "スペイン",
+    "name_de": "Spanien",
+    "name_ru": "Испания",
+    "name_ar": "إسبانيا",
+    "latlng": [
+      40,
+      -4
+    ],
+    "area": 505992
+  },
+  {
+    "capital": "Sri Jayawardenepura Kotte, Colombo",
+    "code": "lk",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/lk.svg",
+    "flag_4x3": "flags/4x3/lk.svg",
+    "iso": true,
+    "name": "Sri Lanka",
+    "name_zh": "斯里兰卡",
+    "name_ja": "スリランカ",
+    "name_de": "Sri Lanka",
+    "name_ru": "Шри-Ланка",
+    "name_ar": "سريلانكا",
+    "latlng": [
+      7,
+      81
+    ],
+    "area": 65610
+  },
+  {
+    "capital": "Ramallah",
+    "code": "ps",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/ps.svg",
+    "flag_4x3": "flags/4x3/ps.svg",
+    "iso": true,
+    "name": "State of Palestine",
+    "name_zh": "巴勒斯坦",
+    "name_ja": "パレスチナ自治区",
+    "name_de": "Palästinensische Autonomiegebiete",
+    "name_ru": "Палестинские территории",
+    "name_ar": "الأراضي الفلسطينية",
+    "latlng": [
+      31.9,
+      35.2
+    ],
+    "area": 6220
+  },
+  {
+    "capital": "Khartoum",
+    "code": "sd",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/sd.svg",
+    "flag_4x3": "flags/4x3/sd.svg",
+    "iso": true,
+    "name": "Sudan",
+    "name_zh": "苏丹",
+    "name_ja": "スーダン",
+    "name_de": "Sudan",
+    "name_ru": "Судан",
+    "name_ar": "السودان",
+    "latlng": [
+      15,
+      30
+    ],
+    "area": 1886068
+  },
+  {
+    "capital": "Paramaribo",
+    "code": "sr",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/sr.svg",
+    "flag_4x3": "flags/4x3/sr.svg",
+    "iso": true,
+    "name": "Suriname",
+    "name_zh": "苏里南",
+    "name_ja": "スリナム",
+    "name_de": "Suriname",
+    "name_ru": "Суринам",
+    "name_ar": "سورينام",
+    "latlng": [
+      4,
+      -56
+    ],
+    "area": 163820
+  },
+  {
+    "capital": "Longyearbyen",
+    "code": "sj",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/sj.svg",
+    "flag_4x3": "flags/4x3/sj.svg",
+    "iso": true,
+    "name": "Svalbard and Jan Mayen",
+    "name_zh": "斯瓦尔巴和扬马延",
+    "name_ja": "スバールバル諸島・ヤンマイエン島",
+    "name_de": "Spitzbergen und Jan Mayen",
+    "name_ru": "Шпицберген и Ян-Майен",
+    "name_ar": "سفالبارد وجان ماين",
+    "latlng": [
+      78,
+      20
+    ],
+    "area": -1
+  },
+  {
+    "capital": "Stockholm",
+    "code": "se",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/se.svg",
+    "flag_4x3": "flags/4x3/se.svg",
+    "iso": true,
+    "name": "Sweden",
+    "name_zh": "瑞典",
+    "name_ja": "スウェーデン",
+    "name_de": "Schweden",
+    "name_ru": "Швеция",
+    "name_ar": "السويد",
+    "latlng": [
+      62,
+      15
+    ],
+    "area": 450295
+  },
+  {
+    "capital": "Bern",
+    "code": "ch",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/ch.svg",
+    "flag_4x3": "flags/4x3/ch.svg",
+    "iso": true,
+    "name": "Switzerland",
+    "name_zh": "瑞士",
+    "name_ja": "スイス",
+    "name_de": "Schweiz",
+    "name_ru": "Швейцария",
+    "name_ar": "سويسرا",
+    "latlng": [
+      47,
+      8
+    ],
+    "area": 41284
+  },
+  {
+    "capital": "Damascus",
+    "code": "sy",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/sy.svg",
+    "flag_4x3": "flags/4x3/sy.svg",
+    "iso": true,
+    "name": "Syria",
+    "name_zh": "叙利亚",
+    "name_ja": "シリア",
+    "name_de": "Syrien",
+    "name_ru": "Сирия",
+    "name_ar": "سوريا",
+    "latlng": [
+      35,
+      38
+    ],
+    "area": 185180
+  },
+  {
+    "capital": "Taipei",
+    "code": "tw",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/tw.svg",
+    "flag_4x3": "flags/4x3/tw.svg",
+    "iso": true,
+    "name": "Taiwan",
+    "name_zh": "台湾",
+    "name_ja": "台湾",
+    "name_de": "Taiwan",
+    "name_ru": "Тайвань",
+    "name_ar": "تايوان",
+    "latlng": [
+      23.5,
+      121
+    ],
+    "area": 36193
+  },
+  {
+    "capital": "Dushanbe",
+    "code": "tj",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/tj.svg",
+    "flag_4x3": "flags/4x3/tj.svg",
+    "iso": true,
+    "name": "Tajikistan",
+    "name_zh": "塔吉克斯坦",
+    "name_ja": "タジキスタン",
+    "name_de": "Tadschikistan",
+    "name_ru": "Таджикистан",
+    "name_ar": "طاجيكستان",
+    "latlng": [
+      39,
+      71
+    ],
+    "area": 143100
+  },
+  {
+    "capital": "Dodoma",
+    "code": "tz",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/tz.svg",
+    "flag_4x3": "flags/4x3/tz.svg",
+    "iso": true,
+    "name": "Tanzania",
+    "name_zh": "坦桑尼亚",
+    "name_ja": "タンザニア",
+    "name_de": "Tansania",
+    "name_ru": "Танзания",
+    "name_ar": "تنزانيا",
+    "latlng": [
+      -6,
+      35
+    ],
+    "area": 945087
+  },
+  {
+    "capital": "Bangkok",
+    "code": "th",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/th.svg",
+    "flag_4x3": "flags/4x3/th.svg",
+    "iso": true,
+    "name": "Thailand",
+    "name_zh": "泰国",
+    "name_ja": "タイ",
+    "name_de": "Thailand",
+    "name_ru": "Таиланд",
+    "name_ar": "تايلاند",
+    "latlng": [
+      15,
+      100
+    ],
+    "area": 513120
+  },
+  {
+    "capital": "Dili",
+    "code": "tl",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/tl.svg",
+    "flag_4x3": "flags/4x3/tl.svg",
+    "iso": true,
+    "name": "Timor-Leste",
+    "name_zh": "东帝汶",
+    "name_ja": "東ティモール",
+    "name_de": "Timor-Leste",
+    "name_ru": "Восточный Тимор",
+    "name_ar": "تيمور - ليشتي",
+    "latlng": [
+      -8.83333333,
+      125.91666666
+    ],
+    "area": 14874
+  },
+  {
+    "capital": "Lomé",
+    "code": "tg",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/tg.svg",
+    "flag_4x3": "flags/4x3/tg.svg",
+    "iso": true,
+    "name": "Togo",
+    "name_zh": "多哥",
+    "name_ja": "トーゴ",
+    "name_de": "Togo",
+    "name_ru": "Того",
+    "name_ar": "توغو",
+    "latlng": [
+      8,
+      1.16666666
+    ],
+    "area": 56785
+  },
+  {
+    "capital": "Nukunonu, Atafu,Tokelau",
+    "code": "tk",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/tk.svg",
+    "flag_4x3": "flags/4x3/tk.svg",
+    "iso": true,
+    "name": "Tokelau",
+    "name_zh": "托克劳",
+    "name_ja": "トケラウ",
+    "name_de": "Tokelau",
+    "name_ru": "Токелау",
+    "name_ar": "توكيلاو",
+    "latlng": [
+      -9,
+      -172
+    ],
+    "area": 12
+  },
+  {
+    "capital": "Nukuʻalofa",
+    "code": "to",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/to.svg",
+    "flag_4x3": "flags/4x3/to.svg",
+    "iso": true,
+    "name": "Tonga",
+    "name_zh": "汤加",
+    "name_ja": "トンガ",
+    "name_de": "Tonga",
+    "name_ru": "Тонга",
+    "name_ar": "تونغا",
+    "latlng": [
+      -20,
+      -175
+    ],
+    "area": 747
+  },
+  {
+    "capital": "Port of Spain",
+    "code": "tt",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/tt.svg",
+    "flag_4x3": "flags/4x3/tt.svg",
+    "iso": true,
+    "name": "Trinidad and Tobago",
+    "name_zh": "特立尼达和多巴哥",
+    "name_ja": "トリニダード・トバゴ",
+    "name_de": "Trinidad und Tobago",
+    "name_ru": "Тринидад и Тобаго",
+    "name_ar": "ترينيداد وتوباغو",
+    "latlng": [
+      11,
+      -61
+    ],
+    "area": 5130
+  },
+  {
+    "capital": "Edinburgh of the Seven Seas",
+    "code": "sh-ta",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/sh-ta.svg",
+    "flag_4x3": "flags/4x3/sh-ta.svg",
+    "iso": false,
+    "name": "Tristan da Cunha",
+    "name_zh": "特里斯坦-达库尼亚",
+    "name_ja": "トリスタン・ダ・クーニャ",
+    "name_de": "Tristan da Cunha",
+    "name_ru": "Тристан-да-Кунья",
+    "name_ar": "تريستان دا كونا"
+  },
+  {
+    "capital": "Tunis",
+    "code": "tn",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/tn.svg",
+    "flag_4x3": "flags/4x3/tn.svg",
+    "iso": true,
+    "name": "Tunisia",
+    "name_zh": "突尼斯",
+    "name_ja": "チュニジア",
+    "name_de": "Tunesien",
+    "name_ru": "Тунис",
+    "name_ar": "تونس",
+    "latlng": [
+      34,
+      9
+    ],
+    "area": 163610
+  },
+  {
+    "capital": "Ashgabat",
+    "code": "tm",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/tm.svg",
+    "flag_4x3": "flags/4x3/tm.svg",
+    "iso": true,
+    "name": "Turkmenistan",
+    "name_zh": "土库曼斯坦",
+    "name_ja": "トルクメニスタン",
+    "name_de": "Turkmenistan",
+    "name_ru": "Туркменистан",
+    "name_ar": "تركمانستان",
+    "latlng": [
+      40,
+      60
+    ],
+    "area": 488100
+  },
+  {
+    "capital": "Cockburn Town",
+    "code": "tc",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/tc.svg",
+    "flag_4x3": "flags/4x3/tc.svg",
+    "iso": true,
+    "name": "Turks and Caicos Islands",
+    "name_zh": "特克斯和凯科斯群岛",
+    "name_ja": "タークス・カイコス諸島",
+    "name_de": "Turks- und Caicosinseln",
+    "name_ru": "Тёркс и Кайкос",
+    "name_ar": "جزر توركس وكايكوس",
+    "latlng": [
+      21.75,
+      -71.58333333
+    ],
+    "area": 948
+  },
+  {
+    "capital": "Funafuti",
+    "code": "tv",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/tv.svg",
+    "flag_4x3": "flags/4x3/tv.svg",
+    "iso": true,
+    "name": "Tuvalu",
+    "name_zh": "图瓦卢",
+    "name_ja": "ツバル",
+    "name_de": "Tuvalu",
+    "name_ru": "Тувалу",
+    "name_ar": "توفالو",
+    "latlng": [
+      -8,
+      178
+    ],
+    "area": 26
+  },
+  {
+    "capital": "Ankara",
+    "code": "tr",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/tr.svg",
+    "flag_4x3": "flags/4x3/tr.svg",
+    "iso": true,
+    "name": "Türkiye",
+    "name_zh": "土耳其",
+    "name_ja": "トルコ",
+    "name_de": "Türkei",
+    "name_ru": "Турция",
+    "name_ar": "تركيا",
+    "latlng": [
+      39,
+      35
+    ],
+    "area": 783562
+  },
+  {
+    "capital": "Kampala",
+    "code": "ug",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/ug.svg",
+    "flag_4x3": "flags/4x3/ug.svg",
+    "iso": true,
+    "name": "Uganda",
+    "name_zh": "乌干达",
+    "name_ja": "ウガンダ",
+    "name_de": "Uganda",
+    "name_ru": "Уганда",
+    "name_ar": "أوغندا",
+    "latlng": [
+      1,
+      32
+    ],
+    "area": 241550
+  },
+  {
+    "capital": "Kiev",
+    "code": "ua",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/ua.svg",
+    "flag_4x3": "flags/4x3/ua.svg",
+    "iso": true,
+    "name": "Ukraine",
+    "name_zh": "乌克兰",
+    "name_ja": "ウクライナ",
+    "name_de": "Ukraine",
+    "name_ru": "Украина",
+    "name_ar": "أوكرانيا",
+    "latlng": [
+      49,
+      32
+    ],
+    "area": 603500
+  },
+  {
+    "capital": "Abu Dhabi",
+    "code": "ae",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/ae.svg",
+    "flag_4x3": "flags/4x3/ae.svg",
+    "iso": true,
+    "name": "United Arab Emirates",
+    "name_zh": "阿联酋",
+    "name_ja": "アラブ���長国連邦",
+    "name_de": "Vereinigte Arabische Emirate",
+    "name_ru": "ОАЭ",
+    "name_ar": "الإمارات العربية المتحدة",
+    "latlng": [
+      24,
+      54
+    ],
+    "area": 83600
+  },
+  {
+    "capital": "London",
+    "code": "gb",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/gb.svg",
+    "flag_4x3": "flags/4x3/gb.svg",
+    "iso": true,
+    "name": "United Kingdom",
+    "name_zh": "英国",
+    "name_ja": "イギリス",
+    "name_de": "Vereinigtes Königreich",
+    "name_ru": "Великобритания",
+    "name_ar": "المملكة المتحدة",
+    "latlng": [
+      54,
+      -2
+    ],
+    "area": 242900
+  },
+  {
+    "code": "un",
+    "flag_1x1": "flags/1x1/un.svg",
+    "flag_4x3": "flags/4x3/un.svg",
+    "iso": false,
+    "name": "United Nations",
+    "name_zh": "联合国",
+    "name_ja": "国際連合",
+    "name_de": "Vereinte Nationen",
+    "name_ru": "Организация Объединенных Наций",
+    "name_ar": "الأمم المتحدة"
+  },
+  {
+    "capital": "Washington, D.C.",
+    "code": "um",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/um.svg",
+    "flag_4x3": "flags/4x3/um.svg",
+    "iso": true,
+    "name": "United States Minor Outlying Islands",
+    "name_zh": "美国本土外小岛屿",
+    "name_ja": "合衆国領有小離島",
+    "name_de": "Amerikanische Überseeinseln",
+    "name_ru": "Внешние малые о-ва (США)",
+    "name_ar": "جزر الولايات المتحدة النائية",
+    "latlng": [
+      19.3,
+      166.633333
+    ],
+    "area": 34.2
+  },
+  {
+    "capital": "Washington, D.C.",
+    "code": "us",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/us.svg",
+    "flag_4x3": "flags/4x3/us.svg",
+    "iso": true,
+    "name": "United States of America",
+    "name_zh": "美国",
+    "name_ja": "アメリカ合衆国",
+    "name_de": "Vereinigte Staaten",
+    "name_ru": "Соединенные Штаты",
+    "name_ar": "الولايات المتحدة",
+    "latlng": [
+      38,
+      -97
+    ],
+    "area": 9372610
+  },
+  {
+    "capital": "Montevideo",
+    "code": "uy",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/uy.svg",
+    "flag_4x3": "flags/4x3/uy.svg",
+    "iso": true,
+    "name": "Uruguay",
+    "name_zh": "乌拉圭",
+    "name_ja": "ウルグアイ",
+    "name_de": "Uruguay",
+    "name_ru": "Уругвай",
+    "name_ar": "أورغواي",
+    "latlng": [
+      -33,
+      -56
+    ],
+    "area": 181034
+  },
+  {
+    "capital": "Tashkent",
+    "code": "uz",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/uz.svg",
+    "flag_4x3": "flags/4x3/uz.svg",
+    "iso": true,
+    "name": "Uzbekistan",
+    "name_zh": "乌兹别克斯坦",
+    "name_ja": "ウズベキスタン",
+    "name_de": "Usbekistan",
+    "name_ru": "Узбекистан",
+    "name_ar": "أوزبكستان",
+    "latlng": [
+      41,
+      64
+    ],
+    "area": 447400
+  },
+  {
+    "capital": "Port Vila",
+    "code": "vu",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/vu.svg",
+    "flag_4x3": "flags/4x3/vu.svg",
+    "iso": true,
+    "name": "Vanuatu",
+    "name_zh": "瓦努阿图",
+    "name_ja": "バヌアツ",
+    "name_de": "Vanuatu",
+    "name_ru": "Вануату",
+    "name_ar": "فانواتو",
+    "latlng": [
+      -16,
+      167
+    ],
+    "area": 12189
+  },
+  {
+    "capital": "Caracas",
+    "code": "ve",
+    "continent": "South America",
+    "flag_1x1": "flags/1x1/ve.svg",
+    "flag_4x3": "flags/4x3/ve.svg",
+    "iso": true,
+    "name": "Venezuela",
+    "name_zh": "委内瑞拉",
+    "name_ja": "ベネズエラ",
+    "name_de": "Venezuela",
+    "name_ru": "Венесуэла",
+    "name_ar": "فنزويلا",
+    "latlng": [
+      8,
+      -66
+    ],
+    "area": 916445
+  },
+  {
+    "capital": "Hanoi",
+    "code": "vn",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/vn.svg",
+    "flag_4x3": "flags/4x3/vn.svg",
+    "iso": true,
+    "name": "Vietnam",
+    "name_zh": "越南",
+    "name_ja": "ベトナム",
+    "name_de": "Vietnam",
+    "name_ru": "Вьетнам",
+    "name_ar": "فيتنام",
+    "latlng": [
+      16.16666666,
+      107.83333333
+    ],
+    "area": 331212
+  },
+  {
+    "capital": "Road Town",
+    "code": "vg",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/vg.svg",
+    "flag_4x3": "flags/4x3/vg.svg",
+    "iso": true,
+    "name": "Virgin Islands (British)",
+    "name_zh": "英属维尔京群岛",
+    "name_ja": "英領ヴァージン諸島",
+    "name_de": "Britische Jungferninseln",
+    "name_ru": "Виргинские о-ва (Великобритания)",
+    "name_ar": "جزر فيرجن البريطانية",
+    "latlng": [
+      18.431383,
+      -64.62305
+    ],
+    "area": 151
+  },
+  {
+    "capital": "Charlotte Amalie",
+    "code": "vi",
+    "continent": "North America",
+    "flag_1x1": "flags/1x1/vi.svg",
+    "flag_4x3": "flags/4x3/vi.svg",
+    "iso": true,
+    "name": "Virgin Islands (U.S.)",
+    "name_zh": "美属维尔京群岛",
+    "name_ja": "米領ヴァージン諸島",
+    "name_de": "Amerikanische Jungferninseln",
+    "name_ru": "Виргинские о-ва (США)",
+    "name_ar": "جزر فيرجن الأمريكية",
+    "latlng": [
+      18.35,
+      -64.933333
+    ],
+    "area": 347
+  },
+  {
+    "capital": "Cardiff",
+    "code": "gb-wls",
+    "continent": "Europe",
+    "flag_1x1": "flags/1x1/gb-wls.svg",
+    "flag_4x3": "flags/4x3/gb-wls.svg",
+    "iso": false,
+    "name": "Wales",
+    "name_zh": "威尔士",
+    "name_ja": "ウェールズ",
+    "name_de": "Wales",
+    "name_ru": "Уэльс",
+    "name_ar": "ويلز"
+  },
+  {
+    "capital": "Mata-Utu",
+    "code": "wf",
+    "continent": "Oceania",
+    "flag_1x1": "flags/1x1/wf.svg",
+    "flag_4x3": "flags/4x3/wf.svg",
+    "iso": true,
+    "name": "Wallis and Futuna",
+    "name_zh": "瓦利斯和富图纳",
+    "name_ja": "ウォリス・フツナ",
+    "name_de": "Wallis und Futuna",
+    "name_ru": "Уоллис и Футуна",
+    "name_ar": "جزر والس وفوتونا",
+    "latlng": [
+      -13.3,
+      -176.2
+    ],
+    "area": 142
+  },
+  {
+    "capital": "Laayoune",
+    "code": "eh",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/eh.svg",
+    "flag_4x3": "flags/4x3/eh.svg",
+    "iso": true,
+    "name": "Western Sahara",
+    "name_zh": "西撒哈拉",
+    "name_ja": "西サハラ",
+    "name_de": "Westsahara",
+    "name_ru": "Западная Сахара",
+    "name_ar": "الصحراء الغربية",
+    "latlng": [
+      24.5,
+      -13
+    ],
+    "area": 266000
+  },
+  {
+    "capital": "Sana'a",
+    "code": "ye",
+    "continent": "Asia",
+    "flag_1x1": "flags/1x1/ye.svg",
+    "flag_4x3": "flags/4x3/ye.svg",
+    "iso": true,
+    "name": "Yemen",
+    "name_zh": "也门",
+    "name_ja": "イエメン",
+    "name_de": "Jemen",
+    "name_ru": "Йемен",
+    "name_ar": "اليمن",
+    "latlng": [
+      15,
+      48
+    ],
+    "area": 527968
+  },
+  {
+    "capital": "Lusaka",
+    "code": "zm",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/zm.svg",
+    "flag_4x3": "flags/4x3/zm.svg",
+    "iso": true,
+    "name": "Zambia",
+    "name_zh": "赞比亚",
+    "name_ja": "ザンビア",
+    "name_de": "Sambia",
+    "name_ru": "Замбия",
+    "name_ar": "زامبيا",
+    "latlng": [
+      -15,
+      30
+    ],
+    "area": 752612
+  },
+  {
+    "capital": "Harare",
+    "code": "zw",
+    "continent": "Africa",
+    "flag_1x1": "flags/1x1/zw.svg",
+    "flag_4x3": "flags/4x3/zw.svg",
+    "iso": true,
+    "name": "Zimbabwe",
+    "name_zh": "津巴布韦",
+    "name_ja": "ジンバブエ",
+    "name_de": "Simbabwe",
+    "name_ru": "Зимбабве",
+    "name_ar": "زيمبابوي",
+    "latlng": [
+      -20,
+      30
+    ],
+    "area": 390757
+  }
+]

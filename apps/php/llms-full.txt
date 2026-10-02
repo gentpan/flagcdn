@@ -1,0 +1,167 @@
+# flagcdn.io — Full Documentation
+
+> Free SVG country flag icons with CDN delivery. ISO 3166-1 alpha-2 codes. 4:3 and 1:1 aspect ratios. MIT licensed.
+
+## Overview
+
+flagcdn.io is a free, non-profit CDN for country flag icons in SVG format. It is based on the open-source lipis/flag-icons project with additional flags, SVG fixes, and free CDN hosting. The service provides 270+ flags covering all ISO 3166-1 countries and territories, plus additional non-ISO flags for regions and organizations.
+
+---
+
+## 1. Include CSS
+
+Add one of these stylesheets to your HTML `<head>`:
+
+### flagcdn.io CDN (recommended)
+```html
+<link rel="stylesheet" href="https://flagcdn.io/css/flag-icons.min.css" />
+```
+
+### jsDelivr
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7/css/flag-icons.min.css" />
+```
+
+### cdnjs
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.5.0/css/flag-icons.min.css" />
+```
+
+---
+
+## 2. HTML Usage
+
+Use the `fi` base class with a country-code class `fi-xx`:
+
+### 4:3 Aspect Ratio (default)
+```html
+<span class="fi fi-us"></span>
+<span class="fi fi-cn"></span>
+<span class="fi fi-gb"></span>
+```
+
+### 1:1 Square Aspect Ratio
+Add the `fis` class:
+```html
+<span class="fi fi-us fis"></span>
+<span class="fi fi-cn fis"></span>
+```
+
+### Background Image Mode
+Use the `fib` class with explicit dimensions:
+```html
+<span class="fi fi-cn fib" style="width:32px;height:24px;display:inline-block;"></span>
+```
+
+---
+
+## 3. Direct SVG URLs
+
+You can link to flag SVGs directly:
+
+| Format | URL Pattern | Example |
+|--------|-------------|---------|
+| 4:3 | `https://flagcdn.io/flags/4x3/{code}.svg` | `https://flagcdn.io/flags/4x3/us.svg` |
+| 1:1 | `https://flagcdn.io/flags/1x1/{code}.svg` | `https://flagcdn.io/flags/1x1/us.svg` |
+| Short (4:3) | `https://flagcdn.io/{code}.svg` | `https://flagcdn.io/us.svg` |
+
+Use in `<img>` tags:
+```html
+<img src="https://flagcdn.io/flags/4x3/jp.svg" alt="Japan" width="32" />
+```
+
+All flag URLs support CORS (`Access-Control-Allow-Origin: *`) for cross-origin usage.
+
+---
+
+## 4. Country Codes
+
+Flags use lowercase ISO 3166-1 alpha-2 codes. Common examples:
+
+| Code | Country | Code | Country |
+|------|---------|------|---------|
+| us | United States | cn | China |
+| gb | United Kingdom | jp | Japan |
+| de | Germany | fr | France |
+| in | India | br | Brazil |
+| kr | South Korea | ru | Russia |
+| au | Australia | ca | Canada |
+| eu | European Union | un | United Nations |
+
+The full list of 270+ codes is available on the homepage at https://flagcdn.io/ with search and filtering by continent.
+
+---
+
+## 5. API Endpoints
+
+### Country Data
+`GET https://flagcdn.io/data/country.json`
+
+Returns JSON array of all countries with:
+- `code` — ISO alpha-2 code
+- `name` — English name
+- `name_zh`, `name_ja`, `name_de`, `name_ru`, `name_ar` — Translated names
+- `continent` — Continent name
+- `capital` — Capital city
+- `iso` — Boolean, true if ISO 3166-1
+- `flag_4x3`, `flag_1x1` — SVG file paths
+
+### Download Stats
+`GET https://flagcdn.io/api/download-count.php`
+
+Returns: `{"count": 12345}`
+
+### Site Analytics
+`GET https://flagcdn.io/api/stats.php`
+
+Returns Cloudflare analytics (30-day):
+```json
+{
+  "requests": 1234567,
+  "visitors": 45678,
+  "bytes": 9876543210,
+  "pageViews": 23456,
+  "since": "2026-03-11",
+  "until": "2026-04-10"
+}
+```
+
+---
+
+## 6. Features
+
+- **270+ flags**: All ISO 3166-1 countries/territories plus non-ISO flags
+- **SVG format**: Infinitely scalable, lightweight, sharp at any size
+- **Two aspect ratios**: 4:3 (standard) and 1:1 (square)
+- **Three usage modes**: CSS classes, direct SVG URLs, background images
+- **Free CDN**: Fast delivery via Cloudflare, no rate limits
+- **CORS enabled**: All flag assets allow cross-origin requests
+- **Multilingual UI**: English, Chinese, Japanese, German, Russian, Arabic
+- **Dark mode**: Automatic theme detection with manual toggle
+- **Interactive map**: Click any flag to see the country on a Leaflet map
+- **Search & filter**: Real-time search by name (6 languages) or country code
+- **One-click copy**: Copy HTML snippet or image URL to clipboard
+- **Bulk download**: Download all flags as a ZIP archive
+- **MIT license**: Free for personal and commercial use
+
+---
+
+## 7. Technical Details
+
+- **Hosting**: Nginx + PHP 8.5 behind Cloudflare CDN
+- **Cache**: Static assets cached 30 days, CSS/JS cached 12 hours
+- **Data format**: All flag data stored as JSON, no database required
+- **File sizes**: Individual SVGs range from ~300 bytes to ~50 KB
+- **Source**: Based on https://github.com/lipis/flag-icons (MIT license)
+
+---
+
+## 8. Contact & Links
+
+- Website: https://flagcdn.io
+- Documentation: https://flagcdn.io/docs/
+- Changelog: https://flagcdn.io/changelog/
+- Feedback: https://flagcdn.io/issues/
+- Email: support@flagcdn.io
+- GitHub: https://github.com/gentpan
+- Twitter/X: https://x.com/gentpan

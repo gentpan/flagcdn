@@ -36,6 +36,7 @@
 
 ```
 apps/web/           Nuxt 3 前端（首页、详情页、文档、SSG）
+apps/php/           当前线上 PHP 站点（页面、下载计数、反馈、统计）
 cmd/api/            Go HTTP API（/api/v1、/i 栅格）
 cmd/rastergen/      离线批量生成 PNG/WebP/AVIF
 flags/              SVG 源文件
@@ -44,7 +45,9 @@ data/country.json   国家元数据
 css/                flag-icons.min.css（对外嵌入）
 ```
 
-**站点 = Nuxt 3 前端 + Go 后端**（仓库已无 PHP/HTML 遗留页面）。架构说明见 **[docs/STACK.md](./docs/STACK.md)**。
+**当前线上站点使用 PHP + FrankenPHP/Caddy**，完整源码在 `apps/php/`，部署步骤见 **[apps/php/README.md](./apps/php/README.md)**。
+
+仓库同时保留 Nuxt 3 前端 + Go 后端版本，架构说明见 **[docs/STACK.md](./docs/STACK.md)**。下方构建命令用于 Nuxt + Go 版本。
 
 ---
 
@@ -79,6 +82,8 @@ make raster-verify
 ---
 
 ## 使用方式
+
+完整素材包与各格式下载见 [GitHub Releases](https://github.com/gentpan/flagcdn/releases) 或 [站点首页](https://flagcdn.io)。包含 543 个 SVG，以及 16–512px 八种尺寸的 PNG、WebP、AVIF，共 13,032 张栅格图。可用 `python3 scripts/build-flag-assets.py` 重新生成。
 
 ### CSS 类名
 

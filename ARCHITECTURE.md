@@ -48,7 +48,7 @@ css/flag-icons.min.css  对外嵌入 API（保留）
 - Go `flagcdn-api` 处理 `/api/v1/*` 与 `/i/*` fallback 渲染
 - Nuxt SSR：`node apps/web/.output/server/index.mjs` 或使用 `nuxt build` + Nitro
 
-**生产站点 = Nuxt 静态输出 + Go API + 静态资源**（`flags/`、`raster/`、`css/`）。仓库无 PHP。
+**Nuxt 版本部署 = Nuxt 静态输出 + Go API + 静态资源**（`flags/`、`raster/`、`css/`）。当前线上 PHP 站点源码在 `apps/php/`，部署见该目录 README。
 
 ## 目标
 
