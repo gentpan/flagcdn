@@ -1,4 +1,4 @@
-# FlagCDN.io v2 — Nuxt + Go
+# FlagCDN.io v2 — React + Go
 
 ## 配色：Ocean Slate（海洋蓝 + 中性灰）
 
@@ -21,7 +21,7 @@
 # 安装前端依赖
 make install
 
-# 启动 Go API (:8080) + Nuxt (:3000)
+# 启动 Go API (:8080) + React Vite (:3000)
 make dev
 
 # 批量生成栅格图
@@ -32,7 +32,8 @@ make raster-verify
 ## 目录
 
 ```
-apps/web/          Nuxt 3 + TS 前端
+apps/react/        React 19 + TS 前端（Vite，当前产品）
+apps/web/          旧 Nuxt 3 参考实现（已废弃，待移除）
 cmd/api/           Go HTTP 服务（flags API + /1x1/、/4x3/ 栅格）
 cmd/rastergen/     离线批量生成
 internal/          Go 共享库
@@ -46,9 +47,9 @@ css/flag-icons.min.css  对外嵌入 API（保留）
 
 - Nginx：静态 `/flags/`、`/1x1/`、`/4x3/`、`/css/` 直出
 - Go `flagcdn-api` 处理 `/api/v1/*` 与 `/1x1/*`、`/4x3/*` fallback 渲染
-- Nuxt SSR：`node apps/web/.output/server/index.mjs` 或使用 `nuxt build` + Nitro
+- 前端：`apps/react` 执行 `npm run build`，部署 `dist/` 静态产物，前端路由 fallback 到 `index.html`
 
-**Nuxt 版本部署 = Nuxt 静态输出 + Go API + 静态资源**（`flags/`、`1x1/`、`4x3/`、`css/`）。当前线上 PHP 站点源码在 `apps/php/`，部署见该目录 README。
+**部署 = React 静态产物 + Go API + 静态资源**（`flags/`、`1x1/`、`4x3/`、`css/`）。PHP 站点（`apps/php/`）已从仓库移除。
 
 ## 目标
 
@@ -116,7 +117,7 @@ go run ./cmd/rastergen -codes cn,us,jp
 
 ### 当前栈（已完成）
 
-- Nuxt 3 预渲染首页、列表、文档、changelog、271+ 国旗详情页
+- React SPA：首页、列表、文档、changelog、271+ 国旗详情页（SSG/预渲染待补）
 - Go `cmd/api`：`/api/v1/*`、`/api/stats`、`/1x1/*`、`/4x3/*` 栅格
 - `cmd/rastergen` 离线批量生成 `1x1/`、`4x3/`
 - Cloudflare CDN 边缘缓存
@@ -159,7 +160,7 @@ go run ./cmd/rastergen -codes cn,us,jp
 1. 本地 `go run ./cmd/rastergen` 生成 `1x1/`、`4x3/`
 2. `rsync` 到生产（含 `1x1/`、`4x3/`、`flags/`）
 3. Nginx 反代 Go API（见 `deploy/nginx.conf.example`）
-4. `rsync` Nuxt `apps/web/.output/public/` 到站点根
+4. `rsync` React `apps/react/dist/` 到站点根
 
 ---
 
@@ -167,6 +168,6 @@ go run ./cmd/rastergen -codes cn,us,jp
 
 1. ✅ 直接路径 + `rastergen` + `/1x1/`、`/4x3/` URL
 2. ⏳ 跑完全量 `rastergen`（生产机或 CI）
-3. ⏳ 详情页 UI 改成 thesvg 双栏 + Export 卡片网格
-4. ⏳ 初始化 Nuxt `apps/web`，先 SSG `/flag/[cc]`
+3. ✅ 详情页 UI 改成 thesvg 双栏 + Export 卡片网格
+4. ⏳ React 版补 SSG/预渲染（sitemap、SEO meta、JSON-LD）
 5. ✅ Go `cmd/api` 承担全部栅格与 JSON API

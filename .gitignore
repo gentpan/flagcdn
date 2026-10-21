@@ -10,6 +10,8 @@ cache/
 apps/web/node_modules/
 apps/web/.nuxt/
 apps/web/.output/
+apps/react/node_modules/
+apps/react/dist/
 bin/
 .idea/
 .vscode/

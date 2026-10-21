@@ -1,0 +1,29 @@
+export interface Country {
+  code: string;
+  name: string;
+  name_zh?: string;
+  name_ja?: string;
+  name_de?: string;
+  name_ru?: string;
+  name_ar?: string;
+  capital?: string;
+  continent?: string;
+  iso: boolean;
+  flag_1x1?: string;
+  flag_4x3?: string;
+  cca3?: string;
+  population?: number;
+  area?: number;
+  latlng?: [number, number];
+}
+
+export interface FlagDetailResponse {
+  country: Country;
+  related: Country[];
+  svg: Record<"1x1" | "4x3", string>;
+}
+
+export type Ratio = "1x1" | "4x3";
+export type RasterFormat = "png" | "webp" | "avif";
+
+export const RATIOS: Ratio[] = ["1x1", "4x3"];

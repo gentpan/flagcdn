@@ -1,0 +1,72 @@
+{
+  "checked_at": "2026-10-02",
+  "source": {
+    "sha": "086f7e97d657358203916dbe84f61c2bccaa81eb",
+    "source_url": "https://github.com/lipis/flag-icons/commit/086f7e97d657358203916dbe84f61c2bccaa81eb"
+  },
+  "coverage": {
+    "local_variant_svgs": 542,
+    "root_original_svgs": 1,
+    "php_svgs_identical_to_root": 543,
+    "upstream_byte_identical_variant_svgs": 540,
+    "local_only_codes": [],
+    "upstream_only_codes": []
+  },
+  "upstream_differences": [
+    {
+      "path": "4x3/pa.svg",
+      "kind": "upstream_fix_missing_locally",
+      "description": "Red canton starts at y=3.6 (visible white top edge); blue canton starts x=3.2 (white left edge). Upstream April 2026 removes these borders. Upstream retains uneven canton split at x=323 and y=225.3, so upstream is not geometrically authoritative.",
+      "references": [
+        "https://github.com/lipis/flag-icons/commit/086f7e97d657358203916dbe84f61c2bccaa81eb",
+        "https://github.com/lipis/flag-icons/pull/1440"
+      ]
+    },
+    {
+      "path": "1x1/gy.svg",
+      "kind": "local_improvement",
+      "description": "Local green base x=0,width=512; upstream base x=2,width=510 causes partial transparent left edge. Keep local fix.",
+      "references": [
+        "https://github.com/lipis/flag-icons/blob/086f7e97d657358203916dbe84f61c2bccaa81eb/flags/1x1/gy.svg"
+      ]
+    }
+  ],
+  "additional_findings": [
+    {
+      "path": "4x3/gy.svg",
+      "confidence": "confirmed_rendering_defect",
+      "description": "Green base begins x=2.4 instead of x=0; edge alpha becomes <255 along left side. 907 nonopaque pixels when rendered at 1200x900; same defect exists upstream."
+    },
+    {
+      "path": "gy.svg vs 4x3/gy.svg and 1x1/gy.svg",
+      "confidence": "confirmed_internal_palette_inconsistency",
+      "description": "Native uses green #2a936a, gold #ffc20e, red #be1e2d, black #000000. Variant icons use green #399408, gold #ffde08, red #de2110, black #000001. No authoritative numerical RGB values found, so no claim either palette legally wrong."
+    },
+    {
+      "path": "4x3/pa.svg",
+      "confidence": "confirmed_geometry_difference_from_government_reference",
+      "description": "Canvas 640x480 quarter boundaries expected at x=320,y=240 for equal quarters; local/upstream x=323,y=225.3. Therefore top band is46.9375% tall and bottom53.0625%. Panama CONASINA reference depicts equal quarters and centered stars; ordinary flag3:2,but4:3/1:1 are icon variants and aspect conversion itself not an error.",
+      "references": [
+        "https://www.mingob.gob.pa/simbolosdelanacion/bandera-nacional/",
+        "https://www.mingob.gob.pa/simbolosdelanacion/wp-content/plugins/download-attachments/includes/download.php?id=1387"
+      ]
+    },
+    {
+      "path": "gy.svg and ratio variants",
+      "confidence": "requires_further_specification_verification",
+      "description": "Guyana Ministry of Education textbook (2021 revised edition),printed163/PDF175, gives red16%,black4%,gold24%,white6%,green50%. Local geometry color areas differ substantially, particularly native red21.17% and gold18.31%; 4:3 red18.04%,gold17.62%. These are rendered solid-color pixel fractions, antialiasing not assigned. Native flag aspect5:3 matches constitutional land ratio. Treat as geometry research item, not automatic replacement based on textbook alone. IMPORTANT: the textbook illustration on the same page visually places the inner black triangle apex near50% of width, apparently inconsistent with the area table. Do not classify Guyana design geometry as wrong from this table; further authoritative construction standard needed.",
+      "references": [
+        "https://education.gov.gy/web2/index.php/ngsa-2022/4596-social-studies-made-easy-revised-edition/file",
+        "https://www.oas.org/juridico/spanish/mesicic2_guy_constitution.pdf"
+      ]
+    }
+  ],
+  "outputs": {
+    "byte_comparison": "byte-comparison.json",
+    "visual_comparison": "visual-comparison.json",
+    "diff_sheet": "upstream-differences.png",
+    "guyana_variants": "guyana-variant-comparison.png",
+    "pa_official_pdf": "pa-official-vector.pdf",
+    "pa_official_render": "pa-official-vector.png"
+  }
+}

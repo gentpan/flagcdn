@@ -1,0 +1,223 @@
+[
+  {
+    "file": "flags/1x1/bs.svg",
+    "width": 512,
+    "height": 512,
+    "alpha_min": 0,
+    "zero_pixels": 512,
+    "zero_percent": 0.1953125,
+    "alpha_nonopaque_percent": 0.390625,
+    "top_zero_pixels": 512,
+    "left_zero_pixels": 1,
+    "visible_bounds": [
+      0,
+      1,
+      512,
+      512
+    ]
+  },
+  {
+    "file": "flags/1x1/bs.svg",
+    "width": 1600,
+    "height": 1600,
+    "alpha_min": 0,
+    "zero_pixels": 6400,
+    "zero_percent": 0.25,
+    "alpha_nonopaque_percent": 0.3125,
+    "top_zero_pixels": 1600,
+    "left_zero_pixels": 4,
+    "visible_bounds": [
+      0,
+      4,
+      1600,
+      1600
+    ]
+  },
+  {
+    "file": "flags/4x3/bs.svg",
+    "width": 512,
+    "height": 384,
+    "alpha_min": 0,
+    "zero_pixels": 509,
+    "zero_percent": 0.2588907877604167,
+    "alpha_nonopaque_percent": 0.7151285807291666,
+    "top_zero_pixels": 509,
+    "left_zero_pixels": 0,
+    "visible_bounds": [
+      0,
+      0,
+      512,
+      384
+    ]
+  },
+  {
+    "file": "flags/4x3/bs.svg",
+    "width": 1600,
+    "height": 1200,
+    "alpha_min": 0,
+    "zero_pixels": 7335,
+    "zero_percent": 0.38203125,
+    "alpha_nonopaque_percent": 0.5278645833333333,
+    "top_zero_pixels": 1597,
+    "left_zero_pixels": 721,
+    "visible_bounds": [
+      0,
+      0,
+      1600,
+      1200
+    ]
+  },
+  {
+    "file": "flags/1x1/im.svg",
+    "width": 512,
+    "height": 512,
+    "alpha_min": 0,
+    "zero_pixels": 512,
+    "zero_percent": 0.1953125,
+    "alpha_nonopaque_percent": 0.390625,
+    "top_zero_pixels": 1,
+    "left_zero_pixels": 512,
+    "visible_bounds": [
+      1,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "file": "flags/1x1/im.svg",
+    "width": 1600,
+    "height": 1600,
+    "alpha_min": 0,
+    "zero_pixels": 8000,
+    "zero_percent": 0.3125,
+    "alpha_nonopaque_percent": 0.375,
+    "top_zero_pixels": 5,
+    "left_zero_pixels": 1600,
+    "visible_bounds": [
+      5,
+      0,
+      1600,
+      1600
+    ]
+  },
+  {
+    "file": "flags/4x3/pg.svg",
+    "width": 512,
+    "height": 384,
+    "alpha_min": 0,
+    "zero_pixels": 268,
+    "zero_percent": 0.13631184895833334,
+    "alpha_nonopaque_percent": 0.677490234375,
+    "top_zero_pixels": 0,
+    "left_zero_pixels": 268,
+    "visible_bounds": [
+      0,
+      0,
+      512,
+      384
+    ]
+  },
+  {
+    "file": "flags/4x3/pg.svg",
+    "width": 1600,
+    "height": 1200,
+    "alpha_min": 0,
+    "zero_pixels": 3360,
+    "zero_percent": 0.175,
+    "alpha_nonopaque_percent": 0.2875520833333333,
+    "top_zero_pixels": 2,
+    "left_zero_pixels": 1200,
+    "visible_bounds": [
+      2,
+      0,
+      1600,
+      1200
+    ]
+  },
+  {
+    "file": "flags/4x3/gy.svg",
+    "width": 512,
+    "height": 384,
+    "alpha_min": 82,
+    "zero_pixels": 0,
+    "zero_percent": 0.0,
+    "alpha_nonopaque_percent": 0.18412272135416666,
+    "top_zero_pixels": 0,
+    "left_zero_pixels": 0,
+    "visible_bounds": [
+      0,
+      0,
+      512,
+      384
+    ]
+  },
+  {
+    "file": "flags/4x3/gy.svg",
+    "width": 1600,
+    "height": 1200,
+    "alpha_min": 0,
+    "zero_pixels": 9,
+    "zero_percent": 0.00046875,
+    "alpha_nonopaque_percent": 0.063125,
+    "top_zero_pixels": 3,
+    "left_zero_pixels": 0,
+    "visible_bounds": [
+      0,
+      0,
+      1600,
+      1200
+    ]
+  },
+  {
+    "file": "flags/4x3/gy.svg",
+    "width": 4096,
+    "height": 3072,
+    "alpha_min": 0,
+    "zero_pixels": 757,
+    "zero_percent": 0.006016095479329427,
+    "alpha_nonopaque_percent": 0.030581156412760418,
+    "top_zero_pixels": 12,
+    "left_zero_pixels": 676,
+    "visible_bounds": [
+      0,
+      0,
+      4096,
+      3072
+    ]
+  },
+  {
+    "file": "flags/1x1/sl.svg",
+    "width": 512,
+    "height": 512,
+    "alpha_min": 0,
+    "zero_pixels": 24,
+    "zero_percent": 0.0091552734375,
+    "alpha_nonopaque_percent": 0.4180908203125,
+    "top_zero_pixels": 6,
+    "left_zero_pixels": 6,
+    "visible_bounds": [
+      0,
+      0,
+      512,
+      512
+    ]
+  },
+  {
+    "file": "flags/1x1/sl.svg",
+    "width": 1600,
+    "height": 1600,
+    "alpha_min": 0,
+    "zero_pixels": 320,
+    "zero_percent": 0.0125,
+    "alpha_nonopaque_percent": 0.204453125,
+    "top_zero_pixels": 26,
+    "left_zero_pixels": 32,
+    "visible_bounds": [
+      0,
+      0,
+      1600,
+      1600
+    ]
+  }
+]
